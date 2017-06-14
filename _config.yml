@@ -1,0 +1,49 @@
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+# Site settings
+title: "Dmitry Komanov Blog"
+description: > # this means to ignore newlines until "email:"
+   Severe Software Developer Blog
+
+email: dkomanov@gmail.com
+logo: "/assets/images/df_logo.jpg"
+cover: "/assets/images/cover.jpg"
+
+name: 'Dmitry Komanov'
+author: 'Dmitry Komanov'
+author_image: "/assets/images/author.jpg"
+
+paginate:	5
+
+url: "https://www.komanov.com" # the base hostname & protocol for your site
+baseurl: ""
+twitter_handle: '@dkomanov' #used to display twitter cards
+
+disqus: blog-komanov-com
+
+#google_analytics: UA-XXXXX-X
+
+social:
+  - icon:	twitter
+    url:	https://twitter.com/dkomanov
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	facebook
+    url:	https://facebook.com/dkomanov
+    desc: Connect with me facebook
+    share_url: https://www.facebook.com/sharer.php
+    share_title: ?t=
+    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/dkomanov
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
