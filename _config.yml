@@ -4,9 +4,8 @@ gems:
   - jekyll-paginate
 
 # Site settings
-title: "Dmitry Komanov Blog"
-description: > # this means to ignore newlines until "email:"
-   Severe Software Developer Blog
+title: "@dkomanov"
+description: Severe Software Developer Blog
 
 email: dkomanov@gmail.com
 logo: "/assets/images/df_logo.jpg"

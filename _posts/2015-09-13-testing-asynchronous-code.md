@@ -2,7 +2,7 @@
 layout: post
 title:  "Testing Asynchronous Code"
 date:   2015-09-13 03:00:00
-categories: scala specs2 async testing
+tags: scala specs2 async testing
 image: /assets/article_images/2015-09-13-testing-asynchronous-code/ancient-art-764930_1920.jpg
 
 semaphoreJavadocLink: "http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Semaphore.html"

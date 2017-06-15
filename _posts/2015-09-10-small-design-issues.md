@@ -2,7 +2,7 @@
 layout: post
 title:  "Small design issues"
 date:   2015-09-10 03:00:00
-categories: scala specs2 testing
+tags: scala specs2 testing
 image: /assets/article_images/2015-09-10-small-design-issues/pisa-1998120_1920.jpg
 
 mockitoCallbacksLink: "https://etorreborre.github.io/specs2/guide/SPECS2-3.6.1/org.specs2.guide.UseMockito.html#callbacks"
