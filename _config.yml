@@ -23,7 +23,7 @@ twitter_handle: '@dkomanov' #used to display twitter cards
 
 disqus: blog-komanov-com
 
-#google_analytics: UA-XXXXX-X
+google_analytics: UA-106699396-1
 
 social:
   - icon:	twitter
