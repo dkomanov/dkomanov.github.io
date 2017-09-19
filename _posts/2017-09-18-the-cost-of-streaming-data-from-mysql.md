@@ -14,7 +14,7 @@ connectorjLink: https://dev.mysql.com/downloads/connector/j/
 mariadbLink: https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/
 drizzleLink: https://github.com/krummas/DrizzleJDBC
 connectorJImplementationLink: http://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-implementation-notes.html
-graphsLink: http://blog.komanov.com/mysql-streaming/
+graphsLink: https://dkomanov.github.io/mysql-streaming/
 jmhLink: http://openjdk.java.net/projects/code-tools/jmh/
 embeddedMysqlLink: https://github.com/wix/wix-embedded-mysql
 githubLink: https://github.com/dkomanov/mysql-streaming
