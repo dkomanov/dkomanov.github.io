@@ -7,6 +7,8 @@ title: Links
 
 Here I'm trying to add some interesting (imo) links with a small comment about it. Different topics and no structure at all.
 
+* [Debugging an evil Go runtime bug](https://marcan.st/2017/12/debugging-an-evil-go-runtime-bug/).
+Rare type of detective articles on chasing bug. Amazing thriller and amazing final (2017-12-06).
 * [JVM Serializers](https://github.com/eishay/jvm-serializers).
 A good big article/research about serialization libraries for JVM.
 * [15 Fundamental Laws of Software Development](http://www.exceptionnotfound.net/fundamental-laws-of-software-development/).
