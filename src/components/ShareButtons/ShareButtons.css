@@ -1,0 +1,10 @@
+.share-buttons {
+    display: inline-block;
+}
+
+.share-buttons .share-button {
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 0 0 0.5em;
+    text-align: center;
+}

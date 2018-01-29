@@ -1,0 +1,7 @@
+{
+  "date": "2015-09-13",
+  "title": "Testing Asynchronous Code",
+  "description": "Some tricks how to reliably test multithreaded code in Java/Scala...",
+  "tags": ["scala", "specs2", "async", "testing"],
+  "cover": "cover.jpg"
+}

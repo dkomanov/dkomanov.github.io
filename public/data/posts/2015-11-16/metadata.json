@@ -1,0 +1,6 @@
+{
+  "date": "2015-11-16",
+  "title": "Let’s continue with UUID.fromString",
+  "description": "Everything is invented before us: my attempt to contribute UUID.fromString to JDK9...",
+  "tags": ["java", "jdk9", "performance"]
+}

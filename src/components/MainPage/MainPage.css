@@ -1,0 +1,68 @@
+.site-header {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: -140px;
+    z-index: 2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.site-header .site-logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -60px;
+    right: 50%;
+    margin-right: -60px;
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 99;
+    text-indent: -9999px;
+    border: 3px solid #fff;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.site-header .site-title {
+    margin: 0;
+    padding: 84px 16px 8px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -2px;
+    outline: 0;
+    line-height: 50px;
+    word-break: break-word;
+    color: #fff;
+}
+
+.site-header .site-description {
+    margin: 0 0 20px;
+    padding: 0 32px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-content {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    top: -140px;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+    .site-content {
+        padding: 0 32px;
+    }
+}
