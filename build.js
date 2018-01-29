@@ -82,29 +82,28 @@ function buildFeedXml() {
 
   content += '<?xml version="1.0" encoding="UTF-8"?>';
   content += `
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${config.title}</title>
     <description>${config.description || config.title}</description>
     <link>${absoluteUrl}</link>
     <atom:link href="${absoluteUrl}feed.xml" rel="self" type="application/rss+xml" />
     <pubDate>${new Date(posts[0].date).toUTCString()}</pubDate>
-    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-  `;
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>`;
 
   posts.forEach(post => {
-    const tags = (post.tags || []).map(t => `<category>${t}</category>`).join('\n');
+    const tags = (post.tags || []).map(t => `<category>${t}</category>`).join('\n        ');
     const postDescription = post.description && post.description.length ? post.description : post.title;
     const postUrl = `${absoluteUrl}p/${post.url}`;
     content += `
-      <item>
-        <title>${post.title}</title>
-        <description>${postDescription}</description>
-        <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-        <link>${postUrl}</link>
-        <guid isPermaLink="true">${postUrl}</guid>
-        ${tags}
-      </item>
-`
+    <item>
+      <title>${post.title}</title>
+      <description>${postDescription}</description>
+      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <link>${postUrl}</link>
+      <guid isPermaLink="true">${postUrl}</guid>
+      ${tags}
+    </item>`
   });
 
   content += `
@@ -112,7 +111,7 @@ function buildFeedXml() {
 </rss>
 `;
 
-  fs.writeFileSync('./feed.xml', content);
+  fs.writeFileSync('./public/feed.xml', content);
 }
 
 function readConfigJson() {
