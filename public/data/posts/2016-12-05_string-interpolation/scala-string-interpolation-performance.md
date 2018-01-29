@@ -317,9 +317,7 @@ regular string concatenation and approximately the same as slf4j.
 
 The more convenient chart is [here](https://dkomanov.github.io/scala-string-format/).
 
-<div class="wide-image">
-    <img src="./string-formatting.png" alt="Different kind of string formatting performance, divided by resulting string length, nanos"/>
-</div>
+![Different kind of string formatting performance, divided by resulting string length, nanos|wide](./string-formatting.png)
 
 Data table for a resulting string length 212:
 

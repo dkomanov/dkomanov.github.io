@@ -85,9 +85,9 @@ Taking into account we have more than one driver for MySQL server, results may v
 For each driver, I ran two sets of tests: one for the default querying (.atOnce) and one for the streaming (.stream). Each set consisted of several test cases to query different amount of rows (via LIMIT clause); from 1 to 1000.
 
 To check the network influence, I performed tests in three different configurations:
-Benchmark and MySQL on the same server (local).
-Benchmark and MySQL on different servers connected through Wi-Fi (wifi = simulation of a “slow” network with ping greater than a millisecond).
-Benchmark and MySQL on different servers but connected through the wire (wire = fast network).
+* Benchmark and MySQL on the same server (local).
+* Benchmark and MySQL on different servers connected through Wi-Fi (wifi = simulation of a “slow” network with ping greater than a millisecond).
+* Benchmark and MySQL on different servers but connected through the wire (wire = fast network).
 
 ## Results
 
@@ -97,17 +97,13 @@ Let’s take a look at the benchmark results.
 
 Times grows linearly with rows count. Apparently, there are no network problems - traffic on localhost is very fast.
 
-<div class="wide-image">
-    <img src="./local.png" alt="Local"/>
-</div>
+![Local|wide](./local.png)
 
 ### Wi-Fi (slow network with latency)
 
 Since the network is unpredictable, it’s hard to see any reasonable correlation between streaming and non-streaming. However, in general, times grows linearly as well.
 
-<div class="wide-image">
-    <img src="./wifi.png" alt="wifi"/>
-</div>
+![wifi|wide](./wifi.png)
 
 ### Wire
 
@@ -117,9 +113,7 @@ In the case of MariaDB the difference is insignificant. We may see the differenc
 
 ConnectorJ’s non-streaming is slightly better than everything else.
 
-<div class="wide-image">
-    <img src="./wire.png" alt="wire"/>
-</div>
+![wire|wide](./wire.png)
 
 You can play with charts [here](https://dkomanov.github.io/mysql-streaming/).
 
