@@ -1,5 +1,9 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# These files are auto-generated. In git we have just stubs.
+public/feed.xml
+src/content
+
 # dependencies
 /node_modules
 
