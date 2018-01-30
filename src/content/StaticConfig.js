@@ -1,4 +1,3 @@
-// this file is generated automatically by build.js!
 export default {
   "domain": "https://dkomanov.github.io",
   "baseUrl": "/",
@@ -8,5 +7,4 @@ export default {
   "disqus": "blog-komanov-com",
   "twitterName": "dkomanov",
   "facebookName": "dkomanov"
-}
-;
+};
