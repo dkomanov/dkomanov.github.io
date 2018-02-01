@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './BlogPostList.css';
 import Pagination from './Pagination/Pagination';
 import Tags from './Tags/Tags';
-import './BlogPostList.css';
 
 class BlogPostPreview extends React.Component {
   static propTypes = {

@@ -4,15 +4,20 @@ import React from 'react';
 export default class Loader extends React.Component {
   static propTypes = {
     loading: PropTypes.bool,
+    content: PropTypes.any,
+  };
+
+  static defaultProps = {
+    content: 'Loading...',
   };
 
   render() {
-    const {loading} = this.props;
+    const {loading, content} = this.props;
 
     if (loading === true) {
-      return (
-        <p>Loading...</p>
-      );
+      return typeof content === 'string'
+        ? <p>{content}</p>
+        : content;
     } else {
       return null;
     }

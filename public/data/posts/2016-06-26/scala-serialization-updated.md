@@ -1,5 +1,4 @@
-I’ve just created a site on [GitHub Pages](https://dkomanov.github.io/scala-serialization/).
-There I’ve put my recent benchmark results from the
+I’ve just created [charts](/charts/scala-serialization/). There I’ve put my recent benchmark results from the
 [Scala Serialization article](/p/scala-serialization).
 
 Things changed:
@@ -10,7 +9,7 @@ Things changed:
   “Buffer underflow” exception, it is related to multi-threading,
   but I didn’t have enough time to investigate).
 * Libraries versions are updated (boopickle, pickling, scalapb).
-Scala Pickling [improved](https://medium.com/@biasedrandom/hi-dmitry-7de5bc33a71d) significantly.
+* Scala Pickling [improved](https://medium.com/@biasedrandom/hi-dmitry-7de5bc33a71d) significantly.
 
 Thanks to everyone for comments, pull requests and shares.
 

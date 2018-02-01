@@ -3,6 +3,7 @@ import React from 'react';
 import {Route, Switch, withRouter} from 'react-router';
 import {BrowserRouter} from 'react-router-dom';
 import * as page from './../../pages';
+import * as chart from './../../pages/Charts';
 import './App.css';
 
 // https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/scroll-restoration.md
@@ -42,6 +43,11 @@ export default class App extends React.Component {
             <Route exact path="/what-i-read/:month?" component={page.WhatIRead}/>
             <Route exact path="/about" component={page.About}/>
             <Route exact path="/powered" component={page.Powered}/>
+            <Route exact path="/charts/mysql-streaming" component={chart.MysqlStreaming}/>
+            <Route exact path="/charts/read-lines" component={chart.ReadLines}/>
+            <Route exact path="/charts/read-utf8" component={chart.ReadUtf8}/>
+            <Route exact path="/charts/scala-serialization" component={chart.ScalaSerialization}/>
+            <Route exact path="/charts/scala-string-format" component={chart.ScalaStringFormat}/>
             <Route path="*" component={page.NotFound}/>
           </Switch>
         </ScrollToTop>

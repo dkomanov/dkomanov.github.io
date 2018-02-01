@@ -120,13 +120,15 @@
     font-size: 16px;
 }
 
-/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
-.markdown .wide-image {
-    width: 96vw;
-    position: relative;
-    display: block;
-    left: 50%;
-    right: 50%;
-    margin-left: -48vw;
-    margin-right: -48vw;
+.markdown.tiny * {
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.markdown.tiny ul, .markdown.tiny ul {
+    padding: 0;
+}
+
+.markdown.tiny ul li {
+    margin-bottom: 0;
 }

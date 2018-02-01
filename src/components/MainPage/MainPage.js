@@ -27,6 +27,11 @@ class Header extends React.Component {
 export default class MainPage extends React.Component {
   static propTypes = {
     teaserUrl: PropTypes.string,
+    fluid: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    fluid: false,
   };
 
   render() {

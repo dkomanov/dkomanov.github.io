@@ -62,7 +62,7 @@ class HighlightJs extends React.Component {
   }
 }
 
-class ImageLoader extends  React.Component {
+class ImageLoader extends React.Component {
   static propTypes = {
     src: PropTypes.string,
     title: PropTypes.string,
@@ -75,7 +75,7 @@ class ImageLoader extends  React.Component {
 
     if (className === 'wide') {
       return (
-        <span className="wide-image">
+        <span className="wide-content">
           <img src={src} alt={alt} title={title}/>
         </span>
       );
@@ -86,10 +86,19 @@ class ImageLoader extends  React.Component {
 }
 
 export default class Markdown extends React.Component {
+  static propTypes = {
+    tiny: PropTypes.bool,
+    source: PropTypes.string.isRequired,
+  };
+
+  static defaultProps = {
+    tiny: false
+  };
+
   render() {
-    const {source} = this.props;
+    const {tiny, source} = this.props;
     return (
-      <div className="markdown" role="main">
+      <div className={`markdown ${tiny ? 'tiny' : ''}`} role="main">
         <ReactMarkdown
           source={source}
           renderers={{

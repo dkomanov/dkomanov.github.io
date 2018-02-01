@@ -315,7 +315,7 @@ As you can see, optimized concatenation works better on strings longer than
 Scala’s interpolations (s, f and raw) are slow, its performance lower than
 regular string concatenation and approximately the same as slf4j.
 
-The more convenient chart is [here](https://dkomanov.github.io/scala-string-format/).
+The more convenient chart is [here](/charts/scala-string-format/).
 
 ![Different kind of string formatting performance, divided by resulting string length, nanos|wide](./string-formatting.png)
 
@@ -493,8 +493,6 @@ Test configuration:
 * Scala Library 2.12
 * Hardware is Intel® Core™ i7–5600U CPU @ 2.60GHz × 4 (2 core + 2 HT) with 16 GB RAM
 
-As always, all code is on [GitHub](https://github.com/dkomanov/scala-string-format).
-Graphs and tables on [GitHub.io](https://dkomanov.github.io/scala-string-format/). Comments, suggestions and
-blaming are welcome.
+As always, all code is on [GitHub](https://github.com/dkomanov/scala-string-format). Graphs and tables are [here](/charts/scala-string-format/). Comments, suggestions and blaming are welcome.
 
 Originally posted on [Medium](https://medium.com/@dkomanov/scala-string-interpolation-performance-21dc85e83afd).

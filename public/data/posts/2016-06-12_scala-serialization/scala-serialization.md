@@ -1,4 +1,4 @@
-*UPD*: Recent benchmark charts are at [GitHub](https://dkomanov.github.io/scala-serialization/).
+*UPD*: Recent benchmark charts are [here](/charts/scala-serialization/).
 
 It’s common to use [JSON](http://json.org/) as the main format of serialized data.
 It’s very convenient to use it both on client and server. Obviously, it’s not

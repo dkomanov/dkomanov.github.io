@@ -61,6 +61,17 @@
     position: relative;
 }
 
+/* https://css-tricks.com/full-width-containers-limited-width-parents/ */
+.wide-content {
+    width: 96vw;
+    position: relative;
+    display: block;
+    left: 50%;
+    right: 50%;
+    margin-left: -48vw;
+    margin-right: -48vw;
+}
+
 @media only screen and (max-width: 800px) {
     .site-content {
         padding: 0 32px;
