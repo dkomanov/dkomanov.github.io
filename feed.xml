@@ -6,7 +6,7 @@
     <link>https://dkomanov.github.io/</link>
     <atom:link href="https://dkomanov.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <pubDate>Mon, 18 Sep 2017 00:00:00 GMT</pubDate>
-    <lastBuildDate>Sat, 03 Feb 2018 11:21:46 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 03 Feb 2018 11:31:52 GMT</lastBuildDate>
     <item>
       <title>The Cost of Streaming Data from MySQL</title>
       <description>How streaming from MySQL (on client side) affects performance comparing to non-streaming...</description>
