@@ -13,5 +13,6 @@ export {default as Markdown} from './Markdown/Markdown';
 export {default as PageFooter} from './PageFooter/PageFooter';
 export {default as ShareButtons} from './ShareButtons/ShareButtons';
 export {default as SiteMenu} from './SiteMenu/SiteMenu';
+export {default as StaticPage} from './StaticPage';
 export {default as TeaserImage} from './TeaserImage/TeaserImage';
 export {default as TimeUnits} from './TimeUnits/TimeUnits';
