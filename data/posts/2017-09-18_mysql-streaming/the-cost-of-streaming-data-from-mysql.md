@@ -115,7 +115,7 @@ ConnectorJ’s non-streaming is slightly better than everything else.
 
 ![wire|wide](./wire.png)
 
-You can play with charts [here](https://dkomanov.github.io/mysql-streaming/).
+You can play with charts [here](/charts/mysql-streaming).
 
 ## Conclusion
 
@@ -131,7 +131,7 @@ The use case for the event sourcing simulation is 1000 rows with unique ID’s a
 
 To test the correctness of my benchmark I used an open source library [wix-embedded-mysql](https://github.com/wix/wix-embedded-mysql). It is a highly useful tool that enables you not to think about MySQL server installation (it downloads, runs, and shutdowns a real MySQL server instance in your test).
 
-You can check out my [GitHub repo](https://github.com/dkomanov/mysql-streaming) for more details.
+You can check out my [GitHub repo](/charts/mysql-streaming) for more details.
 
 ## Extra
 

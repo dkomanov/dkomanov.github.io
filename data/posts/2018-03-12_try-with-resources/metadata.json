@@ -1,0 +1,6 @@
+{
+  "date": "2018-03-12",
+  "title": "Scala try-with-resources",
+  "description": "My 2 cents on how to properly manage resources in Scala, or a story of reimplementing try-with-resources in Scala.",
+  "tags": ["scala", "java", "exception", "error", "io"]
+}
