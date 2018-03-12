@@ -1,11 +1,11 @@
-Resource management is a very important topic in software development. Also it is hard to add something new about it. Topic is covered pretty well in all kinds of blog posts, articles and tech papers. Nevertheless, I have something to say, not new, but I believe it's worth repeating.
+Resource management is a very important topic in software development. Also, it is hard to add something new to it. The topic is covered pretty well in all kinds of blog posts, articles, and tech papers. Nevertheless, I have something to say, not new, but I believe it's worth repeating.
 
 ## Intro
 
 A usual pattern for working with files (or other resources), for example, is following:
 
 ```scala
-var file: InputStream = _
+val file: InputStream = _
 try {
   // read from stream
 } finally {
@@ -30,13 +30,13 @@ try {
 
 By doing this exception in finally-block is just ignored. Which is also not always good.
 
-I've recently [upgraded](https://commons.apache.org/proper/commons-io/upgradeto2_6.html) Apache Commons library in one of my projects and I noticed that IOUtils.closeQuietly method became [deprecated](https://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/deprecation/deprecation.html). So, now I finally have to do something with it.
+I've recently [upgraded](https://commons.apache.org/proper/commons-io/upgradeto2_6.html) Apache Commons library in one of my projects and I noticed that the IOUtils.closeQuietly method became [deprecated](https://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/deprecation/deprecation.html). So, now I finally have to do something with it to make it right.
 
 ## try-with-resources
 
 In Java, since Java7, there is a special language construct for such cases, called try `try-with-resources`. This concept described very well in [this](http://www.oracle.com/technetwork/articles/java/trywithresources-401775.html) tech article. Actually, most of the content of this post is scattered there (not everything, thankfully).
 
-What I tried to do, is to find a way of reusing this pattern, but in Scala. I was quiet disappointed, I must say. From 5 first results in [Google](https://www.google.com/search?q=scala+try+with+resources) the correct one was only [one](https://codereview.stackexchange.com/questions/79267/scala-trywith-that-closes-resources-automatically), and it was 4th! This is why I decided to go over some mistakes that were made there.
+What I tried to do, is to find a way of reusing this pattern, but in Scala. I was quite disappointed, I must say. From 5 first results in [Google](https://www.google.com/search?q=scala+try+with+resources) the correct one was only [one](https://codereview.stackexchange.com/questions/79267/scala-trywith-that-closes-resources-automatically), and it was 4th! This is why I decided to go over some mistakes that were made there.
 
 ### Mistake 1: swallow exception in finally
 
@@ -48,11 +48,11 @@ finally {
 }
 ```
 
-`close` can throw an exception, therefore exception thrown in try-block might be swallowed. How to deal with it? There solution isn't "neat".
+`close` can throw an exception, therefore exception thrown in try-block might be swallowed. How to deal with it? The solution isn't "neat".
 
 ```
 var exception: Throwable = null
-var file: InputStream = _
+val file: InputStream = _
 try {
   // read from stream
 } catch {
@@ -73,9 +73,9 @@ try {
 }
 ```
 
-Ok, this is a little bit long one, but what is important here is a call to [addSuppressed](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable)) method. So, if there was an exception in try-block, exception from `close` won't swallow it, but will be just added to original exception as suppressed. Nice!
+Ok, this is a little bit long one, but what is important here is a call to [addSuppressed](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#addSuppressed(java.lang.Throwable)) method. So, if there was an exception in try-block, exception from `close` won't swallow it but will be just added to original exception as suppressed. Nice!
 
-This mistake I see in many places, for example in the most popular [StackOverflow](https://stackoverflow.com/questions/39866000/java-try-with-resource-not-working-with-scala) [response](https://stackoverflow.com/a/39868021/426397).
+This mistake I saw in many places, for example in the most popular [StackOverflow](https://stackoverflow.com/questions/39866000/java-try-with-resource-not-working-with-scala) [response](https://stackoverflow.com/a/39868021/426397).
 
 ### Mistake 2: Catching Exception/Throwable
 
@@ -113,7 +113,7 @@ It won't match special exceptions like InterruptedException or OutOfMemoryError,
 
 ### Mistake 3: Swallowing exceptions from close
 
-I showed in the beginning a use of `closeQuietly` in finally. When can it be bad? Let's put aside the topic of swallowing exceptions in general. Let's assume, that it's either ok or we do proper logging on swallow. So, what can go wrong?
+I showed, in the beginning, a use of `closeQuietly` in finally. When can it be bad? Let's put aside the topic of swallowing exceptions in general. Let's assume, that it's either ok or we do proper logging on the swallow. So, what can go wrong?
 
 Here is a very simple example that describes the problem:
 
@@ -136,9 +136,9 @@ So, what does it mean when [close](http://hg.openjdk.java.net/jdk9/jdk9/jdk/file
 
 We can't do anything about the latter case. But what's about failing flush on disk? We can definitely say, that our file doesn't contain exactly what we expected to write there.
 
-So, in this case, when we write something in file (socket, whatever), we shouldn't swallow exception on close, because we can't definitively say whether our business process succeeded or not. So, we should signal to our caller, that we failed.
+So, in this case, when we write something in a file (socket, whatever), we shouldn't swallow exception on close, because we can't definitively say whether our business process succeeded or not. So, we should signal to our caller, that we failed.
 
-Also we may deduct from it, that it's mostly fine to swallow exception in close during read.
+Also, we may deduct from it, that it's mostly fine to swallow exception in close during reading.
 
 ## try-with-resources in Scala
 
@@ -161,17 +161,15 @@ def withResources[T <: AutoCloseable, V](r: => T)(f: T => V): V = {
 }
 
 private def closeAndAddSuppressed(e: Throwable, resource: AutoCloseable): Unit = {
-  if (resource != null) {
-    if (e != null) {
-      try {
-        resource.close()
-      } catch {
-        case NonFatal(suppressed) =>
-          e.addSuppressed(suppressed)
-      }
-    } else {
+  if (e != null) {
+    try {
       resource.close()
+    } catch {
+      case NonFatal(suppressed) =>
+        e.addSuppressed(suppressed)
     }
+  } else {
+    resource.close()
   }
 }
 ```
@@ -180,15 +178,13 @@ A little bit verbose, but it should be a part of a standard library (or your fra
 
 ## Recap
 
-Let's recap main points:
+Let's recap the main points:
 * Don't catch `Exception` or `Throwable`.
 * Be cautious in finally clause, don't let exception there to overthrow an original one.
 * You may swallow exceptions in close for read operations.
 
 ## Conclusion
 
-Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in not mature enough languages (I believe, Scala is one of that kind). I think, good pattern must be somehow integrated in a language, maybe as a language construct, maybe as a part of a core library.
+Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in not mature enough languages (I believe, Scala is one of that kind). Don’t get me wrong, there are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/). But I believe that it should be a part of the language. Either as a language construct or as a part of a scala-library. It’s too important to not have it.
 
-Don't get me wrong. There are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/), but I think in should be in scala-library, accessible without any additional dependency.
-
-All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/io). Originally posted on [Medium]().
+All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/io). Originally posted on [Medium](https://medium.com/@dkomanov/scala-try-with-resources-735baad0fd7d).
