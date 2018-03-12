@@ -6,7 +6,7 @@
     <link>https://dkomanov.github.io/</link>
     <atom:link href="https://dkomanov.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <pubDate>Mon, 12 Mar 2018 00:00:00 GMT</pubDate>
-    <lastBuildDate>Mon, 12 Mar 2018 21:15:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 22:05:30 GMT</lastBuildDate>
     <item>
       <title>Scala try-with-resources</title>
       <description>My 2 cents on how to properly manage resources in Scala, or a story of reimplementing try-with-resources in Scala.</description>
