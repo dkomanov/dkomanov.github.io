@@ -1,3 +1,5 @@
+> UPD: Apparently in top5 from Google there are no correct examples, changed text accordingly.
+
 Resource management is a very important topic in software development. Also, it is hard to add something new to it. The topic is covered pretty well in all kinds of blog posts, articles, and tech papers. Nevertheless, I have something to say, not new, but I believe it's worth repeating.
 
 ## Intro
@@ -36,7 +38,7 @@ I've recently [upgraded](https://commons.apache.org/proper/commons-io/upgradeto2
 
 In Java, since Java7, there is a special language construct for such cases, called try `try-with-resources`. This concept described very well in [this](http://www.oracle.com/technetwork/articles/java/trywithresources-401775.html) tech article. Actually, most of the content of this post is scattered there (not everything, thankfully).
 
-What I tried to do, is to find a way of reusing this pattern, but in Scala. I was quite disappointed, I must say. From 5 first results in [Google](https://www.google.com/search?q=scala+try+with+resources) the correct one was only [one](https://codereview.stackexchange.com/questions/79267/scala-trywith-that-closes-resources-automatically), and it was 4th! This is why I decided to go over some mistakes that were made there.
+What I tried to do, is to find a way of reusing this pattern, but in Scala. I was quite disappointed, I must say. From 5 first results in [Google](https://www.google.com/search?q=scala+try+with+resources) there wasn't any correct! This is why I decided to go over some mistakes that were made there.
 
 ### Mistake 1: swallow exception in finally
 
@@ -111,7 +113,35 @@ case NonFatal(e) => Failure(e)
 
 It won't match special exceptions like InterruptedException or OutOfMemoryError, which will be just propagated. What's also good, this extractor is used inside Try and Future, so you don't need to care in your code about it.
 
-### Mistake 3: Swallowing exceptions from close
+### Mistake 3: Not closing resource
+
+In previous part I suggested to use NonFatal extractor, but it has to be used wisely. Another [example](https://codereview.stackexchange.com/questions/79267/scala-trywith-that-closes-resources-automatically) from Google. In attempt to make try-with-resources more idiomatic, the big mistake was introduced:
+
+```scala
+def apply[C <: Closeable, R](resource: => C)(f: C => R): Try[R] =
+  Try(resource).flatMap(resourceInstance => {
+    try {
+      val returnValue = f(resourceInstance)
+      Try(resourceInstance.close()).map(_ => returnValue)
+    } catch {
+      case NonFatal(exceptionInFunction) =>
+        try {
+          resourceInstance.close()
+          Failure(exceptionInFunction)
+        } catch {
+          case NonFatal(exceptionInClose) =>
+            exceptionInFunction.addSuppressed(exceptionInClose)
+            Failure(exceptionInFunction)
+        }
+    }
+  })
+```
+
+Notice that catch clause: on NonFatal exception - close the resource. But what's about fatal exception? What are we supposed to do with resources? Remember, one of the fatal exceptions is InterruptedException? Isn't it normal to cleanup before stopping thread? Of course it is.
+
+The general rule is you should always try to close (release) the resource. Even in case of "fatal" exception.
+
+### Mistake 4: Swallowing exceptions from close
 
 I showed, in the beginning, a use of `closeQuietly` in finally. When can it be bad? Let's put aside the topic of swallowing exceptions in general. Let's assume, that it's either ok or we do proper logging on the swallow. So, what can go wrong?
 
@@ -185,6 +215,6 @@ Let's recap the main points:
 
 ## Conclusion
 
-Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in not mature enough languages (I believe, Scala is one of that kind). Don’t get me wrong, there are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/). But I believe that it should be a part of the language. Either as a language construct or as a part of a scala-library. It’s too important to not have it.
+Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in languages not mature enough (I believe, Scala is one of that kind). Don’t get me wrong, there are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/). But I believe that it should be a part of the language. Either as a language construct or as a part of a scala-library. It’s too important to not have it.
 
 All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/io). Originally posted on [Medium](https://medium.com/@dkomanov/scala-try-with-resources-735baad0fd7d).
