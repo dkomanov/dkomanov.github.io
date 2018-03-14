@@ -185,6 +185,6 @@ Let's recap the main points:
 
 ## Conclusion
 
-Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in not mature enough languages (I believe, Scala is one of that kind). Don’t get me wrong, there are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/). But I believe that it should be a part of the language. Either as a language construct or as a part of a scala-library. It’s too important to not have it.
+Despite the fact that resource management is a well-known subject, there are still many mistakes around it. Especially in languages not mature enough (I believe, Scala is one of that kind). Don’t get me wrong, there are libraries in Scala world that handle resource management properly, i.e. [better-files](https://github.com/pathikrit/better-files/) or [scala-arm](https://github.com/jsuereth/scala-arm/). But I believe that it should be a part of the language. Either as a language construct or as a part of a scala-library. It’s too important to not have it.
 
 All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/io). Originally posted on [Medium](https://medium.com/@dkomanov/scala-try-with-resources-735baad0fd7d).
