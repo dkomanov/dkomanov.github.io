@@ -6,6 +6,17 @@ import {loadJson} from '../../../util';
 
 const runs = [
   {
+    date: '2018-04-08',
+    comment: `
+* Major upgrade to scala 2.12.4.
+* Add [CBOR](https://github.com/FasterXML/jackson-dataformats-binary/tree/master/cbor) data format (via Jackson)
+* Upgrade versions of libraries: jackson&nbsp;(2.9.5), protobuf&nbsp;(3.4.0), boopickle&nbsp;(1.3.0), chill&nbsp;(0.9.2).
+* Downgrade: protobuf&nbsp(3.1.0).
+* Fixed Chill threading via state per thread (no penalty for clone for it).
+* Remove circe (failed to compile).
+    `,
+  },
+  {
     date: '2017-12-01',
     comment: `
 * Introduced benchmark for [Circe](https://github.com/circe/circe) library.
@@ -35,6 +46,10 @@ const xDesc = {
     {
       name: 'Json',
       value: 'JSON',
+    },
+    {
+      name: 'Cbor',
+      value: 'CBOR',
     },
     {
       name: 'ScalaPb',
