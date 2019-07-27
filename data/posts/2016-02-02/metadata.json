@@ -1,6 +1,0 @@
-{
-  "date": "2016-02-02",
-  "title": "One more threat of Mockito",
-  "description": "Discovery during testing of a mutable code with Mockito...",
-  "tags": ["scala", "design", "testing"]
-}

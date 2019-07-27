@@ -1,6 +1,0 @@
-{
-  "date": "2015-11-05",
-  "title": "Micro-optimization for UUID.fromString in 7 steps",
-  "description": "A sequence of 7 micro-optimizations for parsing UUID from String to make it really fast!",
-  "tags": ["java", "jdk8", "performance"]
-}

@@ -1,6 +1,0 @@
-{
-  "date": "2016-12-03",
-  "title": "Scala StringBuilder vs Java StringBuilder Performance",
-  "description": "O_O performance benchmark of StringBuilder wrapper in Scala...",
-  "tags": ["scala", "java", "benchmark", "performance", "common-sense"]
-}
