@@ -22,7 +22,7 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         break;
 
       case 'what-i-read':
-        const date = new Date(value.split('/')[2] + '-01');
+        const date = new Date(value.split('/')[1] + '-01');
 
         createNodeField({name, node, value: `/what-i-read${value}`});
         createNodeField({name: 'month', node, value: date});
@@ -168,7 +168,7 @@ const queryMonths = async (graphql) => {
           node {
             id
             fields {
-              month(formatString: "YYYY-DD")
+              month(formatString: "YYYY-MM")
             }
           }
         }

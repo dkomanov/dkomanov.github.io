@@ -37,7 +37,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages/charts`,
         name: `charts-content`,
-        ignore: 'js'
+        ignore: 'js',
       },
     },
     {
@@ -68,8 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-feed`,
       options: {
-        options: {
-          query: `
+        query: `
           {
             site {
               siteMetadata {
@@ -81,19 +80,19 @@ module.exports = {
             }
           }
         `,
-          feeds: [
-            {
-              serialize: ({query: {site, allMarkdownRemark}}) => {
-                return allMarkdownRemark.edges.map(({node}) => {
-                  return Object.assign({}, node.frontmatter, {
-                    description: node.excerpt,
-                    date: node.frontmatter.date,
-                    url: site.siteMetadata.siteUrl + node.fields.slug,
-                    guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  });
+        feeds: [
+          {
+            serialize: ({query: {site, allMarkdownRemark}}) => {
+              return allMarkdownRemark.edges.map(({node}) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
                 });
-              },
-              query: `
+              });
+            },
+            query: `
               {
                 allMarkdownRemark(
                   filter: {
@@ -117,11 +116,10 @@ module.exports = {
                 }
               }
             `,
-              output: '/rss.xml',
-              title: 'Severe Software Developer Blog',
-            },
-          ],
-        },
+            output: '/rss.xml',
+            title: 'Severe Software Developer Blog',
+          },
+        ],
       },
     },
     {
