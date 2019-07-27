@@ -2,7 +2,7 @@ import React from 'react';
 import {Chart} from 'react-google-charts';
 
 function getConvertOptionsFunc(chartType) {
-  return window.google && window.google.charts && window.google.charts[chartType]
+  return window && window.google && window.google.charts && window.google.charts[chartType]
     ? window.google.charts[chartType].convertOptions
     : null;
 }

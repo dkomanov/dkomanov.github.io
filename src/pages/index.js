@@ -1,7 +1,38 @@
-export {default as About} from './About/About';
-export {default as Blog} from './Blog/Blog';
-export {default as BlogByTag} from './BlogByTag/BlogByTag';
-export {default as BlogPost} from './BlogPost/BlogPost';
-export {default as NotFound} from './NotFound/NotFound';
-export {default as Powered} from './Powered/Powered';
-export {default as WhatIRead} from './WhatIRead/WhatIRead';
+import {graphql} from 'gatsby';
+import React from 'react';
+import {BlogPostList, Layout, Seo} from '../components';
+import '../components/fragments';
+
+// TODO: https://www.gatsbyjs.org/docs/adding-pagination/
+
+class BlogIndex extends React.Component {
+  render() {
+    const {data} = this.props;
+    const posts = data.allMarkdownRemark.edges.map(({node}) => node);
+
+    return (
+      <Layout location={this.props.location} teaserUrl="img/cover.jpg">
+        <Seo title="All posts"/>
+        <BlogPostList posts={posts} pageSize={100} page={1} urlFunc={() => null}/>
+      </Layout>
+    );
+  }
+}
+
+export default BlogIndex;
+
+export const pageQuery = graphql`
+    query {
+        allMarkdownRemark(
+            filter: {
+                frontmatter: {
+                    type: {eq: "blog"}
+                    draft: {ne: true}
+                }
+            },
+            sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+            ...BlogPostList
+        }
+    }
+`;

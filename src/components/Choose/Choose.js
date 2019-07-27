@@ -7,7 +7,7 @@ export default class Choose extends React.Component {
     items: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string.isRequired,
       value: PropTypes.any.isRequired,
-      default: PropTypes.bool,
+      default: PropTypes.bool
     })).isRequired,
     label: PropTypes.any,
     multiple: PropTypes.bool,
@@ -15,7 +15,7 @@ export default class Choose extends React.Component {
   };
 
   static defaultProps = {
-    multiple: false,
+    multiple: false
   };
 
   constructor(props) {
@@ -28,7 +28,7 @@ export default class Choose extends React.Component {
     }
 
     this.state = {
-      activeMap,
+      activeMap
     };
   }
 
@@ -86,7 +86,7 @@ export default class Choose extends React.Component {
       }
     } else {
       items.forEach(i => {
-        newActiveMap[i.value] = false
+        newActiveMap[i.value] = false;
       });
       newActiveMap[item.value] = true;
       if (onChange) {
@@ -95,7 +95,7 @@ export default class Choose extends React.Component {
     }
 
     this.setState({
-      activeMap: newActiveMap,
+      activeMap: newActiveMap
     });
   };
 }

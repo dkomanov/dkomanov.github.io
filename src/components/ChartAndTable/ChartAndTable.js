@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {GoogleChart} from '..';
+import {GoogleChart, Button} from '..';
 import {buildData} from '../../util';
 import './ChartAndTable.css';
 
@@ -116,7 +116,7 @@ export default class ChartAndTable extends React.Component {
           loader="Rendering chart..."
         />
         <div className="table-toggler">
-          <a onClick={this.handleOnClick}>Toggle Raw Data</a>
+          <Button onClick={this.handleOnClick}>Toggle Raw Data</Button>
         </div>
         {this.state.hideTable || <RawDataTable data={data}/>}
       </div>

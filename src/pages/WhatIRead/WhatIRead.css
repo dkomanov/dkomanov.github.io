@@ -1,8 +1,0 @@
-.what-i-read h3 a {
-    cursor: pointer;
-    border-bottom: 1px dashed #000;
-}
-
-.what-i-read h3 a.loading {
-    cursor: default;
-}

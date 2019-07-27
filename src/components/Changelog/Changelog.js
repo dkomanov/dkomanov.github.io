@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Markdown} from '../index';
+import {Button, Markdown} from '..';
 
 export default class Changelog extends React.Component {
   static propTypes = {
@@ -15,9 +15,9 @@ export default class Changelog extends React.Component {
     const children = this.props.runs.map(({date, comment}) =>
       <div key={date}>
         <h4>
-          <a onClick={event => this.handleOnClick(event, date)}>{date}</a>
+          <Button onClick={event => this.handleOnClick(event, date)}>{date}</Button>
         </h4>
-        {typeof comment === 'string' ? <Markdown source={comment} tiny/> : comment}
+        {typeof comment === 'string' ? <Markdown html={comment} tiny/> : comment}
         <hr/>
       </div>
     );

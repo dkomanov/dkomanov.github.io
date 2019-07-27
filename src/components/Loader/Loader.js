@@ -4,11 +4,11 @@ import React from 'react';
 export default class Loader extends React.Component {
   static propTypes = {
     loading: PropTypes.bool,
-    content: PropTypes.any,
+    content: PropTypes.any
   };
 
   static defaultProps = {
-    content: 'Loading...',
+    content: 'Loading...'
   };
 
   render() {

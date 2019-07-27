@@ -1,32 +1,60 @@
 {
-  "name": "site",
-  "version": "0.1.0",
+  "name": "komanov.com",
   "private": true,
-  "homepage": "https://dkomanov.github.io",
-  "devDependencies": {
-    "gh-pages": "^1.0.0"
-  },
+  "description": "",
+  "version": "0.1.0",
+  "author": "Dmitry Komanov <dkomanov@gmail.com>",
   "dependencies": {
-    "axios": "^0.17.1",
-    "highlight.js": "^9.12.0",
-    "promise-polyfill": "^6.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.1.1",
-    "react-disqus-comments": "^1.1.1",
-    "react-dom": "^16.1.1",
-    "react-google-charts": "^1.5.5",
-    "react-markdown": "^3.1.4",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17",
-    "react-share": "^1.19.0"
+    "axios": "^0.19.0",
+    "gatsby": "^2.13.31",
+    "gatsby-image": "^2.2.6",
+    "gatsby-plugin-feed": "^2.3.4",
+    "gatsby-plugin-google-analytics": "^2.1.4",
+    "gatsby-plugin-manifest": "^2.2.3",
+    "gatsby-plugin-offline": "^2.2.4",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-sharp": "^2.2.8",
+    "gatsby-plugin-typography": "^2.3.2",
+    "gatsby-remark-autolink-headers": "^2.1.3",
+    "gatsby-remark-copy-linked-files": "^2.1.3",
+    "gatsby-remark-images": "^3.1.6",
+    "gatsby-remark-prismjs": "^3.3.3",
+    "gatsby-remark-responsive-iframe": "^2.2.4",
+    "gatsby-remark-smartypants": "^2.1.2",
+    "gatsby-source-filesystem": "^2.1.5",
+    "gatsby-transformer-remark": "^2.6.7",
+    "gatsby-transformer-sharp": "^2.2.4",
+    "prismjs": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-google-charts": "^3.0.14",
+    "react-helmet": "^5.2.1",
+    "react-share": "^3.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "homepage": "https://komanov.com",
+  "keywords": [
+    "dmitry komanov",
+    "software",
+    "engineering",
+    "komanov",
+    "mitya"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkomanov/dkomanov.github.io.git"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "prebuild": "node build.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "npm run build && gh-pages -d build --branch master --dotfiles"
   }
 }

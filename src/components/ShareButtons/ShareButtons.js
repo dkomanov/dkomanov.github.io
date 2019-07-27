@@ -1,54 +1,56 @@
-import PropTypes from 'prop-types';
+import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
-import {generateShareIcon, ShareButtons as ReactShareButtons} from 'react-share';
-import {Config} from '../../util';
+import {FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton} from 'react-share';
 import './ShareButtons.css';
 
-const {
-  FacebookShareButton,
-  TwitterShareButton
-} = ReactShareButtons;
+const ShareButtons = ({post}) => {
+  const data = useStaticQuery(graphql`
+      query ShareButtonsQuery {
+          site {
+              siteMetadata {
+                  siteUrl
+                  title
+                  social {
+                      twitter
+                      facebook
+                  }
+              }
+          }
+      }
+  `);
 
-const FacebookIcon = Config.facebookName ? generateShareIcon('facebook') : null;
-const TwitterIcon = Config.twitterName ? generateShareIcon('twitter') : null;
+  const {site: {siteMetadata: {siteUrl, title, social: {twitter, facebook}}}} = data;
 
-export default class ShareButtons extends React.Component {
-  static propTypes = {
-    post: PropTypes.object.isRequired,
-  };
+  const url = `${siteUrl}${post.fields.slug}`;
+  const tags = post.frontmatter.tags || [];
 
-  render() {
-    const {post} = this.props;
+  return (
+    <div className="share-buttons">
+      {
+        twitter &&
+        <TwitterShareButton
+          url={url}
+          className="share-button"
+          title={title}
+          via="dkomanov"
+          hashtags={tags}
+        >
+          <TwitterIcon size={24}/>
+        </TwitterShareButton>
+      }
+      {
+        facebook &&
+        <FacebookShareButton
+          url={url}
+          className="share-button"
+          quote={title}
+          hashtag={tags.length ? `#${tags[0]}` : null}
+        >
+          <FacebookIcon size={24}/>
+        </FacebookShareButton>
+      }
+    </div>
+  );
+};
 
-    const url = Config.postUrl(post);
-    const title = Config.postDescription(post);
-
-    return (
-      <div className="share-buttons">
-        {
-          Config.twitterName &&
-          <TwitterShareButton
-            url={url}
-            className="share-button"
-            title={title}
-            via="dkomanov"
-            hashtags={post.tags}
-          >
-            <TwitterIcon size={24}/>
-          </TwitterShareButton>
-        }
-        {
-          Config.facebookName &&
-          <FacebookShareButton
-            url={url}
-            className="share-button"
-            quote={title}
-            hashtag={post.tags ? `#${post.tags[0]}` : null}
-          >
-            <FacebookIcon size={24}/>
-          </FacebookShareButton>
-        }
-      </div>
-    );
-  }
-}
+export default ShareButtons;

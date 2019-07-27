@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Choose} from '..';
+import Choose from '../Choose/Choose';
 import './TimeUnits.css';
 
 const items = [

@@ -1,6 +1,6 @@
+import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Link} from 'react-router-dom';
 import './Tags.css';
 
 export default class Tags extends React.Component {
@@ -19,7 +19,8 @@ export default class Tags extends React.Component {
       return null;
     }
 
-    const items = tags.map(tag => <li key={tag} className="cf"><Link to={`/posts/${tag}`}>{tag.replace(' ', '\u00A0')}</Link></li>);
+    const items = tags.map(tag => <li key={tag} className="cf">
+      <Link to={`/posts/${tag}`}>{tag.replace(' ', '\u00A0')}</Link></li>);
     return (
       <ul className="tags">
         {items}

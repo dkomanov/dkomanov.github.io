@@ -1,10 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export default class ErrorMessage extends React.Component {
   static propTypes = {
     message: PropTypes.string.isRequired,
-    error: PropTypes.array,
+    error: PropTypes.array
   };
 
   render() {
