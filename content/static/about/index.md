@@ -15,5 +15,3 @@ to time (when I actually have some time).
 
 In Moscow I worked at [Yandex](https://www.yandex.com/) for 4 years, in Israel
 I work in [Wix](https://www.wix.com/).
-
-TEST
