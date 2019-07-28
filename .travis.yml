@@ -12,6 +12,7 @@ before_script:
   - "chmod 600 github_deploy_key"
   - "eval $(ssh-agent -s)"
   - "ssh-add github_deploy_key"
+  - "git remote set-url origin git@github.com:dkomanov/dkomanov.github.io.git"
 script:
   - "npm run test"
 after_success:
