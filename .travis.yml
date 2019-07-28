@@ -5,13 +5,13 @@ cache:
   directories:
     - node_modules
 before_script:
+  - "git checkout dev"
   - "npm i -g gatsby"
   - "npm i"
   - "openssl aes-256-cbc -K $encrypted_53aac12992f3_key -iv $encrypted_53aac12992f3_iv -in github_deploy_key.enc -out github_deploy_key -d"
   - "chmod 600 github_deploy_key"
   - "eval $(ssh-agent -s)"
   - "ssh-add github_deploy_key"
-  - "git checkout dev"
 script:
   - "npm run test"
 after_success:
