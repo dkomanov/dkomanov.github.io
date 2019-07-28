@@ -56,6 +56,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "preDeploy": "npm run test",
     "deploy": "gatsby build && gh-pages -d public --branch master --dotfiles"
   }
 }
