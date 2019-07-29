@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `@dkomanov`,
-    author: `Dmitry Komanov`,
     description: `Severe Software Developer Blog`,
     siteUrl: `https://komanov.com`,
+    author: `Dmitry Komanov`,
+    email: 'dkomanov@gmail.com',
     social: {
       twitter: `dkomanov`,
       facebook: 'dkomanov',
