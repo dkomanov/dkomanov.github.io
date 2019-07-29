@@ -10,6 +10,7 @@ const ShareButtons = ({post}) => {
               siteMetadata {
                   siteUrl
                   title
+                  description
                   social {
                       twitter
                       facebook
@@ -19,10 +20,12 @@ const ShareButtons = ({post}) => {
       }
   `);
 
-  const {site: {siteMetadata: {siteUrl, title, social: {twitter, facebook}}}} = data;
+  const {site: {siteMetadata: {siteUrl, title: siteTitle, description: siteDescription, social: {twitter, facebook}}}} = data;
 
   const url = `${siteUrl}${post.fields.slug}`;
   const tags = post.frontmatter.tags || [];
+  const title = post.frontmatter.title || siteTitle;
+  const description = post.frontmatter.description || siteDescription;
 
   return (
     <div className="share-buttons">
@@ -43,7 +46,7 @@ const ShareButtons = ({post}) => {
         <FacebookShareButton
           url={url}
           className="share-button"
-          quote={title}
+          quote={description}
           hashtag={tags.length ? `#${tags[0]}` : null}
         >
           <FacebookIcon size={24}/>
