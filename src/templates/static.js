@@ -1,6 +1,6 @@
 import {graphql} from 'gatsby';
 import React from 'react';
-import {Layout, Markdown} from '../components';
+import {Layout, Markdown, Seo} from '../components';
 import '../components/fragments';
 
 export default class Static extends React.Component {
@@ -8,6 +8,7 @@ export default class Static extends React.Component {
     const {data: {markdownRemark: md}} = this.props;
     return (
       <Layout teaserUrl={md.frontmatter.cover}>
+        <Seo title={md.frontmatter.title}/>
         <Markdown html={md.html}/>
       </Layout>
     );
@@ -19,6 +20,7 @@ export const pageQuery = graphql`
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
+                title
                 cover {
                     ...coverUrl
                 }

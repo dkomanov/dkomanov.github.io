@@ -12,7 +12,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} teaserUrl="img/cover.jpg">
-        <Seo title="All posts"/>
+        <Seo title="Blog"/>
         <BlogPostList posts={posts} pageSize={100} page={1} urlFunc={() => null}/>
       </Layout>
     );
