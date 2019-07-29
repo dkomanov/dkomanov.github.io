@@ -44,7 +44,7 @@ class TeaserfulLayout extends React.Component {
         <div className="site-content">
           {children}
         </div>
-        <PageFooter className="main-page-footer"/>
+        <PageFooter/>
       </div>
     );
   }
