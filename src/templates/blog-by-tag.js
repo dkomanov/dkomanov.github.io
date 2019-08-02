@@ -6,11 +6,10 @@ import '../components/fragments';
 export default class BlogPostListByTagTemplate extends React.Component {
   render() {
     const {data, pageContext: {tag}} = this.props;
-    const siteTitle = data.site.siteMetadata.title;
     const posts = data.allMarkdownRemark.edges.map(({node}) => node);
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} teaserUrl="/img/cover.jpg">
         <Seo title={`Blog posts by tag: ${tag}`}/>
         <h1>by tag: {tag} ({posts.length})</h1>
         <BlogPostList posts={posts} pageSize={100} page={1} urlFunc={() => null}/>
@@ -21,11 +20,6 @@ export default class BlogPostListByTagTemplate extends React.Component {
 
 export const pageQuery = graphql`
     query BlogPostByTag($tag: String!) {
-        site {
-            siteMetadata {
-                title
-            }
-        }
         allMarkdownRemark(
             filter: {
                 frontmatter: {
