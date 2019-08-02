@@ -231,4 +231,8 @@ function createAllOldRedirects(createRedirect) {
   redirect('/2016/06/26/scala-serialization-updated.html', '/p/scala-serialization-updated/');
   redirect('/2016/02/02/one-more-threat-of-mockito.html', '/p/one-more-threat-of-mockito/');
   redirect('/2016/06/12/scala-serialization.html', '/p/scala-serialization/');
+  redirect('/links', '/what-i-read');
+  redirect('/scala-serialization', '/charts/scala-serialization/');
+  redirect('/mysql-streaming', '/charts/mysql-streaming/');
+  redirect('/scala-string-format', '/charts/scala-string-format/');
 }
