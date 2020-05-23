@@ -1,7 +1,7 @@
 ---
 type: blog
 date: 2020-05-23
-title: "Writing Async App in Scala"
+title: "Writing Async App in Scala. Part 1: Coding"
 description: How the async code looks like, How to make it more readable and look like non-async code. Extending Future capabilities to match our needs.
 cover: ./cover.jpg
 tags: ["scala", "async", "coding"]
@@ -12,7 +12,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-1-cod
 
 > In this part we will cover the most basic part of async programming in Scala with Futures. \
 > Part 1. Coding. \
-> Part 2. Exception Handling. \
+> [Part 2. Exception Handling.](/p/writing-async-app-in-scala-part-2-exception-handling) \
 > Part 3. Threading Model. \
 > Part 4. Rewriting Existing App. \
 > Part 5. What's next?
