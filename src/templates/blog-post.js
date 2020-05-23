@@ -41,7 +41,7 @@ class BlogPostTemplate extends React.Component {
         <div className="blog-post" itemScope itemType="http://schema.org/Article">
           {
             post.frontmatter.cover &&
-            <h1>{post.title}</h1>
+            <h1>{post.frontmatter.title}</h1>
           }
           <Markdown html={post.html}/>
         </div>
