@@ -144,6 +144,25 @@ handle(HttpRequest("/cdn-boom"))
 
 And it's quite severe, because the framework will get the Future from our `handle` method, but this Future won't be resolved ever. And this, depending on defined timeouts, throttling and load could lead to something really bad (OutOfMemory, elevated response times etc.)
 
+## More Trivial Example
+
+Actually, there is a simpler case for showing why an async application shouldn't throw exceptions but only return it as failed futures.
+
+```scala
+def rpcCall: Future[Option[String]] = ???
+def reportException(e: Throwable): Unit = e.printStackTrace()
+
+def getUrlSafe: Future[Option[String]] = {
+  rpcCall.recover {
+    case e: Throwable =>
+      reportException(e)
+      None
+  }
+}
+```
+
+As you may see, if the `rpcCall` function will throw an exception, this method won't work as expected. Instead of falling back to `None` it will rethrow an exception. Most likely, at the end it will be properly wrapped in `Future.failed` or handled by the framework. But the end result would be undesired.
+
 ## How to safely create futures?
 
 There are couple solutions.
