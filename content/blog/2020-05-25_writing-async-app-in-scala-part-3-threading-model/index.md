@@ -5,7 +5,7 @@ title: "Writing Async App in Scala. Part 3: Threading Model"
 description: How many threads to use? How many thread pools or execution contexts do we need? How to minimize overhead for the better performance in async world?
 cover: ./cover.jpg
 tags: ["scala", "async", "threading"]
-canonicalUrl: TBD
+canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-3-threading-model-ef9e9033bd33
 ---
 
 > [Part 1. Coding.](/p/writing-async-app-in-scala-part-1-coding) \
@@ -375,6 +375,10 @@ Same applies to more important resources vs less important resources. There migh
 
 ## Conclusion
 
-* Don't use Await. Never.
+I want to leave you with few points, just to recap:
+* Try to minimize a number of threads. Your application's resilience depends on it.
+* Don't use Await. Never. If you have a `Future` just propagate it further.
+* Isolate blocking code as much as possible. Use an async alternative if possible.
+* Use direct `ExecutionContext` in your application code.
 
-All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/future). Originally posted on [Medium](). [Image](https://pixabay.com/photos/craftsman-loom-craftsmanship-hands-1839920/) by [Pexels](https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920).
+All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/future). Originally posted on [Medium](https://medium.com/@dkomanov/writing-async-app-in-scala-part-3-threading-model-ef9e9033bd33). [Image](https://pixabay.com/photos/craftsman-loom-craftsmanship-hands-1839920/) by [Pexels](https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920).
