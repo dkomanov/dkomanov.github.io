@@ -25,7 +25,7 @@ One interesting thing that async programming provides to us is an ability to use
 3. (the most significant one) It brings peace to a soul of a control freak :D
 
 What kinds of operations do we need to perform in our application:
-* HTTP or whatever server performs some IO for incoming/outgoing requests.
+* HTTP or whatever server performs some [IO](https://en.wikipedia.org/wiki/Input/output) for incoming/outgoing requests.
 * RPC/HTTP clients do some IO.
 * Database driver does IO.
 * And our application code orchestrates it all.
@@ -56,21 +56,31 @@ An application, on the other hand, may do slightly more (just as an example):
 
 So, an application orchestrates requests to multiple servers, does parsing and serialization (which are CPU-bound operations), converts one representation to another.
 
-### Single pool vs separate IO pool
+### Short introduction to ExecutionContext
 
-As we defined what is happening inside an application, we can reason about how to handle it.
+[ExecutionContext](https://www.scala-lang.org/api/current/scala/concurrent/ExecutionContext.html) is a simple abstraction:
+```scala
+trait ExecutionContext {
+  def execute(runnable: Runnable): Unit
+  def reportFailure(cause: Throwable): Unit
+}
+```
 
-Generally, there are two main approaches: share threads for all operations or allocate separate thread pools for different kinds of operations.
+Usually, there is a some kind of thread pool behind `ExecutionContext`: one of the [ExecutorService](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/Executors.html) provided by JDK (FixedThreadPool, ForkJoinPool, etc.)
 
-What is a trade-off for having a single thread pool? In a single thread pool all tasks will be submitted to a single queue, which means that tasks should wait its turn regardless of the time it needs.
+Any thread pool consists of 2 parts: queue for incoming tasks and a pool of threads. In order to run `map`/`flatMap`/`onComplete` of a `Future`, we need to submit a task (Runnable) to an `ExecutorService`. Submit consists of 2 operations: [offer](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/BlockingQueue.html#offer(E)) to a BlockingQueue and subsequent [take](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/BlockingQueue.html#take()) from it.
+
+### One pool to rule them all
+
+There is a temptation to use a single thread pool for all operations. Having the predefined [global](https://docs.scala-lang.org/overviews/core/futures.html#the-global-execution-context) ExecutionContext in scala library strengthens this temptation. However, don't be weak. There is something to consider. When we have a single thread pool, then we have a may encounter this kind of problem:
 
 ![Mix of short and long tasks in a queue](./queue.png)
 
-As you may see, multiple small IO tasks may wait in a queue until some big JSON is parsed, which postpones a bit a response for a client.
+This is a queue with different tasks in it. Mostly it has short IO tasks, but then a task appears that needs to parse some big JSON. And all short IO tasks will wait for this parsing to finish. If you use some highly optimized HTTP server like [netty](https://netty.io/) this is something that is likely to happen, because in netty all IO for each connection is performed in a single thread to avoid any synchronization.
 
-On the other hand, if a thread pool is implemented properly, the locality of data in a thread will enable faster execution. For example, when an HTTP server read a chunk of bytes, it sits in a CPU cache, and if parsing code will be executed right after a read operation, it will work with a cached data as opposed to working with a cold memory (for example, see latencies for accessing caches and memory for [i7 skylake](https://www.7-cpu.com/cpu/Skylake.html).)
+On the other hand, if a thread pool is implemented properly (like in netty), the locality of data in a thread will enable faster execution. For example, when an HTTP server read a chunk of bytes, it sits in a CPU cache, and if parsing code will be executed right after a read operation, it will work with a cached data as opposed to working with a cold memory (for example, see latencies for accessing caches and memory for [i7 skylake](https://www.7-cpu.com/cpu/Skylake.html).)
 
-There is no silver bullet. Depending on your application, on its actual workload, the answer may be different. Measure the time spent in your application code, decide what would be better for you.
+I will continue this topic at the end.
 
 ## Blocking code
 
@@ -131,24 +141,12 @@ By doing so we increase the resilience of our application to high traffic. Just 
 
 In guava there is a [directExecutor](https://guava.dev/releases/19.0/api/docs/com/google/common/util/concurrent/MoreExecutors.html#directExecutor()) which simply executes runnable immediately in the same thread. Same idea in Scala would look like:
 ```scala
-ExecutionContext.fromExecutor((runnable: Runnable) => runnable.run())
+implicit val directExecutionContext = ExecutionContext.fromExecutor(
+  (runnable: Runnable) => runnable.run()
+)
 ```
 
 Do we really need it? By definition, it doesn't provide any concurrency. And still, I'd argue it's a very important piece of our async application. Let's understand -- why?
-
-### How does ExecutionContext work?
-
-[ExecutionContext](https://www.scala-lang.org/api/current/scala/concurrent/ExecutionContext.html) is a simple abstraction:
-```scala
-trait ExecutionContext {
-  def execute(runnable: Runnable): Unit
-  def reportFailure(cause: Throwable): Unit
-}
-```
-
-Usually, there is a some kind of thread pool behind `ExecutionContext`: one of the [ExecutorService](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/Executors.html) provided by JDK (FixedThreadPool, ForkJoinPool, etc.)
-
-Any thread pool consists of 2 parts: queue for incoming tasks and a pool of threads. In order to run `map`/`flatMap`/`onComplete` of a `Future`, we need to submit a task (Runnable) to an `ExecutorService`. Submit consists of 2 operations: [offer](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/BlockingQueue.html#offer(E)) to a BlockingQueue and subsequent [take](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/concurrent/BlockingQueue.html#take()) from it.
 
 ### Simple example
 
@@ -228,7 +226,7 @@ def map[U](f: T => U)(implicit ec: ExecutionContext): Future[U] = {
 
 And all this complexity could be avoided by using `smartMap`.
 
-Obviously, there is a reason, why the default behavior of a `Future` is like this. In general case such optimizations (direct executor and smartMap) could lead to a [starvation](https://docs.oracle.com/javase/tutorial/essential/concurrency/starvelive.html) if all operations on futures are too long. However, if we know the load profile of our application we can apply such optimizations for a pretty good benefit.
+Of course, there is a reason, why the default behavior of a `Future` is like this. In general case such optimizations (direct executor and smartMap) could lead to a [starvation](https://docs.oracle.com/javase/tutorial/essential/concurrency/starvelive.html) if all operations on futures are too long. However, if we know the load profile of our application we can apply such optimizations for a pretty good benefit.
 
 Regarding `smartMap`. I put it as an example, in my real code I don't use it, because we don't have that many possibly-redundant operations, and usage of non-standard extensions would lead to confusion as it would be kind of necessary then to avoid using standard ones, which complicates life much more than gain we get from it.
 
@@ -345,33 +343,37 @@ java.lang.IllegalStateException
 
 As you may see, it has much more information. This example has only 2 nesting levels, but it's clear from this example, that with `directExecutionContext` we get the stack trace from the last async operation, which is not as good as in blocking app, but slightly better than non-direct.
 
-## A Final Look
+## The Final Glance
 
-So, at the end, how many threads are we going to use? And how many `ExecutionContext`s? Options vary, but there are 2 opposite cases: one thread pool/ExecutionContext for everything and multiple pools, possibly one per each IO entity. Let's explore both possibilities.
+So, at the end, how many threads are we going to use? And how many `ExecutionContext`s? Options vary, but there are 2 opposite cases: one thread pool/ExecutionContext for everything and multiple pools, possibly one per each IO entity; and all kinds of permutations in the middle. Let's explore both opposites.
 
 ### Single shared thread pool
 
 A single thread pool for the application code and all IO code is possible. For achieving that you need use only non-blocking libraries with an ability to specify (override) a thread pool. In this case everything is pretty simple, you have only 2 `ExecutionContext`s: direct and an `ExecutionContext` backed by the single thread pool for async stuff.
 
-Be aware that your code shouldn't occupy to much time on the CPU. Otherwise one such block of code may increase the response time for several requests which are ready to be sent back, but waiting.
+This approach is the simplest in terms of code. No need to think where to submit task: for all async stuff use the real thread pool, for everything else use `directExecutionContext`. But, as I stated before, beware of having long tasks that take too much time on the CPU to prevent elevated response time for requests which are ready to be sent back, but waiting in a queue.
 
-### All kinds of pools
+### Pool per resource
 
-As an extreme case we may assign a dedicated thread pool for each entity like RPC client, HTTP client or database connection pool. Pros would be separation of concerns, absence of single point of failure. Cons are too many threads to use, which may cause some fighting for resources. But still, if you know the distribution of traffic and know that it's unlikely for different resources to be used at the same time, it could be a viable solution as well.
+As an extreme case we may assign a dedicated thread pool for each entity like RPC client, HTTP client or database connection pool. Pros would be separation of concerns, absence of single point of failure, no interference between resources. Cons are too many threads to use, which may cause some fighting for resources. But still, if you know the distribution of traffic well and know that it's unlikely for different resources to be used at the same time, it could be a viable solution as well.
+
+I wouldn't recommend this approach, as I really don't like to use more threads than it's necessary. If possible, group resources by usage patterns and share threads among them.
+
+### QoS
+
+Another thing to consider is different requirements for different resources. For example, you may have an RPC client with 2 methods. One you call on a user-facing request, another you call in background, for example, to update some in-memory cache. And if a background method can transfer more data, parses bigger objects, you may consider to move it to a separate thread pool to not harm online user-facing requests making it suddenly slower.
+
+Same applies to more important resources vs less important resources. There might be a consideration that more resources should be allocated for the most important transaction. Sometimes even on per user basis to provide different [SLA](https://en.wikipedia.org/wiki/Service-level_agreement).
+
+### Personal example
 
 In my real application I have this separation:
-* Thread pool for a [netty](https://netty.io/) HTTP server and all netty-based HTTP clients.
+* Thread pool for the [netty](https://netty.io/) HTTP server and all netty-based HTTP clients.
 * Thread pool for application code in which most of the business logic is happening along with parsing and serialization of JSON/protobuf/whatever.
 * Thread pool for blocking JDBC queries.
-* Single-threaded ScheduledExecutorService for timers and periodic cache updates.
+* Single-threaded ScheduledExecutorService for timers and periodic background tasks, including slow HTTP client.
 
-The proportion between netty pool and application pool is totally based on a planned load on a service. Even a single-threaded pool in netty may handle a lot of traffic.
-
-## QoS
-
-Another thing to consider is different requirements for different resources. For example, you may have an RPC client with 2 methods. One you call on a user request, another you call in background, for example, to update some in memory cache. And if a background method can transfer more data, parses bigger objects, you may consider to move it to a separate thread pool to not harm online user requests to be suddenly slower.
-
-Same applies to more important resources vs less important resources. There might be a consideration that more resources should be allocated for the most important transaction. Sometimes even on per user basis to provide different SLA.
+The proportion between the netty pool and the application pool is totally based on a planned load on a service. But even a single-threaded pool in netty may handle a lot of traffic.
 
 ## Conclusion
 
