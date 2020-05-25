@@ -13,7 +13,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-1-cod
 > In this part we will cover the most basic part of async programming in Scala with Futures. \
 > Part 1. Coding. \
 > [Part 2. Exception Handling.](/p/writing-async-app-in-scala-part-2-exception-handling) \
-> Part 3. Threading Model. \
+> [Part 3. Threading Model.](/p/writing-async-app-in-scala-part-3-threading-model) \
 > Part 4. Rewriting Existing App. \
 > Part 5. What's next?
 

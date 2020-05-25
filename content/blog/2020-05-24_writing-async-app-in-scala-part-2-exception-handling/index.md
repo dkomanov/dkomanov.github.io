@@ -11,7 +11,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-2-exc
 > In this part we will cover the exception handling for async programming in Scala with Futures. \
 > [Part 1. Coding.](/p/writing-async-app-in-scala-part-1-coding) \
 > Part 2. Exception Handling. \
-> Part 3. Threading Model. \
+> [Part 3. Threading Model.](/p/writing-async-app-in-scala-part-3-threading-model) \
 > Part 4. Rewriting Existing App. \
 > Part 5. What's next?
 
