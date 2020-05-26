@@ -1,6 +1,6 @@
 ---
 type: blog
-date: 2020-05-25
+date: 2020-05-26
 title: "Writing Async App in Scala. Part 3: Threading Model"
 description: How many threads to use? How many thread pools or execution contexts do we need? How to minimize overhead for the better performance in async world?
 cover: ./cover.jpg
@@ -88,7 +88,7 @@ Obviously, in async applications we should avoid using blocking code. But what i
 
 It's very important to remember to not mix a non-blocking code with a blocking one. As I showed in a previous part, consequences may be very tragic for responsiveness and overall throughput.
 
-What to do? Use a separate thread pool! What size to choose? The number of maximum SQL connections you're willing to use from a single application instance. Is it safe? Let's try to find out!
+What to do? Use a separate thread pool! What size to choose<strong>*</strong>? The number of maximum SQL connections you're willing to use from a single application instance. Is it safe? Let's try to find out!
 
 The first approach to write a DAO:
 ```scala
@@ -136,6 +136,21 @@ Here we split a query into 2 parts:
 2. Parse JSON into a domain object. This part will be executed in another `ExecutionContext`, which should be limited to a number of threads less or equal to a number of CPUs.
 
 By doing so we increase the resilience of our application to high traffic. Just to mention, that it's not a final solution, for peak traffic you still need to scale up your cluster, but this solution will give you time to do that, and servers won't die.
+
+<strong>*</strong> There are [formulas](http://baddotrobot.com/blog/2013/06/01/optimum-number-of-threads/) to calculate feasible number of threads in a blocking application. I wouldn't worry unless you have about few dozens of threads doing only queries, without any heavy calculations.
+
+## Thread Locals
+
+If you don't use [ThreadLocal](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/ThreadLocal.html) just continue not using it and you may skip this chapter. For everyone else...
+
+Side note: Here I'm talking about thread locals that are used as a context for the request. Other legitimate [usages](https://javapapers.com/core-java/threadlocal/) like providing thread safety for non thread-safe instances are fine.
+
+In a blocking application it's a convenient way of the propagation of aspects that aren't always related to a business code. There are [some caveats](https://stackoverflow.com/questions/817856/when-and-how-should-i-use-a-threadlocal-variable), though. In async application it gets ugly(er):
+
+* In async application one request is likely to be handled by multiple threads. At any point when execution moves into async mode (meaning, goes to wait for some event), you have to copy your thread locals and restore it again when the execution resumes. It could be a bit expensive.
+* Such implicitness isn't the best pattern to use. It's error-prone and obscure (especially for newcomers).
+
+It's much better to have some kind of a context object that you pass along with the request (you may do it as an implicit argument which is less implicit than thread local).
 
 ## Direct ExecutionContext
 
@@ -380,7 +395,7 @@ The proportion between the netty pool and the application pool is totally based 
 I want to leave you with few points, just to recap:
 * Try to minimize a number of threads. Your application's resilience depends on it.
 * Don't use Await. Never. If you have a `Future` just propagate it further.
-* Isolate blocking code as much as possible. Use an async alternative if possible.
+* Isolate blocking code. Use an async alternative if possible.
 * Use direct `ExecutionContext` in your application code.
 
 All code is available on [GitHub](https://github.com/dkomanov/stuff/tree/master/src/com/komanov/future). Originally posted on [Medium](https://medium.com/@dkomanov/writing-async-app-in-scala-part-3-threading-model-ef9e9033bd33). [Image](https://pixabay.com/photos/craftsman-loom-craftsmanship-hands-1839920/) by [Pexels](https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1839920).
