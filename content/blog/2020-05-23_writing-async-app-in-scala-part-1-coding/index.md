@@ -325,7 +325,7 @@ In this case, in for-comprehensions in this expression `movie <- findMovie("Dark
 ```scala
 implicit class FutureOfOptionExtensions[T](val v: Future[Option[T]]) extends AnyVal {
   def orFail(e: => Throwable): Future[T] =
-    v.flatMap(_.fold[Future[T](Future.failed(e), Future.successful)
+    v.flatMap(_.fold[Future[T]](Future.failed(e), Future.successful)
 }
 ```
 
