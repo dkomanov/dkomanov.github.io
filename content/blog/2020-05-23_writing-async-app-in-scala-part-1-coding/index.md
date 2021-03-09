@@ -14,7 +14,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-1-cod
 > Part 1. Coding. \
 > [Part 2. Exception Handling.](/p/writing-async-app-in-scala-part-2-exception-handling) \
 > [Part 3. Threading Model.](/p/writing-async-app-in-scala-part-3-threading-model) \
-> Part 4. Rewriting Existing App. \
+> [Part 4. Rewrite Blocking App.](/p/writing-async-app-in-scala-part-4-rewrite-blocking-app) \
 > Part 5. What's next?
 
 Today asynchronous programming gets some traction. Some may argue even some hype. However, there are cases when it's really necessary (or, let's put it mildly, favorably). In this blog post I'd like to put aside reasons behind writing an application in an async fashion, it's a separate topic. Here I want to focus on the practical side of this topic - how it looks like, what we have to do in order to make it simpler, and what problems we may encounter. Everything here is based on my personal experience, so I hope it won't be too academic.
