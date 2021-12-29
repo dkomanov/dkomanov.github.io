@@ -3,7 +3,7 @@ type: static
 title: About
 cover: ./cover.jpg
 ---
-Hi! My name is [Dmitry](https://en.wikipedia.org/wiki/Dmitry), but friends call me Mitya.
+Hi! My name is [Dmitry](https://en.wikipedia.org/wiki/Dmitry), but friends call me [Mitya](https://en.wiktionary.org/wiki/%D0%9C%D0%B8%D1%82%D1%8F).
 
 I was born in Moscow, Russia. I lived there for 30 year, and in 2014 I decided to
 move to Israel.
@@ -14,4 +14,4 @@ to share the knowledge as much as I can, this is why I write blog posts from tim
 to time (when I actually have some time).
 
 In Moscow I worked at [Yandex](https://www.yandex.com/) for 4 years, in Israel
-I work in [Wix](https://www.wix.com/).
+I work in [Wix](https://www.wix.com/) for more than 6 years.
