@@ -3,6 +3,7 @@ type: blog
 date: 2021-06-17
 title: Benchmarking batch JDBC queries
 description: Benchmarks for different kinds of batch queries to MySQL
+cover: ./cover.jpg
 tags: ["scala", "java", "jdbc", "mysql", "benchmark"]
 canonicalUrl: https://dkomanov.medium.com/benchmarking-batch-jdbc-queries-a2b5911ada26
 ---
