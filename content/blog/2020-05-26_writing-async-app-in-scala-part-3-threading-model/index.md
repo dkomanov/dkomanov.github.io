@@ -11,7 +11,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-3-thr
 > [Part 1. Coding.](/p/writing-async-app-in-scala-part-1-coding) \
 > [Part 2. Exception Handling.](/p/writing-async-app-in-scala-part-2-exception-handling) \
 > Part 3. Threading Model. \
-> [Part 4. Rewrite Blocking App.](/p/writing-async-app-in-scala-part-4-rewrite-blocking-app) \
+> Part 4. Rewrite Blocking App. \
 > Part 5. What's next?
 
 In previous parts we avoided the question of which `ExecutionContext` we should use. Finally, we got to it! In this part I'm going to cover a lot of different topics around multi-threading. Let's start right away!

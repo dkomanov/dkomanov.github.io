@@ -33,16 +33,17 @@ export default class Choose extends React.Component {
   }
 
   render() {
-    const {label, items} = this.props;
-    const {activeMap} = this.state;
+    const { label, items } = this.props;
+    const { activeMap } = this.state;
 
     const buttons = items.map((item, index) =>
       <li
         className={activeMap[item.value] === true ? 'active' : ''}
         key={index}
-        onClick={event => this.handleOnClick(event, item)}
       >
-        {item.label}
+        <a href={`#${item.label}`} onClick={event => this.handleOnClick(event, item)}>
+          {item.label}
+        </a>
       </li>
     );
 
@@ -57,8 +58,8 @@ export default class Choose extends React.Component {
   }
 
   componentDidMount() {
-    const {activeMap} = this.state;
-    const {multiple, onChange} = this.props;
+    const { activeMap } = this.state;
+    const { multiple, onChange } = this.props;
     if (onChange) {
       if (multiple) {
         onChange(activeMap);
@@ -75,8 +76,8 @@ export default class Choose extends React.Component {
   handleOnClick = (event, item) => {
     event.preventDefault();
 
-    const {activeMap} = this.state;
-    const {items, multiple, onChange} = this.props;
+    const { activeMap } = this.state;
+    const { items, multiple, onChange } = this.props;
 
     const newActiveMap = Object.assign({}, activeMap);
     if (multiple) {

@@ -36,12 +36,12 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         createNodeField({
           name,
           node,
-          value: `/p/${value.substr(value.indexOf('_') + 1)}`,
+          value: `/p/${value.substring(value.indexOf('_') + 1)}`,
         });
         createNodeField({
           name: 'date',
           node,
-          value: value.substr(0, value.indexOf('_')),
+          value: value.substring(0, value.indexOf('_')),
         });
         break;
 

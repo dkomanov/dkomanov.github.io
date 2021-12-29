@@ -12,7 +12,7 @@ canonicalUrl: https://medium.com/@dkomanov/writing-async-app-in-scala-part-2-exc
 > [Part 1. Coding.](/p/writing-async-app-in-scala-part-1-coding) \
 > Part 2. Exception Handling. \
 > [Part 3. Threading Model.](/p/writing-async-app-in-scala-part-3-threading-model) \
-> [Part 4. Rewrite Blocking App.](/p/writing-async-app-in-scala-part-4-rewrite-blocking-app) \
+> Part 4. Rewrite Blocking App. \
 > Part 5. What's next?
 
 I deliberately named this part as "Exception Handling". There are different error handling models: exceptions, error codes, returning [Either](https://www.adtran.com/index.php/blog/technology-blog/255-asynchronous-functional-error-handling-in-scala) of business result or some kind of error etc. I'm not going to describe all possible options here, I decided to use exceptions (or, to better put it, `Future.failed` with exception inside) as a error propagation mechanism, mainly because:

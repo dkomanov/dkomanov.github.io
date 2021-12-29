@@ -74,7 +74,7 @@ class Seo extends React.Component {
   }
 }
 
-export default props => (
+const props = () => (
   <StaticQuery
     query={graphql`
 query SeoQuery {
@@ -90,3 +90,5 @@ query SeoQuery {
     render={({site}) => <Seo site={site} {...props} />}
   />
 );
+
+export default props;

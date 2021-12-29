@@ -105,7 +105,7 @@ class ScalaSerializationImpl extends React.Component {
     const {jmhList, shared} = this.props;
 
     return (
-      <div>
+      <div className="markdown">
         <h3>Introduction</h3>
 
         <p>
@@ -258,17 +258,19 @@ const ScalaSerialization = JmhChartPage(
 
 //export default ScalaSerialization;
 
-export default props => (
+const props = () => (
   <StaticQuery
     query={graphql`
 query ScalaSerializationQuery {
   allMarkdownRemark(
     filter: {fileAbsolutePath: {regex: "/charts/scala-serialization/"}},
-    sort: { fields: [fileAbsolutePath], order: DESC }
+    sort: { fields: frontmatter___date, order: DESC }
   ) {
     edges {
       node {
-        fileAbsolutePath
+        frontmatter {
+          date
+        }
         html
       }
     }
@@ -278,7 +280,7 @@ query ScalaSerializationQuery {
     render={(data) => {
       const runs = data.allMarkdownRemark.edges.map(({node}) => {
         return {
-          date: node.fileAbsolutePath.substr(node.fileAbsolutePath.lastIndexOf('/') + 1, 10),
+          date: node.frontmatter.date.substring(0, 10),
           comment: node.html,
         };
       });
@@ -294,3 +296,5 @@ query ScalaSerializationQuery {
     }}
   />
 );
+
+export default props;
