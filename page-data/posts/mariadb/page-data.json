@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-blog-by-tag-js","path":"/posts/mariadb","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Repost of my blog post in Wix Engineering Blog with some extra information. Cover image via pixabay. Though the question of “How to query…","fields":{"slug":"/p/the-cost-of-streaming-data-from-mysql/"},"frontmatter":{"date":"September 18, 2017","title":"The Cost of Streaming Data from MySQL","description":"How streaming from MySQL (on client side) affects performance comparing to non-streaming..."}}}]}},"pageContext":{"tag":"mariadb"}}}
+{
+    "componentChunkName": "component---src-templates-blog-by-tag-js",
+    "path": "/posts/mariadb",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Repost of my blog post in Wix Engineering Blog with some extra information. Cover image via pixabay. Though the question of “How to query…","fields":{"slug":"/p/the-cost-of-streaming-data-from-mysql/"},"frontmatter":{"date":"September 18, 2017","title":"The Cost of Streaming Data from MySQL","description":"How streaming from MySQL (on client side) affects performance comparing to non-streaming..."}}}]}},"pageContext":{"tag":"mariadb"}},
+    "staticQueryHashes": ["1092343521","1428769721","2792650193","3369465568"]}

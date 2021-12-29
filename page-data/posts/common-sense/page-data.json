@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-templates-blog-by-tag-js","path":"/posts/common-sense","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Yet another post about performance and microbenchmarks. Yes, I know. Very small JMH benchmark: And the result: Wow. Apparently, JVM doesn’t…","fields":{"slug":"/p/scala-stringbuilder-vs-java-stringbuilder-performance/"},"frontmatter":{"date":"December 03, 2016","title":"Scala StringBuilder vs Java StringBuilder Performance","description":"O_O performance benchmark of StringBuilder wrapper in Scala..."}}}]}},"pageContext":{"tag":"common-sense"}}}
+{
+    "componentChunkName": "component---src-templates-blog-by-tag-js",
+    "path": "/posts/common-sense",
+    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Yet another post about performance and microbenchmarks. Yes, I know. Very small JMH benchmark: And the result: Wow. Apparently, JVM doesn’t…","fields":{"slug":"/p/scala-stringbuilder-vs-java-stringbuilder-performance/"},"frontmatter":{"date":"December 03, 2016","title":"Scala StringBuilder vs Java StringBuilder Performance","description":"O_O performance benchmark of StringBuilder wrapper in Scala..."}}}]}},"pageContext":{"tag":"common-sense"}},
+    "staticQueryHashes": ["1092343521","1428769721","2792650193","3369465568"]}
