@@ -10,7 +10,7 @@ class MonthList extends React.Component {
   static propTypes = {
     months: PropTypes.shape({
       path: PropTypes.string.isRequired,
-      month: PropTypes.string.isRequired,
+      yearMonth: PropTypes.string.isRequired,
     }).isRequired,
   };
 
@@ -19,7 +19,7 @@ class MonthList extends React.Component {
 
     return (
       <ul className="what-i-read">
-        {months.map(month => <li key={month.month}><Link to={month.path}>{month.month}</Link></li>)}
+        {months.map(month => <li key={month.yearMonth}><Link to={month.path}>{month.yearMonth}</Link></li>)}
       </ul>
     );
   }
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
         markdownRemark(id: {eq: $id}) {
             html
             fields {
-                month(formatString: "MMMM, YYYY")
+                yearMonth(formatString: "MMMM, YYYY")
             }
         }
     }

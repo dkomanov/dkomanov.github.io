@@ -23,10 +23,9 @@ exports.onCreateNode = ({node, actions, getNode}) => {
         break;
 
       case 'what-i-read':
-        const date = new Date(value.split('/')[1] + '-01');
-
+        const yearMonth = value.split('/')[1];
         createNodeField({name, node, value: `/what-i-read${value}`});
-        createNodeField({name: 'month', node, value: date});
+        createNodeField({name: 'yearMonth', node, value: yearMonth});
         break;
 
       case 'blog':
@@ -156,20 +155,20 @@ const createBlogByTagPages = (createPage, tags) => {
 
 const queryMonths = async (graphql) => {
   const result = await graphql(`
-    query AllMonths {
+    query AllYearMonths {
       allMarkdownRemark(
         filter: {
           frontmatter: {
             type: {eq: "what-i-read"}
           }
         },
-        sort: { fields: [fields___month], order: DESC }
+        sort: { fields: fields___yearMonth, order: DESC }
       ) {
         edges {
           node {
             id
             fields {
-              month(formatString: "YYYY-MM")
+              yearMonth
             }
           }
         }
@@ -182,11 +181,11 @@ const queryMonths = async (graphql) => {
   }
 
   return result.data.allMarkdownRemark.edges.map((edge, index) => {
-    const month = edge.node.fields.month;
+    const yearMonth = edge.node.fields.yearMonth;
     return {
       id: edge.node.id,
-      path: index === 0 ? '/what-i-read' : `/what-i-read/${month}`,
-      month,
+      path: index === 0 ? '/what-i-read' : `/what-i-read/${yearMonth}`,
+      yearMonth: yearMonth,
     };
   });
 };
