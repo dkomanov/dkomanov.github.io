@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-by-tag-js",
     "path": "/posts/jdbc",
     "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"One of our services recently started to perform multiple inserts and deletes in MySQL database. To the point of a noticeable\nresponse time…","fields":{"slug":"/p/benchmarking-batch-jdbc-queries/"},"frontmatter":{"date":"June 17, 2021","title":"Benchmarking batch JDBC queries","description":"Benchmarks for different kinds of batch queries to MySQL"}}}]}},"pageContext":{"tag":"jdbc"}},
-    "staticQueryHashes": ["1092343521","1428769721","2792650193","3369465568"]}
+    "staticQueryHashes": ["3675711862"]}

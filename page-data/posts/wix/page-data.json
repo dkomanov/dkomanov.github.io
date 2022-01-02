@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-by-tag-js",
     "path": "/posts/wix",
     "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"My blog post was published in a Wix Engineering Blog. It was hugely edited before with the real editor. It’s funny to find out that your…","fields":{"slug":"/p/first-time-on-wix-engineering-blog/"},"frontmatter":{"date":"October 12, 2015","title":"First time on Wix Engineering Blog","description":null}}}]}},"pageContext":{"tag":"wix"}},
-    "staticQueryHashes": ["1092343521","1428769721","2792650193","3369465568"]}
+    "staticQueryHashes": ["3675711862"]}

@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-by-tag-js",
     "path": "/posts/io",
     "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"UPD: Apparently in top5 from Google there are no correct examples, changed text accordingly. Resource management is a very important topic…","fields":{"slug":"/p/scala-try-with-resources/"},"frontmatter":{"date":"March 12, 2018","title":"Scala try-with-resources","description":"My 2 cents on how to properly manage resources in Scala, or a story of reimplementing try-with-resources in Scala."}}}]}},"pageContext":{"tag":"io"}},
-    "staticQueryHashes": ["1092343521","1428769721","2792650193","3369465568"]}
+    "staticQueryHashes": ["3675711862"]}
