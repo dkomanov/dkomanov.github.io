@@ -29,12 +29,12 @@ class MonthList extends React.Component {
 export default class WhatIReadPage extends React.Component {
   render() {
     const {data, pageContext: {months}} = this.props;
-    const {markdownRemark: {html, fields: {month}}} = data;
+    const {markdownRemark: {html, fields: {yearMonth}}} = data;
 
     return (
       <Layout location={this.props.location} teaserUrl={cover}>
-        <Seo title={`What I Read on ${month}`}/>
-        <h1>What I Read on {month}</h1>
+        <Seo title={`What I Read on ${yearMonth}`}/>
+        <h1>What I Read on {yearMonth}</h1>
         <p>
           A log of what I've read/watched with short review.
         </p>
