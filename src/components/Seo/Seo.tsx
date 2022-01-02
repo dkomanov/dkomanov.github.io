@@ -17,7 +17,7 @@ export default ({ title, description, canonicalUrl, lang }: SeoPropTypes) => {
   return (
     <Helmet>
       <html lang={lang} />
-      <title>{title ? `${title} | ` : ''}${md.title}</title>
+      <title>{title ? `${title} | ` : ''}{md.title}</title>
       {
         canonicalUrl && <link rel="canonical" href={canonicalUrl} />
       }
