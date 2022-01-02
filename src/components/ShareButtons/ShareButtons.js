@@ -1,36 +1,20 @@
-import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
-import {FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton} from 'react-share';
+import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton } from 'react-share';
 import './ShareButtons.css';
+import { useSiteMetadata } from '../../util/useSiteMetadata';
 
-const ShareButtons = ({post}) => {
-  const data = useStaticQuery(graphql`
-      query ShareButtonsQuery {
-          site {
-              siteMetadata {
-                  siteUrl
-                  title
-                  description
-                  social {
-                      twitter
-                      facebook
-                  }
-              }
-          }
-      }
-  `);
+const ShareButtons = ({ post }) => {
+  const md = useSiteMetadata();
 
-  const {site: {siteMetadata: {siteUrl, title: siteTitle, description: siteDescription, social: {twitter, facebook}}}} = data;
-
-  const url = `${siteUrl}${post.fields.slug}`;
+  const url = `${md.siteUrl}${post.fields.slug}`;
   const tags = post.frontmatter.tags || [];
-  const title = post.frontmatter.title || siteTitle;
-  const description = post.frontmatter.description || siteDescription;
+  const title = post.frontmatter.title || md.title;
+  const description = post.frontmatter.description || md.description;
 
   return (
     <div className="share-buttons">
       {
-        twitter &&
+        md.social.twitter &&
         <TwitterShareButton
           url={url}
           className="share-button"
@@ -38,18 +22,18 @@ const ShareButtons = ({post}) => {
           via="dkomanov"
           hashtags={tags}
         >
-          <TwitterIcon size={24}/>
+          <TwitterIcon size={24} />
         </TwitterShareButton>
       }
       {
-        facebook &&
+        md.social.facebook &&
         <FacebookShareButton
           url={url}
           className="share-button"
           quote={description}
           hashtag={tags.length ? `#${tags[0]}` : null}
         >
-          <FacebookIcon size={24}/>
+          <FacebookIcon size={24} />
         </FacebookShareButton>
       }
     </div>

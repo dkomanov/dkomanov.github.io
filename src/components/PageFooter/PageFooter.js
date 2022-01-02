@@ -1,25 +1,15 @@
-import {graphql, Link, useStaticQuery} from 'gatsby';
+import { Link } from 'gatsby';
 import React from 'react';
+import { useSiteMetadata } from '../../util/useSiteMetadata';
 import './PageFooter.css';
 
-const PageFooter = props => {
-  const data = useStaticQuery(graphql`
-      query PageFooterQuery {
-          site {
-              siteMetadata {
-                  author
-                  email
-              }
-          }
-      }
-  `);
-
-  const {site: {siteMetadata: {author, email}}} = data;
+const PageFooter = (props) => {
+  const md = useSiteMetadata();
 
   return (
     <footer {...props}>
       All content &copy;{' '}
-      <a href={`mailto:${email}`}>{author}</a>,{' '}
+      <a href={`mailto:${md.email}`}>{md.author}</a>,{' '}
       <Link to="/powered">powered by...</Link>
     </footer>
   );

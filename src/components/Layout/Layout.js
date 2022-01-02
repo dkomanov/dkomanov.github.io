@@ -1,31 +1,19 @@
-import {graphql, Link, useStaticQuery} from 'gatsby';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {PageFooter, SiteMenu, TeaserImage} from '../';
+import { PageFooter, SiteMenu, TeaserImage } from '../';
 import './Layout.css';
+import { useSiteMetadata } from '../../util/useSiteMetadata';
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-      query LayoutQuery {
-          site {
-              siteMetadata {
-                  title
-                  description
-              }
-          }
-      }
-  `);
-
-  const {site: {siteMetadata: {title, description}}} = data;
+  const md = useSiteMetadata();
 
   return (
     <header className="site-header">
-      <Link to="/" className="site-logo">
-        {title}
-      </Link>
-      <h1 className="site-title">{title}</h1>
-      <div className="site-description">{description}</div>
-      <SiteMenu/>
+      <Link to="/" className="site-logo">{md.title}</Link>
+      <h1 className="site-title">{md.title}</h1>
+      <div className="site-description">{md.description}</div>
+      <SiteMenu />
     </header>
   );
 };
@@ -36,15 +24,15 @@ class TeaserfulLayout extends React.Component {
   };
 
   render() {
-    const {teaserUrl, children} = this.props;
+    const { teaserUrl, children } = this.props;
     return (
       <div>
-        <TeaserImage url={teaserUrl}/>
-        <Header/>
+        <TeaserImage url={teaserUrl} />
+        <Header />
         <div className="site-content">
           {children}
         </div>
-        <PageFooter/>
+        <PageFooter />
       </div>
     );
   }
@@ -58,7 +46,7 @@ class TeaserlessLayout extends React.Component {
   };
 
   render() {
-    const {title, rawDate, date, children} = this.props;
+    const { title, rawDate, date, children } = this.props;
     return (
       <div className="site-content no-cover">
         <div className="post-meta">
@@ -72,15 +60,15 @@ class TeaserlessLayout extends React.Component {
               rawDate && date && <span>
                 {' on '}
                 <time dateTime={new Date(rawDate).toISOString()}>{date}</time>
-                <br/>
-                <br/>
+                <br />
+                <br />
               </span>
             }
           </div>
-          <SiteMenu/>
+          <SiteMenu />
         </div>
         {children}
-        <PageFooter/>
+        <PageFooter />
       </div>
     );
   }
@@ -95,7 +83,7 @@ export default class Layout extends React.Component {
   };
 
   render() {
-    const {teaserUrl} = this.props;
-    return teaserUrl ? <TeaserfulLayout {...this.props}/> : <TeaserlessLayout {...this.props}/>;
+    const { teaserUrl } = this.props;
+    return teaserUrl ? <TeaserfulLayout {...this.props} /> : <TeaserlessLayout {...this.props} />;
   }
 }
