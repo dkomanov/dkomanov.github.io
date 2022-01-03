@@ -6,7 +6,7 @@ interface SeoPropTypes {
   title?: string;
   description?: string;
   canonicalUrl?: string;
-  lang: string;
+  lang?: string;
 }
 
 export default ({ title, description, canonicalUrl, lang }: SeoPropTypes) => {
