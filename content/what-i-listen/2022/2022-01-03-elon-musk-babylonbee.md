@@ -5,7 +5,7 @@ title: 'Elon Musk Sits Down With The Babylon Bee'
 podcastDate: 2021-12-22
 url: https://www.youtube.com/watch?v=jvGnw1sHh9M
 teaser: ./2022-01-03-elon-musk-babylonbee.jpg
-tags: ['jre', 'elon musk']
+tags: ['babylon bee', 'elon musk']
 ---
 
 - Very chill interview in general. It felt like Elon was talking about whatever he wanted.
