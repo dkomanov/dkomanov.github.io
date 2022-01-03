@@ -13,7 +13,8 @@ export default class SiteMenu extends React.Component {
     return (
       <div className="site-menu">
         <MaybeActiveLink to="/">Blog</MaybeActiveLink>
-        <MaybeActiveLink to="/what-i-read">What I Read</MaybeActiveLink>
+        <MaybeActiveLink to="/what-i-read" partiallyActive>What I Read</MaybeActiveLink>
+        <MaybeActiveLink to="/what-i-listen" partiallyActive>What I Listen</MaybeActiveLink>
         <MaybeActiveLink to="/about">About</MaybeActiveLink>
       </div>
     );

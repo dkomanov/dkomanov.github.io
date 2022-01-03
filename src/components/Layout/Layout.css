@@ -7,6 +7,15 @@ body {
     font-feature-settings: "liga";
 }
 
+a {
+    text-decoration: none;
+    color: #333332;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .cf:after {
     content: "";
     display: table;

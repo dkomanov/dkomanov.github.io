@@ -17,15 +17,6 @@ article .post-title {
     margin: 0 0;
 }
 
-article .post-title a {
-    text-decoration: none;
-    color: #333332;
-}
-
-article .post-title a:hover {
-    text-decoration: none
-}
-
 article .post-description {
     letter-spacing: -0.02em;
     font-weight: 300;

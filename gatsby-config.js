@@ -36,6 +36,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/what-i-listen`,
+        name: `what-i-listen`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/src/pages/charts`,
         name: `charts-content`,
         ignore: ['js'],
@@ -67,6 +74,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      // https://www.gatsbyjs.com/docs/how-to/adding-common-features/adding-an-rss-feed/
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
@@ -83,8 +91,8 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({query: {site, allMarkdownRemark}}) => {
-              return allMarkdownRemark.edges.map(({node}) => {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(({ node }) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
@@ -138,5 +146,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-client-side-redirect`,
+    // https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-plugin-image/
+    'gatsby-plugin-image',
   ],
 };

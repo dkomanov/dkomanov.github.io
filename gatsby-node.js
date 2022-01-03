@@ -1,31 +1,43 @@
 const path = require(`path`);
-const {createFilePath} = require(`gatsby-source-filesystem`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
+import { collectGQLFragments } from './collect-fragments.js';
 
-exports.createPages = async ({graphql, actions}) => {
-  const {createPage, createRedirect} = actions;
+exports.createPages = async ({ graphql, actions }) => {
+  // https://github.com/gatsbyjs/gatsby/discussions/12155#discussioncomment-100921
+  const fragments = await collectGQLFragments(
+    path.resolve(__dirname, 'src/fragments')
+  );
+
+  const { createPage, createRedirect } = actions;
 
   createBlogByTagPages(createPage, await queryTags(graphql));
   createBlogPages(createPage, await queryMarkdowns(graphql, 'blog'));
   createStaticPages(createPage, await queryMarkdowns(graphql, 'static'));
   createWhatIReadPages(createPage, await queryMonths(graphql));
+  createWhatIListenPages(createPage, await queryEpisodes(graphql, fragments));
   createAllOldRedirects(createRedirect);
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
-  const {createNodeField} = actions;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
     const name = 'slug';
-    const value = createFilePath({node, getNode});
+    const value = createFilePath({ node, getNode });
     switch (node.frontmatter.type) {
       case 'static':
-        createNodeField({name, node, value: value});
+        createNodeField({ name, node, value: value });
         break;
 
       case 'what-i-read':
         const yearMonth = value.split('/')[1];
-        createNodeField({name, node, value: `/what-i-read${value}`});
-        createNodeField({name: 'yearMonth', node, value: yearMonth});
+        createNodeField({ name, node, value: `/what-i-read${value}` });
+        createNodeField({ name: 'yearMonth', node, value: yearMonth });
+        break;
+
+      case 'what-i-listen':
+        const [, slug] = value.match('/\\d{4}/(.*)/');
+        createNodeField({ name, node, value: `/what-i-listen/${slug}` });
         break;
 
       case 'blog':
@@ -84,14 +96,10 @@ const queryTags = async (graphql) => {
   const result = await graphql(`
     query AllTags {
       allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            type: { eq: "blog"}
-          }
-        }
+        filter: { frontmatter: { type: { eq: "blog" } } }
         limit: 1000
       ) {
-        group(field:frontmatter___tags) {
+        group(field: frontmatter___tags) {
           fieldValue
         }
       }
@@ -102,7 +110,7 @@ const queryTags = async (graphql) => {
     throw result.errors;
   }
 
-  return result.data.allMarkdownRemark.group.map(v => v.fieldValue);
+  return result.data.allMarkdownRemark.group.map((v) => v.fieldValue);
 };
 
 const createBlogPages = (createPage, posts) => {
@@ -122,13 +130,12 @@ const createBlogPages = (createPage, posts) => {
       },
     });
   });
-
 };
 
 const createStaticPages = (createPage, posts) => {
   const page = path.resolve(`./src/templates/static.js`);
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     createPage({
       path: `${post.node.fields.slug}`,
       component: page,
@@ -142,7 +149,7 @@ const createStaticPages = (createPage, posts) => {
 const createBlogByTagPages = (createPage, tags) => {
   const page = path.resolve(`./src/templates/blog-by-tag.js`);
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/posts/${tag}`,
       component: page,
@@ -157,11 +164,7 @@ const queryMonths = async (graphql) => {
   const result = await graphql(`
     query AllYearMonths {
       allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            type: {eq: "what-i-read"}
-          }
-        },
+        filter: { frontmatter: { type: { eq: "what-i-read" } } }
         sort: { fields: fields___yearMonth, order: DESC }
       ) {
         edges {
@@ -193,7 +196,7 @@ const queryMonths = async (graphql) => {
 const createWhatIReadPages = (createPage, months) => {
   const page = path.resolve('./src/templates/what-i-read/index.js');
 
-  months.forEach(month => {
+  months.forEach((month) => {
     createPage({
       path: month.path,
       component: page,
@@ -205,12 +208,54 @@ const createWhatIReadPages = (createPage, months) => {
   });
 };
 
+const queryEpisodes = async (graphql, fragments) => {
+  const data = await runQuery(
+    graphql(`
+      ${fragments}
+
+      query AllEpisodes {
+        allMarkdownRemark(
+          filter: { frontmatter: { type: { eq: "what-i-listen" } } }
+          sort: { fields: fields___slug, order: DESC }
+        ) {
+          edges {
+            node {
+              html
+            }
+          }
+          ...ListenedPoscastEpisodeFragment
+        }
+      }
+    `)
+  );
+
+  return data.allMarkdownRemark.edges.map(({ node }) => node);
+};
+
+const createWhatIListenPages = (createPage, nodes) => {
+  createPage({
+    path: '/what-i-listen',
+    component: path.resolve('./src/templates/what-i-listen/list.tsx'),
+    context: { nodes: nodes.filter((node) => !node.frontmatter.draft) },
+  });
+
+  nodes.forEach((node) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(
+        './src/templates/what-i-listen/single-episode.tsx'
+      ),
+      context: { node },
+    });
+  });
+};
+
 function createAllOldRedirects(createRedirect) {
   function redirect(from, to) {
     if (from.length === 0 || to.length === 0) {
       throw new Error('wrong redirect');
     }
-    createRedirect({fromPath: from, toPath: to, isPermanent: true});
+    createRedirect({ fromPath: from, toPath: to, isPermanent: true });
   }
 
   redirect('/blog/tag/hebrew', '/posts/hebrew');
@@ -235,3 +280,11 @@ function createAllOldRedirects(createRedirect) {
   redirect('/mysql-streaming', '/charts/mysql-streaming/');
   redirect('/scala-string-format', '/charts/scala-string-format/');
 }
+
+const runQuery = async (q) => {
+  const { data, errors } = await q;
+  if (errors) {
+    throw errors;
+  }
+  return data;
+};

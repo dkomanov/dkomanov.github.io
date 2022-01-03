@@ -1,0 +1,3 @@
+https://pixabay.com/photos/microphone-cable-mixer-music-audio-4272176/
+
+Image by <a href="https://pixabay.com/users/marvin_ahlers-12768274/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4272176">Marvin Ahlers</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4272176">Pixabay</a>

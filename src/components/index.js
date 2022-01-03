@@ -1,9 +1,11 @@
+export { default as Article } from './Article/Article';
 export { default as BlogPostList } from './BlogPostList/BlogPostList';
 export { default as Button } from './Button/Button';
 export { default as Changelog } from './Changelog/Changelog';
 export { default as ChartAndTable } from './ChartAndTable/ChartAndTable';
 export { default as Choose } from './Choose/Choose';
 export { default as ErrorMessage } from './ErrorMessage/ErrorMessage';
+export { default as EpisodeCard } from './EpisodeCard/EpisodeCard';
 export { default as GoogleChart } from './GoogleChart/GoogleChart';
 export { default as JmhChartPage } from './JmhChartPage/JmhChartPage';
 export { default as Loader } from './Loader/Loader';
