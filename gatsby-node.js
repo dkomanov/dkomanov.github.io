@@ -250,6 +250,7 @@ const createWhatIListenPages = (createPage, nodes) => {
   });
 };
 
+// prettier-ignore
 function createAllOldRedirects(createRedirect) {
   function redirect(from, to) {
     if (from.length === 0 || to.length === 0) {
