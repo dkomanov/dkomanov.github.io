@@ -76,13 +76,13 @@
     border-top: 1px solid #ddd;
 }
 
-.markdown blockquote {
+.markdown blockquote, .markdown li blockquote {
     margin: 0 0 30px -26px;
     border-left: 3px solid #57ad68;
     padding-left: 20px;
 }
 
-.markdown blockquote p {
+.markdown blockquote p, .markdown li blockquote p {
     letter-spacing: 0.01rem;
     font-weight: 400;
     font-style: italic;
