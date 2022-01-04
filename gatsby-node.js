@@ -2,6 +2,14 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 import { collectGQLFragments } from './collect-fragments.js';
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, `src`), `node_modules`],
+    },
+  });
+};
+
 exports.createPages = async ({ graphql, actions }) => {
   // https://github.com/gatsbyjs/gatsby/discussions/12155#discussioncomment-100921
   const fragments = await collectGQLFragments(
@@ -14,7 +22,11 @@ exports.createPages = async ({ graphql, actions }) => {
   createBlogPages(createPage, await queryMarkdowns(graphql, 'blog'));
   createStaticPages(createPage, await queryMarkdowns(graphql, 'static'));
   createWhatIReadPages(createPage, await queryMonths(graphql));
-  createWhatIListenPages(createPage, await queryEpisodes(graphql, fragments));
+  createWhatIListenPages(
+    createPage,
+    await queryEpisodes(graphql, fragments),
+    await queryEpisodeTags(graphql)
+  );
   createAllOldRedirects(createRedirect);
 };
 
@@ -232,11 +244,54 @@ const queryEpisodes = async (graphql, fragments) => {
   return data.allMarkdownRemark.edges.map(({ node }) => node);
 };
 
-const createWhatIListenPages = (createPage, nodes) => {
+const queryEpisodeTags = async (graphql) => {
+  const data = await runQuery(
+    graphql(`
+      query EpisodeTagCloud {
+        allMarkdownRemark(
+          filter: {
+            frontmatter: { type: { eq: "what-i-listen" }, draft: { ne: true } }
+          }
+        ) {
+          tags: group(field: frontmatter___tags) {
+            value: fieldValue
+            count: totalCount
+          }
+        }
+      }
+    `)
+  );
+
+  return data.allMarkdownRemark.tags;
+};
+
+const createWhatIListenPages = (createPage, nodes, tags) => {
+  const listPage = path.resolve('./src/templates/what-i-listen/list.tsx');
+
   createPage({
     path: '/what-i-listen',
-    component: path.resolve('./src/templates/what-i-listen/list.tsx'),
+    component: listPage,
     context: { nodes: nodes.filter((node) => !node.frontmatter.draft) },
+  });
+
+  createPage({
+    path: '/what-i-listen/tags',
+    component: path.resolve('./src/templates/what-i-listen/tag-cloud.tsx'),
+    context: { tags },
+  });
+
+  tags.forEach(({ value }) => {
+    createPage({
+      path: `/what-i-listen/tag/${value}`,
+      component: listPage,
+      context: {
+        nodes: nodes.filter(
+          (node) =>
+            !node.frontmatter.draft && node.frontmatter.tags.includes(value)
+        ),
+        tag: value,
+      },
+    });
   });
 
   nodes.forEach((node) => {

@@ -1,12 +1,22 @@
 import { Link } from 'gatsby';
+import moment from 'moment';
 import React from 'react';
-import { Layout, Markdown, Seo, EpisodeCard } from '../../components';
-import cover from './cover.jpg';
+import { EpisodeCard, Layout, Markdown, Seo } from '../../components';
 import { listenedPodcastEpisodeFromGql } from '../../util/gql';
 import { useSiteMetadata } from '../../util/useSiteMetadata';
-import moment from 'moment';
+import cover from './cover.jpg';
 
-const SingleEpisodePage = ({ location, pageContext: { node } }) => {
+interface SingleEpisodePageProps {
+  location: any;
+  pageContext: {
+    node: any;
+  };
+}
+
+const SingleEpisodePage = ({
+  location,
+  pageContext: { node },
+}: SingleEpisodePageProps) => {
   const episode = listenedPodcastEpisodeFromGql(node);
   const { html } = node;
   const md = useSiteMetadata();
