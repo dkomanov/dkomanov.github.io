@@ -56,13 +56,9 @@
   },
   "scripts": {
     "build": "NODE_OPTIONS=\"-r esm\" gatsby build",
-    "develop": "NODE_OPTIONS=\"-r esm\" gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "NODE_OPTIONS=\"-r esm\" gatsby develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "preDeploy": "npm run test",
-    "deploy": "gatsby build && gh-pages -d public --branch master --dotfiles",
+    "deploy": "npm run build && gh-pages -d public --branch master --dotfiles",
     "clean": "gatsby clean"
   }
 }
