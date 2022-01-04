@@ -15,6 +15,7 @@ export { default as PageFooter } from './PageFooter/PageFooter';
 export { default as Seo } from './Seo/Seo';
 export { default as ShareButtons } from './ShareButtons/ShareButtons';
 export { default as SiteMenu } from './SiteMenu/SiteMenu';
+export { default as TagCloud } from './TagCloud/TagCloud';
 export { default as Tags } from './Tags/Tags';
 export { default as TeaserImage } from './TeaserImage/TeaserImage';
 export { default as TimeUnits } from './TimeUnits/TimeUnits';
