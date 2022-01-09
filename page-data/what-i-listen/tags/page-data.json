@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-what-i-listen-tag-cloud-tsx",
     "path": "/what-i-listen/tags",
-    "result": {"pageContext":{"tags":[{"value":"babylon bee","count":1},{"value":"elon musk","count":1},{"value":"jre","count":1},{"value":"lex fridman","count":1},{"value":"matt taibbi","count":1},{"value":"michael malice","count":1}]}},
+    "result": {"pageContext":{"tags":[{"value":"adam curry","count":1},{"value":"babylon bee","count":1},{"value":"elon musk","count":1},{"value":"jre","count":2},{"value":"lex fridman","count":1},{"value":"matt taibbi","count":1},{"value":"michael malice","count":1}]}},
     "staticQueryHashes": ["3675711862"]}
