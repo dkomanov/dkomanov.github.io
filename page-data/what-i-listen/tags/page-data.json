@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-what-i-listen-tag-cloud-tsx",
     "path": "/what-i-listen/tags",
-    "result": {"pageContext":{"tags":[{"value":"Dr. Robert Epstein","count":1},{"value":"adam curry","count":1},{"value":"babylon bee","count":1},{"value":"elon musk","count":1},{"value":"joe rogan","count":1},{"value":"jre","count":3},{"value":"lex fridman","count":3},{"value":"mark normand","count":1},{"value":"matt taibbi","count":1},{"value":"michael malice","count":1},{"value":"tim dillon","count":2}]}},
+    "result": {"pageContext":{"tags":[{"value":"Dr. Robert Epstein","count":1},{"value":"adam curry","count":1},{"value":"babylon bee","count":1},{"value":"elon musk","count":1},{"value":"joe rogan","count":1},{"value":"jordan peterson","count":1},{"value":"jre","count":4},{"value":"lex fridman","count":3},{"value":"mark normand","count":1},{"value":"matt taibbi","count":1},{"value":"michael malice","count":1},{"value":"tim dillon","count":2}]}},
     "staticQueryHashes": ["3675711862"]}
