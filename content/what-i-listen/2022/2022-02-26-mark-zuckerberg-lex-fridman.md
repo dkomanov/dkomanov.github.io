@@ -4,7 +4,7 @@ date: 2022-02-26
 title: 'Mark Zuckerberg: Meta, Facebook, Instagram, and the Metaverse | LFP #267'
 podcastDate: 2022-02-26
 url: https://www.youtube.com/watch?v=5zOHSysMmH0
-teaser: ./2022-02-26-mark-zuckerberg-lex-fridman
+teaser: ./2022-02-26-mark-zuckerberg-lex-fridman.jpg
 tags: ['mark zuckerberg', 'lex fridman']
 ---
 
