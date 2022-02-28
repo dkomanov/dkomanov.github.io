@@ -27,7 +27,7 @@ const Article = ({ teaser, header, content, date, meta }: ArticleProps) => {
             {header}
           </h2>
         </header>
-        <section className="post-description" itemProp="description">
+        <section className={`post-description${teaser ? ' teaser-padding' : ''}`} itemProp="description">
           {content}
         </section>
         {(date || meta) && (

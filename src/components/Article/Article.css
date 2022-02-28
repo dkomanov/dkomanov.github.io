@@ -33,6 +33,10 @@ article .post-description {
   color: #666665;
 }
 
+article .teaser-padding {
+  margin-left: 110px;
+}
+
 article .post-meta {
   font-size: 14px;
   color: #b3b3b1;
