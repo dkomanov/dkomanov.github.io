@@ -1,8 +1,8 @@
 ---
 type: what-i-listen
-date: 2022-04-14
+date: 2022-04-15
 title: 'Elon Musk talks Twitter, Tesla and the future at TED2022'
-podcastDate: 2022-03-23
+podcastDate: 2022-04-14
 url: https://www.youtube.com/watch?v=cdZZpaB2kDM
 teaser: ./2022-04-15-elon-musk-ted.jpg
 tags: ['elon musk', 'ted']
