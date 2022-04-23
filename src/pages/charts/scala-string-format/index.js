@@ -50,7 +50,7 @@ class ScalaStringFormatImpl extends React.Component {
     const {jmhList} = this.props;
 
     return (
-      <div class="markdown">
+      <div className="markdown">
         <h3>Introduction</h3>
 
         <p>
