@@ -7,6 +7,7 @@ cache:
 before_script:
   - "git checkout dev"
   - "npm i -g gatsby"
+  - "gatsby -v"
   - "npm i"
   - "openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv -in github_deploy_key.enc -out github_deploy_key -d"
   - "chmod 600 github_deploy_key"
