@@ -60,7 +60,6 @@ export default class ChartAndTable extends React.Component {
 
   static defaultProps = {
     chartType: 'Bar',
-    options: {},
   };
 
   constructor(props) {
@@ -72,7 +71,8 @@ export default class ChartAndTable extends React.Component {
   }
 
   render() {
-    const {dataTable, filter, extractor, title, xDesc, yDesc, findMaxFunc, chartType, options} = this.props;
+    const {dataTable, filter, extractor, title, xDesc, yDesc, findMaxFunc, chartType} = this.props;
+    const options = this.props.options || {};
 
     if (!dataTable || !extractor) {
       return null;
