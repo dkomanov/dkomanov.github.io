@@ -59,6 +59,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "NODE_OPTIONS=\"-r esm\" gatsby develop",
     "deploy": "npm run build && gh-pages -d public --branch master --dotfiles",
+    "publish": "gh-pages -d public --branch master --dotfiles",
     "clean": "gatsby clean"
   }
 }
