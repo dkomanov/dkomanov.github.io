@@ -6,8 +6,7 @@ cache:
     - node_modules
 before_script:
   - "git checkout dev"
-  - "npm i -g gatsby@4.4"
-  - "gatsby -v"
+  - "npm i -g gatsby"
   - "npm i"
   - "openssl aes-256-cbc -K $encrypted_db2095f63ba3_key -iv $encrypted_db2095f63ba3_iv -in github_deploy_key.enc -out github_deploy_key -d"
   - "chmod 600 github_deploy_key"
@@ -15,5 +14,6 @@ before_script:
   - "ssh-add github_deploy_key"
   - "git remote set-url origin git@github.com:dkomanov/dkomanov.github.io.git"
 script:
+  - "gatsby -v"
   - "npm run build"
   - "npm run publish"
