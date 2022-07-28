@@ -1,5 +1,5 @@
 # komanov.com
-[![Build Status](https://travis-ci.org/dkomanov/dkomanov.github.io.svg?branch=dev)](https://travis-ci.org/dkomanov/dkomanov.github.io)
+[![Build Status](https://app.travis-ci.com/dkomanov/dkomanov.github.io.svg?branch=dev)](https://app.travis-ci.com/dkomanov/dkomanov.github.io)
 
 * create-react-app
 * https://medium.freecodecamp.org/surge-vs-github-pages-deploying-a-create-react-app-project-c0ecbf317089
