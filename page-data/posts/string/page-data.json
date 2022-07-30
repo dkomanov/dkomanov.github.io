@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-blog-by-tag-js",
-    "path": "/posts/string",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Yet another post about performance and microbenchmarks. Beware of the results. There is a method in String class, called regionMatches…","fields":{"slug":"/p/benchmarking-string-regionmatches/"},"frontmatter":{"date":"April 24, 2022","title":"Benchmarking String.regionMatches","description":"A simple just for fun benchmark reveals some bizarre performance of regionMatches method"}}}]}},"pageContext":{"tag":"string"}},
-    "staticQueryHashes": ["3675711862"]}
+{"componentChunkName":"component---src-templates-blog-by-tag-js","path":"/posts/string","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Yet another post about performance and microbenchmarks. Beware of the results. There is a method in String class, called regionMatches…","fields":{"slug":"/p/benchmarking-string-regionmatches/"},"frontmatter":{"date":"April 24, 2022","title":"Benchmarking String.regionMatches","description":"A simple just for fun benchmark reveals some bizarre performance of regionMatches method"}}}]}},"pageContext":{"tag":"string"}},"staticQueryHashes":["3675711862"]}

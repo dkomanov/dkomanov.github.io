@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-blog-by-tag-js",
-    "path": "/posts/jdk8",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"I spent some time on optimizing UUID.fromString\nfunction and I want to share my experience about it. TL;DR — we will improve\nit’s…","fields":{"slug":"/p/micro-optimization-for-uuid-fromstring-in-7-steps/"},"frontmatter":{"date":"November 05, 2015","title":"Micro-optimization for UUID.fromString in 7 steps","description":"A sequence of 7 micro-optimizations for parsing UUID from String to make it really fast!"}}}]}},"pageContext":{"tag":"jdk8"}},
-    "staticQueryHashes": ["3675711862"]}
+{"componentChunkName":"component---src-templates-blog-by-tag-js","path":"/posts/jdk8","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"I spent some time on optimizing UUID.fromString\nfunction and I want to share my experience about it. TL;DR — we will improve\nit’s…","fields":{"slug":"/p/micro-optimization-for-uuid-fromstring-in-7-steps/"},"frontmatter":{"date":"November 05, 2015","title":"Micro-optimization for UUID.fromString in 7 steps","description":"A sequence of 7 micro-optimizations for parsing UUID from String to make it really fast!"}}}]}},"pageContext":{"tag":"jdk8"}},"staticQueryHashes":["3675711862"]}
