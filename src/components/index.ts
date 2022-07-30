@@ -8,6 +8,7 @@ export { default as ErrorMessage } from './ErrorMessage/ErrorMessage';
 export { default as EpisodeCard } from './EpisodeCard/EpisodeCard';
 export { default as GoogleChart } from './GoogleChart/GoogleChart';
 export { default as JmhChartPage } from './JmhChartPage/JmhChartPage';
+export type { JmhChartComponentProps } from './JmhChartPage/JmhChartPage';
 export { default as Loader } from './Loader/Loader';
 export { default as Layout } from './Layout/Layout';
 export { default as Markdown } from './Markdown/Markdown';

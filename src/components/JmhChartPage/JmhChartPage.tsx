@@ -14,7 +14,7 @@ interface JmhChartPageState {
   warning?: any | null;
 }
 
-interface JmhChartComponentProps {
+export interface JmhChartComponentProps {
   jmhList: any[] | null;
   refetch: () => void;
 }

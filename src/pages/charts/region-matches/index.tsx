@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { JmhBenchmarkRun } from '../../..';
-import { ChartAndTable, JmhChartPage, TimeUnits } from '../../../components';
+import {
+  ChartAndTable,
+  JmhChartComponentProps,
+  JmhChartPage,
+  TimeUnits,
+} from '../../../components';
 import { loadJson } from '../../../util';
 
 const jdks = ['openjdk-17', 'openjdk-11', 'openjdk-8'];
@@ -26,7 +31,7 @@ const yDesc = {
   values: jdks,
 };
 
-const RegionMatchesImpl = ({ jmhList }: { jmhList: any }) => {
+const RegionMatchesImpl = ({ jmhList }: JmhChartComponentProps) => {
   const [extractor, extractorSet] = useState({ func: null });
 
   return (
