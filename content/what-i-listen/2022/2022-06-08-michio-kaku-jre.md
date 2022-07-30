@@ -1,6 +1,6 @@
 ---
 type: what-i-listen
-date: 2022-06-088
+date: 2022-06-08
 title: 'JRE #1828 - Michio Kaku'
 podcastDate: 2022-06-08
 url: https://open.spotify.com/episode/3Xmj1kd7XgMVLf8WxZqfBQ
