@@ -1,0 +1,1797 @@
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:22:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 251.000 ns/op
+# Warmup Iteration   2: 233.553 ns/op
+Iteration   1: 220.629 ns/op
+Iteration   2: 217.852 ns/op
+Iteration   3: 219.941 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
+  219.474 ±(99.9%) 26.381 ns/op [Average]
+  (min, avg, max) = (217.852, 219.474, 220.629), stdev = 1.446
+  CI (99.9%): [193.092, 245.855] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 1.56% complete, ETA 00:23:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 249.933 ns/op
+# Warmup Iteration   2: 226.175 ns/op
+Iteration   1: 218.642 ns/op
+Iteration   2: 216.681 ns/op
+Iteration   3: 218.613 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
+  217.979 ±(99.9%) 20.500 ns/op [Average]
+  (min, avg, max) = (216.681, 217.979, 218.642), stdev = 1.124
+  CI (99.9%): [197.479, 238.479] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 3.13% complete, ETA 00:22:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 169.439 ns/op
+# Warmup Iteration   2: 153.649 ns/op
+Iteration   1: 153.026 ns/op
+Iteration   2: 153.304 ns/op
+Iteration   3: 157.379 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
+  154.569 ±(99.9%) 44.457 ns/op [Average]
+  (min, avg, max) = (153.026, 154.569, 157.379), stdev = 2.437
+  CI (99.9%): [110.112, 199.027] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 4.69% complete, ETA 00:22:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 212.634 ns/op
+# Warmup Iteration   2: 165.247 ns/op
+Iteration   1: 154.938 ns/op
+Iteration   2: 154.675 ns/op
+Iteration   3: 154.510 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
+  154.708 ±(99.9%) 3.940 ns/op [Average]
+  (min, avg, max) = (154.510, 154.708, 154.938), stdev = 0.216
+  CI (99.9%): [150.768, 158.647] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 6.25% complete, ETA 00:23:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 233.030 ns/op
+# Warmup Iteration   2: 222.146 ns/op
+Iteration   1: 199.357 ns/op
+Iteration   2: 199.360 ns/op
+Iteration   3: 210.731 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
+  203.149 ±(99.9%) 119.785 ns/op [Average]
+  (min, avg, max) = (199.357, 203.149, 210.731), stdev = 6.566
+  CI (99.9%): [83.365, 322.934] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 7.81% complete, ETA 00:22:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 238.717 ns/op
+# Warmup Iteration   2: 218.109 ns/op
+Iteration   1: 205.113 ns/op
+Iteration   2: 204.753 ns/op
+Iteration   3: 208.350 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
+  206.072 ±(99.9%) 36.144 ns/op [Average]
+  (min, avg, max) = (204.753, 206.072, 208.350), stdev = 1.981
+  CI (99.9%): [169.928, 242.216] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 9.38% complete, ETA 00:22:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 130.257 ns/op
+# Warmup Iteration   2: 121.417 ns/op
+Iteration   1: 119.286 ns/op
+Iteration   2: 119.183 ns/op
+Iteration   3: 119.341 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
+  119.270 ±(99.9%) 1.459 ns/op [Average]
+  (min, avg, max) = (119.183, 119.270, 119.341), stdev = 0.080
+  CI (99.9%): [117.810, 120.729] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 10.94% complete, ETA 00:21:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 154.293 ns/op
+# Warmup Iteration   2: 113.635 ns/op
+Iteration   1: 111.039 ns/op
+Iteration   2: 110.849 ns/op
+Iteration   3: 111.019 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
+  110.969 ±(99.9%) 1.905 ns/op [Average]
+  (min, avg, max) = (110.849, 110.969, 111.039), stdev = 0.104
+  CI (99.9%): [109.064, 112.874] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 12.50% complete, ETA 00:21:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 180.015 ns/op
+# Warmup Iteration   2: 178.160 ns/op
+Iteration   1: 164.354 ns/op
+Iteration   2: 166.053 ns/op
+Iteration   3: 164.749 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
+  165.052 ±(99.9%) 16.224 ns/op [Average]
+  (min, avg, max) = (164.354, 165.052, 166.053), stdev = 0.889
+  CI (99.9%): [148.828, 181.276] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 14.06% complete, ETA 00:21:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 176.395 ns/op
+# Warmup Iteration   2: 166.165 ns/op
+Iteration   1: 156.916 ns/op
+Iteration   2: 158.164 ns/op
+Iteration   3: 159.408 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
+  158.162 ±(99.9%) 22.734 ns/op [Average]
+  (min, avg, max) = (156.916, 158.162, 159.408), stdev = 1.246
+  CI (99.9%): [135.428, 180.897] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 15.63% complete, ETA 00:20:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 139.571 ns/op
+# Warmup Iteration   2: 129.231 ns/op
+Iteration   1: 124.643 ns/op
+Iteration   2: 124.655 ns/op
+Iteration   3: 124.591 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
+  124.630 ±(99.9%) 0.625 ns/op [Average]
+  (min, avg, max) = (124.591, 124.630, 124.655), stdev = 0.034
+  CI (99.9%): [124.005, 125.254] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 17.19% complete, ETA 00:20:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 185.769 ns/op
+# Warmup Iteration   2: 140.531 ns/op
+Iteration   1: 141.753 ns/op
+Iteration   2: 137.107 ns/op
+Iteration   3: 135.920 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
+  138.260 ±(99.9%) 56.240 ns/op [Average]
+  (min, avg, max) = (135.920, 138.260, 141.753), stdev = 3.083
+  CI (99.9%): [82.020, 194.500] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 18.75% complete, ETA 00:20:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 162.889 ns/op
+# Warmup Iteration   2: 152.481 ns/op
+Iteration   1: 142.161 ns/op
+Iteration   2: 145.740 ns/op
+Iteration   3: 142.629 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
+  143.510 ±(99.9%) 35.499 ns/op [Average]
+  (min, avg, max) = (142.161, 143.510, 145.740), stdev = 1.946
+  CI (99.9%): [108.011, 179.008] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 20.31% complete, ETA 00:19:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 164.352 ns/op
+# Warmup Iteration   2: 156.761 ns/op
+Iteration   1: 149.987 ns/op
+Iteration   2: 148.233 ns/op
+Iteration   3: 151.226 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
+  149.816 ±(99.9%) 27.430 ns/op [Average]
+  (min, avg, max) = (148.233, 149.816, 151.226), stdev = 1.504
+  CI (99.9%): [122.385, 177.246] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 21.88% complete, ETA 00:19:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 119.495 ns/op
+# Warmup Iteration   2: 109.199 ns/op
+Iteration   1: 109.516 ns/op
+Iteration   2: 109.425 ns/op
+Iteration   3: 109.799 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
+  109.580 ±(99.9%) 3.560 ns/op [Average]
+  (min, avg, max) = (109.425, 109.580, 109.799), stdev = 0.195
+  CI (99.9%): [106.020, 113.140] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 23.44% complete, ETA 00:18:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 140.451 ns/op
+# Warmup Iteration   2: 113.571 ns/op
+Iteration   1: 107.242 ns/op
+Iteration   2: 107.046 ns/op
+Iteration   3: 109.153 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
+  107.814 ±(99.9%) 21.240 ns/op [Average]
+  (min, avg, max) = (107.046, 107.814, 109.153), stdev = 1.164
+  CI (99.9%): [86.574, 129.053] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 25.00% complete, ETA 00:18:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 215.698 ns/op
+# Warmup Iteration   2: 201.396 ns/op
+Iteration   1: 195.933 ns/op
+Iteration   2: 197.769 ns/op
+Iteration   3: 194.781 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
+  196.161 ±(99.9%) 27.495 ns/op [Average]
+  (min, avg, max) = (194.781, 196.161, 197.769), stdev = 1.507
+  CI (99.9%): [168.666, 223.656] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 26.56% complete, ETA 00:18:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 226.212 ns/op
+# Warmup Iteration   2: 214.620 ns/op
+Iteration   1: 198.642 ns/op
+Iteration   2: 203.168 ns/op
+Iteration   3: 199.466 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
+  200.425 ±(99.9%) 43.978 ns/op [Average]
+  (min, avg, max) = (198.642, 200.425, 203.168), stdev = 2.411
+  CI (99.9%): [156.448, 244.403] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 28.13% complete, ETA 00:17:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 328.192 ns/op
+# Warmup Iteration   2: 294.997 ns/op
+Iteration   1: 301.681 ns/op
+Iteration   2: 300.801 ns/op
+Iteration   3: 296.817 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
+  299.767 ±(99.9%) 47.282 ns/op [Average]
+  (min, avg, max) = (296.817, 299.767, 301.681), stdev = 2.592
+  CI (99.9%): [252.485, 347.049] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 29.69% complete, ETA 00:17:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 791.133 ns/op
+# Warmup Iteration   2: 289.288 ns/op
+Iteration   1: 286.332 ns/op
+Iteration   2: 288.972 ns/op
+Iteration   3: 286.763 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
+  287.356 ±(99.9%) 25.837 ns/op [Average]
+  (min, avg, max) = (286.332, 287.356, 288.972), stdev = 1.416
+  CI (99.9%): [261.518, 313.193] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 31.25% complete, ETA 00:17:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 282.555 ns/op
+# Warmup Iteration   2: 268.132 ns/op
+Iteration   1: 268.999 ns/op
+Iteration   2: 264.742 ns/op
+Iteration   3: 262.371 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
+  265.371 ±(99.9%) 61.263 ns/op [Average]
+  (min, avg, max) = (262.371, 265.371, 268.999), stdev = 3.358
+  CI (99.9%): [204.108, 326.633] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 32.81% complete, ETA 00:16:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 284.845 ns/op
+# Warmup Iteration   2: 265.063 ns/op
+Iteration   1: 257.782 ns/op
+Iteration   2: 259.336 ns/op
+Iteration   3: 258.182 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
+  258.433 ±(99.9%) 14.723 ns/op [Average]
+  (min, avg, max) = (257.782, 258.433, 259.336), stdev = 0.807
+  CI (99.9%): [243.710, 273.156] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 34.38% complete, ETA 00:16:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 354.488 ns/op
+# Warmup Iteration   2: 338.438 ns/op
+Iteration   1: 322.166 ns/op
+Iteration   2: 324.425 ns/op
+Iteration   3: 327.062 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
+  324.551 ±(99.9%) 44.714 ns/op [Average]
+  (min, avg, max) = (322.166, 324.551, 327.062), stdev = 2.451
+  CI (99.9%): [279.837, 369.265] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 35.94% complete, ETA 00:15:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 989.417 ns/op
+# Warmup Iteration   2: 333.440 ns/op
+Iteration   1: 331.105 ns/op
+Iteration   2: 328.855 ns/op
+Iteration   3: 329.256 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
+  329.739 ±(99.9%) 21.894 ns/op [Average]
+  (min, avg, max) = (328.855, 329.739, 331.105), stdev = 1.200
+  CI (99.9%): [307.845, 351.633] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 37.50% complete, ETA 00:15:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 182.755 ns/op
+# Warmup Iteration   2: 171.702 ns/op
+Iteration   1: 166.380 ns/op
+Iteration   2: 166.308 ns/op
+Iteration   3: 165.800 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
+  166.163 ±(99.9%) 5.769 ns/op [Average]
+  (min, avg, max) = (165.800, 166.163, 166.380), stdev = 0.316
+  CI (99.9%): [160.394, 171.931] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 39.06% complete, ETA 00:15:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 200.977 ns/op
+# Warmup Iteration   2: 184.749 ns/op
+Iteration   1: 177.203 ns/op
+Iteration   2: 177.680 ns/op
+Iteration   3: 175.642 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
+  176.841 ±(99.9%) 19.449 ns/op [Average]
+  (min, avg, max) = (175.642, 176.841, 177.680), stdev = 1.066
+  CI (99.9%): [157.393, 196.290] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 40.63% complete, ETA 00:14:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 153.840 ns/op
+# Warmup Iteration   2: 139.097 ns/op
+Iteration   1: 138.410 ns/op
+Iteration   2: 138.620 ns/op
+Iteration   3: 139.881 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
+  138.970 ±(99.9%) 14.514 ns/op [Average]
+  (min, avg, max) = (138.410, 138.970, 139.881), stdev = 0.796
+  CI (99.9%): [124.457, 153.484] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 42.19% complete, ETA 00:14:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 408.205 ns/op
+# Warmup Iteration   2: 137.003 ns/op
+Iteration   1: 135.914 ns/op
+Iteration   2: 135.295 ns/op
+Iteration   3: 135.635 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
+  135.615 ±(99.9%) 5.652 ns/op [Average]
+  (min, avg, max) = (135.295, 135.615, 135.914), stdev = 0.310
+  CI (99.9%): [129.963, 141.266] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 43.75% complete, ETA 00:13:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 172.737 ns/op
+# Warmup Iteration   2: 165.918 ns/op
+Iteration   1: 155.221 ns/op
+Iteration   2: 154.183 ns/op
+Iteration   3: 154.546 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
+  154.650 ±(99.9%) 9.607 ns/op [Average]
+  (min, avg, max) = (154.183, 154.650, 155.221), stdev = 0.527
+  CI (99.9%): [145.043, 164.258] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 45.31% complete, ETA 00:13:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 188.250 ns/op
+# Warmup Iteration   2: 177.311 ns/op
+Iteration   1: 167.021 ns/op
+Iteration   2: 171.129 ns/op
+Iteration   3: 172.496 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
+  170.215 ±(99.9%) 51.986 ns/op [Average]
+  (min, avg, max) = (167.021, 170.215, 172.496), stdev = 2.850
+  CI (99.9%): [118.229, 222.201] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 46.88% complete, ETA 00:13:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 135.611 ns/op
+# Warmup Iteration   2: 137.916 ns/op
+Iteration   1: 124.825 ns/op
+Iteration   2: 127.449 ns/op
+Iteration   3: 123.362 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
+  125.212 ±(99.9%) 37.779 ns/op [Average]
+  (min, avg, max) = (123.362, 125.212, 127.449), stdev = 2.071
+  CI (99.9%): [87.433, 162.991] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 48.44% complete, ETA 00:12:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 196.964 ns/op
+# Warmup Iteration   2: 127.672 ns/op
+Iteration   1: 125.475 ns/op
+Iteration   2: 123.875 ns/op
+Iteration   3: 123.713 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
+  124.354 ±(99.9%) 17.771 ns/op [Average]
+  (min, avg, max) = (123.713, 124.354, 125.475), stdev = 0.974
+  CI (99.9%): [106.584, 142.125] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 50.00% complete, ETA 00:12:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 334.421 ns/op
+# Warmup Iteration   2: 310.314 ns/op
+Iteration   1: 301.798 ns/op
+Iteration   2: 303.733 ns/op
+Iteration   3: 306.005 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
+  303.845 ±(99.9%) 38.417 ns/op [Average]
+  (min, avg, max) = (301.798, 303.845, 306.005), stdev = 2.106
+  CI (99.9%): [265.428, 342.262] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 51.56% complete, ETA 00:12:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 382.996 ns/op
+# Warmup Iteration   2: 361.848 ns/op
+Iteration   1: 352.955 ns/op
+Iteration   2: 352.355 ns/op
+Iteration   3: 351.978 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
+  352.429 ±(99.9%) 8.991 ns/op [Average]
+  (min, avg, max) = (351.978, 352.429, 352.955), stdev = 0.493
+  CI (99.9%): [343.438, 361.420] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 53.13% complete, ETA 00:11:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 535.401 ns/op
+# Warmup Iteration   2: 490.562 ns/op
+Iteration   1: 469.137 ns/op
+Iteration   2: 468.815 ns/op
+Iteration   3: 473.715 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
+  470.556 ±(99.9%) 50.006 ns/op [Average]
+  (min, avg, max) = (468.815, 470.556, 473.715), stdev = 2.741
+  CI (99.9%): [420.550, 520.561] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 54.69% complete, ETA 00:11:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 544.641 ns/op
+# Warmup Iteration   2: 523.377 ns/op
+Iteration   1: 511.829 ns/op
+Iteration   2: 483.441 ns/op
+Iteration   3: 473.331 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
+  489.533 ±(99.9%) 364.135 ns/op [Average]
+  (min, avg, max) = (473.331, 489.533, 511.829), stdev = 19.959
+  CI (99.9%): [125.398, 853.669] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 56.25% complete, ETA 00:10:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 220.370 ns/op
+# Warmup Iteration   2: 208.275 ns/op
+Iteration   1: 202.892 ns/op
+Iteration   2: 205.606 ns/op
+Iteration   3: 207.073 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
+  205.191 ±(99.9%) 38.702 ns/op [Average]
+  (min, avg, max) = (202.892, 205.191, 207.073), stdev = 2.121
+  CI (99.9%): [166.489, 243.892] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 57.81% complete, ETA 00:10:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 311.061 ns/op
+# Warmup Iteration   2: 296.114 ns/op
+Iteration   1: 290.163 ns/op
+Iteration   2: 288.918 ns/op
+Iteration   3: 288.775 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
+  289.285 ±(99.9%) 13.924 ns/op [Average]
+  (min, avg, max) = (288.775, 289.285, 290.163), stdev = 0.763
+  CI (99.9%): [275.361, 303.209] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 59.38% complete, ETA 00:10:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 380.678 ns/op
+# Warmup Iteration   2: 362.215 ns/op
+Iteration   1: 349.498 ns/op
+Iteration   2: 349.754 ns/op
+Iteration   3: 349.909 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
+  349.720 ±(99.9%) 3.792 ns/op [Average]
+  (min, avg, max) = (349.498, 349.720, 349.909), stdev = 0.208
+  CI (99.9%): [345.928, 353.512] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 60.94% complete, ETA 00:09:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 1078.982 ns/op
+# Warmup Iteration   2: 380.065 ns/op
+Iteration   1: 379.425 ns/op
+Iteration   2: 376.218 ns/op
+Iteration   3: 374.444 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
+  376.696 ±(99.9%) 46.066 ns/op [Average]
+  (min, avg, max) = (374.444, 376.696, 379.425), stdev = 2.525
+  CI (99.9%): [330.630, 422.761] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 62.50% complete, ETA 00:09:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 334.382 ns/op
+# Warmup Iteration   2: 318.918 ns/op
+Iteration   1: 314.691 ns/op
+Iteration   2: 327.864 ns/op
+Iteration   3: 317.678 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
+  320.077 ±(99.9%) 126.003 ns/op [Average]
+  (min, avg, max) = (314.691, 320.077, 327.864), stdev = 6.907
+  CI (99.9%): [194.075, 446.080] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 64.06% complete, ETA 00:08:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 336.704 ns/op
+# Warmup Iteration   2: 317.461 ns/op
+Iteration   1: 302.459 ns/op
+Iteration   2: 300.513 ns/op
+Iteration   3: 301.307 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
+  301.426 ±(99.9%) 17.847 ns/op [Average]
+  (min, avg, max) = (300.513, 301.426, 302.459), stdev = 0.978
+  CI (99.9%): [283.579, 319.273] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 65.63% complete, ETA 00:08:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 362.737 ns/op
+# Warmup Iteration   2: 326.501 ns/op
+Iteration   1: 319.126 ns/op
+Iteration   2: 320.930 ns/op
+Iteration   3: 317.863 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
+  319.306 ±(99.9%) 28.123 ns/op [Average]
+  (min, avg, max) = (317.863, 319.306, 320.930), stdev = 1.542
+  CI (99.9%): [291.183, 347.429] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 67.19% complete, ETA 00:08:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 779.482 ns/op
+# Warmup Iteration   2: 266.606 ns/op
+Iteration   1: 266.400 ns/op
+Iteration   2: 262.030 ns/op
+Iteration   3: 263.636 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
+  264.022 ±(99.9%) 40.321 ns/op [Average]
+  (min, avg, max) = (262.030, 264.022, 266.400), stdev = 2.210
+  CI (99.9%): [223.701, 304.343] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 68.75% complete, ETA 00:07:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 334.811 ns/op
+# Warmup Iteration   2: 318.319 ns/op
+Iteration   1: 316.403 ns/op
+Iteration   2: 316.519 ns/op
+Iteration   3: 313.254 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
+  315.392 ±(99.9%) 33.800 ns/op [Average]
+  (min, avg, max) = (313.254, 315.392, 316.519), stdev = 1.853
+  CI (99.9%): [281.592, 349.192] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 70.31% complete, ETA 00:07:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 348.595 ns/op
+# Warmup Iteration   2: 331.571 ns/op
+Iteration   1: 322.688 ns/op
+Iteration   2: 322.303 ns/op
+Iteration   3: 323.480 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
+  322.824 ±(99.9%) 10.952 ns/op [Average]
+  (min, avg, max) = (322.303, 322.824, 323.480), stdev = 0.600
+  CI (99.9%): [311.872, 333.776] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 71.88% complete, ETA 00:06:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 255.799 ns/op
+# Warmup Iteration   2: 235.932 ns/op
+Iteration   1: 232.651 ns/op
+Iteration   2: 232.982 ns/op
+Iteration   3: 234.400 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
+  233.344 ±(99.9%) 16.948 ns/op [Average]
+  (min, avg, max) = (232.651, 233.344, 234.400), stdev = 0.929
+  CI (99.9%): [216.396, 250.293] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 73.44% complete, ETA 00:06:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 736.309 ns/op
+# Warmup Iteration   2: 250.068 ns/op
+Iteration   1: 239.432 ns/op
+Iteration   2: 239.127 ns/op
+Iteration   3: 239.139 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
+  239.233 ±(99.9%) 3.152 ns/op [Average]
+  (min, avg, max) = (239.127, 239.233, 239.432), stdev = 0.173
+  CI (99.9%): [236.081, 242.385] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 75.00% complete, ETA 00:06:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 220.080 ns/op
+# Warmup Iteration   2: 205.905 ns/op
+Iteration   1: 198.515 ns/op
+Iteration   2: 202.088 ns/op
+Iteration   3: 203.509 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
+  201.371 ±(99.9%) 46.947 ns/op [Average]
+  (min, avg, max) = (198.515, 201.371, 203.509), stdev = 2.573
+  CI (99.9%): [154.424, 248.318] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 76.56% complete, ETA 00:05:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 232.339 ns/op
+# Warmup Iteration   2: 223.068 ns/op
+Iteration   1: 208.856 ns/op
+Iteration   2: 205.730 ns/op
+Iteration   3: 207.360 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
+  207.315 ±(99.9%) 28.525 ns/op [Average]
+  (min, avg, max) = (205.730, 207.315, 208.856), stdev = 1.564
+  CI (99.9%): [178.791, 235.840] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 78.13% complete, ETA 00:05:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 273.812 ns/op
+# Warmup Iteration   2: 255.034 ns/op
+Iteration   1: 250.290 ns/op
+Iteration   2: 253.880 ns/op
+Iteration   3: 252.258 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
+  252.143 ±(99.9%) 32.805 ns/op [Average]
+  (min, avg, max) = (250.290, 252.143, 253.880), stdev = 1.798
+  CI (99.9%): [219.338, 284.947] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 79.69% complete, ETA 00:05:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 628.815 ns/op
+# Warmup Iteration   2: 218.113 ns/op
+Iteration   1: 224.254 ns/op
+Iteration   2: 222.105 ns/op
+Iteration   3: 221.101 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
+  222.486 ±(99.9%) 29.385 ns/op [Average]
+  (min, avg, max) = (221.101, 222.486, 224.254), stdev = 1.611
+  CI (99.9%): [193.101, 251.872] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 81.25% complete, ETA 00:04:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 241.866 ns/op
+# Warmup Iteration   2: 220.292 ns/op
+Iteration   1: 210.576 ns/op
+Iteration   2: 212.055 ns/op
+Iteration   3: 210.784 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
+  211.139 ±(99.9%) 14.610 ns/op [Average]
+  (min, avg, max) = (210.576, 211.139, 212.055), stdev = 0.801
+  CI (99.9%): [196.528, 225.749] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 82.81% complete, ETA 00:04:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 259.638 ns/op
+# Warmup Iteration   2: 243.432 ns/op
+Iteration   1: 236.383 ns/op
+Iteration   2: 237.254 ns/op
+Iteration   3: 238.147 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
+  237.261 ±(99.9%) 16.097 ns/op [Average]
+  (min, avg, max) = (236.383, 237.261, 238.147), stdev = 0.882
+  CI (99.9%): [221.165, 253.358] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 84.38% complete, ETA 00:03:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 258.129 ns/op
+# Warmup Iteration   2: 246.894 ns/op
+Iteration   1: 242.645 ns/op
+Iteration   2: 241.035 ns/op
+Iteration   3: 247.791 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
+  243.824 ±(99.9%) 64.380 ns/op [Average]
+  (min, avg, max) = (241.035, 243.824, 247.791), stdev = 3.529
+  CI (99.9%): [179.444, 308.204] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 85.94% complete, ETA 00:03:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 633.547 ns/op
+# Warmup Iteration   2: 225.880 ns/op
+Iteration   1: 225.279 ns/op
+Iteration   2: 220.308 ns/op
+Iteration   3: 222.693 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
+  222.760 ±(99.9%) 45.353 ns/op [Average]
+  (min, avg, max) = (220.308, 222.760, 225.279), stdev = 2.486
+  CI (99.9%): [177.407, 268.113] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 87.50% complete, ETA 00:03:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 282.218 ns/op
+# Warmup Iteration   2: 261.405 ns/op
+Iteration   1: 260.958 ns/op
+Iteration   2: 258.418 ns/op
+Iteration   3: 266.976 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
+  262.118 ±(99.9%) 80.182 ns/op [Average]
+  (min, avg, max) = (258.418, 262.118, 266.976), stdev = 4.395
+  CI (99.9%): [181.936, 342.299] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 89.06% complete, ETA 00:02:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 370.579 ns/op
+# Warmup Iteration   2: 348.815 ns/op
+Iteration   1: 343.796 ns/op
+Iteration   2: 342.452 ns/op
+Iteration   3: 344.693 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
+  343.647 ±(99.9%) 20.578 ns/op [Average]
+  (min, avg, max) = (342.452, 343.647, 344.693), stdev = 1.128
+  CI (99.9%): [323.069, 364.226] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 90.63% complete, ETA 00:02:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 432.440 ns/op
+# Warmup Iteration   2: 402.843 ns/op
+Iteration   1: 393.282 ns/op
+Iteration   2: 396.755 ns/op
+Iteration   3: 395.986 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
+  395.341 ±(99.9%) 33.282 ns/op [Average]
+  (min, avg, max) = (393.282, 395.341, 396.755), stdev = 1.824
+  CI (99.9%): [362.059, 428.623] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 92.19% complete, ETA 00:01:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 1229.167 ns/op
+# Warmup Iteration   2: 435.263 ns/op
+Iteration   1: 432.910 ns/op
+Iteration   2: 433.328 ns/op
+Iteration   3: 435.094 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
+  433.777 ±(99.9%) 21.147 ns/op [Average]
+  (min, avg, max) = (432.910, 433.777, 435.094), stdev = 1.159
+  CI (99.9%): [412.630, 454.925] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 93.75% complete, ETA 00:01:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 187.702 ns/op
+# Warmup Iteration   2: 176.468 ns/op
+Iteration   1: 171.704 ns/op
+Iteration   2: 174.199 ns/op
+Iteration   3: 172.953 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
+  172.952 ±(99.9%) 22.763 ns/op [Average]
+  (min, avg, max) = (171.704, 172.952, 174.199), stdev = 1.248
+  CI (99.9%): [150.189, 195.715] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 95.31% complete, ETA 00:01:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 242.977 ns/op
+# Warmup Iteration   2: 228.048 ns/op
+Iteration   1: 220.241 ns/op
+Iteration   2: 223.858 ns/op
+Iteration   3: 227.085 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
+  223.728 ±(99.9%) 62.468 ns/op [Average]
+  (min, avg, max) = (220.241, 223.728, 227.085), stdev = 3.424
+  CI (99.9%): [161.260, 286.196] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 96.88% complete, ETA 00:00:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 306.698 ns/op
+# Warmup Iteration   2: 282.321 ns/op
+Iteration   1: 275.144 ns/op
+Iteration   2: 271.247 ns/op
+Iteration   3: 276.487 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
+  274.293 ±(99.9%) 49.654 ns/op [Average]
+  (min, avg, max) = (271.247, 274.293, 276.487), stdev = 2.722
+  CI (99.9%): [224.638, 323.947] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_312, VM 25.312-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 98.44% complete, ETA 00:00:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 1040.077 ns/op
+# Warmup Iteration   2: 359.550 ns/op
+Iteration   1: 354.069 ns/op
+Iteration   2: 356.906 ns/op
+Iteration   3: 352.745 ns/op
+
+
+Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
+  354.573 ±(99.9%) 38.788 ns/op [Average]
+  (min, avg, max) = (352.745, 354.573, 356.906), stdev = 2.126
+  CI (99.9%): [315.786, 393.361] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:24:48
+
+Benchmark                                         (size)  Mode  Cnt    Score     Error  Units
+SetMapJavaVsScalaBenchmarks.javaMapHit              1000  avgt    3  219.474 ±  26.381  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit             10000  avgt    3  217.979 ±  20.500  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit            100000  avgt    3  154.569 ±  44.457  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit           1000000  avgt    3  154.708 ±   3.940  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss             1000  avgt    3  203.149 ± 119.785  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss            10000  avgt    3  206.072 ±  36.144  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss           100000  avgt    3  119.270 ±   1.459  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss          1000000  avgt    3  110.969 ±   1.905  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit              1000  avgt    3  165.052 ±  16.224  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit             10000  avgt    3  158.162 ±  22.734  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit            100000  avgt    3  124.630 ±   0.625  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit           1000000  avgt    3  138.260 ±  56.240  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss             1000  avgt    3  143.510 ±  35.499  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss            10000  avgt    3  149.816 ±  27.430  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss           100000  avgt    3  109.580 ±   3.560  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss          1000000  avgt    3  107.814 ±  21.240  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit       1000  avgt    3  196.161 ±  27.495  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit      10000  avgt    3  200.425 ±  43.978  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit     100000  avgt    3  299.767 ±  47.282  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit    1000000  avgt    3  287.356 ±  25.837  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss      1000  avgt    3  265.371 ±  61.263  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss     10000  avgt    3  258.433 ±  14.723  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss    100000  avgt    3  324.551 ±  44.714  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss   1000000  avgt    3  329.739 ±  21.894  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit       1000  avgt    3  166.163 ±   5.769  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit      10000  avgt    3  176.841 ±  19.449  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit     100000  avgt    3  138.970 ±  14.514  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit    1000000  avgt    3  135.615 ±   5.652  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss      1000  avgt    3  154.650 ±   9.607  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss     10000  avgt    3  170.215 ±  51.986  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss    100000  avgt    3  125.212 ±  37.779  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss   1000000  avgt    3  124.354 ±  17.771  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit             1000  avgt    3  303.845 ±  38.417  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit            10000  avgt    3  352.429 ±   8.991  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit           100000  avgt    3  470.556 ±  50.006  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit          1000000  avgt    3  489.533 ± 364.135  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss            1000  avgt    3  205.191 ±  38.702  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss           10000  avgt    3  289.285 ±  13.924  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss          100000  avgt    3  349.720 ±   3.792  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss         1000000  avgt    3  376.696 ±  46.066  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit      1000  avgt    3  320.077 ± 126.003  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit     10000  avgt    3  301.426 ±  17.847  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit    100000  avgt    3  319.306 ±  28.123  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit   1000000  avgt    3  264.022 ±  40.321  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss     1000  avgt    3  315.392 ±  33.800  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss    10000  avgt    3  322.824 ±  10.952  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss   100000  avgt    3  233.344 ±  16.948  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss  1000000  avgt    3  239.233 ±   3.152  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit      1000  avgt    3  201.371 ±  46.947  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit     10000  avgt    3  207.315 ±  28.525  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit    100000  avgt    3  252.143 ±  32.805  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit   1000000  avgt    3  222.486 ±  29.385  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss     1000  avgt    3  211.139 ±  14.610  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss    10000  avgt    3  237.261 ±  16.097  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss   100000  avgt    3  243.824 ±  64.380  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss  1000000  avgt    3  222.760 ±  45.353  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit             1000  avgt    3  262.118 ±  80.182  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit            10000  avgt    3  343.647 ±  20.578  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit           100000  avgt    3  395.341 ±  33.282  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit          1000000  avgt    3  433.777 ±  21.147  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss            1000  avgt    3  172.952 ±  22.763  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss           10000  avgt    3  223.728 ±  62.468  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss          100000  avgt    3  274.293 ±  49.654  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss         1000000  avgt    3  354.573 ±  38.788  ns/op
+
+Benchmark result is saved to /static/data/charts/set-map-java-vs-scala-2-12/jdk8.json
