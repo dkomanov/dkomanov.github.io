@@ -1,0 +1,3332 @@
+[
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 70.20884480155654,
+            "scoreError" : 1.1745310053189932,
+            "scoreConfidence" : [
+                69.03431379623754,
+                71.38337580687553
+            ],
+            "scorePercentiles" : {
+                "0.0" : 70.15364665657209,
+                "50.0" : 70.1933201105135,
+                "90.0" : 70.27956763758398,
+                "95.0" : 70.27956763758398,
+                "99.0" : 70.27956763758398,
+                "99.9" : 70.27956763758398,
+                "99.99" : 70.27956763758398,
+                "99.999" : 70.27956763758398,
+                "99.9999" : 70.27956763758398,
+                "100.0" : 70.27956763758398
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    70.27956763758398,
+                    70.1933201105135,
+                    70.15364665657209
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 79.21497131367344,
+            "scoreError" : 0.9702004737256477,
+            "scoreConfidence" : [
+                78.24477083994779,
+                80.1851717873991
+            ],
+            "scorePercentiles" : {
+                "0.0" : 79.15615319479039,
+                "50.0" : 79.22910195693184,
+                "90.0" : 79.2596587892981,
+                "95.0" : 79.2596587892981,
+                "99.0" : 79.2596587892981,
+                "99.9" : 79.2596587892981,
+                "99.99" : 79.2596587892981,
+                "99.999" : 79.2596587892981,
+                "99.9999" : 79.2596587892981,
+                "100.0" : 79.2596587892981
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    79.15615319479039,
+                    79.2596587892981,
+                    79.22910195693184
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 76.54146128654064,
+            "scoreError" : 13.990742473153583,
+            "scoreConfidence" : [
+                62.55071881338706,
+                90.53220375969423
+            ],
+            "scorePercentiles" : {
+                "0.0" : 75.69701472275938,
+                "50.0" : 76.73284450390358,
+                "90.0" : 77.19452463295895,
+                "95.0" : 77.19452463295895,
+                "99.0" : 77.19452463295895,
+                "99.9" : 77.19452463295895,
+                "99.99" : 77.19452463295895,
+                "99.999" : 77.19452463295895,
+                "99.9999" : 77.19452463295895,
+                "100.0" : 77.19452463295895
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    77.19452463295895,
+                    76.73284450390358,
+                    75.69701472275938
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 94.40777709501565,
+            "scoreError" : 12.766630031718703,
+            "scoreConfidence" : [
+                81.64114706329694,
+                107.17440712673435
+            ],
+            "scorePercentiles" : {
+                "0.0" : 93.60025840279289,
+                "50.0" : 94.78643428346982,
+                "90.0" : 94.83663859878419,
+                "95.0" : 94.83663859878419,
+                "99.0" : 94.83663859878419,
+                "99.9" : 94.83663859878419,
+                "99.99" : 94.83663859878419,
+                "99.999" : 94.83663859878419,
+                "99.9999" : 94.83663859878419,
+                "100.0" : 94.83663859878419
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    93.60025840279289,
+                    94.83663859878419,
+                    94.78643428346982
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 48.05136910461689,
+            "scoreError" : 3.5618613705091295,
+            "scoreConfidence" : [
+                44.48950773410776,
+                51.61323047512602
+            ],
+            "scorePercentiles" : {
+                "0.0" : 47.888777029777934,
+                "50.0" : 47.99742240013073,
+                "90.0" : 48.267907883941994,
+                "95.0" : 48.267907883941994,
+                "99.0" : 48.267907883941994,
+                "99.9" : 48.267907883941994,
+                "99.99" : 48.267907883941994,
+                "99.999" : 48.267907883941994,
+                "99.9999" : 48.267907883941994,
+                "100.0" : 48.267907883941994
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    47.99742240013073,
+                    47.888777029777934,
+                    48.267907883941994
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 52.73232077404029,
+            "scoreError" : 1.835100977352152,
+            "scoreConfidence" : [
+                50.897219796688134,
+                54.567421751392445
+            ],
+            "scorePercentiles" : {
+                "0.0" : 52.630628326971674,
+                "50.0" : 52.734567143056495,
+                "90.0" : 52.831766852092706,
+                "95.0" : 52.831766852092706,
+                "99.0" : 52.831766852092706,
+                "99.9" : 52.831766852092706,
+                "99.99" : 52.831766852092706,
+                "99.999" : 52.831766852092706,
+                "99.9999" : 52.831766852092706,
+                "100.0" : 52.831766852092706
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    52.630628326971674,
+                    52.734567143056495,
+                    52.831766852092706
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 51.67198065947351,
+            "scoreError" : 2.5347296406055033,
+            "scoreConfidence" : [
+                49.13725101886801,
+                54.20671030007902
+            ],
+            "scorePercentiles" : {
+                "0.0" : 51.5785247650944,
+                "50.0" : 51.60577937949317,
+                "90.0" : 51.83163783383297,
+                "95.0" : 51.83163783383297,
+                "99.0" : 51.83163783383297,
+                "99.9" : 51.83163783383297,
+                "99.99" : 51.83163783383297,
+                "99.999" : 51.83163783383297,
+                "99.9999" : 51.83163783383297,
+                "100.0" : 51.83163783383297
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    51.60577937949317,
+                    51.5785247650944,
+                    51.83163783383297
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 47.588891369868605,
+            "scoreError" : 0.5545349662378606,
+            "scoreConfidence" : [
+                47.034356403630746,
+                48.143426336106465
+            ],
+            "scorePercentiles" : {
+                "0.0" : 47.558046527684766,
+                "50.0" : 47.58981001533744,
+                "90.0" : 47.6188175665836,
+                "95.0" : 47.6188175665836,
+                "99.0" : 47.6188175665836,
+                "99.9" : 47.6188175665836,
+                "99.99" : 47.6188175665836,
+                "99.999" : 47.6188175665836,
+                "99.9999" : 47.6188175665836,
+                "100.0" : 47.6188175665836
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    47.6188175665836,
+                    47.558046527684766,
+                    47.58981001533744
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 62.52068746026966,
+            "scoreError" : 0.2601215332500659,
+            "scoreConfidence" : [
+                62.2605659270196,
+                62.78080899351973
+            ],
+            "scorePercentiles" : {
+                "0.0" : 62.50425885251575,
+                "50.0" : 62.5279689390967,
+                "90.0" : 62.52983458919653,
+                "95.0" : 62.52983458919653,
+                "99.0" : 62.52983458919653,
+                "99.9" : 62.52983458919653,
+                "99.99" : 62.52983458919653,
+                "99.999" : 62.52983458919653,
+                "99.9999" : 62.52983458919653,
+                "100.0" : 62.52983458919653
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    62.52983458919653,
+                    62.50425885251575,
+                    62.5279689390967
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 62.674549882373014,
+            "scoreError" : 29.193160945333,
+            "scoreConfidence" : [
+                33.481388937040016,
+                91.86771082770602
+            ],
+            "scorePercentiles" : {
+                "0.0" : 61.72642659888044,
+                "50.0" : 61.77516373837537,
+                "90.0" : 64.52205930986324,
+                "95.0" : 64.52205930986324,
+                "99.0" : 64.52205930986324,
+                "99.9" : 64.52205930986324,
+                "99.99" : 64.52205930986324,
+                "99.999" : 64.52205930986324,
+                "99.9999" : 64.52205930986324,
+                "100.0" : 64.52205930986324
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    61.77516373837537,
+                    61.72642659888044,
+                    64.52205930986324
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 62.26366889248687,
+            "scoreError" : 0.34229622975704854,
+            "scoreConfidence" : [
+                61.92137266272982,
+                62.605965122243916
+            ],
+            "scorePercentiles" : {
+                "0.0" : 62.24215926115011,
+                "50.0" : 62.27218096416517,
+                "90.0" : 62.27666645214534,
+                "95.0" : 62.27666645214534,
+                "99.0" : 62.27666645214534,
+                "99.9" : 62.27666645214534,
+                "99.99" : 62.27666645214534,
+                "99.999" : 62.27666645214534,
+                "99.9999" : 62.27666645214534,
+                "100.0" : 62.27666645214534
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    62.27666645214534,
+                    62.27218096416517,
+                    62.24215926115011
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 63.978387353940064,
+            "scoreError" : 8.015488760048937,
+            "scoreConfidence" : [
+                55.962898593891126,
+                71.993876113989
+            ],
+            "scorePercentiles" : {
+                "0.0" : 63.72220853518564,
+                "50.0" : 63.72724992876482,
+                "90.0" : 64.48570359786973,
+                "95.0" : 64.48570359786973,
+                "99.0" : 64.48570359786973,
+                "99.9" : 64.48570359786973,
+                "99.99" : 64.48570359786973,
+                "99.999" : 64.48570359786973,
+                "99.9999" : 64.48570359786973,
+                "100.0" : 64.48570359786973
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    63.72220853518564,
+                    63.72724992876482,
+                    64.48570359786973
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 58.60727986220386,
+            "scoreError" : 5.53344237645058,
+            "scoreConfidence" : [
+                53.07383748575328,
+                64.14072223865443
+            ],
+            "scorePercentiles" : {
+                "0.0" : 58.42725265079078,
+                "50.0" : 58.437125108308706,
+                "90.0" : 58.957461827512105,
+                "95.0" : 58.957461827512105,
+                "99.0" : 58.957461827512105,
+                "99.9" : 58.957461827512105,
+                "99.99" : 58.957461827512105,
+                "99.999" : 58.957461827512105,
+                "99.9999" : 58.957461827512105,
+                "100.0" : 58.957461827512105
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    58.42725265079078,
+                    58.957461827512105,
+                    58.437125108308706
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 60.3112587798657,
+            "scoreError" : 0.36380153497561546,
+            "scoreConfidence" : [
+                59.94745724489009,
+                60.67506031484132
+            ],
+            "scorePercentiles" : {
+                "0.0" : 60.29888867644682,
+                "50.0" : 60.30062460288548,
+                "90.0" : 60.33426306026482,
+                "95.0" : 60.33426306026482,
+                "99.0" : 60.33426306026482,
+                "99.9" : 60.33426306026482,
+                "99.99" : 60.33426306026482,
+                "99.999" : 60.33426306026482,
+                "99.9999" : 60.33426306026482,
+                "100.0" : 60.33426306026482
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    60.33426306026482,
+                    60.29888867644682,
+                    60.30062460288548
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 61.80773237608205,
+            "scoreError" : 18.340343371104076,
+            "scoreConfidence" : [
+                43.467389004977974,
+                80.14807574718613
+            ],
+            "scorePercentiles" : {
+                "0.0" : 61.206222219605436,
+                "50.0" : 61.24868549382953,
+                "90.0" : 62.968289414811196,
+                "95.0" : 62.968289414811196,
+                "99.0" : 62.968289414811196,
+                "99.9" : 62.968289414811196,
+                "99.99" : 62.968289414811196,
+                "99.999" : 62.968289414811196,
+                "99.9999" : 62.968289414811196,
+                "100.0" : 62.968289414811196
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    61.206222219605436,
+                    62.968289414811196,
+                    61.24868549382953
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 52.6213712285774,
+            "scoreError" : 0.18515142875342971,
+            "scoreConfidence" : [
+                52.436219799823974,
+                52.80652265733083
+            ],
+            "scorePercentiles" : {
+                "0.0" : 52.612360971010986,
+                "50.0" : 52.61938720723719,
+                "90.0" : 52.632365507484025,
+                "95.0" : 52.632365507484025,
+                "99.0" : 52.632365507484025,
+                "99.9" : 52.632365507484025,
+                "99.99" : 52.632365507484025,
+                "99.999" : 52.632365507484025,
+                "99.9999" : 52.632365507484025,
+                "100.0" : 52.632365507484025
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    52.612360971010986,
+                    52.61938720723719,
+                    52.632365507484025
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 78.36037830950075,
+            "scoreError" : 5.033981380751061,
+            "scoreConfidence" : [
+                73.32639692874969,
+                83.3943596902518
+            ],
+            "scorePercentiles" : {
+                "0.0" : 78.19406394767842,
+                "50.0" : 78.20818098756885,
+                "90.0" : 78.67888999325496,
+                "95.0" : 78.67888999325496,
+                "99.0" : 78.67888999325496,
+                "99.9" : 78.67888999325496,
+                "99.99" : 78.67888999325496,
+                "99.999" : 78.67888999325496,
+                "99.9999" : 78.67888999325496,
+                "100.0" : 78.67888999325496
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    78.19406394767842,
+                    78.20818098756885,
+                    78.67888999325496
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 85.74667575887786,
+            "scoreError" : 34.11132325366081,
+            "scoreConfidence" : [
+                51.63535250521705,
+                119.85799901253867
+            ],
+            "scorePercentiles" : {
+                "0.0" : 84.63647323919525,
+                "50.0" : 84.69816297312403,
+                "90.0" : 87.90539106431427,
+                "95.0" : 87.90539106431427,
+                "99.0" : 87.90539106431427,
+                "99.9" : 87.90539106431427,
+                "99.99" : 87.90539106431427,
+                "99.999" : 87.90539106431427,
+                "99.9999" : 87.90539106431427,
+                "100.0" : 87.90539106431427
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    84.63647323919525,
+                    87.90539106431427,
+                    84.69816297312403
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 93.75236975208497,
+            "scoreError" : 9.901201323568156,
+            "scoreConfidence" : [
+                83.85116842851681,
+                103.65357107565313
+            ],
+            "scorePercentiles" : {
+                "0.0" : 93.41481963536305,
+                "50.0" : 93.46388335027405,
+                "90.0" : 94.3784062706178,
+                "95.0" : 94.3784062706178,
+                "99.0" : 94.3784062706178,
+                "99.9" : 94.3784062706178,
+                "99.99" : 94.3784062706178,
+                "99.999" : 94.3784062706178,
+                "99.9999" : 94.3784062706178,
+                "100.0" : 94.3784062706178
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    94.3784062706178,
+                    93.41481963536305,
+                    93.46388335027405
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 99.62276216778389,
+            "scoreError" : 30.266723987219258,
+            "scoreConfidence" : [
+                69.35603818056464,
+                129.88948615500314
+            ],
+            "scorePercentiles" : {
+                "0.0" : 97.7848087409671,
+                "50.0" : 100.07398148431318,
+                "90.0" : 101.0094962780714,
+                "95.0" : 101.0094962780714,
+                "99.0" : 101.0094962780714,
+                "99.9" : 101.0094962780714,
+                "99.99" : 101.0094962780714,
+                "99.999" : 101.0094962780714,
+                "99.9999" : 101.0094962780714,
+                "100.0" : 101.0094962780714
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    100.07398148431318,
+                    101.0094962780714,
+                    97.7848087409671
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 98.42952459301426,
+            "scoreError" : 6.401516172057442,
+            "scoreConfidence" : [
+                92.02800842095682,
+                104.8310407650717
+            ],
+            "scorePercentiles" : {
+                "0.0" : 98.20987540398008,
+                "50.0" : 98.24449573792151,
+                "90.0" : 98.8342026371412,
+                "95.0" : 98.8342026371412,
+                "99.0" : 98.8342026371412,
+                "99.9" : 98.8342026371412,
+                "99.99" : 98.8342026371412,
+                "99.999" : 98.8342026371412,
+                "99.9999" : 98.8342026371412,
+                "100.0" : 98.8342026371412
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    98.8342026371412,
+                    98.20987540398008,
+                    98.24449573792151
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 103.82610704751534,
+            "scoreError" : 0.41255324588971076,
+            "scoreConfidence" : [
+                103.41355380162562,
+                104.23866029340505
+            ],
+            "scorePercentiles" : {
+                "0.0" : 103.80148851819895,
+                "50.0" : 103.83087884070773,
+                "90.0" : 103.84595378363936,
+                "95.0" : 103.84595378363936,
+                "99.0" : 103.84595378363936,
+                "99.9" : 103.84595378363936,
+                "99.99" : 103.84595378363936,
+                "99.999" : 103.84595378363936,
+                "99.9999" : 103.84595378363936,
+                "100.0" : 103.84595378363936
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    103.83087884070773,
+                    103.84595378363936,
+                    103.80148851819895
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 104.55181309544513,
+            "scoreError" : 0.21589095801706648,
+            "scoreConfidence" : [
+                104.33592213742806,
+                104.7677040534622
+            ],
+            "scorePercentiles" : {
+                "0.0" : 104.54234035760301,
+                "50.0" : 104.54802085570647,
+                "90.0" : 104.56507807302592,
+                "95.0" : 104.56507807302592,
+                "99.0" : 104.56507807302592,
+                "99.9" : 104.56507807302592,
+                "99.99" : 104.56507807302592,
+                "99.999" : 104.56507807302592,
+                "99.9999" : 104.56507807302592,
+                "100.0" : 104.56507807302592
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    104.56507807302592,
+                    104.54234035760301,
+                    104.54802085570647
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 91.3817219832864,
+            "scoreError" : 4.182613109499273,
+            "scoreConfidence" : [
+                87.19910887378713,
+                95.56433509278567
+            ],
+            "scorePercentiles" : {
+                "0.0" : 91.22258329048248,
+                "50.0" : 91.27807630889708,
+                "90.0" : 91.64450635047962,
+                "95.0" : 91.64450635047962,
+                "99.0" : 91.64450635047962,
+                "99.9" : 91.64450635047962,
+                "99.99" : 91.64450635047962,
+                "99.999" : 91.64450635047962,
+                "99.9999" : 91.64450635047962,
+                "100.0" : 91.64450635047962
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    91.27807630889708,
+                    91.64450635047962,
+                    91.22258329048248
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 70.09230200081402,
+            "scoreError" : 0.6455380993137554,
+            "scoreConfidence" : [
+                69.44676390150026,
+                70.73784010012777
+            ],
+            "scorePercentiles" : {
+                "0.0" : 70.05233273822681,
+                "50.0" : 70.10494636030825,
+                "90.0" : 70.11962690390698,
+                "95.0" : 70.11962690390698,
+                "99.0" : 70.11962690390698,
+                "99.9" : 70.11962690390698,
+                "99.99" : 70.11962690390698,
+                "99.999" : 70.11962690390698,
+                "99.9999" : 70.11962690390698,
+                "100.0" : 70.11962690390698
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    70.05233273822681,
+                    70.11962690390698,
+                    70.10494636030825
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 68.83018901853931,
+            "scoreError" : 6.210136708463749,
+            "scoreConfidence" : [
+                62.620052310075565,
+                75.04032572700307
+            ],
+            "scorePercentiles" : {
+                "0.0" : 68.61562916428551,
+                "50.0" : 68.65225985868712,
+                "90.0" : 69.22267803264533,
+                "95.0" : 69.22267803264533,
+                "99.0" : 69.22267803264533,
+                "99.9" : 69.22267803264533,
+                "99.99" : 69.22267803264533,
+                "99.999" : 69.22267803264533,
+                "99.9999" : 69.22267803264533,
+                "100.0" : 69.22267803264533
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    68.61562916428551,
+                    69.22267803264533,
+                    68.65225985868712
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 77.2147298979419,
+            "scoreError" : 5.445873074818799,
+            "scoreConfidence" : [
+                71.76885682312309,
+                82.6606029727607
+            ],
+            "scorePercentiles" : {
+                "0.0" : 77.04180591723015,
+                "50.0" : 77.04296870889462,
+                "90.0" : 77.55941506770091,
+                "95.0" : 77.55941506770091,
+                "99.0" : 77.55941506770091,
+                "99.9" : 77.55941506770091,
+                "99.99" : 77.55941506770091,
+                "99.999" : 77.55941506770091,
+                "99.9999" : 77.55941506770091,
+                "100.0" : 77.55941506770091
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    77.04180591723015,
+                    77.55941506770091,
+                    77.04296870889462
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 78.52584938998793,
+            "scoreError" : 4.3611555461469385,
+            "scoreConfidence" : [
+                74.164693843841,
+                82.88700493613486
+            ],
+            "scorePercentiles" : {
+                "0.0" : 78.38676064292846,
+                "50.0" : 78.38891016553791,
+                "90.0" : 78.80187736149739,
+                "95.0" : 78.80187736149739,
+                "99.0" : 78.80187736149739,
+                "99.9" : 78.80187736149739,
+                "99.99" : 78.80187736149739,
+                "99.999" : 78.80187736149739,
+                "99.9999" : 78.80187736149739,
+                "100.0" : 78.80187736149739
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    78.80187736149739,
+                    78.38676064292846,
+                    78.38891016553791
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 65.92645902810871,
+            "scoreError" : 0.6764973371823869,
+            "scoreConfidence" : [
+                65.24996169092633,
+                66.60295636529109
+            ],
+            "scorePercentiles" : {
+                "0.0" : 65.888992696844,
+                "50.0" : 65.9272418838257,
+                "90.0" : 65.96314250365643,
+                "95.0" : 65.96314250365643,
+                "99.0" : 65.96314250365643,
+                "99.9" : 65.96314250365643,
+                "99.99" : 65.96314250365643,
+                "99.999" : 65.96314250365643,
+                "99.9999" : 65.96314250365643,
+                "100.0" : 65.96314250365643
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    65.96314250365643,
+                    65.9272418838257,
+                    65.888992696844
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 63.7067045728457,
+            "scoreError" : 6.699993046205384,
+            "scoreConfidence" : [
+                57.006711526640316,
+                70.40669761905109
+            ],
+            "scorePercentiles" : {
+                "0.0" : 63.2833008390222,
+                "50.0" : 63.8979380897253,
+                "90.0" : 63.93887478978961,
+                "95.0" : 63.93887478978961,
+                "99.0" : 63.93887478978961,
+                "99.9" : 63.93887478978961,
+                "99.99" : 63.93887478978961,
+                "99.999" : 63.93887478978961,
+                "99.9999" : 63.93887478978961,
+                "100.0" : 63.93887478978961
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    63.2833008390222,
+                    63.93887478978961,
+                    63.8979380897253
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 60.82719419275259,
+            "scoreError" : 5.027927361249837,
+            "scoreConfidence" : [
+                55.799266831502756,
+                65.85512155400244
+            ],
+            "scorePercentiles" : {
+                "0.0" : 60.6552324250723,
+                "50.0" : 60.68127868679045,
+                "90.0" : 61.14507146639503,
+                "95.0" : 61.14507146639503,
+                "99.0" : 61.14507146639503,
+                "99.9" : 61.14507146639503,
+                "99.99" : 61.14507146639503,
+                "99.999" : 61.14507146639503,
+                "99.9999" : 61.14507146639503,
+                "100.0" : 61.14507146639503
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    60.68127868679045,
+                    60.6552324250723,
+                    61.14507146639503
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 64.69162047512604,
+            "scoreError" : 0.36410460832585767,
+            "scoreConfidence" : [
+                64.32751586680018,
+                65.0557250834519
+            ],
+            "scorePercentiles" : {
+                "0.0" : 64.67038703225917,
+                "50.0" : 64.69448029340154,
+                "90.0" : 64.7099940997174,
+                "95.0" : 64.7099940997174,
+                "99.0" : 64.7099940997174,
+                "99.9" : 64.7099940997174,
+                "99.99" : 64.7099940997174,
+                "99.999" : 64.7099940997174,
+                "99.9999" : 64.7099940997174,
+                "100.0" : 64.7099940997174
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    64.67038703225917,
+                    64.69448029340154,
+                    64.7099940997174
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 296.72062843666816,
+            "scoreError" : 21.15103256417991,
+            "scoreConfidence" : [
+                275.56959587248826,
+                317.87166100084806
+            ],
+            "scorePercentiles" : {
+                "0.0" : 295.921997622508,
+                "50.0" : 296.189483748979,
+                "90.0" : 298.05040393851755,
+                "95.0" : 298.05040393851755,
+                "99.0" : 298.05040393851755,
+                "99.9" : 298.05040393851755,
+                "99.99" : 298.05040393851755,
+                "99.999" : 298.05040393851755,
+                "99.9999" : 298.05040393851755,
+                "100.0" : 298.05040393851755
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    298.05040393851755,
+                    295.921997622508,
+                    296.189483748979
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 385.91731325035107,
+            "scoreError" : 205.78352057609442,
+            "scoreConfidence" : [
+                180.13379267425665,
+                591.7008338264454
+            ],
+            "scorePercentiles" : {
+                "0.0" : 372.89302863481953,
+                "50.0" : 392.3434615498885,
+                "90.0" : 392.515449566345,
+                "95.0" : 392.515449566345,
+                "99.0" : 392.515449566345,
+                "99.9" : 392.515449566345,
+                "99.99" : 392.515449566345,
+                "99.999" : 392.515449566345,
+                "99.9999" : 392.515449566345,
+                "100.0" : 392.515449566345
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    372.89302863481953,
+                    392.515449566345,
+                    392.3434615498885
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 525.2213258298096,
+            "scoreError" : 2.650439095451442,
+            "scoreConfidence" : [
+                522.5708867343582,
+                527.8717649252611
+            ],
+            "scorePercentiles" : {
+                "0.0" : 525.0817994389042,
+                "50.0" : 525.2104328054043,
+                "90.0" : 525.3717452451203,
+                "95.0" : 525.3717452451203,
+                "99.0" : 525.3717452451203,
+                "99.9" : 525.3717452451203,
+                "99.99" : 525.3717452451203,
+                "99.999" : 525.3717452451203,
+                "99.9999" : 525.3717452451203,
+                "100.0" : 525.3717452451203
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    525.0817994389042,
+                    525.2104328054043,
+                    525.3717452451203
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 599.2776012171552,
+            "scoreError" : 108.12172637574083,
+            "scoreConfidence" : [
+                491.15587484141435,
+                707.399327592896
+            ],
+            "scorePercentiles" : {
+                "0.0" : 595.469880393692,
+                "50.0" : 596.2570787888062,
+                "90.0" : 606.105844468967,
+                "95.0" : 606.105844468967,
+                "99.0" : 606.105844468967,
+                "99.9" : 606.105844468967,
+                "99.99" : 606.105844468967,
+                "99.999" : 606.105844468967,
+                "99.9999" : 606.105844468967,
+                "100.0" : 606.105844468967
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    606.105844468967,
+                    595.469880393692,
+                    596.2570787888062
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 215.93711459628153,
+            "scoreError" : 8.477604096821478,
+            "scoreConfidence" : [
+                207.45951049946007,
+                224.414718693103
+            ],
+            "scorePercentiles" : {
+                "0.0" : 215.65248856110054,
+                "50.0" : 215.68550608048122,
+                "90.0" : 216.47334914726287,
+                "95.0" : 216.47334914726287,
+                "99.0" : 216.47334914726287,
+                "99.9" : 216.47334914726287,
+                "99.99" : 216.47334914726287,
+                "99.999" : 216.47334914726287,
+                "99.9999" : 216.47334914726287,
+                "100.0" : 216.47334914726287
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    216.47334914726287,
+                    215.65248856110054,
+                    215.68550608048122
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 278.84537038995626,
+            "scoreError" : 14.315865187438774,
+            "scoreConfidence" : [
+                264.5295052025175,
+                293.161235577395
+            ],
+            "scorePercentiles" : {
+                "0.0" : 278.36941111026346,
+                "50.0" : 278.41562812628615,
+                "90.0" : 279.7510719333191,
+                "95.0" : 279.7510719333191,
+                "99.0" : 279.7510719333191,
+                "99.9" : 279.7510719333191,
+                "99.99" : 279.7510719333191,
+                "99.999" : 279.7510719333191,
+                "99.9999" : 279.7510719333191,
+                "100.0" : 279.7510719333191
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    279.7510719333191,
+                    278.41562812628615,
+                    278.36941111026346
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 407.01774473539564,
+            "scoreError" : 15.591911785385514,
+            "scoreConfidence" : [
+                391.42583295001015,
+                422.60965652078113
+            ],
+            "scorePercentiles" : {
+                "0.0" : 406.4367364160557,
+                "50.0" : 406.6174228792022,
+                "90.0" : 407.99907491092915,
+                "95.0" : 407.99907491092915,
+                "99.0" : 407.99907491092915,
+                "99.9" : 407.99907491092915,
+                "99.99" : 407.99907491092915,
+                "99.999" : 407.99907491092915,
+                "99.9999" : 407.99907491092915,
+                "100.0" : 407.99907491092915
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    407.99907491092915,
+                    406.6174228792022,
+                    406.4367364160557
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 483.089550328066,
+            "scoreError" : 123.6285893172311,
+            "scoreConfidence" : [
+                359.4609610108349,
+                606.7181396452971
+            ],
+            "scorePercentiles" : {
+                "0.0" : 479.1236857502852,
+                "50.0" : 479.2308310655455,
+                "90.0" : 490.91413416836735,
+                "95.0" : 490.91413416836735,
+                "99.0" : 490.91413416836735,
+                "99.9" : 490.91413416836735,
+                "99.99" : 490.91413416836735,
+                "99.999" : 490.91413416836735,
+                "99.9999" : 490.91413416836735,
+                "100.0" : 490.91413416836735
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    490.91413416836735,
+                    479.2308310655455,
+                    479.1236857502852
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 69.27662819270064,
+            "scoreError" : 3.8381023599761277,
+            "scoreConfidence" : [
+                65.43852583272451,
+                73.11473055267678
+            ],
+            "scorePercentiles" : {
+                "0.0" : 69.1217811315934,
+                "50.0" : 69.19195219192443,
+                "90.0" : 69.51615125458412,
+                "95.0" : 69.51615125458412,
+                "99.0" : 69.51615125458412,
+                "99.9" : 69.51615125458412,
+                "99.99" : 69.51615125458412,
+                "99.999" : 69.51615125458412,
+                "99.9999" : 69.51615125458412,
+                "100.0" : 69.51615125458412
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    69.19195219192443,
+                    69.1217811315934,
+                    69.51615125458412
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 81.56607670250082,
+            "scoreError" : 0.6658985531794417,
+            "scoreConfidence" : [
+                80.90017814932138,
+                82.23197525568027
+            ],
+            "scorePercentiles" : {
+                "0.0" : 81.53709408312372,
+                "50.0" : 81.55406770015838,
+                "90.0" : 81.60706832422036,
+                "95.0" : 81.60706832422036,
+                "99.0" : 81.60706832422036,
+                "99.9" : 81.60706832422036,
+                "99.99" : 81.60706832422036,
+                "99.999" : 81.60706832422036,
+                "99.9999" : 81.60706832422036,
+                "100.0" : 81.60706832422036
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    81.55406770015838,
+                    81.53709408312372,
+                    81.60706832422036
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 86.12135849633283,
+            "scoreError" : 27.38990471608236,
+            "scoreConfidence" : [
+                58.731453780250476,
+                113.51126321241519
+            ],
+            "scorePercentiles" : {
+                "0.0" : 85.14787974928112,
+                "50.0" : 85.36581954931884,
+                "90.0" : 87.8503761903985,
+                "95.0" : 87.8503761903985,
+                "99.0" : 87.8503761903985,
+                "99.9" : 87.8503761903985,
+                "99.99" : 87.8503761903985,
+                "99.999" : 87.8503761903985,
+                "99.9999" : 87.8503761903985,
+                "100.0" : 87.8503761903985
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    85.36581954931884,
+                    85.14787974928112,
+                    87.8503761903985
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 98.11357712770798,
+            "scoreError" : 1.0253621147246488,
+            "scoreConfidence" : [
+                97.08821501298334,
+                99.13893924243263
+            ],
+            "scorePercentiles" : {
+                "0.0" : 98.05225358407208,
+                "50.0" : 98.1258430544628,
+                "90.0" : 98.16263474458907,
+                "95.0" : 98.16263474458907,
+                "99.0" : 98.16263474458907,
+                "99.9" : 98.16263474458907,
+                "99.99" : 98.16263474458907,
+                "99.999" : 98.16263474458907,
+                "99.9999" : 98.16263474458907,
+                "100.0" : 98.16263474458907
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    98.16263474458907,
+                    98.05225358407208,
+                    98.1258430544628
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 54.39602546268625,
+            "scoreError" : 3.0836006157177525,
+            "scoreConfidence" : [
+                51.3124248469685,
+                57.479626078403996
+            ],
+            "scorePercentiles" : {
+                "0.0" : 54.291540242877744,
+                "50.0" : 54.3055068972195,
+                "90.0" : 54.59102924796147,
+                "95.0" : 54.59102924796147,
+                "99.0" : 54.59102924796147,
+                "99.9" : 54.59102924796147,
+                "99.99" : 54.59102924796147,
+                "99.999" : 54.59102924796147,
+                "99.9999" : 54.59102924796147,
+                "100.0" : 54.59102924796147
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    54.3055068972195,
+                    54.291540242877744,
+                    54.59102924796147
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 51.73265238870736,
+            "scoreError" : 0.21382634363379796,
+            "scoreConfidence" : [
+                51.51882604507356,
+                51.946478732341156
+            ],
+            "scorePercentiles" : {
+                "0.0" : 51.72212962214497,
+                "50.0" : 51.7305432444669,
+                "90.0" : 51.74528429951022,
+                "95.0" : 51.74528429951022,
+                "99.0" : 51.74528429951022,
+                "99.9" : 51.74528429951022,
+                "99.99" : 51.74528429951022,
+                "99.999" : 51.74528429951022,
+                "99.9999" : 51.74528429951022,
+                "100.0" : 51.74528429951022
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    51.72212962214497,
+                    51.7305432444669,
+                    51.74528429951022
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 50.6342802008489,
+            "scoreError" : 0.08361548080694331,
+            "scoreConfidence" : [
+                50.55066472004196,
+                50.71789568165584
+            ],
+            "scorePercentiles" : {
+                "0.0" : 50.62907443518921,
+                "50.0" : 50.63605776387119,
+                "90.0" : 50.63770840348627,
+                "95.0" : 50.63770840348627,
+                "99.0" : 50.63770840348627,
+                "99.9" : 50.63770840348627,
+                "99.99" : 50.63770840348627,
+                "99.999" : 50.63770840348627,
+                "99.9999" : 50.63770840348627,
+                "100.0" : 50.63770840348627
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    50.63605776387119,
+                    50.63770840348627,
+                    50.62907443518921
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 46.40540589424584,
+            "scoreError" : 0.13705728667869746,
+            "scoreConfidence" : [
+                46.26834860756714,
+                46.542463180924535
+            ],
+            "scorePercentiles" : {
+                "0.0" : 46.396733611692476,
+                "50.0" : 46.40956209114319,
+                "90.0" : 46.40992197990185,
+                "95.0" : 46.40992197990185,
+                "99.0" : 46.40992197990185,
+                "99.9" : 46.40992197990185,
+                "99.99" : 46.40992197990185,
+                "99.999" : 46.40992197990185,
+                "99.9999" : 46.40992197990185,
+                "100.0" : 46.40992197990185
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    46.40956209114319,
+                    46.40992197990185,
+                    46.396733611692476
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 69.97802591425032,
+            "scoreError" : 0.3888474766959112,
+            "scoreConfidence" : [
+                69.58917843755441,
+                70.36687339094624
+            ],
+            "scorePercentiles" : {
+                "0.0" : 69.95343100318757,
+                "50.0" : 69.98954480589184,
+                "90.0" : 69.99110193367152,
+                "95.0" : 69.99110193367152,
+                "99.0" : 69.99110193367152,
+                "99.9" : 69.99110193367152,
+                "99.99" : 69.99110193367152,
+                "99.999" : 69.99110193367152,
+                "99.9999" : 69.99110193367152,
+                "100.0" : 69.99110193367152
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    69.95343100318757,
+                    69.98954480589184,
+                    69.99110193367152
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 71.97818919579628,
+            "scoreError" : 23.254004722214766,
+            "scoreConfidence" : [
+                48.72418447358151,
+                95.23219391801103
+            ],
+            "scorePercentiles" : {
+                "0.0" : 71.09601114157957,
+                "50.0" : 71.39898207216245,
+                "90.0" : 73.43957437364679,
+                "95.0" : 73.43957437364679,
+                "99.0" : 73.43957437364679,
+                "99.9" : 73.43957437364679,
+                "99.99" : 73.43957437364679,
+                "99.999" : 73.43957437364679,
+                "99.9999" : 73.43957437364679,
+                "100.0" : 73.43957437364679
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    73.43957437364679,
+                    71.09601114157957,
+                    71.39898207216245
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 74.69072513603102,
+            "scoreError" : 23.81114067604638,
+            "scoreConfidence" : [
+                50.87958445998464,
+                98.5018658120774
+            ],
+            "scorePercentiles" : {
+                "0.0" : 73.27588986785725,
+                "50.0" : 74.94853526706297,
+                "90.0" : 75.84775027317284,
+                "95.0" : 75.84775027317284,
+                "99.0" : 75.84775027317284,
+                "99.9" : 75.84775027317284,
+                "99.99" : 75.84775027317284,
+                "99.999" : 75.84775027317284,
+                "99.9999" : 75.84775027317284,
+                "100.0" : 75.84775027317284
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    73.27588986785725,
+                    75.84775027317284,
+                    74.94853526706297
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 80.60387269192405,
+            "scoreError" : 2.326651768064161,
+            "scoreConfidence" : [
+                78.27722092385989,
+                82.93052445998822
+            ],
+            "scorePercentiles" : {
+                "0.0" : 80.5137806274756,
+                "50.0" : 80.5480381873704,
+                "90.0" : 80.74979926092615,
+                "95.0" : 80.74979926092615,
+                "99.0" : 80.74979926092615,
+                "99.9" : 80.74979926092615,
+                "99.99" : 80.74979926092615,
+                "99.999" : 80.74979926092615,
+                "99.9999" : 80.74979926092615,
+                "100.0" : 80.74979926092615
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    80.74979926092615,
+                    80.5480381873704,
+                    80.5137806274756
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 49.20071616278034,
+            "scoreError" : 0.365578111216941,
+            "scoreConfidence" : [
+                48.8351380515634,
+                49.56629427399728
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49.17794621898013,
+                "50.0" : 49.20853861777644,
+                "90.0" : 49.21566365158445,
+                "95.0" : 49.21566365158445,
+                "99.0" : 49.21566365158445,
+                "99.9" : 49.21566365158445,
+                "99.99" : 49.21566365158445,
+                "99.999" : 49.21566365158445,
+                "99.9999" : 49.21566365158445,
+                "100.0" : 49.21566365158445
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    49.20853861777644,
+                    49.21566365158445,
+                    49.17794621898013
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 48.854705672346974,
+            "scoreError" : 5.562480196181567,
+            "scoreConfidence" : [
+                43.292225476165406,
+                54.41718586852854
+            ],
+            "scorePercentiles" : {
+                "0.0" : 48.65950874656669,
+                "50.0" : 48.698558989196215,
+                "90.0" : 49.20604928127804,
+                "95.0" : 49.20604928127804,
+                "99.0" : 49.20604928127804,
+                "99.9" : 49.20604928127804,
+                "99.99" : 49.20604928127804,
+                "99.999" : 49.20604928127804,
+                "99.9999" : 49.20604928127804,
+                "100.0" : 49.20604928127804
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    49.20604928127804,
+                    48.698558989196215,
+                    48.65950874656669
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 45.25643293861021,
+            "scoreError" : 1.8242384481236338,
+            "scoreConfidence" : [
+                43.43219449048657,
+                47.08067138673385
+            ],
+            "scorePercentiles" : {
+                "0.0" : 45.184382077332515,
+                "50.0" : 45.21432362609738,
+                "90.0" : 45.370593112400734,
+                "95.0" : 45.370593112400734,
+                "99.0" : 45.370593112400734,
+                "99.9" : 45.370593112400734,
+                "99.99" : 45.370593112400734,
+                "99.999" : 45.370593112400734,
+                "99.9999" : 45.370593112400734,
+                "100.0" : 45.370593112400734
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    45.370593112400734,
+                    45.184382077332515,
+                    45.21432362609738
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 49.89980193986664,
+            "scoreError" : 0.746080517850046,
+            "scoreConfidence" : [
+                49.153721422016595,
+                50.64588245771669
+            ],
+            "scorePercentiles" : {
+                "0.0" : 49.87028934287518,
+                "50.0" : 49.88263377144304,
+                "90.0" : 49.9464827052817,
+                "95.0" : 49.9464827052817,
+                "99.0" : 49.9464827052817,
+                "99.9" : 49.9464827052817,
+                "99.99" : 49.9464827052817,
+                "99.999" : 49.9464827052817,
+                "99.9999" : 49.9464827052817,
+                "100.0" : 49.9464827052817
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    49.87028934287518,
+                    49.88263377144304,
+                    49.9464827052817
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 257.2238699283111,
+            "scoreError" : 1.1891825096773398,
+            "scoreConfidence" : [
+                256.0346874186338,
+                258.4130524379884
+            ],
+            "scorePercentiles" : {
+                "0.0" : 257.1487290575916,
+                "50.0" : 257.25766882846085,
+                "90.0" : 257.2652118988808,
+                "95.0" : 257.2652118988808,
+                "99.0" : 257.2652118988808,
+                "99.9" : 257.2652118988808,
+                "99.99" : 257.2652118988808,
+                "99.999" : 257.2652118988808,
+                "99.9999" : 257.2652118988808,
+                "100.0" : 257.2652118988808
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    257.2652118988808,
+                    257.25766882846085,
+                    257.1487290575916
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 306.567570646438,
+            "scoreError" : 4.047172283304613,
+            "scoreConfidence" : [
+                302.5203983631334,
+                310.61474292974265
+            ],
+            "scorePercentiles" : {
+                "0.0" : 306.3969163224284,
+                "50.0" : 306.48745765805245,
+                "90.0" : 306.8183379588332,
+                "95.0" : 306.8183379588332,
+                "99.0" : 306.8183379588332,
+                "99.9" : 306.8183379588332,
+                "99.99" : 306.8183379588332,
+                "99.999" : 306.8183379588332,
+                "99.9999" : 306.8183379588332,
+                "100.0" : 306.8183379588332
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    306.3969163224284,
+                    306.8183379588332,
+                    306.48745765805245
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 404.52950188078285,
+            "scoreError" : 56.73482620439277,
+            "scoreConfidence" : [
+                347.79467567639006,
+                461.26432808517563
+            ],
+            "scorePercentiles" : {
+                "0.0" : 400.9980160971403,
+                "50.0" : 405.7317895811658,
+                "90.0" : 406.8586999640424,
+                "95.0" : 406.8586999640424,
+                "99.0" : 406.8586999640424,
+                "99.9" : 406.8586999640424,
+                "99.99" : 406.8586999640424,
+                "99.999" : 406.8586999640424,
+                "99.9999" : 406.8586999640424,
+                "100.0" : 406.8586999640424
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    405.7317895811658,
+                    400.9980160971403,
+                    406.8586999640424
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 513.3664856336028,
+            "scoreError" : 4.676017977515733,
+            "scoreConfidence" : [
+                508.69046765608704,
+                518.0425036111185
+            ],
+            "scorePercentiles" : {
+                "0.0" : 513.0710531962718,
+                "50.0" : 513.4989141738562,
+                "90.0" : 513.5294895306806,
+                "95.0" : 513.5294895306806,
+                "99.0" : 513.5294895306806,
+                "99.9" : 513.5294895306806,
+                "99.99" : 513.5294895306806,
+                "99.999" : 513.5294895306806,
+                "99.9999" : 513.5294895306806,
+                "100.0" : 513.5294895306806
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    513.0710531962718,
+                    513.5294895306806,
+                    513.4989141738562
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 188.14374315559255,
+            "scoreError" : 55.54788352547371,
+            "scoreConfidence" : [
+                132.59585963011884,
+                243.69162668106625
+            ],
+            "scorePercentiles" : {
+                "0.0" : 185.89439089124596,
+                "50.0" : 186.92835166580488,
+                "90.0" : 191.60848690972676,
+                "95.0" : 191.60848690972676,
+                "99.0" : 191.60848690972676,
+                "99.9" : 191.60848690972676,
+                "99.99" : 191.60848690972676,
+                "99.999" : 191.60848690972676,
+                "99.9999" : 191.60848690972676,
+                "100.0" : 191.60848690972676
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    185.89439089124596,
+                    191.60848690972676,
+                    186.92835166580488
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 254.31718403737239,
+            "scoreError" : 4.096814410536483,
+            "scoreConfidence" : [
+                250.2203696268359,
+                258.41399844790885
+            ],
+            "scorePercentiles" : {
+                "0.0" : 254.05846206839067,
+                "50.0" : 254.43156168630077,
+                "90.0" : 254.46152835742572,
+                "95.0" : 254.46152835742572,
+                "99.0" : 254.46152835742572,
+                "99.9" : 254.46152835742572,
+                "99.99" : 254.46152835742572,
+                "99.999" : 254.46152835742572,
+                "99.9999" : 254.46152835742572,
+                "100.0" : 254.46152835742572
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    254.43156168630077,
+                    254.46152835742572,
+                    254.05846206839067
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 314.28317851258424,
+            "scoreError" : 3.3517429220920834,
+            "scoreConfidence" : [
+                310.9314355904922,
+                317.6349214346763
+            ],
+            "scorePercentiles" : {
+                "0.0" : 314.1157975034679,
+                "50.0" : 314.25399359249207,
+                "90.0" : 314.4797444417927,
+                "95.0" : 314.4797444417927,
+                "99.0" : 314.4797444417927,
+                "99.9" : 314.4797444417927,
+                "99.99" : 314.4797444417927,
+                "99.999" : 314.4797444417927,
+                "99.9999" : 314.4797444417927,
+                "100.0" : 314.4797444417927
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    314.1157975034679,
+                    314.25399359249207,
+                    314.4797444417927
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.20",
+        "benchmark" : "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss",
+        "mode" : "avgt",
+        "threads" : 2,
+        "forks" : 1,
+        "jvm" : "/usr/lib/jvm/java-17-openjdk-amd64/bin/java",
+        "jvmArgs" : [
+            "-Xmx2G"
+        ],
+        "jdkVersion" : "17.0.3",
+        "vmVersion" : "17.0.3+7-Ubuntu-0ubuntu0.22.04.1",
+        "warmupIterations" : 2,
+        "warmupTime" : "3 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 3,
+        "measurementTime" : "5 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 383.7220003713999,
+            "scoreError" : 47.747617408653525,
+            "scoreConfidence" : [
+                335.97438296274635,
+                431.4696177800534
+            ],
+            "scorePercentiles" : {
+                "0.0" : 381.8758852145302,
+                "50.0" : 382.57294019768426,
+                "90.0" : 386.7171757019852,
+                "95.0" : 386.7171757019852,
+                "99.0" : 386.7171757019852,
+                "99.9" : 386.7171757019852,
+                "99.99" : 386.7171757019852,
+                "99.999" : 386.7171757019852,
+                "99.9999" : 386.7171757019852,
+                "100.0" : 386.7171757019852
+            },
+            "scoreUnit" : "ns/op",
+            "rawData" : [
+                [
+                    382.57294019768426,
+                    386.7171757019852,
+                    381.8758852145302
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+

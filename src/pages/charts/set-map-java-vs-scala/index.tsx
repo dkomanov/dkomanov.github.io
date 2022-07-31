@@ -10,7 +10,11 @@ import {
 } from '../../../components';
 import { loadJson } from '../../../util';
 
-const jdks = ['openjdk-17', 'openjdk-11', 'openjdk-8'];
+type ScalaVersion = '2.12' | '2.13';
+type ScalaVersionDir = '2-12' | '2-13';
+type JdkVersion = 'openjdk-17' | 'openjdk-11' | 'openjdk-8';
+const jdks: JdkVersion[] = ['openjdk-17', 'openjdk-11', 'openjdk-8'];
+const scalas: ScalaVersion[] = ['2.12', '2.13'];
 
 const xDesc = (kind: 'Set' | 'Map') => {
   return {
@@ -43,7 +47,14 @@ const yDesc = {
   values: jdks,
 };
 
+const yDescScala = {
+  title: 'scala version',
+  prop: 'scala',
+  values: scalas,
+};
+
 const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
+  const [scalaVersion, scalaVersionSet] = useState<ScalaVersion>('2.13');
   const [size, sizeSet] = useState('1000000');
   const [extractor, extractorSet] = useState({ func: null });
 
@@ -92,14 +103,45 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
         ]}
         onChange={(value: string) => sizeSet(value)}
       />
+      <Choose
+        label="Scala version:"
+        items={scalas.map((v) => ({
+          label: v,
+          value: v,
+          default: v === '2.13',
+        }))}
+        onChange={(value: ScalaVersion) => scalaVersionSet(value)}
+      />
       <TimeUnits onChange={(func: any) => extractorSet({ func })} />
+
+      <h4>openjdk-17: 2.12 vs 2.13</h4>
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) => p.what === 'hit' && p.size === size}
+        title="Set successful lookup (hit) -- openjdk-17, nanos"
+        xDesc={xDesc('Set')}
+        yDesc={yDescScala}
+      />
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) => p.what === 'hit' && p.size === size}
+        title="Map successful lookup (hit) -- openjdk-17, nanos"
+        xDesc={xDesc('Map')}
+        yDesc={yDescScala}
+      />
 
       <h4>Successful Lookup (hit)</h4>
 
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.what === 'hit' && p.size === size}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'hit' && p.size === size
+        }
         title="Set successful lookup (hit), nanos"
         xDesc={xDesc('Set')}
         yDesc={yDesc}
@@ -108,7 +150,9 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.what === 'hit' && p.size === size}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'hit' && p.size === size
+        }
         title="Map successful lookup (hit), nanos"
         xDesc={xDesc('Map')}
         yDesc={yDesc}
@@ -119,7 +163,9 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.what === 'miss' && p.size === size}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'miss' && p.size === size
+        }
         title="Set failed lookup (miss), nanos"
         xDesc={xDesc('Set')}
         yDesc={yDesc}
@@ -128,16 +174,24 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.what === 'miss' && p.size === size}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'miss' && p.size === size
+        }
         title="Map failed lookup (miss), nanos"
         xDesc={xDesc('Map')}
         yDesc={yDesc}
       />
 
       <p>
-        Full JMH logs: <a href={filePath('jdk8.log.txt')}>openjdk-8</a>,{' '}
-        <a href={filePath('jdk11.log.txt')}>openjdk-11</a>,{' '}
-        <a href={filePath('jdk17.log.txt')}>openjdk-17</a>.
+        Full JMH logs:
+        <a href={filePath('2-12', 'jdk8.log.txt')}>
+          openjdk-8 (scala 2.12)
+        </a>,{' '}
+        <a href={filePath('2-12', 'jdk11.log.txt')}>openjdk-11 (scala 2.12)</a>,{' '}
+        <a href={filePath('2-12', 'jdk17.log.txt')}>openjdk-17 (scala 2.12)</a>,{' '}
+        <a href={filePath('2-13', 'jdk8.log.txt')}>openjdk-8 (scala 2.13)</a>,{' '}
+        <a href={filePath('2-13', 'jdk11.log.txt')}>openjdk-11 (scala 2.13)</a>,{' '}
+        <a href={filePath('2-13', 'jdk17.log.txt')}>openjdk-17 (scala 2.13)</a>.
       </p>
     </div>
   );
@@ -157,16 +211,19 @@ function exportDimensions(benchmark: string, params: any) {
   };
 }
 
-const filePath = (name: string) =>
-  `/data/charts/set-map-java-vs-scala-2-12/${name}`;
+const filePath = (scala: ScalaVersionDir, name: string) =>
+  `/data/charts/set-map-java-vs-scala-${scala}/${name}`;
 
 const fetchAndCombineResults = () => {
   return Promise.all([
-    loadJson(filePath('jdk8.json')),
-    loadJson(filePath('jdk11.json')),
-    loadJson(filePath('jdk17.json')),
+    loadJson(filePath('2-12', 'jdk8.json')),
+    loadJson(filePath('2-12', 'jdk11.json')),
+    loadJson(filePath('2-12', 'jdk17.json')),
+    loadJson(filePath('2-13', 'jdk8.json')),
+    loadJson(filePath('2-13', 'jdk11.json')),
+    loadJson(filePath('2-13', 'jdk17.json')),
   ]).then((values: any[]) => {
-    function setJdk(index: number, jdk: string, scala: string) {
+    function setJdk(index: number, jdk: JdkVersion, scala: ScalaVersion) {
       const list: JmhBenchmarkRun[] = values[index].data;
       list.forEach((v) => (v.params = { jdk, scala, ...v.params }));
       return list;
@@ -177,6 +234,9 @@ const fetchAndCombineResults = () => {
         ...setJdk(0, 'openjdk-8', '2.12'),
         ...setJdk(1, 'openjdk-11', '2.12'),
         ...setJdk(2, 'openjdk-17', '2.12'),
+        ...setJdk(3, 'openjdk-8', '2.13'),
+        ...setJdk(4, 'openjdk-11', '2.13'),
+        ...setJdk(5, 'openjdk-17', '2.13'),
       ],
     };
   });
