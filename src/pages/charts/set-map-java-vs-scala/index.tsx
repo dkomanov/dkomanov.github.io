@@ -64,9 +64,8 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <p>
         Here are benchmarking results for{' '}
-        set-map-lookup-performance-java-vs-scala
-        <Link to="/p/benchmarking-string-regionmatches">
-          &laquo;Set/Map lookup performance: Java vs Scala&raquo;
+        <Link to="/p/set-map-lookup-performance-java-vs-scala">
+          &laquo;Set/Map Lookup Performance: Java vs Scala&raquo;
         </Link>{' '}
         blog post.
       </p>
