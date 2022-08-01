@@ -64,8 +64,8 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <p>
         Here are benchmarking results for{' '}
-        <Link to="/p/set-map-lookup-performance-java-vs-scala">
-          &laquo;Set/Map Lookup Performance: Java vs Scala&raquo;
+        <Link to="/p/map-performance-java-vs-scala">
+          &laquo;Map Performance: Java vs Scala&raquo;
         </Link>{' '}
         blog post.
       </p>
@@ -113,16 +113,19 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
       />
       <TimeUnits onChange={(func: any) => extractorSet({ func })} />
 
-      <h4>openjdk-17: 2.12 vs 2.13</h4>
+      <h4>Map Lookup Performance</h4>
 
-      <ChartAndTable
-        dataTable={jmhList}
-        extractor={extractor.func}
-        filter={(p: any) => p.what === 'hit' && p.size === size}
-        title="Set successful lookup (hit) -- openjdk-17, nanos"
-        xDesc={xDesc('Set')}
-        yDesc={yDescScala}
-      />
+      <p>
+        Benchmarks for java.util.HashMap vs Map.asJava vs immutable.Map vs
+        mutable.Map.
+      </p>
+
+      <h5>openjdk-17: 2.12 vs 2.13</h5>
+
+      <p>
+        Comparing performance of Map between scala 2.12 and 2.13, using
+        openjdk-17.
+      </p>
 
       <ChartAndTable
         dataTable={jmhList}
@@ -133,7 +136,64 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
         yDesc={yDescScala}
       />
 
-      <h4>Successful Lookup (hit)</h4>
+      <h5>All JDKs</h5>
+
+      <p>
+        Comparing performance of Map for different versions of JDK: openjdk-8 vs
+        openjdk-11 vs openjdk-17. Use switcher above to change scala version.
+      </p>
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'hit' && p.size === size
+        }
+        title="Map successful lookup (hit), nanos"
+        xDesc={xDesc('Map')}
+        yDesc={yDesc}
+      />
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) =>
+          p.scala === scalaVersion && p.what === 'miss' && p.size === size
+        }
+        title="Map failed lookup (miss), nanos"
+        xDesc={xDesc('Map')}
+        yDesc={yDesc}
+      />
+
+      <h4>Set Lookup Performance</h4>
+
+      <p>
+        Same benchmark but for Set. Notice that HashSet internally uses HashMap,
+        so the performance, supposedly, should be the same.
+      </p>
+
+      <h5>openjdk-17: 2.12 vs 2.13</h5>
+
+      <p>
+        Comparing performance of Set between scala 2.12 and 2.13, using
+        openjdk-17.
+      </p>
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) => p.what === 'hit' && p.size === size}
+        title="Set successful lookup (hit) -- openjdk-17, nanos"
+        xDesc={xDesc('Set')}
+        yDesc={yDescScala}
+      />
+
+      <h5>All JDKs</h5>
+
+      <p>
+        Comparing performance of Set for different versions of JDK: openjdk-8 vs
+        openjdk-11 vs openjdk-17. Use switcher above to change scala version.
+      </p>
 
       <ChartAndTable
         dataTable={jmhList}
@@ -150,34 +210,10 @@ const SetMapJavaVsScalaImpl = ({ jmhList }: JmhChartComponentProps) => {
         dataTable={jmhList}
         extractor={extractor.func}
         filter={(p: any) =>
-          p.scala === scalaVersion && p.what === 'hit' && p.size === size
-        }
-        title="Map successful lookup (hit), nanos"
-        xDesc={xDesc('Map')}
-        yDesc={yDesc}
-      />
-
-      <h4>Failed Lookup (miss)</h4>
-
-      <ChartAndTable
-        dataTable={jmhList}
-        extractor={extractor.func}
-        filter={(p: any) =>
           p.scala === scalaVersion && p.what === 'miss' && p.size === size
         }
         title="Set failed lookup (miss), nanos"
         xDesc={xDesc('Set')}
-        yDesc={yDesc}
-      />
-
-      <ChartAndTable
-        dataTable={jmhList}
-        extractor={extractor.func}
-        filter={(p: any) =>
-          p.scala === scalaVersion && p.what === 'miss' && p.size === size
-        }
-        title="Map failed lookup (miss), nanos"
-        xDesc={xDesc('Map')}
         yDesc={yDesc}
       />
 

@@ -12,17 +12,17 @@
 
 # Run progress: 0.00% complete, ETA 00:22:24
 # Fork: 1 of 1
-# Warmup Iteration   1: 118.267 ns/op
-# Warmup Iteration   2: 117.341 ns/op
-Iteration   1: 125.935 ns/op
-Iteration   2: 121.823 ns/op
-Iteration   3: 122.358 ns/op
+# Warmup Iteration   1: 109.016 ns/op
+# Warmup Iteration   2: 106.636 ns/op
+Iteration   1: 102.100 ns/op
+Iteration   2: 101.896 ns/op
+Iteration   3: 101.923 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
-  123.372 ±(99.9%) 40.796 ns/op [Average]
-  (min, avg, max) = (121.823, 123.372, 125.935), stdev = 2.236
-  CI (99.9%): [82.576, 164.167] (assumes normal distribution)
+  101.973 ±(99.9%) 2.022 ns/op [Average]
+  (min, avg, max) = (101.896, 101.973, 102.100), stdev = 0.111
+  CI (99.9%): [99.951, 103.995] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -37,19 +37,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
 # Parameters: (size = 10000)
 
-# Run progress: 1.56% complete, ETA 00:22:48
+# Run progress: 1.56% complete, ETA 00:22:44
 # Fork: 1 of 1
-# Warmup Iteration   1: 120.387 ns/op
-# Warmup Iteration   2: 117.614 ns/op
-Iteration   1: 127.441 ns/op
-Iteration   2: 127.484 ns/op
-Iteration   3: 127.200 ns/op
+# Warmup Iteration   1: 115.707 ns/op
+# Warmup Iteration   2: 114.068 ns/op
+Iteration   1: 109.217 ns/op
+Iteration   2: 109.460 ns/op
+Iteration   3: 106.909 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
-  127.375 ±(99.9%) 2.790 ns/op [Average]
-  (min, avg, max) = (127.200, 127.375, 127.484), stdev = 0.153
-  CI (99.9%): [124.585, 130.165] (assumes normal distribution)
+  108.529 ±(99.9%) 25.681 ns/op [Average]
+  (min, avg, max) = (106.909, 108.529, 109.460), stdev = 1.408
+  CI (99.9%): [82.848, 134.209] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -64,19 +64,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
 # Parameters: (size = 100000)
 
-# Run progress: 3.13% complete, ETA 00:22:28
+# Run progress: 3.13% complete, ETA 00:22:25
 # Fork: 1 of 1
-# Warmup Iteration   1: 133.796 ns/op
-# Warmup Iteration   2: 122.510 ns/op
-Iteration   1: 127.114 ns/op
-Iteration   2: 128.498 ns/op
-Iteration   3: 127.098 ns/op
+# Warmup Iteration   1: 107.104 ns/op
+# Warmup Iteration   2: 109.647 ns/op
+Iteration   1: 112.489 ns/op
+Iteration   2: 109.478 ns/op
+Iteration   3: 109.038 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
-  127.570 ±(99.9%) 14.660 ns/op [Average]
-  (min, avg, max) = (127.098, 127.570, 128.498), stdev = 0.804
-  CI (99.9%): [112.909, 142.230] (assumes normal distribution)
+  110.335 ±(99.9%) 34.271 ns/op [Average]
+  (min, avg, max) = (109.038, 110.335, 112.489), stdev = 1.879
+  CI (99.9%): [76.064, 144.606] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -91,19 +91,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit
 # Parameters: (size = 1000000)
 
-# Run progress: 4.69% complete, ETA 00:22:14
+# Run progress: 4.69% complete, ETA 00:22:12
 # Fork: 1 of 1
-# Warmup Iteration   1: 101.733 ns/op
-# Warmup Iteration   2: 94.894 ns/op
-Iteration   1: 93.562 ns/op
-Iteration   2: 93.686 ns/op
-Iteration   3: 93.376 ns/op
+# Warmup Iteration   1: 92.425 ns/op
+# Warmup Iteration   2: 98.322 ns/op
+Iteration   1: 87.303 ns/op
+Iteration   2: 89.559 ns/op
+Iteration   3: 86.827 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
-  93.541 ±(99.9%) 2.843 ns/op [Average]
-  (min, avg, max) = (93.376, 93.541, 93.686), stdev = 0.156
-  CI (99.9%): [90.698, 96.385] (assumes normal distribution)
+  87.897 ±(99.9%) 26.627 ns/op [Average]
+  (min, avg, max) = (86.827, 87.897, 89.559), stdev = 1.460
+  CI (99.9%): [61.270, 114.524] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -118,19 +118,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
 # Parameters: (size = 1000)
 
-# Run progress: 6.25% complete, ETA 00:22:37
+# Run progress: 6.25% complete, ETA 00:22:34
 # Fork: 1 of 1
-# Warmup Iteration   1: 90.149 ns/op
-# Warmup Iteration   2: 86.995 ns/op
-Iteration   1: 93.698 ns/op
-Iteration   2: 94.126 ns/op
-Iteration   3: 93.945 ns/op
+# Warmup Iteration   1: 107.837 ns/op
+# Warmup Iteration   2: 105.361 ns/op
+Iteration   1: 63.756 ns/op
+Iteration   2: 63.701 ns/op
+Iteration   3: 63.691 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
-  93.923 ±(99.9%) 3.921 ns/op [Average]
-  (min, avg, max) = (93.698, 93.923, 94.126), stdev = 0.215
-  CI (99.9%): [90.002, 97.844] (assumes normal distribution)
+  63.716 ±(99.9%) 0.639 ns/op [Average]
+  (min, avg, max) = (63.691, 63.716, 63.756), stdev = 0.035
+  CI (99.9%): [63.077, 64.356] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -145,19 +145,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
 # Parameters: (size = 10000)
 
-# Run progress: 7.81% complete, ETA 00:22:03
+# Run progress: 7.81% complete, ETA 00:22:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 96.401 ns/op
-# Warmup Iteration   2: 89.843 ns/op
-Iteration   1: 93.007 ns/op
-Iteration   2: 93.252 ns/op
-Iteration   3: 92.353 ns/op
+# Warmup Iteration   1: 112.215 ns/op
+# Warmup Iteration   2: 111.619 ns/op
+Iteration   1: 65.528 ns/op
+Iteration   2: 65.145 ns/op
+Iteration   3: 65.150 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
-  92.871 ±(99.9%) 8.482 ns/op [Average]
-  (min, avg, max) = (92.353, 92.871, 93.252), stdev = 0.465
-  CI (99.9%): [84.389, 101.353] (assumes normal distribution)
+  65.274 ±(99.9%) 4.012 ns/op [Average]
+  (min, avg, max) = (65.145, 65.274, 65.528), stdev = 0.220
+  CI (99.9%): [61.262, 69.286] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -172,19 +172,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
 # Parameters: (size = 100000)
 
-# Run progress: 9.38% complete, ETA 00:21:33
+# Run progress: 9.38% complete, ETA 00:21:31
 # Fork: 1 of 1
-# Warmup Iteration   1: 81.833 ns/op
-# Warmup Iteration   2: 75.952 ns/op
-Iteration   1: 79.054 ns/op
-Iteration   2: 80.110 ns/op
-Iteration   3: 79.101 ns/op
+# Warmup Iteration   1: 101.530 ns/op
+# Warmup Iteration   2: 100.940 ns/op
+Iteration   1: 59.292 ns/op
+Iteration   2: 58.432 ns/op
+Iteration   3: 58.403 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
-  79.421 ±(99.9%) 10.883 ns/op [Average]
-  (min, avg, max) = (79.054, 79.421, 80.110), stdev = 0.597
-  CI (99.9%): [68.538, 90.304] (assumes normal distribution)
+  58.709 ±(99.9%) 9.217 ns/op [Average]
+  (min, avg, max) = (58.403, 58.709, 59.292), stdev = 0.505
+  CI (99.9%): [49.492, 67.926] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -199,19 +199,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss
 # Parameters: (size = 1000000)
 
-# Run progress: 10.94% complete, ETA 00:21:09
+# Run progress: 10.94% complete, ETA 00:21:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 66.592 ns/op
-# Warmup Iteration   2: 61.839 ns/op
-Iteration   1: 62.457 ns/op
-Iteration   2: 62.247 ns/op
-Iteration   3: 62.250 ns/op
+# Warmup Iteration   1: 76.227 ns/op
+# Warmup Iteration   2: 75.489 ns/op
+Iteration   1: 84.329 ns/op
+Iteration   2: 84.236 ns/op
+Iteration   3: 85.418 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
-  62.318 ±(99.9%) 2.191 ns/op [Average]
-  (min, avg, max) = (62.247, 62.318, 62.457), stdev = 0.120
-  CI (99.9%): [60.126, 64.509] (assumes normal distribution)
+  84.661 ±(99.9%) 11.990 ns/op [Average]
+  (min, avg, max) = (84.236, 84.661, 85.418), stdev = 0.657
+  CI (99.9%): [72.672, 96.651] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -226,19 +226,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaMapMiss":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
 # Parameters: (size = 1000)
 
-# Run progress: 12.50% complete, ETA 00:21:04
+# Run progress: 12.50% complete, ETA 00:21:03
 # Fork: 1 of 1
-# Warmup Iteration   1: 106.717 ns/op
-# Warmup Iteration   2: 100.558 ns/op
-Iteration   1: 113.073 ns/op
-Iteration   2: 112.975 ns/op
-Iteration   3: 112.928 ns/op
+# Warmup Iteration   1: 111.260 ns/op
+# Warmup Iteration   2: 113.881 ns/op
+Iteration   1: 102.674 ns/op
+Iteration   2: 103.065 ns/op
+Iteration   3: 102.589 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
-  112.992 ±(99.9%) 1.350 ns/op [Average]
-  (min, avg, max) = (112.928, 112.992, 113.073), stdev = 0.074
-  CI (99.9%): [111.642, 114.343] (assumes normal distribution)
+  102.776 ±(99.9%) 4.634 ns/op [Average]
+  (min, avg, max) = (102.589, 102.776, 103.065), stdev = 0.254
+  CI (99.9%): [98.142, 107.410] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -253,19 +253,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
 # Parameters: (size = 10000)
 
-# Run progress: 14.06% complete, ETA 00:20:36
+# Run progress: 14.06% complete, ETA 00:20:35
 # Fork: 1 of 1
-# Warmup Iteration   1: 109.975 ns/op
-# Warmup Iteration   2: 108.970 ns/op
-Iteration   1: 120.828 ns/op
-Iteration   2: 122.309 ns/op
-Iteration   3: 122.392 ns/op
+# Warmup Iteration   1: 109.756 ns/op
+# Warmup Iteration   2: 111.649 ns/op
+Iteration   1: 100.044 ns/op
+Iteration   2: 100.096 ns/op
+Iteration   3: 100.044 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
-  121.843 ±(99.9%) 16.056 ns/op [Average]
-  (min, avg, max) = (120.828, 121.843, 122.392), stdev = 0.880
-  CI (99.9%): [105.787, 137.899] (assumes normal distribution)
+  100.061 ±(99.9%) 0.547 ns/op [Average]
+  (min, avg, max) = (100.044, 100.061, 100.096), stdev = 0.030
+  CI (99.9%): [99.515, 100.608] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -280,19 +280,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit
 # Parameters: (size = 100000)
 
-# Run progress: 15.63% complete, ETA 00:20:09
+# Run progress: 15.63% complete, ETA 00:20:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 105.919 ns/op
-# Warmup Iteration   2: 98.830 ns/op
-Iteration   1: 111.792 ns/op
-Iteration   2: 112.022 ns/op
-Iteration   3: 111.574 ns/op
+# Warmup Iteration   1: 106.471 ns/op
+# Warmup Iteration   2: 110.765 ns/op
+Iteration   1: 95.371 ns/op
+Iteration   2: 96.101 ns/op
+Iteration   3: 95.225 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
-  111.796 ±(99.9%) 4.091 ns/op [Average]
-  (min, avg, max) = (111.574, 111.796, 112.022), stdev = 0.224
-  CI (99.9%): [107.705, 115.887] (assumes normal distribution)
+  95.566 ±(99.9%) 8.564 ns/op [Average]
+  (min, avg, max) = (95.225, 95.566, 96.101), stdev = 0.469
+  CI (99.9%): [87.002, 104.130] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -309,17 +309,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
 
 # Run progress: 17.19% complete, ETA 00:19:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 80.442 ns/op
-# Warmup Iteration   2: 76.743 ns/op
-Iteration   1: 75.336 ns/op
-Iteration   2: 75.793 ns/op
-Iteration   3: 76.853 ns/op
+# Warmup Iteration   1: 99.408 ns/op
+# Warmup Iteration   2: 100.407 ns/op
+Iteration   1: 92.059 ns/op
+Iteration   2: 91.441 ns/op
+Iteration   3: 90.731 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
-  75.994 ±(99.9%) 14.195 ns/op [Average]
-  (min, avg, max) = (75.336, 75.994, 76.853), stdev = 0.778
-  CI (99.9%): [61.799, 90.189] (assumes normal distribution)
+  91.411 ±(99.9%) 12.124 ns/op [Average]
+  (min, avg, max) = (90.731, 91.411, 92.059), stdev = 0.665
+  CI (99.9%): [79.286, 103.535] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -334,19 +334,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
 # Parameters: (size = 1000)
 
-# Run progress: 18.75% complete, ETA 00:19:34
+# Run progress: 18.75% complete, ETA 00:19:33
 # Fork: 1 of 1
-# Warmup Iteration   1: 88.815 ns/op
-# Warmup Iteration   2: 88.466 ns/op
-Iteration   1: 99.868 ns/op
-Iteration   2: 100.037 ns/op
-Iteration   3: 99.667 ns/op
+# Warmup Iteration   1: 112.451 ns/op
+# Warmup Iteration   2: 109.343 ns/op
+Iteration   1: 64.711 ns/op
+Iteration   2: 64.675 ns/op
+Iteration   3: 64.864 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
-  99.858 ±(99.9%) 3.376 ns/op [Average]
-  (min, avg, max) = (99.667, 99.858, 100.037), stdev = 0.185
-  CI (99.9%): [96.482, 103.234] (assumes normal distribution)
+  64.750 ±(99.9%) 1.828 ns/op [Average]
+  (min, avg, max) = (64.675, 64.750, 64.864), stdev = 0.100
+  CI (99.9%): [62.922, 66.578] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -363,17 +363,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
 
 # Run progress: 20.31% complete, ETA 00:19:07
 # Fork: 1 of 1
-# Warmup Iteration   1: 90.633 ns/op
-# Warmup Iteration   2: 85.222 ns/op
-Iteration   1: 97.517 ns/op
-Iteration   2: 97.258 ns/op
-Iteration   3: 97.553 ns/op
+# Warmup Iteration   1: 118.236 ns/op
+# Warmup Iteration   2: 113.494 ns/op
+Iteration   1: 67.124 ns/op
+Iteration   2: 67.912 ns/op
+Iteration   3: 67.191 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
-  97.443 ±(99.9%) 2.941 ns/op [Average]
-  (min, avg, max) = (97.258, 97.443, 97.553), stdev = 0.161
-  CI (99.9%): [94.502, 100.383] (assumes normal distribution)
+  67.409 ±(99.9%) 7.968 ns/op [Average]
+  (min, avg, max) = (67.124, 67.409, 67.912), stdev = 0.437
+  CI (99.9%): [59.441, 75.377] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -388,19 +388,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss
 # Parameters: (size = 100000)
 
-# Run progress: 21.88% complete, ETA 00:18:42
+# Run progress: 21.88% complete, ETA 00:18:41
 # Fork: 1 of 1
-# Warmup Iteration   1: 86.646 ns/op
-# Warmup Iteration   2: 81.800 ns/op
-Iteration   1: 98.292 ns/op
-Iteration   2: 96.510 ns/op
-Iteration   3: 96.586 ns/op
+# Warmup Iteration   1: 131.917 ns/op
+# Warmup Iteration   2: 113.040 ns/op
+Iteration   1: 70.137 ns/op
+Iteration   2: 70.006 ns/op
+Iteration   3: 69.998 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
-  97.130 ±(99.9%) 18.387 ns/op [Average]
-  (min, avg, max) = (96.510, 97.130, 98.292), stdev = 1.008
-  CI (99.9%): [78.742, 115.517] (assumes normal distribution)
+  70.047 ±(99.9%) 1.420 ns/op [Average]
+  (min, avg, max) = (69.998, 70.047, 70.137), stdev = 0.078
+  CI (99.9%): [68.627, 71.467] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -417,17 +417,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
 
 # Run progress: 23.44% complete, ETA 00:18:18
 # Fork: 1 of 1
-# Warmup Iteration   1: 60.889 ns/op
-# Warmup Iteration   2: 59.907 ns/op
-Iteration   1: 54.012 ns/op
-Iteration   2: 53.713 ns/op
-Iteration   3: 53.876 ns/op
+# Warmup Iteration   1: 69.027 ns/op
+# Warmup Iteration   2: 70.123 ns/op
+Iteration   1: 63.121 ns/op
+Iteration   2: 65.235 ns/op
+Iteration   3: 62.946 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
-  53.867 ±(99.9%) 2.730 ns/op [Average]
-  (min, avg, max) = (53.713, 53.867, 54.012), stdev = 0.150
-  CI (99.9%): [51.137, 56.597] (assumes normal distribution)
+  63.767 ±(99.9%) 23.243 ns/op [Average]
+  (min, avg, max) = (62.946, 63.767, 65.235), stdev = 1.274
+  CI (99.9%): [40.524, 87.011] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -444,17 +444,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaSetMiss":
 
 # Run progress: 25.00% complete, ETA 00:18:03
 # Fork: 1 of 1
-# Warmup Iteration   1: 211.728 ns/op
-# Warmup Iteration   2: 198.939 ns/op
-Iteration   1: 228.219 ns/op
-Iteration   2: 229.503 ns/op
-Iteration   3: 228.323 ns/op
+# Warmup Iteration   1: 229.810 ns/op
+# Warmup Iteration   2: 216.995 ns/op
+Iteration   1: 203.492 ns/op
+Iteration   2: 203.191 ns/op
+Iteration   3: 203.611 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
-  228.682 ±(99.9%) 13.016 ns/op [Average]
-  (min, avg, max) = (228.219, 228.682, 229.503), stdev = 0.713
-  CI (99.9%): [215.665, 241.698] (assumes normal distribution)
+  203.431 ±(99.9%) 3.943 ns/op [Average]
+  (min, avg, max) = (203.191, 203.431, 203.611), stdev = 0.216
+  CI (99.9%): [199.489, 207.374] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -471,17 +471,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
 
 # Run progress: 26.56% complete, ETA 00:17:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 213.982 ns/op
-# Warmup Iteration   2: 198.345 ns/op
-Iteration   1: 222.699 ns/op
-Iteration   2: 224.159 ns/op
-Iteration   3: 223.709 ns/op
+# Warmup Iteration   1: 224.521 ns/op
+# Warmup Iteration   2: 211.423 ns/op
+Iteration   1: 198.362 ns/op
+Iteration   2: 198.070 ns/op
+Iteration   3: 197.664 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
-  223.522 ±(99.9%) 13.641 ns/op [Average]
-  (min, avg, max) = (222.699, 223.522, 224.159), stdev = 0.748
-  CI (99.9%): [209.881, 237.163] (assumes normal distribution)
+  198.032 ±(99.9%) 6.400 ns/op [Average]
+  (min, avg, max) = (197.664, 198.032, 198.362), stdev = 0.351
+  CI (99.9%): [191.632, 204.432] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -498,17 +498,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
 
 # Run progress: 28.13% complete, ETA 00:17:13
 # Fork: 1 of 1
-# Warmup Iteration   1: 216.127 ns/op
-# Warmup Iteration   2: 206.625 ns/op
-Iteration   1: 227.842 ns/op
-Iteration   2: 227.345 ns/op
-Iteration   3: 226.757 ns/op
+# Warmup Iteration   1: 211.901 ns/op
+# Warmup Iteration   2: 206.630 ns/op
+Iteration   1: 193.802 ns/op
+Iteration   2: 194.498 ns/op
+Iteration   3: 193.780 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
-  227.315 ±(99.9%) 9.912 ns/op [Average]
-  (min, avg, max) = (226.757, 227.315, 227.842), stdev = 0.543
-  CI (99.9%): [217.403, 237.226] (assumes normal distribution)
+  194.027 ±(99.9%) 7.457 ns/op [Average]
+  (min, avg, max) = (193.780, 194.027, 194.498), stdev = 0.409
+  CI (99.9%): [186.570, 201.484] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -525,17 +525,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
 
 # Run progress: 29.69% complete, ETA 00:16:50
 # Fork: 1 of 1
-# Warmup Iteration   1: 217.761 ns/op
-# Warmup Iteration   2: 204.695 ns/op
-Iteration   1: 230.442 ns/op
-Iteration   2: 229.307 ns/op
-Iteration   3: 229.755 ns/op
+# Warmup Iteration   1: 238.905 ns/op
+# Warmup Iteration   2: 219.518 ns/op
+Iteration   1: 202.948 ns/op
+Iteration   2: 202.484 ns/op
+Iteration   3: 203.193 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit":
-  229.835 ±(99.9%) 10.424 ns/op [Average]
-  (min, avg, max) = (229.307, 229.835, 230.442), stdev = 0.571
-  CI (99.9%): [219.410, 240.259] (assumes normal distribution)
+  202.875 ±(99.9%) 6.567 ns/op [Average]
+  (min, avg, max) = (202.484, 202.875, 203.193), stdev = 0.360
+  CI (99.9%): [196.308, 209.442] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -552,17 +552,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapHit
 
 # Run progress: 31.25% complete, ETA 00:16:32
 # Fork: 1 of 1
-# Warmup Iteration   1: 254.459 ns/op
-# Warmup Iteration   2: 243.120 ns/op
-Iteration   1: 250.642 ns/op
-Iteration   2: 250.044 ns/op
-Iteration   3: 250.498 ns/op
+# Warmup Iteration   1: 272.951 ns/op
+# Warmup Iteration   2: 272.415 ns/op
+Iteration   1: 264.456 ns/op
+Iteration   2: 264.382 ns/op
+Iteration   3: 266.782 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
-  250.394 ±(99.9%) 5.694 ns/op [Average]
-  (min, avg, max) = (250.044, 250.394, 250.642), stdev = 0.312
-  CI (99.9%): [244.701, 256.088] (assumes normal distribution)
+  265.207 ±(99.9%) 24.900 ns/op [Average]
+  (min, avg, max) = (264.382, 265.207, 266.782), stdev = 1.365
+  CI (99.9%): [240.306, 290.107] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -579,17 +579,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMis
 
 # Run progress: 32.81% complete, ETA 00:16:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 255.425 ns/op
-# Warmup Iteration   2: 245.458 ns/op
-Iteration   1: 260.472 ns/op
-Iteration   2: 260.630 ns/op
-Iteration   3: 260.718 ns/op
+# Warmup Iteration   1: 253.494 ns/op
+# Warmup Iteration   2: 248.676 ns/op
+Iteration   1: 242.035 ns/op
+Iteration   2: 241.742 ns/op
+Iteration   3: 241.650 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
-  260.607 ±(99.9%) 2.273 ns/op [Average]
-  (min, avg, max) = (260.472, 260.607, 260.718), stdev = 0.125
-  CI (99.9%): [258.333, 262.880] (assumes normal distribution)
+  241.809 ±(99.9%) 3.670 ns/op [Average]
+  (min, avg, max) = (241.650, 241.809, 242.035), stdev = 0.201
+  CI (99.9%): [238.139, 245.479] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -606,17 +606,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMis
 
 # Run progress: 34.38% complete, ETA 00:15:44
 # Fork: 1 of 1
-# Warmup Iteration   1: 179.408 ns/op
-# Warmup Iteration   2: 170.474 ns/op
-Iteration   1: 173.669 ns/op
-Iteration   2: 174.131 ns/op
-Iteration   3: 173.538 ns/op
+# Warmup Iteration   1: 244.006 ns/op
+# Warmup Iteration   2: 240.099 ns/op
+Iteration   1: 236.814 ns/op
+Iteration   2: 239.073 ns/op
+Iteration   3: 236.888 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
-  173.779 ±(99.9%) 5.679 ns/op [Average]
-  (min, avg, max) = (173.538, 173.779, 174.131), stdev = 0.311
-  CI (99.9%): [168.100, 179.458] (assumes normal distribution)
+  237.592 ±(99.9%) 23.415 ns/op [Average]
+  (min, avg, max) = (236.814, 237.592, 239.073), stdev = 1.283
+  CI (99.9%): [214.177, 261.007] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -633,17 +633,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMis
 
 # Run progress: 35.94% complete, ETA 00:15:21
 # Fork: 1 of 1
-# Warmup Iteration   1: 254.180 ns/op
-# Warmup Iteration   2: 246.240 ns/op
-Iteration   1: 263.352 ns/op
-Iteration   2: 265.344 ns/op
-Iteration   3: 263.094 ns/op
+# Warmup Iteration   1: 253.160 ns/op
+# Warmup Iteration   2: 246.285 ns/op
+Iteration   1: 239.433 ns/op
+Iteration   2: 238.530 ns/op
+Iteration   3: 238.764 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss":
-  263.930 ±(99.9%) 22.463 ns/op [Average]
-  (min, avg, max) = (263.094, 263.930, 265.344), stdev = 1.231
-  CI (99.9%): [241.467, 286.393] (assumes normal distribution)
+  238.909 ±(99.9%) 8.558 ns/op [Average]
+  (min, avg, max) = (238.530, 238.909, 239.433), stdev = 0.469
+  CI (99.9%): [230.351, 247.467] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -660,17 +660,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedMapMis
 
 # Run progress: 37.50% complete, ETA 00:15:02
 # Fork: 1 of 1
-# Warmup Iteration   1: 112.950 ns/op
-# Warmup Iteration   2: 112.671 ns/op
-Iteration   1: 135.613 ns/op
-Iteration   2: 134.286 ns/op
-Iteration   3: 134.358 ns/op
+# Warmup Iteration   1: 119.990 ns/op
+# Warmup Iteration   2: 112.735 ns/op
+Iteration   1: 107.906 ns/op
+Iteration   2: 107.975 ns/op
+Iteration   3: 107.966 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
-  134.752 ±(99.9%) 13.617 ns/op [Average]
-  (min, avg, max) = (134.286, 134.752, 135.613), stdev = 0.746
-  CI (99.9%): [121.135, 148.370] (assumes normal distribution)
+  107.949 ±(99.9%) 0.686 ns/op [Average]
+  (min, avg, max) = (107.906, 107.949, 107.975), stdev = 0.038
+  CI (99.9%): [107.263, 108.635] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -687,17 +687,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
 
 # Run progress: 39.06% complete, ETA 00:14:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 122.228 ns/op
-# Warmup Iteration   2: 118.156 ns/op
-Iteration   1: 126.753 ns/op
-Iteration   2: 123.545 ns/op
-Iteration   3: 123.912 ns/op
+# Warmup Iteration   1: 124.976 ns/op
+# Warmup Iteration   2: 122.736 ns/op
+Iteration   1: 114.217 ns/op
+Iteration   2: 114.317 ns/op
+Iteration   3: 114.223 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
-  124.737 ±(99.9%) 32.035 ns/op [Average]
-  (min, avg, max) = (123.545, 124.737, 126.753), stdev = 1.756
-  CI (99.9%): [92.702, 156.772] (assumes normal distribution)
+  114.252 ±(99.9%) 1.028 ns/op [Average]
+  (min, avg, max) = (114.217, 114.252, 114.317), stdev = 0.056
+  CI (99.9%): [113.224, 115.280] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -714,17 +714,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
 
 # Run progress: 40.63% complete, ETA 00:14:14
 # Fork: 1 of 1
-# Warmup Iteration   1: 118.483 ns/op
-# Warmup Iteration   2: 111.726 ns/op
-Iteration   1: 134.707 ns/op
-Iteration   2: 134.992 ns/op
-Iteration   3: 134.501 ns/op
+# Warmup Iteration   1: 119.630 ns/op
+# Warmup Iteration   2: 112.987 ns/op
+Iteration   1: 112.232 ns/op
+Iteration   2: 113.445 ns/op
+Iteration   3: 112.444 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
-  134.734 ±(99.9%) 4.494 ns/op [Average]
-  (min, avg, max) = (134.501, 134.734, 134.992), stdev = 0.246
-  CI (99.9%): [130.240, 139.227] (assumes normal distribution)
+  112.707 ±(99.9%) 11.816 ns/op [Average]
+  (min, avg, max) = (112.232, 112.707, 113.445), stdev = 0.648
+  CI (99.9%): [100.891, 124.523] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -741,17 +741,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
 
 # Run progress: 42.19% complete, ETA 00:13:51
 # Fork: 1 of 1
-# Warmup Iteration   1: 85.402 ns/op
-# Warmup Iteration   2: 80.308 ns/op
-Iteration   1: 79.133 ns/op
-Iteration   2: 78.777 ns/op
-Iteration   3: 79.951 ns/op
+# Warmup Iteration   1: 95.960 ns/op
+# Warmup Iteration   2: 97.170 ns/op
+Iteration   1: 83.568 ns/op
+Iteration   2: 80.830 ns/op
+Iteration   3: 81.534 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit":
-  79.287 ±(99.9%) 10.984 ns/op [Average]
-  (min, avg, max) = (78.777, 79.287, 79.951), stdev = 0.602
-  CI (99.9%): [68.303, 90.271] (assumes normal distribution)
+  81.977 ±(99.9%) 25.934 ns/op [Average]
+  (min, avg, max) = (80.830, 81.977, 83.568), stdev = 1.422
+  CI (99.9%): [56.044, 107.911] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -768,17 +768,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetHit
 
 # Run progress: 43.75% complete, ETA 00:13:32
 # Fork: 1 of 1
-# Warmup Iteration   1: 87.352 ns/op
-# Warmup Iteration   2: 89.067 ns/op
-Iteration   1: 78.926 ns/op
-Iteration   2: 78.884 ns/op
-Iteration   3: 78.861 ns/op
+# Warmup Iteration   1: 112.288 ns/op
+# Warmup Iteration   2: 111.238 ns/op
+Iteration   1: 72.147 ns/op
+Iteration   2: 69.016 ns/op
+Iteration   3: 69.022 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
-  78.890 ±(99.9%) 0.602 ns/op [Average]
-  (min, avg, max) = (78.861, 78.890, 78.926), stdev = 0.033
-  CI (99.9%): [78.288, 79.492] (assumes normal distribution)
+  70.062 ±(99.9%) 32.955 ns/op [Average]
+  (min, avg, max) = (69.016, 70.062, 72.147), stdev = 1.806
+  CI (99.9%): [37.106, 103.017] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -795,17 +795,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMis
 
 # Run progress: 45.31% complete, ETA 00:13:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 97.330 ns/op
-# Warmup Iteration   2: 93.341 ns/op
-Iteration   1: 107.103 ns/op
-Iteration   2: 106.576 ns/op
-Iteration   3: 106.426 ns/op
+# Warmup Iteration   1: 126.574 ns/op
+# Warmup Iteration   2: 118.339 ns/op
+Iteration   1: 77.532 ns/op
+Iteration   2: 77.448 ns/op
+Iteration   3: 77.641 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
-  106.702 ±(99.9%) 6.489 ns/op [Average]
-  (min, avg, max) = (106.426, 106.702, 107.103), stdev = 0.356
-  CI (99.9%): [100.213, 113.191] (assumes normal distribution)
+  77.540 ±(99.9%) 1.765 ns/op [Average]
+  (min, avg, max) = (77.448, 77.540, 77.641), stdev = 0.097
+  CI (99.9%): [75.775, 79.305] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -822,17 +822,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMis
 
 # Run progress: 46.88% complete, ETA 00:12:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 105.666 ns/op
-# Warmup Iteration   2: 99.663 ns/op
-Iteration   1: 111.397 ns/op
-Iteration   2: 111.016 ns/op
-Iteration   3: 111.105 ns/op
+# Warmup Iteration   1: 107.705 ns/op
+# Warmup Iteration   2: 104.007 ns/op
+Iteration   1: 66.821 ns/op
+Iteration   2: 67.847 ns/op
+Iteration   3: 66.862 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
-  111.173 ±(99.9%) 3.640 ns/op [Average]
-  (min, avg, max) = (111.016, 111.173, 111.397), stdev = 0.199
-  CI (99.9%): [107.533, 114.812] (assumes normal distribution)
+  67.177 ±(99.9%) 10.593 ns/op [Average]
+  (min, avg, max) = (66.821, 67.177, 67.847), stdev = 0.581
+  CI (99.9%): [56.584, 77.770] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -849,17 +849,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMis
 
 # Run progress: 48.44% complete, ETA 00:12:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 59.967 ns/op
-# Warmup Iteration   2: 55.685 ns/op
-Iteration   1: 51.478 ns/op
-Iteration   2: 51.685 ns/op
-Iteration   3: 52.164 ns/op
+# Warmup Iteration   1: 67.555 ns/op
+# Warmup Iteration   2: 70.370 ns/op
+Iteration   1: 74.905 ns/op
+Iteration   2: 74.670 ns/op
+Iteration   3: 75.122 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss":
-  51.776 ±(99.9%) 6.423 ns/op [Average]
-  (min, avg, max) = (51.478, 51.776, 52.164), stdev = 0.352
-  CI (99.9%): [45.353, 58.199] (assumes normal distribution)
+  74.899 ±(99.9%) 4.123 ns/op [Average]
+  (min, avg, max) = (74.670, 74.899, 75.122), stdev = 0.226
+  CI (99.9%): [70.776, 79.022] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -876,17 +876,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.javaWrappedSetMis
 
 # Run progress: 50.00% complete, ETA 00:12:02
 # Fork: 1 of 1
-# Warmup Iteration   1: 311.960 ns/op
-# Warmup Iteration   2: 298.618 ns/op
-Iteration   1: 315.560 ns/op
-Iteration   2: 309.208 ns/op
-Iteration   3: 309.433 ns/op
+# Warmup Iteration   1: 282.430 ns/op
+# Warmup Iteration   2: 284.674 ns/op
+Iteration   1: 275.221 ns/op
+Iteration   2: 278.511 ns/op
+Iteration   3: 274.990 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
-  311.400 ±(99.9%) 65.750 ns/op [Average]
-  (min, avg, max) = (309.208, 311.400, 315.560), stdev = 3.604
-  CI (99.9%): [245.650, 377.151] (assumes normal distribution)
+  276.241 ±(99.9%) 35.930 ns/op [Average]
+  (min, avg, max) = (274.990, 276.241, 278.511), stdev = 1.969
+  CI (99.9%): [240.311, 312.171] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -903,17 +903,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
 
 # Run progress: 51.56% complete, ETA 00:11:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 412.800 ns/op
-# Warmup Iteration   2: 399.422 ns/op
-Iteration   1: 411.751 ns/op
-Iteration   2: 423.389 ns/op
-Iteration   3: 423.783 ns/op
+# Warmup Iteration   1: 324.643 ns/op
+# Warmup Iteration   2: 318.501 ns/op
+Iteration   1: 320.398 ns/op
+Iteration   2: 320.274 ns/op
+Iteration   3: 319.685 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
-  419.641 ±(99.9%) 124.703 ns/op [Average]
-  (min, avg, max) = (411.751, 419.641, 423.783), stdev = 6.835
-  CI (99.9%): [294.937, 544.344] (assumes normal distribution)
+  320.119 ±(99.9%) 6.949 ns/op [Average]
+  (min, avg, max) = (319.685, 320.119, 320.398), stdev = 0.381
+  CI (99.9%): [313.170, 327.068] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -930,17 +930,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
 
 # Run progress: 53.13% complete, ETA 00:11:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 520.320 ns/op
-# Warmup Iteration   2: 503.008 ns/op
-Iteration   1: 506.635 ns/op
-Iteration   2: 506.611 ns/op
-Iteration   3: 507.806 ns/op
+# Warmup Iteration   1: 490.883 ns/op
+# Warmup Iteration   2: 482.267 ns/op
+Iteration   1: 483.575 ns/op
+Iteration   2: 463.705 ns/op
+Iteration   3: 466.363 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
-  507.017 ±(99.9%) 12.469 ns/op [Average]
-  (min, avg, max) = (506.611, 507.017, 507.806), stdev = 0.683
-  CI (99.9%): [494.548, 519.486] (assumes normal distribution)
+  471.214 ±(99.9%) 196.790 ns/op [Average]
+  (min, avg, max) = (463.705, 471.214, 483.575), stdev = 10.787
+  CI (99.9%): [274.424, 668.005] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -957,17 +957,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
 
 # Run progress: 54.69% complete, ETA 00:10:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 623.171 ns/op
-# Warmup Iteration   2: 609.563 ns/op
-Iteration   1: 614.055 ns/op
-Iteration   2: 613.947 ns/op
-Iteration   3: 611.003 ns/op
+# Warmup Iteration   1: 601.425 ns/op
+# Warmup Iteration   2: 587.615 ns/op
+Iteration   1: 592.281 ns/op
+Iteration   2: 591.210 ns/op
+Iteration   3: 591.326 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
-  613.002 ±(99.9%) 31.591 ns/op [Average]
-  (min, avg, max) = (611.003, 613.002, 614.055), stdev = 1.732
-  CI (99.9%): [581.411, 644.593] (assumes normal distribution)
+  591.606 ±(99.9%) 10.726 ns/op [Average]
+  (min, avg, max) = (591.210, 591.606, 592.281), stdev = 0.588
+  CI (99.9%): [580.880, 602.331] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -982,19 +982,19 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapHit":
 # Benchmark: com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss
 # Parameters: (size = 1000)
 
-# Run progress: 56.25% complete, ETA 00:10:31
+# Run progress: 56.25% complete, ETA 00:10:32
 # Fork: 1 of 1
-# Warmup Iteration   1: 221.952 ns/op
-# Warmup Iteration   2: 213.653 ns/op
-Iteration   1: 215.134 ns/op
-Iteration   2: 215.915 ns/op
-Iteration   3: 214.985 ns/op
+# Warmup Iteration   1: 208.845 ns/op
+# Warmup Iteration   2: 205.586 ns/op
+Iteration   1: 209.439 ns/op
+Iteration   2: 209.251 ns/op
+Iteration   3: 209.113 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
-  215.345 ±(99.9%) 9.114 ns/op [Average]
-  (min, avg, max) = (214.985, 215.345, 215.915), stdev = 0.500
-  CI (99.9%): [206.231, 224.459] (assumes normal distribution)
+  209.268 ±(99.9%) 2.981 ns/op [Average]
+  (min, avg, max) = (209.113, 209.268, 209.439), stdev = 0.163
+  CI (99.9%): [206.286, 212.249] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1011,17 +1011,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
 
 # Run progress: 57.81% complete, ETA 00:10:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 294.340 ns/op
-# Warmup Iteration   2: 287.227 ns/op
-Iteration   1: 286.967 ns/op
-Iteration   2: 287.238 ns/op
-Iteration   3: 286.928 ns/op
+# Warmup Iteration   1: 263.381 ns/op
+# Warmup Iteration   2: 262.009 ns/op
+Iteration   1: 264.079 ns/op
+Iteration   2: 263.885 ns/op
+Iteration   3: 264.081 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
-  287.044 ±(99.9%) 3.082 ns/op [Average]
-  (min, avg, max) = (286.928, 287.044, 287.238), stdev = 0.169
-  CI (99.9%): [283.962, 290.127] (assumes normal distribution)
+  264.015 ±(99.9%) 2.055 ns/op [Average]
+  (min, avg, max) = (263.885, 264.015, 264.081), stdev = 0.113
+  CI (99.9%): [261.960, 266.070] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1038,17 +1038,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
 
 # Run progress: 59.38% complete, ETA 00:09:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 486.298 ns/op
-# Warmup Iteration   2: 459.491 ns/op
-Iteration   1: 457.044 ns/op
-Iteration   2: 455.042 ns/op
-Iteration   3: 453.056 ns/op
+# Warmup Iteration   1: 400.192 ns/op
+# Warmup Iteration   2: 396.784 ns/op
+Iteration   1: 404.977 ns/op
+Iteration   2: 406.741 ns/op
+Iteration   3: 408.046 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
-  455.047 ±(99.9%) 36.372 ns/op [Average]
-  (min, avg, max) = (453.056, 455.047, 457.044), stdev = 1.994
-  CI (99.9%): [418.675, 491.420] (assumes normal distribution)
+  406.588 ±(99.9%) 28.100 ns/op [Average]
+  (min, avg, max) = (404.977, 406.588, 408.046), stdev = 1.540
+  CI (99.9%): [378.488, 434.688] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1065,17 +1065,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
 
 # Run progress: 60.94% complete, ETA 00:09:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 577.659 ns/op
-# Warmup Iteration   2: 525.115 ns/op
-Iteration   1: 520.829 ns/op
-Iteration   2: 513.911 ns/op
-Iteration   3: 521.077 ns/op
+# Warmup Iteration   1: 468.421 ns/op
+# Warmup Iteration   2: 461.915 ns/op
+Iteration   1: 459.811 ns/op
+Iteration   2: 459.299 ns/op
+Iteration   3: 460.823 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
-  518.606 ±(99.9%) 74.212 ns/op [Average]
-  (min, avg, max) = (513.911, 518.606, 521.077), stdev = 4.068
-  CI (99.9%): [444.393, 592.818] (assumes normal distribution)
+  459.978 ±(99.9%) 14.151 ns/op [Average]
+  (min, avg, max) = (459.299, 459.978, 460.823), stdev = 0.776
+  CI (99.9%): [445.827, 474.128] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1092,17 +1092,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMapMiss":
 
 # Run progress: 62.50% complete, ETA 00:09:01
 # Fork: 1 of 1
-# Warmup Iteration   1: 112.592 ns/op
-# Warmup Iteration   2: 108.243 ns/op
-Iteration   1: 120.344 ns/op
-Iteration   2: 120.561 ns/op
-Iteration   3: 120.992 ns/op
+# Warmup Iteration   1: 121.405 ns/op
+# Warmup Iteration   2: 125.851 ns/op
+Iteration   1: 82.125 ns/op
+Iteration   2: 81.450 ns/op
+Iteration   3: 81.661 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
-  120.632 ±(99.9%) 6.020 ns/op [Average]
-  (min, avg, max) = (120.344, 120.632, 120.992), stdev = 0.330
-  CI (99.9%): [114.612, 126.653] (assumes normal distribution)
+  81.745 ±(99.9%) 6.302 ns/op [Average]
+  (min, avg, max) = (81.450, 81.745, 82.125), stdev = 0.345
+  CI (99.9%): [75.444, 88.047] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1119,17 +1119,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHi
 
 # Run progress: 64.06% complete, ETA 00:08:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 120.090 ns/op
-# Warmup Iteration   2: 123.525 ns/op
-Iteration   1: 126.470 ns/op
-Iteration   2: 124.262 ns/op
-Iteration   3: 124.465 ns/op
+# Warmup Iteration   1: 112.586 ns/op
+# Warmup Iteration   2: 110.801 ns/op
+Iteration   1: 68.432 ns/op
+Iteration   2: 69.457 ns/op
+Iteration   3: 68.346 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
-  125.066 ±(99.9%) 22.269 ns/op [Average]
-  (min, avg, max) = (124.262, 125.066, 126.470), stdev = 1.221
-  CI (99.9%): [102.797, 147.335] (assumes normal distribution)
+  68.745 ±(99.9%) 11.278 ns/op [Average]
+  (min, avg, max) = (68.346, 68.745, 69.457), stdev = 0.618
+  CI (99.9%): [57.467, 80.023] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1146,17 +1146,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHi
 
 # Run progress: 65.63% complete, ETA 00:08:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 118.319 ns/op
-# Warmup Iteration   2: 114.640 ns/op
-Iteration   1: 122.504 ns/op
-Iteration   2: 122.266 ns/op
-Iteration   3: 122.449 ns/op
+# Warmup Iteration   1: 120.595 ns/op
+# Warmup Iteration   2: 121.793 ns/op
+Iteration   1: 78.433 ns/op
+Iteration   2: 78.501 ns/op
+Iteration   3: 78.859 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
-  122.406 ±(99.9%) 2.273 ns/op [Average]
-  (min, avg, max) = (122.266, 122.406, 122.504), stdev = 0.125
-  CI (99.9%): [120.133, 124.679] (assumes normal distribution)
+  78.598 ±(99.9%) 4.175 ns/op [Average]
+  (min, avg, max) = (78.433, 78.598, 78.859), stdev = 0.229
+  CI (99.9%): [74.423, 82.772] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1173,17 +1173,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHi
 
 # Run progress: 67.19% complete, ETA 00:07:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 135.025 ns/op
-# Warmup Iteration   2: 123.300 ns/op
-Iteration   1: 125.678 ns/op
-Iteration   2: 126.584 ns/op
-Iteration   3: 126.517 ns/op
+# Warmup Iteration   1: 123.114 ns/op
+# Warmup Iteration   2: 133.071 ns/op
+Iteration   1: 76.924 ns/op
+Iteration   2: 76.890 ns/op
+Iteration   3: 77.477 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHit":
-  126.260 ±(99.9%) 9.207 ns/op [Average]
-  (min, avg, max) = (125.678, 126.260, 126.584), stdev = 0.505
-  CI (99.9%): [117.053, 135.466] (assumes normal distribution)
+  77.097 ±(99.9%) 6.013 ns/op [Average]
+  (min, avg, max) = (76.890, 77.097, 77.477), stdev = 0.330
+  CI (99.9%): [71.084, 83.109] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1200,17 +1200,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapHi
 
 # Run progress: 68.75% complete, ETA 00:07:31
 # Fork: 1 of 1
-# Warmup Iteration   1: 50.809 ns/op
-# Warmup Iteration   2: 48.284 ns/op
-Iteration   1: 51.726 ns/op
-Iteration   2: 51.776 ns/op
-Iteration   3: 51.767 ns/op
+# Warmup Iteration   1: 48.700 ns/op
+# Warmup Iteration   2: 50.062 ns/op
+Iteration   1: 49.377 ns/op
+Iteration   2: 49.278 ns/op
+Iteration   3: 49.348 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
-  51.756 ±(99.9%) 0.491 ns/op [Average]
-  (min, avg, max) = (51.726, 51.756, 51.776), stdev = 0.027
-  CI (99.9%): [51.266, 52.247] (assumes normal distribution)
+  49.334 ±(99.9%) 0.929 ns/op [Average]
+  (min, avg, max) = (49.278, 49.334, 49.377), stdev = 0.051
+  CI (99.9%): [48.405, 50.264] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1227,17 +1227,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMi
 
 # Run progress: 70.31% complete, ETA 00:07:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 52.484 ns/op
-# Warmup Iteration   2: 50.178 ns/op
-Iteration   1: 46.808 ns/op
-Iteration   2: 46.935 ns/op
-Iteration   3: 46.966 ns/op
+# Warmup Iteration   1: 65.385 ns/op
+# Warmup Iteration   2: 60.659 ns/op
+Iteration   1: 57.055 ns/op
+Iteration   2: 57.062 ns/op
+Iteration   3: 57.069 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
-  46.903 ±(99.9%) 1.531 ns/op [Average]
-  (min, avg, max) = (46.808, 46.903, 46.966), stdev = 0.084
-  CI (99.9%): [45.372, 48.433] (assumes normal distribution)
+  57.062 ±(99.9%) 0.130 ns/op [Average]
+  (min, avg, max) = (57.055, 57.062, 57.069), stdev = 0.007
+  CI (99.9%): [56.932, 57.192] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1254,17 +1254,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMi
 
 # Run progress: 71.88% complete, ETA 00:06:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 48.700 ns/op
-# Warmup Iteration   2: 46.527 ns/op
-Iteration   1: 49.427 ns/op
-Iteration   2: 49.287 ns/op
-Iteration   3: 49.348 ns/op
+# Warmup Iteration   1: 49.601 ns/op
+# Warmup Iteration   2: 50.110 ns/op
+Iteration   1: 48.551 ns/op
+Iteration   2: 48.518 ns/op
+Iteration   3: 48.493 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
-  49.354 ±(99.9%) 1.284 ns/op [Average]
-  (min, avg, max) = (49.287, 49.354, 49.427), stdev = 0.070
-  CI (99.9%): [48.070, 50.638] (assumes normal distribution)
+  48.521 ±(99.9%) 0.528 ns/op [Average]
+  (min, avg, max) = (48.493, 48.521, 48.551), stdev = 0.029
+  CI (99.9%): [47.992, 49.049] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1281,17 +1281,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMi
 
 # Run progress: 73.44% complete, ETA 00:06:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 44.144 ns/op
-# Warmup Iteration   2: 42.599 ns/op
-Iteration   1: 39.286 ns/op
-Iteration   2: 39.194 ns/op
-Iteration   3: 39.095 ns/op
+# Warmup Iteration   1: 62.878 ns/op
+# Warmup Iteration   2: 59.933 ns/op
+Iteration   1: 53.980 ns/op
+Iteration   2: 53.654 ns/op
+Iteration   3: 53.802 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss":
-  39.192 ±(99.9%) 1.738 ns/op [Average]
-  (min, avg, max) = (39.095, 39.192, 39.286), stdev = 0.095
-  CI (99.9%): [37.454, 40.930] (assumes normal distribution)
+  53.812 ±(99.9%) 2.980 ns/op [Average]
+  (min, avg, max) = (53.654, 53.812, 53.980), stdev = 0.163
+  CI (99.9%): [50.832, 56.792] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1308,17 +1308,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableMapMi
 
 # Run progress: 75.00% complete, ETA 00:06:01
 # Fork: 1 of 1
-# Warmup Iteration   1: 98.614 ns/op
-# Warmup Iteration   2: 90.092 ns/op
-Iteration   1: 104.187 ns/op
-Iteration   2: 104.209 ns/op
-Iteration   3: 104.657 ns/op
+# Warmup Iteration   1: 117.358 ns/op
+# Warmup Iteration   2: 119.359 ns/op
+Iteration   1: 76.382 ns/op
+Iteration   2: 76.072 ns/op
+Iteration   3: 75.489 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
-  104.351 ±(99.9%) 4.833 ns/op [Average]
-  (min, avg, max) = (104.187, 104.351, 104.657), stdev = 0.265
-  CI (99.9%): [99.518, 109.184] (assumes normal distribution)
+  75.981 ±(99.9%) 8.273 ns/op [Average]
+  (min, avg, max) = (75.489, 75.981, 76.382), stdev = 0.453
+  CI (99.9%): [67.707, 84.254] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1335,17 +1335,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHi
 
 # Run progress: 76.56% complete, ETA 00:05:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 102.831 ns/op
-# Warmup Iteration   2: 102.712 ns/op
-Iteration   1: 120.334 ns/op
-Iteration   2: 119.770 ns/op
-Iteration   3: 120.089 ns/op
+# Warmup Iteration   1: 106.853 ns/op
+# Warmup Iteration   2: 107.452 ns/op
+Iteration   1: 70.908 ns/op
+Iteration   2: 74.510 ns/op
+Iteration   3: 72.062 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
-  120.064 ±(99.9%) 5.168 ns/op [Average]
-  (min, avg, max) = (119.770, 120.064, 120.334), stdev = 0.283
-  CI (99.9%): [114.896, 125.233] (assumes normal distribution)
+  72.493 ±(99.9%) 33.560 ns/op [Average]
+  (min, avg, max) = (70.908, 72.493, 74.510), stdev = 1.840
+  CI (99.9%): [38.933, 106.054] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1362,17 +1362,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHi
 
 # Run progress: 78.13% complete, ETA 00:05:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 93.716 ns/op
-# Warmup Iteration   2: 89.516 ns/op
-Iteration   1: 104.809 ns/op
-Iteration   2: 106.860 ns/op
-Iteration   3: 104.604 ns/op
+# Warmup Iteration   1: 122.443 ns/op
+# Warmup Iteration   2: 124.021 ns/op
+Iteration   1: 83.997 ns/op
+Iteration   2: 83.977 ns/op
+Iteration   3: 83.974 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
-  105.424 ±(99.9%) 22.756 ns/op [Average]
-  (min, avg, max) = (104.604, 105.424, 106.860), stdev = 1.247
-  CI (99.9%): [82.668, 128.180] (assumes normal distribution)
+  83.983 ±(99.9%) 0.231 ns/op [Average]
+  (min, avg, max) = (83.974, 83.983, 83.997), stdev = 0.013
+  CI (99.9%): [83.752, 84.214] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1389,17 +1389,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHi
 
 # Run progress: 79.69% complete, ETA 00:04:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 115.090 ns/op
-# Warmup Iteration   2: 107.950 ns/op
-Iteration   1: 110.192 ns/op
-Iteration   2: 109.188 ns/op
-Iteration   3: 108.422 ns/op
+# Warmup Iteration   1: 140.558 ns/op
+# Warmup Iteration   2: 147.116 ns/op
+Iteration   1: 85.580 ns/op
+Iteration   2: 86.871 ns/op
+Iteration   3: 85.583 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHit":
-  109.267 ±(99.9%) 16.197 ns/op [Average]
-  (min, avg, max) = (108.422, 109.267, 110.192), stdev = 0.888
-  CI (99.9%): [93.070, 125.465] (assumes normal distribution)
+  86.012 ±(99.9%) 13.584 ns/op [Average]
+  (min, avg, max) = (85.580, 86.012, 86.871), stdev = 0.745
+  CI (99.9%): [72.428, 99.595] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1416,17 +1416,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetHi
 
 # Run progress: 81.25% complete, ETA 00:04:30
 # Fork: 1 of 1
-# Warmup Iteration   1: 52.232 ns/op
-# Warmup Iteration   2: 47.634 ns/op
-Iteration   1: 45.452 ns/op
-Iteration   2: 45.422 ns/op
-Iteration   3: 45.502 ns/op
+# Warmup Iteration   1: 50.337 ns/op
+# Warmup Iteration   2: 50.527 ns/op
+Iteration   1: 48.911 ns/op
+Iteration   2: 48.877 ns/op
+Iteration   3: 48.915 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
-  45.458 ±(99.9%) 0.736 ns/op [Average]
-  (min, avg, max) = (45.422, 45.458, 45.502), stdev = 0.040
-  CI (99.9%): [44.722, 46.195] (assumes normal distribution)
+  48.901 ±(99.9%) 0.383 ns/op [Average]
+  (min, avg, max) = (48.877, 48.901, 48.915), stdev = 0.021
+  CI (99.9%): [48.518, 49.284] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1443,17 +1443,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMi
 
 # Run progress: 82.81% complete, ETA 00:04:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 47.551 ns/op
-# Warmup Iteration   2: 45.756 ns/op
-Iteration   1: 45.446 ns/op
-Iteration   2: 45.426 ns/op
-Iteration   3: 45.420 ns/op
+# Warmup Iteration   1: 65.832 ns/op
+# Warmup Iteration   2: 64.188 ns/op
+Iteration   1: 59.157 ns/op
+Iteration   2: 59.279 ns/op
+Iteration   3: 59.289 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
-  45.430 ±(99.9%) 0.246 ns/op [Average]
-  (min, avg, max) = (45.420, 45.430, 45.446), stdev = 0.013
-  CI (99.9%): [45.184, 45.677] (assumes normal distribution)
+  59.242 ±(99.9%) 1.338 ns/op [Average]
+  (min, avg, max) = (59.157, 59.242, 59.289), stdev = 0.073
+  CI (99.9%): [57.904, 60.580] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1470,17 +1470,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMi
 
 # Run progress: 84.38% complete, ETA 00:03:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 45.228 ns/op
-# Warmup Iteration   2: 43.322 ns/op
-Iteration   1: 40.379 ns/op
-Iteration   2: 40.323 ns/op
-Iteration   3: 40.136 ns/op
+# Warmup Iteration   1: 49.799 ns/op
+# Warmup Iteration   2: 50.919 ns/op
+Iteration   1: 48.716 ns/op
+Iteration   2: 48.969 ns/op
+Iteration   3: 48.445 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
-  40.279 ±(99.9%) 2.318 ns/op [Average]
-  (min, avg, max) = (40.136, 40.279, 40.379), stdev = 0.127
-  CI (99.9%): [37.962, 42.597] (assumes normal distribution)
+  48.710 ±(99.9%) 4.776 ns/op [Average]
+  (min, avg, max) = (48.445, 48.710, 48.969), stdev = 0.262
+  CI (99.9%): [43.934, 53.486] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1497,17 +1497,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMi
 
 # Run progress: 85.94% complete, ETA 00:03:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 53.262 ns/op
-# Warmup Iteration   2: 48.817 ns/op
-Iteration   1: 52.603 ns/op
-Iteration   2: 52.543 ns/op
-Iteration   3: 52.487 ns/op
+# Warmup Iteration   1: 48.751 ns/op
+# Warmup Iteration   2: 50.636 ns/op
+Iteration   1: 49.496 ns/op
+Iteration   2: 49.430 ns/op
+Iteration   3: 49.582 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss":
-  52.544 ±(99.9%) 1.057 ns/op [Average]
-  (min, avg, max) = (52.487, 52.544, 52.603), stdev = 0.058
-  CI (99.9%): [51.487, 53.602] (assumes normal distribution)
+  49.503 ±(99.9%) 1.396 ns/op [Average]
+  (min, avg, max) = (49.430, 49.503, 49.582), stdev = 0.077
+  CI (99.9%): [48.107, 50.899] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1524,17 +1524,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaMutableSetMi
 
 # Run progress: 87.50% complete, ETA 00:03:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 322.975 ns/op
-# Warmup Iteration   2: 310.091 ns/op
-Iteration   1: 332.924 ns/op
-Iteration   2: 329.060 ns/op
-Iteration   3: 332.700 ns/op
+# Warmup Iteration   1: 280.445 ns/op
+# Warmup Iteration   2: 276.531 ns/op
+Iteration   1: 279.082 ns/op
+Iteration   2: 274.805 ns/op
+Iteration   3: 274.954 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
-  331.561 ±(99.9%) 39.565 ns/op [Average]
-  (min, avg, max) = (329.060, 331.561, 332.924), stdev = 2.169
-  CI (99.9%): [291.996, 371.126] (assumes normal distribution)
+  276.280 ±(99.9%) 44.286 ns/op [Average]
+  (min, avg, max) = (274.805, 276.280, 279.082), stdev = 2.427
+  CI (99.9%): [231.994, 320.566] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1551,17 +1551,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
 
 # Run progress: 89.06% complete, ETA 00:02:37
 # Fork: 1 of 1
-# Warmup Iteration   1: 378.835 ns/op
-# Warmup Iteration   2: 368.695 ns/op
-Iteration   1: 370.893 ns/op
-Iteration   2: 368.385 ns/op
-Iteration   3: 368.213 ns/op
+# Warmup Iteration   1: 349.156 ns/op
+# Warmup Iteration   2: 348.789 ns/op
+Iteration   1: 340.580 ns/op
+Iteration   2: 340.568 ns/op
+Iteration   3: 339.252 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
-  369.164 ±(99.9%) 27.367 ns/op [Average]
-  (min, avg, max) = (368.213, 369.164, 370.893), stdev = 1.500
-  CI (99.9%): [341.797, 396.531] (assumes normal distribution)
+  340.133 ±(99.9%) 13.929 ns/op [Average]
+  (min, avg, max) = (339.252, 340.133, 340.580), stdev = 0.764
+  CI (99.9%): [326.204, 354.063] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1578,17 +1578,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
 
 # Run progress: 90.63% complete, ETA 00:02:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 422.514 ns/op
-# Warmup Iteration   2: 408.119 ns/op
-Iteration   1: 415.087 ns/op
-Iteration   2: 421.449 ns/op
-Iteration   3: 415.766 ns/op
+# Warmup Iteration   1: 402.274 ns/op
+# Warmup Iteration   2: 415.640 ns/op
+Iteration   1: 401.137 ns/op
+Iteration   2: 398.938 ns/op
+Iteration   3: 400.430 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
-  417.434 ±(99.9%) 63.734 ns/op [Average]
-  (min, avg, max) = (415.087, 417.434, 421.449), stdev = 3.493
-  CI (99.9%): [353.700, 481.168] (assumes normal distribution)
+  400.168 ±(99.9%) 20.475 ns/op [Average]
+  (min, avg, max) = (398.938, 400.168, 401.137), stdev = 1.122
+  CI (99.9%): [379.693, 420.644] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1605,17 +1605,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
 
 # Run progress: 92.19% complete, ETA 00:01:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 610.518 ns/op
-# Warmup Iteration   2: 588.819 ns/op
-Iteration   1: 575.847 ns/op
-Iteration   2: 575.347 ns/op
-Iteration   3: 574.737 ns/op
+# Warmup Iteration   1: 517.242 ns/op
+# Warmup Iteration   2: 504.918 ns/op
+Iteration   1: 506.333 ns/op
+Iteration   2: 506.328 ns/op
+Iteration   3: 505.891 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
-  575.310 ±(99.9%) 10.143 ns/op [Average]
-  (min, avg, max) = (574.737, 575.310, 575.847), stdev = 0.556
-  CI (99.9%): [565.167, 585.454] (assumes normal distribution)
+  506.184 ±(99.9%) 4.630 ns/op [Average]
+  (min, avg, max) = (505.891, 506.184, 506.333), stdev = 0.254
+  CI (99.9%): [501.553, 510.814] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1632,17 +1632,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetHit":
 
 # Run progress: 93.75% complete, ETA 00:01:30
 # Fork: 1 of 1
-# Warmup Iteration   1: 204.351 ns/op
-# Warmup Iteration   2: 198.883 ns/op
-Iteration   1: 198.336 ns/op
-Iteration   2: 196.405 ns/op
-Iteration   3: 195.585 ns/op
+# Warmup Iteration   1: 173.419 ns/op
+# Warmup Iteration   2: 170.876 ns/op
+Iteration   1: 172.226 ns/op
+Iteration   2: 172.155 ns/op
+Iteration   3: 172.231 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
-  196.775 ±(99.9%) 25.768 ns/op [Average]
-  (min, avg, max) = (195.585, 196.775, 198.336), stdev = 1.412
-  CI (99.9%): [171.008, 222.543] (assumes normal distribution)
+  172.204 ±(99.9%) 0.773 ns/op [Average]
+  (min, avg, max) = (172.155, 172.204, 172.231), stdev = 0.042
+  CI (99.9%): [171.431, 172.978] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1659,17 +1659,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
 
 # Run progress: 95.31% complete, ETA 00:01:07
 # Fork: 1 of 1
-# Warmup Iteration   1: 279.438 ns/op
-# Warmup Iteration   2: 269.768 ns/op
-Iteration   1: 269.367 ns/op
-Iteration   2: 269.130 ns/op
-Iteration   3: 269.912 ns/op
+# Warmup Iteration   1: 257.408 ns/op
+# Warmup Iteration   2: 253.492 ns/op
+Iteration   1: 261.772 ns/op
+Iteration   2: 263.707 ns/op
+Iteration   3: 260.280 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
-  269.470 ±(99.9%) 7.314 ns/op [Average]
-  (min, avg, max) = (269.130, 269.470, 269.912), stdev = 0.401
-  CI (99.9%): [262.156, 276.783] (assumes normal distribution)
+  261.920 ±(99.9%) 31.348 ns/op [Average]
+  (min, avg, max) = (260.280, 261.920, 263.707), stdev = 1.718
+  CI (99.9%): [230.572, 293.267] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1686,17 +1686,17 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
 
 # Run progress: 96.88% complete, ETA 00:00:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 360.293 ns/op
-# Warmup Iteration   2: 353.500 ns/op
-Iteration   1: 348.633 ns/op
-Iteration   2: 351.339 ns/op
-Iteration   3: 348.695 ns/op
+# Warmup Iteration   1: 337.931 ns/op
+# Warmup Iteration   2: 330.160 ns/op
+Iteration   1: 336.781 ns/op
+Iteration   2: 336.483 ns/op
+Iteration   3: 336.441 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
-  349.556 ±(99.9%) 28.179 ns/op [Average]
-  (min, avg, max) = (348.633, 349.556, 351.339), stdev = 1.545
-  CI (99.9%): [321.377, 377.734] (assumes normal distribution)
+  336.569 ±(99.9%) 3.382 ns/op [Average]
+  (min, avg, max) = (336.441, 336.569, 336.781), stdev = 0.185
+  CI (99.9%): [333.186, 339.951] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1713,85 +1713,85 @@ Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
 
 # Run progress: 98.44% complete, ETA 00:00:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 416.953 ns/op
-# Warmup Iteration   2: 407.114 ns/op
-Iteration   1: 380.889 ns/op
-Iteration   2: 380.174 ns/op
-Iteration   3: 383.131 ns/op
+# Warmup Iteration   1: 453.017 ns/op
+# Warmup Iteration   2: 450.892 ns/op
+Iteration   1: 451.940 ns/op
+Iteration   2: 445.175 ns/op
+Iteration   3: 442.646 ns/op
 
 
 Result "com.komanov.collection.jmh.SetMapJavaVsScalaBenchmarks.scalaSetMiss":
-  381.398 ±(99.9%) 28.145 ns/op [Average]
-  (min, avg, max) = (380.174, 381.398, 383.131), stdev = 1.543
-  CI (99.9%): [353.253, 409.544] (assumes normal distribution)
+  446.587 ±(99.9%) 87.669 ns/op [Average]
+  (min, avg, max) = (442.646, 446.587, 451.940), stdev = 4.805
+  CI (99.9%): [358.917, 534.256] (assumes normal distribution)
 
 
 # Run complete. Total time: 00:24:04
 
 Benchmark                                         (size)  Mode  Cnt    Score     Error  Units
-SetMapJavaVsScalaBenchmarks.javaMapHit              1000  avgt    3  123.372 ±  40.796  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapHit             10000  avgt    3  127.375 ±   2.790  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapHit            100000  avgt    3  127.570 ±  14.660  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapHit           1000000  avgt    3   93.541 ±   2.843  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapMiss             1000  avgt    3   93.923 ±   3.921  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapMiss            10000  avgt    3   92.871 ±   8.482  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapMiss           100000  avgt    3   79.421 ±  10.883  ns/op
-SetMapJavaVsScalaBenchmarks.javaMapMiss          1000000  avgt    3   62.318 ±   2.191  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetHit              1000  avgt    3  112.992 ±   1.350  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetHit             10000  avgt    3  121.843 ±  16.056  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetHit            100000  avgt    3  111.796 ±   4.091  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetHit           1000000  avgt    3   75.994 ±  14.195  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetMiss             1000  avgt    3   99.858 ±   3.376  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetMiss            10000  avgt    3   97.443 ±   2.941  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetMiss           100000  avgt    3   97.130 ±  18.387  ns/op
-SetMapJavaVsScalaBenchmarks.javaSetMiss          1000000  avgt    3   53.867 ±   2.730  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapHit       1000  avgt    3  228.682 ±  13.016  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapHit      10000  avgt    3  223.522 ±  13.641  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapHit     100000  avgt    3  227.315 ±   9.912  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapHit    1000000  avgt    3  229.835 ±  10.424  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss      1000  avgt    3  250.394 ±   5.694  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss     10000  avgt    3  260.607 ±   2.273  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss    100000  avgt    3  173.779 ±   5.679  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss   1000000  avgt    3  263.930 ±  22.463  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetHit       1000  avgt    3  134.752 ±  13.617  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetHit      10000  avgt    3  124.737 ±  32.035  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetHit     100000  avgt    3  134.734 ±   4.494  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetHit    1000000  avgt    3   79.287 ±  10.984  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss      1000  avgt    3   78.890 ±   0.602  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss     10000  avgt    3  106.702 ±   6.489  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss    100000  avgt    3  111.173 ±   3.640  ns/op
-SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss   1000000  avgt    3   51.776 ±   6.423  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapHit             1000  avgt    3  311.400 ±  65.750  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapHit            10000  avgt    3  419.641 ± 124.703  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapHit           100000  avgt    3  507.017 ±  12.469  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapHit          1000000  avgt    3  613.002 ±  31.591  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapMiss            1000  avgt    3  215.345 ±   9.114  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapMiss           10000  avgt    3  287.044 ±   3.082  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapMiss          100000  avgt    3  455.047 ±  36.372  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMapMiss         1000000  avgt    3  518.606 ±  74.212  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapHit      1000  avgt    3  120.632 ±   6.020  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapHit     10000  avgt    3  125.066 ±  22.269  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapHit    100000  avgt    3  122.406 ±   2.273  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapHit   1000000  avgt    3  126.260 ±   9.207  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss     1000  avgt    3   51.756 ±   0.491  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss    10000  avgt    3   46.903 ±   1.531  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss   100000  avgt    3   49.354 ±   1.284  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss  1000000  avgt    3   39.192 ±   1.738  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetHit      1000  avgt    3  104.351 ±   4.833  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetHit     10000  avgt    3  120.064 ±   5.168  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetHit    100000  avgt    3  105.424 ±  22.756  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetHit   1000000  avgt    3  109.267 ±  16.197  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss     1000  avgt    3   45.458 ±   0.736  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss    10000  avgt    3   45.430 ±   0.246  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss   100000  avgt    3   40.279 ±   2.318  ns/op
-SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss  1000000  avgt    3   52.544 ±   1.057  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetHit             1000  avgt    3  331.561 ±  39.565  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetHit            10000  avgt    3  369.164 ±  27.367  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetHit           100000  avgt    3  417.434 ±  63.734  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetHit          1000000  avgt    3  575.310 ±  10.143  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetMiss            1000  avgt    3  196.775 ±  25.768  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetMiss           10000  avgt    3  269.470 ±   7.314  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetMiss          100000  avgt    3  349.556 ±  28.179  ns/op
-SetMapJavaVsScalaBenchmarks.scalaSetMiss         1000000  avgt    3  381.398 ±  28.145  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit              1000  avgt    3  101.973 ±   2.022  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit             10000  avgt    3  108.529 ±  25.681  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit            100000  avgt    3  110.335 ±  34.271  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapHit           1000000  avgt    3   87.897 ±  26.627  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss             1000  avgt    3   63.716 ±   0.639  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss            10000  avgt    3   65.274 ±   4.012  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss           100000  avgt    3   58.709 ±   9.217  ns/op
+SetMapJavaVsScalaBenchmarks.javaMapMiss          1000000  avgt    3   84.661 ±  11.990  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit              1000  avgt    3  102.776 ±   4.634  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit             10000  avgt    3  100.061 ±   0.547  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit            100000  avgt    3   95.566 ±   8.564  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetHit           1000000  avgt    3   91.411 ±  12.124  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss             1000  avgt    3   64.750 ±   1.828  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss            10000  avgt    3   67.409 ±   7.968  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss           100000  avgt    3   70.047 ±   1.420  ns/op
+SetMapJavaVsScalaBenchmarks.javaSetMiss          1000000  avgt    3   63.767 ±  23.243  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit       1000  avgt    3  203.431 ±   3.943  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit      10000  avgt    3  198.032 ±   6.400  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit     100000  avgt    3  194.027 ±   7.457  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapHit    1000000  avgt    3  202.875 ±   6.567  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss      1000  avgt    3  265.207 ±  24.900  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss     10000  avgt    3  241.809 ±   3.670  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss    100000  avgt    3  237.592 ±  23.415  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedMapMiss   1000000  avgt    3  238.909 ±   8.558  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit       1000  avgt    3  107.949 ±   0.686  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit      10000  avgt    3  114.252 ±   1.028  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit     100000  avgt    3  112.707 ±  11.816  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetHit    1000000  avgt    3   81.977 ±  25.934  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss      1000  avgt    3   70.062 ±  32.955  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss     10000  avgt    3   77.540 ±   1.765  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss    100000  avgt    3   67.177 ±  10.593  ns/op
+SetMapJavaVsScalaBenchmarks.javaWrappedSetMiss   1000000  avgt    3   74.899 ±   4.123  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit             1000  avgt    3  276.241 ±  35.930  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit            10000  avgt    3  320.119 ±   6.949  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit           100000  avgt    3  471.214 ± 196.790  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapHit          1000000  avgt    3  591.606 ±  10.726  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss            1000  avgt    3  209.268 ±   2.981  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss           10000  avgt    3  264.015 ±   2.055  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss          100000  avgt    3  406.588 ±  28.100  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMapMiss         1000000  avgt    3  459.978 ±  14.151  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit      1000  avgt    3   81.745 ±   6.302  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit     10000  avgt    3   68.745 ±  11.278  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit    100000  avgt    3   78.598 ±   4.175  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapHit   1000000  avgt    3   77.097 ±   6.013  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss     1000  avgt    3   49.334 ±   0.929  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss    10000  avgt    3   57.062 ±   0.130  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss   100000  avgt    3   48.521 ±   0.528  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableMapMiss  1000000  avgt    3   53.812 ±   2.980  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit      1000  avgt    3   75.981 ±   8.273  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit     10000  avgt    3   72.493 ±  33.560  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit    100000  avgt    3   83.983 ±   0.231  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetHit   1000000  avgt    3   86.012 ±  13.584  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss     1000  avgt    3   48.901 ±   0.383  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss    10000  avgt    3   59.242 ±   1.338  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss   100000  avgt    3   48.710 ±   4.776  ns/op
+SetMapJavaVsScalaBenchmarks.scalaMutableSetMiss  1000000  avgt    3   49.503 ±   1.396  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit             1000  avgt    3  276.280 ±  44.286  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit            10000  avgt    3  340.133 ±  13.929  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit           100000  avgt    3  400.168 ±  20.475  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetHit          1000000  avgt    3  506.184 ±   4.630  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss            1000  avgt    3  172.204 ±   0.773  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss           10000  avgt    3  261.920 ±  31.348  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss          100000  avgt    3  336.569 ±   3.382  ns/op
+SetMapJavaVsScalaBenchmarks.scalaSetMiss         1000000  avgt    3  446.587 ±  87.669  ns/op
 
 Benchmark result is saved to /static/data/charts/set-map-java-vs-scala-2-13/jdk11.json
