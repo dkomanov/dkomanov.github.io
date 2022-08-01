@@ -18,6 +18,17 @@
     margin: 0 0 4px;
 }
 
+.markdown h5, .markdown h6 {
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: Linux Libertine, serif;
+    text-transform: uppercase;
+    margin: 0 0 3px;
+}
+
 .markdown h2, .markdown h1 {
     letter-spacing: -0.02em;
     font-weight: 700;
