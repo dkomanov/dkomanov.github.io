@@ -33,7 +33,7 @@ export default class GoogleChart extends React.Component {
     const finalOptions = convertFunc ? convertFunc(options) : options;
 
     return (
-      <Chart chartType={chartType} options={finalOptions} chartEvents={convertFunc ? [] : this.chartEvents} {...other}/>
+      <Chart chartType={chartType} chartVersion="51" options={finalOptions} chartEvents={convertFunc ? [] : this.chartEvents} {...other}/>
     );
   }
 }
