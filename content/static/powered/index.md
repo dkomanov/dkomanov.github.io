@@ -5,7 +5,7 @@ cover: ./cover.jpg
 ---
 This site is built with:
 * [React](https://reactjs.org/)
-* [Gatsby](https://www.gatsbyjs.org)
+* [Gatsby](https://www.gatsbyjs.com/)
 * [GitHub Pages](https://pages.github.com/)
 * [Mediator Template](https://github.com/dirkfabisch/mediator) (modified)
 * [Google Charts](https://developers.google.com/chart/) via [react-google-charts](https://www.npmjs.com/package/react-google-charts)
