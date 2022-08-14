@@ -4,7 +4,7 @@ date: 2022-08-15
 title: 'Replacing HashSet with Sorted Array and Binary Search in Java?'
 description: An attempt to replace HashSet with sorted array and binary search for memory optimization. Including off-heap storage.
 tags: ['java', 'hashset', 'benchmark', 'performance', 'memory', 'offheap']
-canonicalUrl: TBD
+canonicalUrl: https://dkomanov.medium.com/replacing-hashset-with-sorted-array-and-binary-search-in-java-4a3b8023f0b
 cover: ./cover.jpg
 ---
 
@@ -122,4 +122,4 @@ The overhead of `ByteBuf` comparing to direct use of `Unsafe` is surprising. Tho
 I'd say if memory is not an important concern for you, there is no need to replace `HashSet` with `long[]`. 4x in memory usage compensate well with 6x performance. And with Valhalla Project memory usage eventually will go down as well. At least one might hope.
 
 
-Play with charts [here](/charts/offheap-array). Source code is on [GitHub](https://github.com/dkomanov/stuff/blob/16685505efad45555f0f048601c049b028835fe0/src/com/komanov/offheap/jmh/Benchmarks.scala). Originally posted on [Medium](https://dkomanov.medium.com/map-performance-java-vs-scala-72fec18db020). [Cover image](https://pixabay.com/illustrations/binary-zero-one-digital-blue-797274/) by [geralt](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com/).
+Play with charts [here](/charts/offheap-array). Source code is on [GitHub](https://github.com/dkomanov/stuff/blob/16685505efad45555f0f048601c049b028835fe0/src/com/komanov/offheap/jmh/Benchmarks.scala). Originally posted on [Medium](https://dkomanov.medium.com/replacing-hashset-with-sorted-array-and-binary-search-in-java-4a3b8023f0b). [Cover image](https://pixabay.com/illustrations/binary-zero-one-digital-blue-797274/) by [geralt](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com/).
