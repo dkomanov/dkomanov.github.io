@@ -1,6 +1,6 @@
 ---
 type: blog
-date: 2022-08-15
+date: 2022-08-14
 title: 'Replacing HashSet with Sorted Array and Binary Search in Java?'
 description: An attempt to replace HashSet with sorted array and binary search for memory optimization. Including off-heap storage.
 tags: ['java', 'hashset', 'benchmark', 'performance', 'memory', 'offheap']
