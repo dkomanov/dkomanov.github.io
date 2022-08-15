@@ -109,7 +109,7 @@ Also, nothing unexpected here. Performance of `HashSet` doesn't depend on the co
 
 ### Off-Heap Performance
 
-I excluded benchmarks of `CompositeByteBuf` and `CompositeBuffer`, because, as you may see, its performance is awful. Actually, it's not a surprise if to think about. The way I composed it in test - I split all data in chunks of 4000 bytes and added it to a composite buffer to simulate packets in the real network. For each lookup by index `CompositeByteBuf` should iterate over all buffers to find the relevant chunk... So, zero-copy has its huge cost :)
+I excluded benchmarks of `CompositeByteBuf` and `CompositeBuffer`, because, as you may see, its performance is awful. Actually, it's not a surprise if you think about it. The way I composed it in test is splitting all data in chunks of 4000 bytes and adding it to a composite buffer to simulate packets in the real network. For each lookup by index `CompositeByteBuf` should iterate over all buffers to find the relevant chunk... So, zero-copy has its huge cost :)
 
 ![Successful Lookup on a set of 1M items, off-heap only](./chart-off-heap.png)
 
