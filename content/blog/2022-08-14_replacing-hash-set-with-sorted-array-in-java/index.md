@@ -29,8 +29,8 @@ Simply put:
 UUID[] array = ...;
 Arrays.sort(array);
 
-public boolean contains(UUID value) {
-  int found = Arrays.binarySearch(array, value);
+public boolean contains(UUID key) {
+  int found = Arrays.binarySearch(array, key);
   return found >= 0 && found < array.length;
 }
 ```
@@ -47,7 +47,7 @@ array.forEach(uuid -> {
 });
 
 // Here we need to borrow implementation from Arrays.binarySearch class.
-public contains(UUID value) {
+public contains(UUID key) {
   int low = 0;
   int high = size - 1;
 
