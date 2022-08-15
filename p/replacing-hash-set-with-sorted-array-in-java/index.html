@@ -60,8 +60,8 @@
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">UUID<span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
 <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">UUID</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">int</span> found <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">binarySearch</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">UUID</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> found <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">binarySearch</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> found <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> found <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre></div>
 <p>Of course, <code class="language-text">UUID[]</code> doesn’t do much for us, a it still has 2x overhead of <code class="language-text">UUID</code> object.</p>
@@ -74,7 +74,7 @@ array<span class="token punctuation">.</span><span class="token function">forEac
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// Here we need to borrow implementation from Arrays.binarySearch class.</span>
-<span class="token keyword">public</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">UUID</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span> <span class="token function">contains</span><span class="token punctuation">(</span><span class="token class-name">UUID</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">int</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">int</span> high <span class="token operator">=</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
 
