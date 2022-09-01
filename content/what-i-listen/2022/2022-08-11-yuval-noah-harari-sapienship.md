@@ -5,7 +5,7 @@ title: 'Yuval Noah Harari & Sapienship Youth Debate Current Events, Popular Film
 podcastDate: 2022-08-11
 url: https://www.youtube.com/watch?v=NZGj0v-2Qbo
 teaser: ./2022-08-11-yuval-noah-harari-sapienship.jpg
-tags: ['yuval noah harari', 'sapienshit']
+tags: ['yuval noah harari', 'sapienship']
 ---
 
 It was an interesting interview (not debate), I want to point out 2 things:
