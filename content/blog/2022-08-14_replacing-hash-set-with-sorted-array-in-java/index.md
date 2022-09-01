@@ -99,7 +99,7 @@ At the end I decided to include benchmarks for `java.util.Set` and `scala.collec
 
 Here is a successful lookup (hit, contains returns true) performance in a collection of 1 million `UUIDs`. As you may see, `HashSet` is a clear leader, but this is not a [surprise](/p/map-performance-java-vs-scala/). Scala's `Set` performance is very close to binary search. Performance of off-heap array is very close to on-heap implementations, `long[]` is slightly better.
 
-![Successful Lookup on a set of 1M items, all JVMs](./chart-all-jdks.png)
+![Successful Lookup on a set of 1M items, all JDKs](./chart-all-jdks.png)
 
 ### Lookup performance for different Set size
 
