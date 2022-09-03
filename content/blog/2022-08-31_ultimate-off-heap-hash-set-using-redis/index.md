@@ -8,7 +8,7 @@ canonicalUrl: https://dkomanov.medium.com/ultimate-off-heap-hash-set-using-redis
 cover: ./cover.jpg
 ---
 
-After my [post](/p/replacing-hashset-with-sorted-array-and-binary-search-in-java) about making off-heap Set-like data structure, my friend threw an idea at me: why not to go all the way, and use not just off-heap, but off-process? Why not to try to use [Redis](https://redis.io/) as a side-car and have caches there?
+After my [post](/p/replacing-hash-set-with-sorted-array-in-java) about making off-heap Set-like data structure, my friend threw an idea at me: why not to go all the way, and use not just off-heap, but off-process? Why not to try to use [Redis](https://redis.io/) as a side-car and have caches there?
 
 Indeed, why not to try?
 
