@@ -3,7 +3,7 @@ type: blog
 date: 2022-09-05
 title: 'MySQL as Redis vs Redis?'
 description: 'Simple one column table in MySQL representing a Set. Let's benchmark it (against Redis)!'
-tags: ['java', 'cache', 'mysql', 'benchmark', 'performance']
+tags: ['java', 'mysql', 'benchmark', 'performance']
 canonicalUrl: https://dkomanov.medium.com/mysql-as-redis-vs-redis-74b788af9c6f
 cover: ./cover.jpg
 ---
