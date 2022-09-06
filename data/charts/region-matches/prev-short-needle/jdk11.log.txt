@@ -1,0 +1,275 @@
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.begin_regionMatches
+
+# Run progress: 0.00% complete, ETA 00:03:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 18.693 ns/op
+# Warmup Iteration   2: 18.482 ns/op
+Iteration   1: 20.020 ns/op
+Iteration   2: 19.785 ns/op
+Iteration   3: 19.609 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.begin_regionMatches":
+  19.805 ±(99.9%) 3.764 ns/op [Average]
+  (min, avg, max) = (19.609, 19.805, 20.020), stdev = 0.206
+  CI (99.9%): [16.041, 23.569] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.begin_startsWith
+
+# Run progress: 10.00% complete, ETA 00:03:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 9.779 ns/op
+# Warmup Iteration   2: 9.734 ns/op
+Iteration   1: 9.546 ns/op
+Iteration   2: 9.579 ns/op
+Iteration   3: 9.565 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.begin_startsWith":
+  9.563 ±(99.9%) 0.303 ns/op [Average]
+  (min, avg, max) = (9.546, 9.563, 9.579), stdev = 0.017
+  CI (99.9%): [9.260, 9.866] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.begin_substringEquals
+
+# Run progress: 20.00% complete, ETA 00:02:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 24.788 ns/op
+# Warmup Iteration   2: 18.497 ns/op
+Iteration   1: 17.394 ns/op
+Iteration   2: 21.569 ns/op
+Iteration   3: 18.375 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.begin_substringEquals":
+  19.113 ±(99.9%) 39.820 ns/op [Average]
+  (min, avg, max) = (17.394, 19.113, 21.569), stdev = 2.183
+  CI (99.9%): [≈ 0, 58.933] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.end_endsWith
+
+# Run progress: 30.00% complete, ETA 00:02:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.550 ns/op
+# Warmup Iteration   2: 15.752 ns/op
+Iteration   1: 17.078 ns/op
+Iteration   2: 17.010 ns/op
+Iteration   3: 24.018 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.end_endsWith":
+  19.369 ±(99.9%) 73.462 ns/op [Average]
+  (min, avg, max) = (17.010, 19.369, 24.018), stdev = 4.027
+  CI (99.9%): [≈ 0, 92.831] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.end_regionMatches
+
+# Run progress: 40.00% complete, ETA 00:02:08
+# Fork: 1 of 1
+# Warmup Iteration   1: 30.685 ns/op
+# Warmup Iteration   2: 30.787 ns/op
+Iteration   1: 34.667 ns/op
+Iteration   2: 34.432 ns/op
+Iteration   3: 30.540 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.end_regionMatches":
+  33.213 ±(99.9%) 42.291 ns/op [Average]
+  (min, avg, max) = (30.540, 33.213, 34.667), stdev = 2.318
+  CI (99.9%): [≈ 0, 75.505] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.end_substringEquals
+
+# Run progress: 50.00% complete, ETA 00:01:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 19.340 ns/op
+# Warmup Iteration   2: 17.795 ns/op
+Iteration   1: 17.278 ns/op
+Iteration   2: 19.507 ns/op
+Iteration   3: 17.422 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.end_substringEquals":
+  18.069 ±(99.9%) 22.753 ns/op [Average]
+  (min, avg, max) = (17.278, 18.069, 19.507), stdev = 1.247
+  CI (99.9%): [≈ 0, 40.822] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.middle2Sides_regionMatches
+
+# Run progress: 60.00% complete, ETA 00:01:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.603 ns/op
+# Warmup Iteration   2: 27.679 ns/op
+Iteration   1: 27.506 ns/op
+Iteration   2: 27.445 ns/op
+Iteration   3: 27.203 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.middle2Sides_regionMatches":
+  27.385 ±(99.9%) 2.929 ns/op [Average]
+  (min, avg, max) = (27.203, 27.385, 27.506), stdev = 0.161
+  CI (99.9%): [24.456, 30.314] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.middle2Sides_substringEquals
+
+# Run progress: 70.00% complete, ETA 00:01:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 27.632 ns/op
+# Warmup Iteration   2: 36.609 ns/op
+Iteration   1: 26.707 ns/op
+Iteration   2: 28.135 ns/op
+Iteration   3: 29.055 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.middle2Sides_substringEquals":
+  27.966 ±(99.9%) 21.588 ns/op [Average]
+  (min, avg, max) = (26.707, 27.966, 29.055), stdev = 1.183
+  CI (99.9%): [6.378, 49.554] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.middle_regionMatches
+
+# Run progress: 80.00% complete, ETA 00:00:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 17.122 ns/op
+# Warmup Iteration   2: 15.175 ns/op
+Iteration   1: 14.752 ns/op
+Iteration   2: 14.813 ns/op
+Iteration   3: 14.904 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.middle_regionMatches":
+  14.823 ±(99.9%) 1.400 ns/op [Average]
+  (min, avg, max) = (14.752, 14.823, 14.904), stdev = 0.077
+  CI (99.9%): [13.423, 16.223] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.14.1, VM 11.0.14.1+1-Ubuntu-0ubuntu1.21.10
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.str.jmh.RegionMatchesBenchmarks.middle_substringEquals
+
+# Run progress: 90.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 20.247 ns/op
+# Warmup Iteration   2: 21.485 ns/op
+Iteration   1: 19.057 ns/op
+Iteration   2: 18.490 ns/op
+Iteration   3: 18.683 ns/op
+
+
+Result "com.komanov.str.jmh.RegionMatchesBenchmarks.middle_substringEquals":
+  18.743 ±(99.9%) 5.262 ns/op [Average]
+  (min, avg, max) = (18.490, 18.743, 19.057), stdev = 0.288
+  CI (99.9%): [13.482, 24.005] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:33
+
+Benchmark                                             Mode  Cnt   Score    Error  Units
+RegionMatchesBenchmarks.begin_regionMatches           avgt    3  19.805 ±  3.764  ns/op
+RegionMatchesBenchmarks.begin_startsWith              avgt    3   9.563 ±  0.303  ns/op
+RegionMatchesBenchmarks.begin_substringEquals         avgt    3  19.113 ± 39.820  ns/op
+RegionMatchesBenchmarks.end_endsWith                  avgt    3  19.369 ± 73.462  ns/op
+RegionMatchesBenchmarks.end_regionMatches             avgt    3  33.213 ± 42.291  ns/op
+RegionMatchesBenchmarks.end_substringEquals           avgt    3  18.069 ± 22.753  ns/op
+RegionMatchesBenchmarks.middle2Sides_regionMatches    avgt    3  27.385 ±  2.929  ns/op
+RegionMatchesBenchmarks.middle2Sides_substringEquals  avgt    3  27.966 ± 21.588  ns/op
+RegionMatchesBenchmarks.middle_regionMatches          avgt    3  14.823 ±  1.400  ns/op
+RegionMatchesBenchmarks.middle_substringEquals        avgt    3  18.743 ±  5.262  ns/op
+
+Benchmark result is saved to jdk11.json

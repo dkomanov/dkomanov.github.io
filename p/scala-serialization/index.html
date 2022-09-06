@@ -1,0 +1,322 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:description" content="Performance comparison of popular serialization libraries for Scala..."/><meta data-react-helmet="true" name="twitter:title" content="Scala Serialization"/><meta data-react-helmet="true" name="twitter:creator" content="Dmitry Komanov"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:description" content="Performance comparison of popular serialization libraries for Scala..."/><meta data-react-helmet="true" name="og:title" content="Scala Serialization"/><meta data-react-helmet="true" name="description" content="Performance comparison of popular serialization libraries for Scala..."/><meta name="theme-color" content="#663399"/><meta name="generator" content="Gatsby 4.19.2"/><style data-href="/styles.29745ad4453b633c257a.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}article{border-bottom:1px solid #f2f2f0;padding:40px 0}article:last-child{border-bottom:0}article .post-title{display:block;font-size:28px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}article .post-teaser{float:left;height:100px;padding:0 10px 0 0;width:100px}article .post-description{color:#666665;font-size:20px;font-style:normal;font-weight:300;letter-spacing:-.02em;line-height:1.3}article .teaser-padding{margin-left:110px}article .post-meta{color:#b3b3b1;font-size:14px;line-height:30px}article .post-meta time{margin:0 1em 0 0;vertical-align:middle}ul.pagination{list-style:none;margin:1em 0 0;padding:0}ul.pagination li{color:#b3b3b1;float:left;padding:0 10px 0 0}ul.pagination li.active{font-weight:700}ul.pagination li a,ul.pagination li a:visited{color:#b3b3b1;text-decoration:none}.btn{background-color:transparent;border:none;cursor:pointer;display:inline;margin:0;outline:0;padding:0;text-decoration:underline}.btn:focus,.btn:hover{text-decoration:none}.table-toggler{text-align:center}.table-toggler a{border-bottom:1px dotted #000;cursor:pointer;font-size:.7em}.raw-data-table table{width:100%}.raw-data-table table th{background-color:rgba(0,0,0,.03)}.raw-data-table table .right{text-align:right}.markdown div.choose ul{margin:.5em 0 0;padding:0}.markdown div.choose ul li:first-child{border-radius:5px 0 0 5px}.markdown div.choose ul li:last-child{border-radius:0 5px 5px 0}.markdown div.choose ul li{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);cursor:pointer;line-height:1.4;margin:0;min-width:40px;padding:3px .5em;text-align:center}.markdown div.choose ul li:hover{background-color:rgba(0,0,0,.15)}.markdown div.choose ul li.active{background-color:rgba(0,0,0,.15);cursor:default}.markdown div.choose label{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);display:inline-block;font-size:23px;margin:0 .5em 0 0;padding:5px;vertical-align:bottom}body{text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";font-family:Open Sans,MundoSans,Helvetica Neue,Arial,Helvetica,sans-serif;font-size:1.2em;margin:0;padding:0}a{color:#333332}a,a:hover{text-decoration:none}.cf:after{clear:both;content:"";display:table}ul.horizontal{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.horizontal li{float:left}.site-header{box-sizing:border-box;margin:0 auto;max-width:740px;padding:0;position:relative;top:-140px;width:100%;z-index:2}.site-header .site-logo{background-color:#fff;background-image:url(data:image/jpeg;base64,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);background-size:cover;border:3px solid #fff;border-radius:50%;box-shadow:0 1px 1px rgba(0,0,0,.3);height:120px;margin-right:-60px;position:absolute;right:50%;text-indent:-9999px;top:-60px;width:120px;z-index:99}.site-header .site-title{color:#fff;font-size:50px;font-weight:700;letter-spacing:-2px;line-height:50px;margin:0;outline:0;padding:84px 16px 8px;text-align:center;word-break:break-word}.site-header .site-description{color:#666;font-size:18px;font-weight:400;line-height:1.5;margin:0 0 20px;padding:0 32px;text-align:center}.site-content{box-sizing:border-box;margin:0 auto;max-width:740px;position:relative;top:-140px;width:100%}.wide-content{display:block;left:50%;margin-left:-48vw;margin-right:-48vw;position:relative;right:50%;width:96vw}@media only screen and (max-width:800px){.site-content{padding:0 32px}}.markdown{color:#333;width:100%}.markdown,.markdown h1,.markdown h2,.markdown h3{font-family:Linux Libertine,serif}.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 4px}.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:20px;font-style:normal;font-weight:500;letter-spacing:.02em;line-height:1.4;margin:0 0 3px;text-transform:uppercase}.markdown h1,.markdown h2{font-size:32px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:4px;padding-top:31px}.markdown p{color:#333;font-size:22px;font-style:normal;font-weight:400;-webkit-hyphens:auto;hyphens:auto;line-height:30px;margin:0;padding-bottom:30px}.markdown a{color:#333;text-decoration:underline}.markdown img{margin:0 auto;max-width:100%}.markdown figure{margin:0;padding:0 0 30px}.markdown figcaption{color:#666665;font-size:16px;font-style:italic;font-weight:400;line-height:1.3;outline:0;text-align:center;z-index:300}.markdown hr{border:0;border-top:1px solid #ddd;display:block;margin:30px auto;padding:0;width:15%}.markdown blockquote,.markdown li blockquote{border-left:3px solid #57ad68;margin:0 0 30px -26px;padding-left:20px}.markdown blockquote p,.markdown li blockquote p{border-left:3px solid #57ad68;font-style:italic;font-weight:400;letter-spacing:.01rem;margin-left:-26px;padding-bottom:3px;padding-left:20px}.markdown ol,.markdown ul{margin:0;padding:0 0 30px}.markdown li{font-size:23px;font-style:normal;font-weight:400;line-height:30px;margin-bottom:12px;margin-left:30px;padding:2px 0 0}.markdown li p{padding:0 0 1.618rem}.markdown ol li{list-style-type:decimal}.markdown code{font-family:Courier,monospace;font-size:16px}.markdown.tiny *{font-size:16px;line-height:1.2em}.markdown.tiny ul{padding:0}.markdown.tiny ul li{margin-bottom:0}footer{color:#999;font-size:12px;line-height:17.6px;margin:0 auto;max-width:640px;padding:22px 0;text-align:center;width:100%}footer a{color:#666;text-decoration:none}footer a:hover{color:#333}.share-buttons{display:inline-block}.share-buttons .share-button{display:inline-block;margin:0 0 0 .5em;text-align:center;vertical-align:top}.site-menu{color:#ccc;margin:0 0 50px;text-align:center}.site-menu a{color:#999;padding-left:20px;text-decoration:none}.site-menu a:hover{color:#333}.site-menu a.active{font-weight:700}.tag-cloud a{margin:6px}ul.tags{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.tags li{background-color:rgba(0,0,0,.05);border-radius:3px;float:left;line-height:1.4;margin:4px .5em 0 0;padding:3px 5px}ul.tags li:hover{background-color:rgba(0,0,0,.15)}ul.tags li.label{padding:0 .5em 0 0}ul.tags li a,ul.tags li a:visited{color:rgba(0,0,0,.68);text-decoration:none}.teaser-image{background-color:#000;height:360px;overflow:hidden;position:relative}.teaser-image_image{background-position:50%;background-size:cover;bottom:0;left:0;position:absolute;right:0;text-indent:-9999px;top:0;z-index:1}.time-units p.small{margin:0 0 10px}.time-units small{color:rgba(0,0,0,.3);font-size:11px}.site-content.no-cover{position:relative;top:0}.no-cover .post-meta{padding-top:60px}.no-cover .post-title{color:#333332;font-size:50px;font-style:normal;font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}.no-cover .author-image{background-image:url(/img/top-logo.jpg);background-size:cover;border-radius:100%;display:inline-block;float:left;height:30px;line-height:30px;margin-bottom:-10px;margin-right:8px;text-indent:-9999px;width:30px}.no-cover .author-name{display:inline}.no-cover .post-meta-text{color:#b3b3b1;font-size:14px;font-style:normal;font-weight:400;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}.blog-post-meta{color:#b3b3b1}ul.what-i-read{list-style-type:none;margin:0;padding:0}ul.what-i-read>li{display:inline-block;padding:0 10px 0 0}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" title="Severe Software Developer Blog" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=994a873755adc623fbc44f1a9a107c69" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=994a873755adc623fbc44f1a9a107c69"/><title data-react-helmet="true">Scala Serialization | @dkomanov</title><link data-react-helmet="true" rel="canonical" href="https://medium.com/@dkomanov/scala-serialization-419d175c888a"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="site-content no-cover"><div class="post-meta"><h1 class="post-title">Scala Serialization</h1><div class="cf post-meta-text"><a href="/"><span class="author-image">Blog Logo</span></a><h4 class="author-name" itemProp="author" itemscope="" itemType="http://schema.org/Person">Dmitry Komanov</h4><span> on <time dateTime="2016-06-12T00:00:00.000Z">June 12, 2016</time><br/><br/></span></div><div class="site-menu"><a href="/">Blog</a><a href="/what-i-read">What I Read</a><a href="/what-i-listen">What I Listen</a><a href="/about">About</a></div></div><div class="blog-post" itemscope="" itemType="http://schema.org/Article"><div class="markdown " role="main"><p><em>UPD</em>: Recent benchmark charts are <a href="/charts/scala-serialization/">here</a>.</p>
+<p>It’s common to use <a href="http://json.org/">JSON</a> as the main format of serialized data. It’s very convenient to use it both on client and server. Obviously, it’s not the best choice in terms of both data size and performance.</p>
+<p>This article mainly focused on data size/performance of binary serialization libraries for <a href="http://www.scala-lang.org/">Scala</a>. Java versions are used just to compare with.</p>
+<h2 id="tldr" style="position:relative;"><a href="#tldr" aria-label="tldr permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TL;DR</h2>
+<p>Protobuf is small and fast. Scala’s implementation — ScalaPB — is robust and convenient. Both for many small and big messages.</p>
+<h2 id="use-cases" style="position:relative;"><a href="#use-cases" aria-label="use cases permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use cases</h2>
+<p>Many performance tests suffers from a synthetic nature of data. This test is not an exception, but here I test existing almost-production like data models (simplified a bit, of course). One case is a rich <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>
+(data transfer object), the second one is a list of small <a href="http://martinfowler.com/eaaDev/EventSourcing.html">events</a> from which a rich DTO could be reconstructed.</p>
+<h2 id="tested-libraries" style="position:relative;"><a href="#tested-libraries" aria-label="tested libraries permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tested libraries</h2>
+<p>I chose several libraries for a testing:</p>
+<ul>
+<li><a href="https://github.com/trueaccord/ScalaPB">ScalaPB</a>. A Google <a href="https://developers.google.com/protocol-buffers/">Protocol Buffers</a> compiler implementation for Scala. All data objects are case classes, all protobuf features are supported.</li>
+<li><a href="https://github.com/scala/pickling">Pickling</a>. Meant to be a Scala alternative to default <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/serialization/index.html">Java serialization</a>. Uses macros to generate serializers/parsers (picklers/unpicklers in its terminology).</li>
+<li><a href="https://github.com/ochrons/boopickle">Boopickle</a>. Custom binary format without backward-compatibility. Also uses macros.</li>
+<li><a href="https://github.com/twitter/chill">Chill</a>. Twitter’s extension for <a href="https://github.com/EsotericSoftware/kryo">Kryo</a>.</li>
+<li><a href="https://twitter.github.io/scrooge/">Scrooge</a>. A <a href="https://thrift.apache.org/">Thrift</a> compiler implementation for Scala.</li>
+</ul>
+<p>For Protobuf and Thrift, I also used Java implementation to check compatibility and performance with the original. Also, I added to comparison a default Java Serialization (Serializable interface + ObjectInputStream).</p>
+<p>All libraries I checked against well-known JSON serialization library — <a href="https://github.com/FasterXML/jackson">Jackson</a>.</p>
+<p>It’s worth to mention couple libraries, that I decided not to include a comparison:</p>
+<ul>
+<li><a href="http://www.protostuff.io/">Protostuff</a>. An interesting library, supports protobuf and its own binary format, but… It’s hard to support Scala Collections there (without changes inside library it’s impossible).</li>
+<li><a href="http://msgpack.org/index.html">MsgPack</a>. Scala implementation of this library doesn’t support case classes. The idea is interesting — to replace quotes, colons etc., but the gain is ~25%. Doesn’t seem to be a big deal.</li>
+</ul>
+<p>Also, I want to promote an interesting research — <a href="https://github.com/eishay/jvm-serializers">JVM Serializers</a>. It’s a good starting point to pick your serialization library.</p>
+<h2 id="test-data-models" style="position:relative;"><a href="#test-data-models" aria-label="test data models permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test data models</h2>
+<p>I tested libraries against two types of data objects:</p>
+<ol>
+<li>Site — a rich data transfer object with fields, lists etc.</li>
+<li>Events — a list of simple flat objects with at most 4 flat fields.</li>
+</ol>
+<h3 id="site" style="position:relative;"><a href="#site" aria-label="site permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Site</h3>
+<p>A <a href="https://github.com/dkomanov/scala-serialization/blob/master/src/main/scala/com/komanov/serialization/domain/Site.scala">rich DTO</a> consists of several fields with simple data types (<a href="https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html">UUID</a>, dates, strings, etc) and nested lists of other rich objects (without back-references). Also, there are couple rich objects with subclasses (see an example of EntryPoint).</p>
+<p>The Site represents a web-site: contains information about pages, meta tags, entry points and other meta information.</p>
+<div class="gatsby-highlight" data-language="scala"><pre class="language-scala"><code class="language-scala"><span class="token keyword">case</span> <span class="token keyword">class</span> Site<span class="token punctuation">(</span>id<span class="token operator">:</span> UUID<span class="token punctuation">,</span>
+                ownerId<span class="token operator">:</span> UUID<span class="token punctuation">,</span>
+                revision<span class="token operator">:</span> <span class="token builtin">Long</span><span class="token punctuation">,</span>
+                siteType<span class="token operator">:</span> SiteType<span class="token punctuation">,</span>
+                flags<span class="token operator">:</span> Seq<span class="token punctuation">[</span>SiteFlag<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                name<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span>
+                description<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span>
+                domains<span class="token operator">:</span> Seq<span class="token punctuation">[</span>Domain<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                defaultMetaTags<span class="token operator">:</span> Seq<span class="token punctuation">[</span>MetaTag<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                pages<span class="token operator">:</span> Seq<span class="token punctuation">[</span>Page<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                entryPoints<span class="token operator">:</span> Seq<span class="token punctuation">[</span>EntryPoint<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                published<span class="token operator">:</span> <span class="token builtin">Boolean</span><span class="token punctuation">,</span>
+                dateCreated<span class="token operator">:</span> Instant<span class="token punctuation">,</span>
+                dateUpdated<span class="token operator">:</span> Instant<span class="token punctuation">)</span>
+<span class="token keyword">sealed</span> <span class="token keyword">trait</span> EntryPoint
+<span class="token keyword">final</span> <span class="token keyword">case</span> <span class="token keyword">class</span> DomainEntryPoint<span class="token punctuation">(</span>domain<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span>
+                                  primary<span class="token operator">:</span> <span class="token builtin">Boolean</span><span class="token punctuation">)</span>
+  <span class="token keyword">extends</span> EntryPoint <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">final</span> <span class="token keyword">case</span> <span class="token keyword">class</span> FreeEntryPoint<span class="token punctuation">(</span>userName<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span>
+                                siteName<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span>
+                                primary<span class="token operator">:</span> <span class="token builtin">Boolean</span><span class="token punctuation">)</span>
+  <span class="token keyword">extends</span> EntryPoint <span class="token punctuation">{</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3 id="events" style="position:relative;"><a href="#events" aria-label="events permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h3>
+<p>I’ve implemented as simple as possible <a href="https://github.com/dkomanov/scala-serialization/blob/master/src/main/scala/com/komanov/serialization/domain/Events.scala">event model</a> for building Site snapshot (as if it was event sourced). All events are very small, represents a single change in a model (very granular):</p>
+<div class="gatsby-highlight" data-language="scala"><pre class="language-scala"><code class="language-scala"><span class="token keyword">sealed</span> <span class="token keyword">trait</span> SiteEvent
+
+<span class="token keyword">case</span> <span class="token keyword">class</span> SiteCreated<span class="token punctuation">(</span>id<span class="token operator">:</span> UUID<span class="token punctuation">,</span> ownerId<span class="token operator">:</span> UUID<span class="token punctuation">,</span> siteType<span class="token operator">:</span> SiteType<span class="token punctuation">)</span> <span class="token keyword">extends</span> SiteEvent
+<span class="token keyword">case</span> <span class="token keyword">class</span> SiteNameSet<span class="token punctuation">(</span>name<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">)</span> <span class="token keyword">extends</span> SiteEvent
+<span class="token keyword">case</span> <span class="token keyword">class</span> SiteDescriptionSet<span class="token punctuation">(</span>description<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">)</span> <span class="token keyword">extends</span> SiteEvent
+<span class="token keyword">case</span> <span class="token keyword">class</span> SiteRevisionSet<span class="token punctuation">(</span>revision<span class="token operator">:</span> <span class="token builtin">Long</span><span class="token punctuation">)</span> <span class="token keyword">extends</span> SiteEvent
+<span class="token keyword">case</span> <span class="token keyword">class</span> SitePublished<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">extends</span> SiteEvent
+<span class="token comment">// etc</span></code></pre></div>
+<p>Events come as a sequence, ordered by a timestamp. For example, in MySQL, it could be stored in such table:</p>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> site_events <span class="token punctuation">(</span>
+  id <span class="token keyword">BINARY</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token keyword">timestamp</span> <span class="token keyword">BIGINT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  event_type <span class="token keyword">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  event_digest <span class="token keyword">MEDIUMBLOB</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+  <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span><span class="token punctuation">;</span></code></pre></div>
+<p>An example of how to reconstruct a Site from events (<a href="https://github.com/dkomanov/scala-serialization/blob/master/src/main/scala/com/komanov/serialization/domain/EventProcessor.scala">EventProcessor</a>):</p>
+<div class="gatsby-highlight" data-language="scala"><pre class="language-scala"><code class="language-scala"><span class="token keyword">def</span> apply<span class="token punctuation">(</span>list<span class="token operator">:</span> Seq<span class="token punctuation">[</span>SiteEventData<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> Site <span class="token operator">=</span> <span class="token punctuation">{</span>
+  list<span class="token punctuation">.</span>foldLeft<span class="token punctuation">(</span>emptySite<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token punctuation">(</span>s<span class="token punctuation">,</span> SiteEventData<span class="token punctuation">(</span>_<span class="token punctuation">,</span> SiteRevisionSet<span class="token punctuation">(</span>rev<span class="token punctuation">)</span><span class="token punctuation">,</span> dateUpdated<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">=></span>
+      s<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>revision <span class="token operator">=</span> rev<span class="token punctuation">,</span> dateUpdated <span class="token operator">=</span> dateUpdated<span class="token punctuation">)</span>
+
+    <span class="token keyword">case</span> <span class="token punctuation">(</span>s<span class="token punctuation">,</span> SiteEventData<span class="token punctuation">(</span>_<span class="token punctuation">,</span> SiteNameSet<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> _<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">=></span>
+      s<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>name <span class="token operator">=</span> name<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre></div>
+<h2 id="tests" style="position:relative;"><a href="#tests" aria-label="tests permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tests</h2>
+<p>There are 5 objects (Site) to test: 1k, 2k, 4k, 8k, and 64k. This mnemonic means: 1k is the object, that is present as approximately 1 kilobyte JSON; 2k is ~2 kilobyte JSON etc.</p>
+<p>Events are produced from these 5 objects: 1k events are events from which may be reconstructed a 1k object, etc.</p>
+<h3 id="data-size" style="position:relative;"><a href="#data-size" aria-label="data size permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data size</h3>
+<p>Sizes (in bytes) for Site (rich DTO):</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Converter     1k    2k    4k    8k    64k
+JSON        1060  2076  4043  8173  65835
+Boopickle    544  1130  1855  2882  16290
+Protobuf     554  1175  1930  3058  27111
+Thrift       712  1441  2499  4315  38289
+Chill        908  1695  2507  3643  26261
+Java        2207  3311  4549  6615  43168
+Pickling    1628  2883  5576 11762  97997</code></pre></div>
+<p>BooPickle is the leader (and this is understandable — this library doesn’t support backward compatibility, so, they don’t need to save field tags). Chill demonstrates better results for the very big object. Thrift is not so good (maybe, it’s because of implementation for optional fields).</p>
+<p>Sizes (in bytes) for events (sum for all events in list):</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Converter     1k    2k    4k    8k    64k
+JSON        1277  2499  5119 10961 109539
+Boopickle    593  1220  2117  3655  42150
+Protobuf     578  1192  2076  3604  42455
+Thrift       700  1430  2639  4911  57029
+Chill        588  1260  2397  3981  47048
+Java        2716  5078 11538 26228 240267
+Pickling    1565  3023  6284 13462 128797</code></pre></div>
+<p>Now protobuf looks even better.</p>
+<p>Protobuf, thrift, chill and boopickle are almost 2.5 times more compact than JSON. Big object serializes better with Java Serialization than Pickling, and small objects — vice versa.</p>
+<h3 id="data-size-and-compression" style="position:relative;"><a href="#data-size-and-compression" aria-label="data size and compression permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data size and compression</h3>
+<p>Another interesting topic about data size is the compression. A compression is widely used in modern systems, from databases (i.e. “compress” row format in <a href="https://dev.mysql.com/doc/refman/5.6/en/innodb-compression.html">MySQL</a>) to networks (<a href="https://en.wikipedia.org/wiki/HTTP_compression">GZip over HTTP</a>). So, the data size could be not so important to look at. The comparison table for gzipped and raw object are pretty big, I will show a small part (an entire table available <a href="https://docs.google.com/spreadsheets/d/1BpI1GCMBfk1MbXwtlHbTi-DJK2ur-VEWn7m2laQ9gos/edit?usp=sharing">here</a>).</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Converter        site 2k  events 2k  site 8k  events 8k
+JSON (raw)          2076       2499     8173      10961
+JSON (gz)           1137       2565     2677      11784
+Protobuf (raw)      1175       1192     3058       3604
+Protobuf (gz)        898       1463     2175       5552
+Thrift (raw)        1441       1430     4315       4911
+Thrift (gz)          966       1669     2256       6673</code></pre></div>
+<p>Important note: events are gzipped not together, but one by one, of course, if it would be gzipped together, result size would be much less. It shows an importance of choosing the right storage/transfer mechanism.</p>
+<p>We may see, that on small objects (less that 2k) protobuf has almost the same size as gzipped JSON (so, we can save some CPU cycles).</p>
+<h3 id="performance" style="position:relative;"><a href="#performance" aria-label="performance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performance</h3>
+<p>The next important thing is the performance of serialization and deserialization (parsing). Our tests are about serializing/deserializing the raw data to Scala objects. In order to simplify this testing, I converted generated classes to “domain” classes, so, for protobuf and thrift there is also an addition of object conversion (I don’t think that the effect of this addition is significant).</p>
+<p>I excluded Java Serialization and Pickling from this chart (and other charts also) because both of them are very slow. I will write about it afterward.</p>
+<p>The code for the performance tests is in <a href="https://github.com/dkomanov/scala-serialization/blob/master/src/test/scala/com/komanov/serialization/converters/BasePerfTest.scala">BasePerfTest.scala</a>.</p>
+<h3 id="serialization-performance" style="position:relative;"><a href="#serialization-performance" aria-label="serialization performance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Serialization performance</h3>
+<p>On the following chart you may see the serialisitezation times for Site object (measured in nano-seconds with <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/System.html#nanoTime%28%29">System.nanoTime</a> method).</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/73a3a0617535270b1af0f3f786620b86/0a47e/serialization-site.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABm0lEQVQoz4VSy0ocQRTtL3Gff3DlNgu3bl1k5Z+4d+NKguAgRgk4UZiE0CIq4wONJANKT1szY890O2JX16t76lbdUN1jdBTNoaCK4p576pxbHj5CKdVut4MgCMOw0+kQQnq9HiEkjmN8DmvdKuFVG2OMc84YS9M0yzLGGKWUMZZlmRDCWldujAFj0NpcyTwvnsjWVgVvwmqNWiOiru8MPq9eRdEoz8fkSgHL9q/hZLlQPB2OFPzafzj8NnigUggP/wv3IouA8fnml/qRvDu++bNBuomS4smzlPJR2VkwAO4AxoAGHNk0D5Y+bW1/PzqD7UbA2b3WMCZXFCxJE7IAyW3Hv2xjf3i1MF2r76FBA2YibcG5lKosRiFdcr1u2GzFSGlrcX69cYEkup77UNs9KH3oKl3vnzHXLeqeby03mhxbF/7CTM0Psdk8/Ti15l/iNfk9O7Xy9Sc61qRy9Vzdj6KTH8OsMEkyON0bUoWUJmf7/XuKXCYn/u3gDp8N9L20pXRm3inwXkzFGihHY9FAXhSjorAwvrGgX3ykv2aCpoobtPoWAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Serialization times for Site (rich DTO), nano-seconds"
+        title="Serialization times for Site (rich DTO), nano-seconds"
+        src="/static/73a3a0617535270b1af0f3f786620b86/0a47e/serialization-site.png"
+        srcset="/static/73a3a0617535270b1af0f3f786620b86/1d79a/serialization-site.png 185w,
+/static/73a3a0617535270b1af0f3f786620b86/1efb2/serialization-site.png 370w,
+/static/73a3a0617535270b1af0f3f786620b86/0a47e/serialization-site.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>ScalaPB is the pure winner, Java protobuf and Thrift goes after. BooPickle and Child are slightly slower for “small” objects, and a bit better for bigger objects.</p>
+<p>The next chart is serialization times for events.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9faa8ce8fafe525b9e387de6ae06ce6b/0a47e/serialization-events.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2UlEQVQoz3WSzW7TQBSF8ySwR2LDc1QVSzYseQMWLJBY8Ah9AUBCbRACRaIqqKgpaggpaoLaqBVtcBzHjpM4Dh7Pn+14Zg5yklIC5SzujEZzde75Zkq4VJIk3W7Xsizbth3HcV233+97ntfr9WISFzeMWdbFBigtFsYY55wxRgihlDLGFpVzMY3CMB7DIIv7lPsA0kSmaXbVbObCvzIQKbN/nsNg2tg47lXx8fPw+YsL35+l6bKZUiqEAKC0UloBCNl4SD3IjLLQDr8DGNU2ypWqPvsW1bdHUSyFKF1nVowQMN+Le0gV55Ed/UAC5+XDrbcHYtJ0zl47bpBIcZVZSlk4q7xwNhgT1yU2MlC33o9OMEnOn9ytfNhvtPJ3uxZn0zxXy2Y9VzEbcUlKkOZB7PvMgYG387T69RBueHH/9ubOATS00iu0uRBSFpl96tHZFDMMjsvWpIPB5PTR2qu9Npxh596trff1Od18QfcyszEa0Fb3pPy47YZotmoP7rz50kXjsLl2c3O/jY5zun7jWaU6B7LqbHSBOPd9/2gvIDMTjIfNWkASUBq0asNpDC6Do0+D0QR/POg1tH9LSs7nFP+n1WZjjFZFHGOgVZplsywzanliVP7XR/oFnJ2ci/Knfu8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Serialization times for events, nano-seconds"
+        title="Serialization times for events, nano-seconds"
+        src="/static/9faa8ce8fafe525b9e387de6ae06ce6b/0a47e/serialization-events.png"
+        srcset="/static/9faa8ce8fafe525b9e387de6ae06ce6b/1d79a/serialization-events.png 185w,
+/static/9faa8ce8fafe525b9e387de6ae06ce6b/1efb2/serialization-events.png 370w,
+/static/9faa8ce8fafe525b9e387de6ae06ce6b/0a47e/serialization-events.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>ScalaPB still is the winner. BooPickle is very slow in this contest. Apparently, many small messages are not the proper scenario for it.</p>
+<p>In terms of <a href="https://docs.google.com/spreadsheets/d/1BpI1GCMBfk1MbXwtlHbTi-DJK2ur-VEWn7m2laQ9gos/edit?usp=sharing">numbers</a>, ScalaPB is faster than JSON more than 2 times for a single rich DTO, and more that 4 times faster than JSON for a list of small events.</p>
+<h3 id="deserialization-parsing-performance" style="position:relative;"><a href="#deserialization-parsing-performance" aria-label="deserialization parsing performance permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deserialization (parsing) performance</h3>
+<p>The next chart is deserialization times for Site object:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4941db7b0a1985a270379d8b1d05ecdd/0a47e/deserialization-site.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkUlEQVQoz32SW0okMRSGeyO6gFmEGxCZVxfhg+BCfHEDOjqPooI0iNoo4q2bQR0GwVunqu2yurxUJ6mkkkrqnCGpbrVF/QiEhPz5/3OSGg6RUhJC7jyEkDAMgyCIoogQwjl/PYYAbnhq1cSH9Pt9SinnnHk455RSrTUYU5bWqQBULpXSb2Lw4NeUWQZaIaLZrMdLy1dRVCg1EDPGhBDu0GcAouXcenFxvpce1eOUSiFq+C1gDJTWhc2VSTv3IdKH/eByNegkuRRvNUspvXNVADhHRMtYZWhp/rQxf3Ec7zfl5nY748/G2IG4iodOZN3a2kELVC5f0vseYie6nZlY22piiWDLkW4LIYbOWBSIWmapDLuI6VN7YW73OMF253r6x+/6ge+uqa6uvb6eC3l3fbvx6/BviWenJ7NTa4c9PD1pTY6tNM7xJvz3c3xxvYFONeoMPq6Jut3WziPTkPSiZiOhGVKW/DmInxlkMmntdeNHfPeg33VbyizztXzFqBhcguobYWmV1oXWYAc7YM2Hj/QfjfipIq02g94AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Deserialization times for Site (rich DTO), nano-seconds"
+        title="Deserialization times for Site (rich DTO), nano-seconds"
+        src="/static/4941db7b0a1985a270379d8b1d05ecdd/0a47e/deserialization-site.png"
+        srcset="/static/4941db7b0a1985a270379d8b1d05ecdd/1d79a/deserialization-site.png 185w,
+/static/4941db7b0a1985a270379d8b1d05ecdd/1efb2/deserialization-site.png 370w,
+/static/4941db7b0a1985a270379d8b1d05ecdd/0a47e/deserialization-site.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>ScalaPB is the winner. BooPickle looks much better, apparently, there are many optimizations during the serialization that costs a lot.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/b1557d2343d5f7c34d9ed01264c09939/0a47e/deserialization-events.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 61.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVQoz3WSS2/TQBCA/UsQF26cETf+AOLEiTPihMT/4cRD0BwQbVFBRVTQkoSHUiNEkypQNbId7LoxxV7vw7v2zgyy49BG0E+r3dVqRzvzzTq0QCnled6kwfM83/fDMPQ8L4qiwPe11u09xHo0OPOFL8iyjDHGOc/zvJ7TlDOWc14WhbVWFCUh6kJpbU6DsYH+AaUka+tdodMkXP8c4Ku38aPHP6Ko1LoNzvNcSklEcBbEinNrjAWgkpK91ScvPsDQTT++jFOmpHTovwDMCwMhsKwzpN8yfnivs9ZTievvP/Ons0LJ05qVUnWeAEhkhbDGABIqqaSOc0uTn5O719a2up/cauPNoeAnVWWdxUt1kgSAtkIikBKrqulBEfRXO6/3KIi+37y0stknILCwZFtIWSiFZdl64+I4GA/DjL5+G9+5+rw3Iv/o4Nblzma/sVvNbzl/uwdEsD8ab9x3J4reb3dvX1nZOaTBYPf6xafbQzrwRzcuPFh/R42KpZcRwBJV02k42DrODCZJ7HZ/5QUxNvvSOzphJNRsdyeMEzrT0HNst39OiMbieSwHIyLYupxantXGlMagbU9ql8sf6Q+Wq6CP6gcz0wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Deserialization times for events, nano-seconds"
+        title="Deserialization times for events, nano-seconds"
+        src="/static/b1557d2343d5f7c34d9ed01264c09939/0a47e/deserialization-events.png"
+        srcset="/static/b1557d2343d5f7c34d9ed01264c09939/1d79a/deserialization-events.png 185w,
+/static/b1557d2343d5f7c34d9ed01264c09939/1efb2/deserialization-events.png 370w,
+/static/b1557d2343d5f7c34d9ed01264c09939/0a47e/deserialization-events.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>For events, the fastest library is Java Protobuf (I don’t know why, but it confirmed after several runs).</p>
+<p>ScalaPB is ~3 times faster for rich DTO and ~3–4 times faster than JSON for a list of small events. Numbers are 2 microseconds vs. 7 microseconds for 1k Site and 3 microseconds vs. 12 microseconds for 1k events.</p>
+<h3 id="java-serialization-and-pickling" style="position:relative;"><a href="#java-serialization-and-pickling" aria-label="java serialization and pickling permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Java Serialization and Pickling</h3>
+<p>Pickling performance is surprisingly bad. I think I missed something and did it wrong (I used all tips from its manual), but Pickling is the slowest library in this test.</p>
+<p>Just to compare its performance. Serialization of a rich DTO:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Converter         1k     2k     4k     8k     64k
+JSON            4365   8437  16771  35164  270175
+Serializable   13156  21203  36457  79045  652942
+Pickling       53991  83601 220440 589888 4162785</code></pre></div>
+<p>Deserialization of a rich DTO:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Converter        1k     2k     4k     8k     64k
+JSON           7670  12964  24804  51578  384623
+Serializable  61455  84196 102870 126839  575232
+Pickling      40337  63840 165109 446043 3201348</code></pre></div>
+<h2 id="conclusion" style="position:relative;"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>As expected, binary serialization is faster and produce less data. ScalaPB showed very good results (and the protobuf format in general).</p>
+<p>Nevertheless, performance and data size are not enough to make a decision to move from using JSON to protobuf. But, it’s important to know how much does it cost.</p>
+<p>Originally posted on <a href="https://medium.com/@dkomanov/scala-serialization-419d175c888a">Medium</a>.</p></div></div><div class="blog-post-meta"><ul class="tags"><li class="cf"><a href="/posts/scala">scala</a></li><li class="cf"><a href="/posts/serialization">serialization</a></li><li class="cf"><a href="/posts/benchmark">benchmark</a></li><li class="cf"><a href="/posts/performance">performance</a></li></ul><hr/><div class="share-buttons"><button aria-label="twitter" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#00aced"></rect><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" fill="white"></path></svg></button><button aria-label="facebook" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#3b5998"></rect><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z" fill="white"></path></svg></button></div></div><footer>All content ©<!-- --> <a href="mailto:dkomanov@gmail.com">Dmitry Komanov</a>,<!-- --> <a href="/powered">powered by...</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/p/scala-serialization/";window.___webpackCompilationHash="b1fc2d9c79964ae3f6fe";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f1d5be50dbe1d5fc9ecc.js"],"app":["/app-1125d9f16e02153a630b.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-99a953a5d5072d737c00.js"],"component---src-pages-404-js":["/component---src-pages-404-js-d44cf7e9bb2d0952e916.js"],"component---src-pages-charts-mysql-streaming-index-js":["/component---src-pages-charts-mysql-streaming-index-js-72c5e6e52b23a4a15e4c.js"],"component---src-pages-charts-offheap-array-index-tsx":["/component---src-pages-charts-offheap-array-index-tsx-689b09c4ba28987da516.js"],"component---src-pages-charts-read-lines-index-js":["/component---src-pages-charts-read-lines-index-js-e6cdb0747a14c2924012.js"],"component---src-pages-charts-read-utf-8-index-js":["/component---src-pages-charts-read-utf-8-index-js-d7e85260faff494b5c73.js"],"component---src-pages-charts-region-matches-index-tsx":["/component---src-pages-charts-region-matches-index-tsx-4cbfd529465bdaf97151.js"],"component---src-pages-charts-scala-serialization-index-js":["/component---src-pages-charts-scala-serialization-index-js-f9cbac41632bd6c2eb6e.js"],"component---src-pages-charts-scala-string-format-index-js":["/component---src-pages-charts-scala-string-format-index-js-820e39088937b968584a.js"],"component---src-pages-charts-set-map-java-vs-scala-index-tsx":["/component---src-pages-charts-set-map-java-vs-scala-index-tsx-1060dbf0e10300ab0eea.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8fe38c0463f550eb8e69.js"],"component---src-templates-blog-by-tag-js":["/component---src-templates-blog-by-tag-js-8ae480b5dd789207d0ea.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-1650ae1603ee7f3fc229.js"],"component---src-templates-static-js":["/component---src-templates-static-js-140a67808cc96096b7ec.js"],"component---src-templates-what-i-listen-list-tsx":["/component---src-templates-what-i-listen-list-tsx-3db1c676da95f417dd87.js"],"component---src-templates-what-i-listen-single-episode-tsx":["/component---src-templates-what-i-listen-single-episode-tsx-c14377bb76c9f41543d9.js"],"component---src-templates-what-i-listen-tag-cloud-tsx":["/component---src-templates-what-i-listen-tag-cloud-tsx-9c9b40199aae5d0bf72a.js"],"component---src-templates-what-i-read-index-js":["/component---src-templates-what-i-read-index-js-eafa8980baa0072ad611.js"]};/*]]>*/</script><script src="/polyfill-f1d5be50dbe1d5fc9ecc.js" nomodule=""></script><script src="/app-1125d9f16e02153a630b.js" async=""></script><script src="/framework-bf670a827ae315f850d0.js" async=""></script><script src="/webpack-runtime-167d587010f616d5951b.js" async=""></script></body></html>
