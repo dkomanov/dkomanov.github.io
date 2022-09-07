@@ -1,0 +1,1265 @@
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap
+# Parameters: (size = 100)
+
+# Run progress: 0.00% complete, ETA 00:17:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 25.490 ns/op
+# Warmup Iteration   2: 25.714 ns/op
+Iteration   1: 24.193 ns/op
+Iteration   2: 24.245 ns/op
+Iteration   3: 24.197 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap":
+  24.212 ±(99.9%) 0.525 ns/op [Average]
+  (min, avg, max) = (24.193, 24.212, 24.245), stdev = 0.029
+  CI (99.9%): [23.687, 24.736] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap
+# Parameters: (size = 1000)
+
+# Run progress: 2.22% complete, ETA 00:17:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 28.603 ns/op
+# Warmup Iteration   2: 28.164 ns/op
+Iteration   1: 26.524 ns/op
+Iteration   2: 26.542 ns/op
+Iteration   3: 26.736 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap":
+  26.601 ±(99.9%) 2.146 ns/op [Average]
+  (min, avg, max) = (26.524, 26.601, 26.736), stdev = 0.118
+  CI (99.9%): [24.454, 28.747] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap
+# Parameters: (size = 10000)
+
+# Run progress: 4.44% complete, ETA 00:16:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 28.646 ns/op
+# Warmup Iteration   2: 28.218 ns/op
+Iteration   1: 26.939 ns/op
+Iteration   2: 26.882 ns/op
+Iteration   3: 26.762 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap":
+  26.861 ±(99.9%) 1.648 ns/op [Average]
+  (min, avg, max) = (26.762, 26.861, 26.939), stdev = 0.090
+  CI (99.9%): [25.213, 28.509] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap
+# Parameters: (size = 100000)
+
+# Run progress: 6.67% complete, ETA 00:16:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 42.567 ns/op
+# Warmup Iteration   2: 42.175 ns/op
+Iteration   1: 39.496 ns/op
+Iteration   2: 39.769 ns/op
+Iteration   3: 39.507 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap":
+  39.591 ±(99.9%) 2.815 ns/op [Average]
+  (min, avg, max) = (39.496, 39.591, 39.769), stdev = 0.154
+  CI (99.9%): [36.775, 42.406] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap
+# Parameters: (size = 1000000)
+
+# Run progress: 8.89% complete, ETA 00:16:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 47.574 ns/op
+# Warmup Iteration   2: 47.843 ns/op
+Iteration   1: 46.746 ns/op
+Iteration   2: 46.819 ns/op
+Iteration   3: 46.884 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.baselineEmptyMap":
+  46.816 ±(99.9%) 1.266 ns/op [Average]
+  (min, avg, max) = (46.746, 46.816, 46.884), stdev = 0.069
+  CI (99.9%): [45.551, 48.082] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit
+# Parameters: (size = 100)
+
+# Run progress: 11.11% complete, ETA 00:16:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 122.708 ns/op
+# Warmup Iteration   2: 115.981 ns/op
+Iteration   1: 87.145 ns/op
+Iteration   2: 85.142 ns/op
+Iteration   3: 85.110 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit":
+  85.799 ±(99.9%) 21.267 ns/op [Average]
+  (min, avg, max) = (85.110, 85.799, 87.145), stdev = 1.166
+  CI (99.9%): [64.532, 107.065] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 13.33% complete, ETA 00:15:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 151.986 ns/op
+# Warmup Iteration   2: 144.189 ns/op
+Iteration   1: 103.870 ns/op
+Iteration   2: 104.226 ns/op
+Iteration   3: 105.148 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit":
+  104.415 ±(99.9%) 12.034 ns/op [Average]
+  (min, avg, max) = (103.870, 104.415, 105.148), stdev = 0.660
+  CI (99.9%): [92.381, 116.449] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 15.56% complete, ETA 00:15:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 188.553 ns/op
+# Warmup Iteration   2: 196.202 ns/op
+Iteration   1: 126.104 ns/op
+Iteration   2: 125.723 ns/op
+Iteration   3: 127.198 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit":
+  126.342 ±(99.9%) 13.965 ns/op [Average]
+  (min, avg, max) = (125.723, 126.342, 127.198), stdev = 0.765
+  CI (99.9%): [112.377, 140.307] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 17.78% complete, ETA 00:14:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 545.280 ns/op
+# Warmup Iteration   2: 517.007 ns/op
+Iteration   1: 356.815 ns/op
+Iteration   2: 358.698 ns/op
+Iteration   3: 350.321 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit":
+  355.278 ±(99.9%) 80.176 ns/op [Average]
+  (min, avg, max) = (350.321, 355.278, 358.698), stdev = 4.395
+  CI (99.9%): [275.102, 435.454] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 20.00% complete, ETA 00:14:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 818.185 ns/op
+# Warmup Iteration   2: 798.691 ns/op
+Iteration   1: 672.522 ns/op
+Iteration   2: 688.348 ns/op
+Iteration   3: 668.603 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapHit":
+  676.491 ±(99.9%) 190.719 ns/op [Average]
+  (min, avg, max) = (668.603, 676.491, 688.348), stdev = 10.454
+  CI (99.9%): [485.772, 867.210] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss
+# Parameters: (size = 100)
+
+# Run progress: 22.22% complete, ETA 00:14:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 95.190 ns/op
+# Warmup Iteration   2: 95.499 ns/op
+Iteration   1: 79.788 ns/op
+Iteration   2: 85.688 ns/op
+Iteration   3: 86.668 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss":
+  84.048 ±(99.9%) 67.895 ns/op [Average]
+  (min, avg, max) = (79.788, 84.048, 86.668), stdev = 3.722
+  CI (99.9%): [16.153, 151.943] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 24.44% complete, ETA 00:13:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 107.594 ns/op
+# Warmup Iteration   2: 101.996 ns/op
+Iteration   1: 89.676 ns/op
+Iteration   2: 88.025 ns/op
+Iteration   3: 86.778 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss":
+  88.160 ±(99.9%) 26.518 ns/op [Average]
+  (min, avg, max) = (86.778, 88.160, 89.676), stdev = 1.454
+  CI (99.9%): [61.642, 114.678] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 26.67% complete, ETA 00:13:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 102.658 ns/op
+# Warmup Iteration   2: 96.731 ns/op
+Iteration   1: 82.779 ns/op
+Iteration   2: 80.996 ns/op
+Iteration   3: 81.129 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss":
+  81.635 ±(99.9%) 18.126 ns/op [Average]
+  (min, avg, max) = (80.996, 81.635, 82.779), stdev = 0.994
+  CI (99.9%): [63.509, 99.761] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 28.89% complete, ETA 00:12:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 112.079 ns/op
+# Warmup Iteration   2: 106.112 ns/op
+Iteration   1: 93.735 ns/op
+Iteration   2: 91.403 ns/op
+Iteration   3: 90.522 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss":
+  91.886 ±(99.9%) 30.287 ns/op [Average]
+  (min, avg, max) = (90.522, 91.886, 93.735), stdev = 1.660
+  CI (99.9%): [61.599, 122.173] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 31.11% complete, ETA 00:12:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 104.574 ns/op
+# Warmup Iteration   2: 99.702 ns/op
+Iteration   1: 87.878 ns/op
+Iteration   2: 90.553 ns/op
+Iteration   3: 93.628 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.JavaHashMapBenchmark.javaMapMiss":
+  90.686 ±(99.9%) 52.488 ns/op [Average]
+  (min, avg, max) = (87.878, 90.686, 93.628), stdev = 2.877
+  CI (99.9%): [38.198, 143.174] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit
+# Parameters: (size = 100)
+
+# Run progress: 33.33% complete, ETA 00:12:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 130.058 ns/op
+# Warmup Iteration   2: 131.895 ns/op
+Iteration   1: 132.614 ns/op
+Iteration   2: 132.534 ns/op
+Iteration   3: 132.538 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit":
+  132.562 ±(99.9%) 0.825 ns/op [Average]
+  (min, avg, max) = (132.534, 132.562, 132.614), stdev = 0.045
+  CI (99.9%): [131.737, 133.387] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit
+# Parameters: (size = 1000)
+
+# Run progress: 35.56% complete, ETA 00:11:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 146.755 ns/op
+# Warmup Iteration   2: 143.473 ns/op
+Iteration   1: 143.232 ns/op
+Iteration   2: 143.093 ns/op
+Iteration   3: 143.135 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit":
+  143.154 ±(99.9%) 1.298 ns/op [Average]
+  (min, avg, max) = (143.093, 143.154, 143.232), stdev = 0.071
+  CI (99.9%): [141.855, 144.452] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit
+# Parameters: (size = 10000)
+
+# Run progress: 37.78% complete, ETA 00:11:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 291.522 ns/op
+# Warmup Iteration   2: 295.033 ns/op
+Iteration   1: 283.791 ns/op
+Iteration   2: 282.871 ns/op
+Iteration   3: 285.229 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit":
+  283.964 ±(99.9%) 21.683 ns/op [Average]
+  (min, avg, max) = (282.871, 283.964, 285.229), stdev = 1.189
+  CI (99.9%): [262.281, 305.647] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit
+# Parameters: (size = 100000)
+
+# Run progress: 40.00% complete, ETA 00:10:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 463.244 ns/op
+# Warmup Iteration   2: 453.977 ns/op
+Iteration   1: 466.785 ns/op
+Iteration   2: 465.111 ns/op
+Iteration   3: 466.993 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit":
+  466.296 ±(99.9%) 18.823 ns/op [Average]
+  (min, avg, max) = (465.111, 466.296, 466.993), stdev = 1.032
+  CI (99.9%): [447.473, 485.119] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 42.22% complete, ETA 00:10:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 719.125 ns/op
+# Warmup Iteration   2: 715.874 ns/op
+Iteration   1: 717.052 ns/op
+Iteration   2: 714.012 ns/op
+Iteration   3: 712.893 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapHit":
+  714.652 ±(99.9%) 39.263 ns/op [Average]
+  (min, avg, max) = (712.893, 714.652, 717.052), stdev = 2.152
+  CI (99.9%): [675.389, 753.915] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss
+# Parameters: (size = 100)
+
+# Run progress: 44.44% complete, ETA 00:10:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 94.757 ns/op
+# Warmup Iteration   2: 98.228 ns/op
+Iteration   1: 104.383 ns/op
+Iteration   2: 104.414 ns/op
+Iteration   3: 104.431 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss":
+  104.409 ±(99.9%) 0.443 ns/op [Average]
+  (min, avg, max) = (104.383, 104.409, 104.431), stdev = 0.024
+  CI (99.9%): [103.966, 104.852] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 46.67% complete, ETA 00:09:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 104.677 ns/op
+# Warmup Iteration   2: 106.851 ns/op
+Iteration   1: 114.850 ns/op
+Iteration   2: 114.772 ns/op
+Iteration   3: 114.684 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss":
+  114.769 ±(99.9%) 1.519 ns/op [Average]
+  (min, avg, max) = (114.684, 114.769, 114.850), stdev = 0.083
+  CI (99.9%): [113.249, 116.288] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 48.89% complete, ETA 00:09:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 95.533 ns/op
+# Warmup Iteration   2: 98.463 ns/op
+Iteration   1: 106.433 ns/op
+Iteration   2: 106.319 ns/op
+Iteration   3: 106.305 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss":
+  106.352 ±(99.9%) 1.280 ns/op [Average]
+  (min, avg, max) = (106.305, 106.352, 106.433), stdev = 0.070
+  CI (99.9%): [105.072, 107.633] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 51.11% complete, ETA 00:08:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 88.973 ns/op
+# Warmup Iteration   2: 92.039 ns/op
+Iteration   1: 97.642 ns/op
+Iteration   2: 97.475 ns/op
+Iteration   3: 97.276 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss":
+  97.465 ±(99.9%) 3.346 ns/op [Average]
+  (min, avg, max) = (97.276, 97.465, 97.642), stdev = 0.183
+  CI (99.9%): [94.118, 100.811] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 53.33% complete, ETA 00:08:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 92.822 ns/op
+# Warmup Iteration   2: 95.046 ns/op
+Iteration   1: 100.820 ns/op
+Iteration   2: 100.919 ns/op
+Iteration   3: 100.780 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OffHeapMapBenchmark.offHeapMiss":
+  100.840 ±(99.9%) 1.301 ns/op [Average]
+  (min, avg, max) = (100.780, 100.840, 100.919), stdev = 0.071
+  CI (99.9%): [99.539, 102.141] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit
+# Parameters: (size = 100)
+
+# Run progress: 55.56% complete, ETA 00:08:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 113.835 ns/op
+# Warmup Iteration   2: 115.562 ns/op
+Iteration   1: 104.478 ns/op
+Iteration   2: 104.546 ns/op
+Iteration   3: 104.541 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit":
+  104.522 ±(99.9%) 0.690 ns/op [Average]
+  (min, avg, max) = (104.478, 104.522, 104.546), stdev = 0.038
+  CI (99.9%): [103.832, 105.211] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit
+# Parameters: (size = 1000)
+
+# Run progress: 57.78% complete, ETA 00:07:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 136.013 ns/op
+# Warmup Iteration   2: 134.969 ns/op
+Iteration   1: 125.254 ns/op
+Iteration   2: 125.580 ns/op
+Iteration   3: 125.409 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit":
+  125.414 ±(99.9%) 2.978 ns/op [Average]
+  (min, avg, max) = (125.254, 125.414, 125.580), stdev = 0.163
+  CI (99.9%): [122.436, 128.393] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit
+# Parameters: (size = 10000)
+
+# Run progress: 60.00% complete, ETA 00:07:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 275.647 ns/op
+# Warmup Iteration   2: 273.678 ns/op
+Iteration   1: 256.099 ns/op
+Iteration   2: 257.196 ns/op
+Iteration   3: 256.610 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit":
+  256.635 ±(99.9%) 10.022 ns/op [Average]
+  (min, avg, max) = (256.099, 256.635, 257.196), stdev = 0.549
+  CI (99.9%): [246.613, 266.657] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit
+# Parameters: (size = 100000)
+
+# Run progress: 62.22% complete, ETA 00:06:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 516.554 ns/op
+# Warmup Iteration   2: 520.279 ns/op
+Iteration   1: 488.647 ns/op
+Iteration   2: 483.226 ns/op
+Iteration   3: 484.112 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit":
+  485.328 ±(99.9%) 53.055 ns/op [Average]
+  (min, avg, max) = (483.226, 485.328, 488.647), stdev = 2.908
+  CI (99.9%): [432.274, 538.383] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 64.44% complete, ETA 00:06:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 971.058 ns/op
+# Warmup Iteration   2: 970.271 ns/op
+Iteration   1: 903.850 ns/op
+Iteration   2: 904.114 ns/op
+Iteration   3: 903.190 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapHit":
+  903.718 ±(99.9%) 8.689 ns/op [Average]
+  (min, avg, max) = (903.190, 903.718, 904.114), stdev = 0.476
+  CI (99.9%): [895.029, 912.407] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss
+# Parameters: (size = 100)
+
+# Run progress: 66.67% complete, ETA 00:06:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 97.183 ns/op
+# Warmup Iteration   2: 96.265 ns/op
+Iteration   1: 97.930 ns/op
+Iteration   2: 97.644 ns/op
+Iteration   3: 97.610 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss":
+  97.728 ±(99.9%) 3.209 ns/op [Average]
+  (min, avg, max) = (97.610, 97.728, 97.930), stdev = 0.176
+  CI (99.9%): [94.519, 100.937] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 68.89% complete, ETA 00:05:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 105.078 ns/op
+# Warmup Iteration   2: 103.904 ns/op
+Iteration   1: 104.291 ns/op
+Iteration   2: 104.286 ns/op
+Iteration   3: 104.178 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss":
+  104.252 ±(99.9%) 1.168 ns/op [Average]
+  (min, avg, max) = (104.178, 104.252, 104.291), stdev = 0.064
+  CI (99.9%): [103.084, 105.419] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 71.11% complete, ETA 00:05:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 96.014 ns/op
+# Warmup Iteration   2: 95.372 ns/op
+Iteration   1: 96.485 ns/op
+Iteration   2: 96.668 ns/op
+Iteration   3: 96.616 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss":
+  96.590 ±(99.9%) 1.724 ns/op [Average]
+  (min, avg, max) = (96.485, 96.590, 96.668), stdev = 0.094
+  CI (99.9%): [94.866, 98.313] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 73.33% complete, ETA 00:04:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 113.592 ns/op
+# Warmup Iteration   2: 112.284 ns/op
+Iteration   1: 113.379 ns/op
+Iteration   2: 113.010 ns/op
+Iteration   3: 113.023 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss":
+  113.137 ±(99.9%) 3.816 ns/op [Average]
+  (min, avg, max) = (113.010, 113.137, 113.379), stdev = 0.209
+  CI (99.9%): [109.322, 116.953] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 75.56% complete, ETA 00:04:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 107.058 ns/op
+# Warmup Iteration   2: 106.509 ns/op
+Iteration   1: 107.360 ns/op
+Iteration   2: 107.238 ns/op
+Iteration   3: 107.303 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.OnHeapMapBenchmark.onHeapMiss":
+  107.300 ±(99.9%) 1.114 ns/op [Average]
+  (min, avg, max) = (107.238, 107.300, 107.360), stdev = 0.061
+  CI (99.9%): [106.186, 108.414] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit
+# Parameters: (size = 100)
+
+# Run progress: 77.78% complete, ETA 00:04:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 226.965 ns/op
+# Warmup Iteration   2: 221.382 ns/op
+Iteration   1: 223.970 ns/op
+Iteration   2: 224.269 ns/op
+Iteration   3: 224.204 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit":
+  224.147 ±(99.9%) 2.866 ns/op [Average]
+  (min, avg, max) = (223.970, 224.147, 224.269), stdev = 0.157
+  CI (99.9%): [221.282, 227.013] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit
+# Parameters: (size = 1000)
+
+# Run progress: 80.00% complete, ETA 00:03:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 313.725 ns/op
+# Warmup Iteration   2: 311.365 ns/op
+Iteration   1: 304.615 ns/op
+Iteration   2: 303.880 ns/op
+Iteration   3: 304.551 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit":
+  304.349 ±(99.9%) 7.426 ns/op [Average]
+  (min, avg, max) = (303.880, 304.349, 304.615), stdev = 0.407
+  CI (99.9%): [296.923, 311.775] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit
+# Parameters: (size = 10000)
+
+# Run progress: 82.22% complete, ETA 00:03:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 616.936 ns/op
+# Warmup Iteration   2: 609.099 ns/op
+Iteration   1: 606.294 ns/op
+Iteration   2: 605.701 ns/op
+Iteration   3: 605.757 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit":
+  605.917 ±(99.9%) 5.969 ns/op [Average]
+  (min, avg, max) = (605.701, 605.917, 606.294), stdev = 0.327
+  CI (99.9%): [599.948, 611.886] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit
+# Parameters: (size = 100000)
+
+# Run progress: 84.44% complete, ETA 00:02:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 1682.143 ns/op
+# Warmup Iteration   2: 1627.104 ns/op
+Iteration   1: 1631.030 ns/op
+Iteration   2: 1619.466 ns/op
+Iteration   3: 1629.893 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit":
+  1626.796 ±(99.9%) 116.276 ns/op [Average]
+  (min, avg, max) = (1619.466, 1626.796, 1631.030), stdev = 6.373
+  CI (99.9%): [1510.520, 1743.073] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 86.67% complete, ETA 00:02:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 3172.739 ns/op
+# Warmup Iteration   2: 3034.773 ns/op
+Iteration   1: 2604.897 ns/op
+Iteration   2: 2576.408 ns/op
+Iteration   3: 2583.603 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapHit":
+  2588.303 ±(99.9%) 270.280 ns/op [Average]
+  (min, avg, max) = (2576.408, 2588.303, 2604.897), stdev = 14.815
+  CI (99.9%): [2318.023, 2858.583] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss
+# Parameters: (size = 100)
+
+# Run progress: 88.89% complete, ETA 00:02:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 157.746 ns/op
+# Warmup Iteration   2: 157.073 ns/op
+Iteration   1: 160.961 ns/op
+Iteration   2: 160.914 ns/op
+Iteration   3: 161.138 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss":
+  161.004 ±(99.9%) 2.162 ns/op [Average]
+  (min, avg, max) = (160.914, 161.004, 161.138), stdev = 0.119
+  CI (99.9%): [158.842, 163.167] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 91.11% complete, ETA 00:01:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 179.392 ns/op
+# Warmup Iteration   2: 178.991 ns/op
+Iteration   1: 183.965 ns/op
+Iteration   2: 183.987 ns/op
+Iteration   3: 184.160 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss":
+  184.038 ±(99.9%) 1.953 ns/op [Average]
+  (min, avg, max) = (183.965, 184.038, 184.160), stdev = 0.107
+  CI (99.9%): [182.085, 185.990] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 93.33% complete, ETA 00:01:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 282.491 ns/op
+# Warmup Iteration   2: 282.449 ns/op
+Iteration   1: 293.860 ns/op
+Iteration   2: 295.926 ns/op
+Iteration   3: 295.795 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss":
+  295.194 ±(99.9%) 21.110 ns/op [Average]
+  (min, avg, max) = (293.860, 295.194, 295.926), stdev = 1.157
+  CI (99.9%): [274.084, 316.303] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 95.56% complete, ETA 00:00:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 387.625 ns/op
+# Warmup Iteration   2: 386.309 ns/op
+Iteration   1: 387.491 ns/op
+Iteration   2: 382.418 ns/op
+Iteration   3: 380.847 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss":
+  383.585 ±(99.9%) 63.340 ns/op [Average]
+  (min, avg, max) = (380.847, 383.585, 387.491), stdev = 3.472
+  CI (99.9%): [320.245, 446.926] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 4 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 97.78% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 500.837 ns/op
+# Warmup Iteration   2: 497.296 ns/op
+Iteration   1: 513.027 ns/op
+Iteration   2: 508.517 ns/op
+Iteration   3: 505.733 ns/op
+
+
+Result "com.komanov.offheap.uuidhashmap.jmh.ScalaImmutableMapBenchmark.scalaMapMiss":
+  509.092 ±(99.9%) 67.158 ns/op [Average]
+  (min, avg, max) = (505.733, 509.092, 513.027), stdev = 3.681
+  CI (99.9%): [441.935, 576.250] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:18:11
+
+Benchmark                                 (size)  Mode  Cnt     Score     Error  Units
+JavaHashMapBenchmark.baselineEmptyMap        100  avgt    3    24.212 ±   0.525  ns/op
+JavaHashMapBenchmark.baselineEmptyMap       1000  avgt    3    26.601 ±   2.146  ns/op
+JavaHashMapBenchmark.baselineEmptyMap      10000  avgt    3    26.861 ±   1.648  ns/op
+JavaHashMapBenchmark.baselineEmptyMap     100000  avgt    3    39.591 ±   2.815  ns/op
+JavaHashMapBenchmark.baselineEmptyMap    1000000  avgt    3    46.816 ±   1.266  ns/op
+JavaHashMapBenchmark.javaMapHit              100  avgt    3    85.799 ±  21.267  ns/op
+JavaHashMapBenchmark.javaMapHit             1000  avgt    3   104.415 ±  12.034  ns/op
+JavaHashMapBenchmark.javaMapHit            10000  avgt    3   126.342 ±  13.965  ns/op
+JavaHashMapBenchmark.javaMapHit           100000  avgt    3   355.278 ±  80.176  ns/op
+JavaHashMapBenchmark.javaMapHit          1000000  avgt    3   676.491 ± 190.719  ns/op
+JavaHashMapBenchmark.javaMapMiss             100  avgt    3    84.048 ±  67.895  ns/op
+JavaHashMapBenchmark.javaMapMiss            1000  avgt    3    88.160 ±  26.518  ns/op
+JavaHashMapBenchmark.javaMapMiss           10000  avgt    3    81.635 ±  18.126  ns/op
+JavaHashMapBenchmark.javaMapMiss          100000  avgt    3    91.886 ±  30.287  ns/op
+JavaHashMapBenchmark.javaMapMiss         1000000  avgt    3    90.686 ±  52.488  ns/op
+OffHeapMapBenchmark.offHeapHit               100  avgt    3   132.562 ±   0.825  ns/op
+OffHeapMapBenchmark.offHeapHit              1000  avgt    3   143.154 ±   1.298  ns/op
+OffHeapMapBenchmark.offHeapHit             10000  avgt    3   283.964 ±  21.683  ns/op
+OffHeapMapBenchmark.offHeapHit            100000  avgt    3   466.296 ±  18.823  ns/op
+OffHeapMapBenchmark.offHeapHit           1000000  avgt    3   714.652 ±  39.263  ns/op
+OffHeapMapBenchmark.offHeapMiss              100  avgt    3   104.409 ±   0.443  ns/op
+OffHeapMapBenchmark.offHeapMiss             1000  avgt    3   114.769 ±   1.519  ns/op
+OffHeapMapBenchmark.offHeapMiss            10000  avgt    3   106.352 ±   1.280  ns/op
+OffHeapMapBenchmark.offHeapMiss           100000  avgt    3    97.465 ±   3.346  ns/op
+OffHeapMapBenchmark.offHeapMiss          1000000  avgt    3   100.840 ±   1.301  ns/op
+OnHeapMapBenchmark.onHeapHit                 100  avgt    3   104.522 ±   0.690  ns/op
+OnHeapMapBenchmark.onHeapHit                1000  avgt    3   125.414 ±   2.978  ns/op
+OnHeapMapBenchmark.onHeapHit               10000  avgt    3   256.635 ±  10.022  ns/op
+OnHeapMapBenchmark.onHeapHit              100000  avgt    3   485.328 ±  53.055  ns/op
+OnHeapMapBenchmark.onHeapHit             1000000  avgt    3   903.718 ±   8.689  ns/op
+OnHeapMapBenchmark.onHeapMiss                100  avgt    3    97.728 ±   3.209  ns/op
+OnHeapMapBenchmark.onHeapMiss               1000  avgt    3   104.252 ±   1.168  ns/op
+OnHeapMapBenchmark.onHeapMiss              10000  avgt    3    96.590 ±   1.724  ns/op
+OnHeapMapBenchmark.onHeapMiss             100000  avgt    3   113.137 ±   3.816  ns/op
+OnHeapMapBenchmark.onHeapMiss            1000000  avgt    3   107.300 ±   1.114  ns/op
+ScalaImmutableMapBenchmark.scalaMapHit       100  avgt    3   224.147 ±   2.866  ns/op
+ScalaImmutableMapBenchmark.scalaMapHit      1000  avgt    3   304.349 ±   7.426  ns/op
+ScalaImmutableMapBenchmark.scalaMapHit     10000  avgt    3   605.917 ±   5.969  ns/op
+ScalaImmutableMapBenchmark.scalaMapHit    100000  avgt    3  1626.796 ± 116.276  ns/op
+ScalaImmutableMapBenchmark.scalaMapHit   1000000  avgt    3  2588.303 ± 270.280  ns/op
+ScalaImmutableMapBenchmark.scalaMapMiss      100  avgt    3   161.004 ±   2.162  ns/op
+ScalaImmutableMapBenchmark.scalaMapMiss     1000  avgt    3   184.038 ±   1.953  ns/op
+ScalaImmutableMapBenchmark.scalaMapMiss    10000  avgt    3   295.194 ±  21.110  ns/op
+ScalaImmutableMapBenchmark.scalaMapMiss   100000  avgt    3   383.585 ±  63.340  ns/op
+ScalaImmutableMapBenchmark.scalaMapMiss  1000000  avgt    3   509.092 ±  67.158  ns/op
+
+Benchmark result is saved to /static/data/charts/offheap-hashmap/jdk17.json
