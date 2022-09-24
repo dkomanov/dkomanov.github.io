@@ -20,3 +20,19 @@ export { default as TagCloud } from './TagCloud/TagCloud';
 export { default as Tags } from './Tags/Tags';
 export { default as TeaserImage } from './TeaserImage/TeaserImage';
 export { default as TimeUnits } from './TimeUnits/TimeUnits';
+
+export type JdkVersion = 'openjdk-17' | 'openjdk-11' | 'openjdk-8';
+export const Jdks: JdkVersion[] = ['openjdk-17', 'openjdk-11', 'openjdk-8'];
+
+export function getChooseItems(
+  values: string[],
+  isDefault: (value: string, index: number) => boolean
+) {
+  return values.map((v, index) => {
+    return {
+      label: v,
+      value: v,
+      default: isDefault(v, index),
+    };
+  });
+}

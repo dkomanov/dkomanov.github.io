@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import React, { useState } from 'react';
 import { JmhBenchmarkRun } from '../../..';
 import {
-  getChooseItems,
   ChartAndTable,
-  Choose,
-  JmhChartComponentProps,
+  Choose, getChooseItems, JmhChartComponentProps,
   JmhChartPage,
-  TimeUnits,
+  TimeUnits
 } from '../../../components';
 import { loadJson } from '../../../util';
 
