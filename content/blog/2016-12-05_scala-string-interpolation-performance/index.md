@@ -6,7 +6,7 @@ description: "Performance comparison between different kinds of string concatena
 tags: ["scala", "java", "benchmark", "performance", "csharp"]
 canonicalUrl: https://medium.com/@dkomanov/scala-string-interpolation-performance-21dc85e83afd
 ---
-> Performance comparison between different kinds of string concatenation/formatting in Java/Scala
+> UPD: [Here](https://github.com/scala/scala/pull/6093) is the Pull Request to scala-compiler with changes inspired by this post.
 
 String concatenation is a basic building block in every modern programming
 language. Many different projects, especially in Web, produce a lot of strings.
