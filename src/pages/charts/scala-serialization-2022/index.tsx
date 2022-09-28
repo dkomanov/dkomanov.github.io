@@ -31,6 +31,10 @@ const fastLibraries = [
     value: 'SCALA_PB',
   },
   {
+    name: 'ScalaPb (direct)',
+    value: 'SCALA_PB_DIRECT',
+  },
+  {
     name: 'JavaPb',
     value: 'JAVA_PB',
   },
@@ -55,8 +59,20 @@ const fastLibraries = [
     value: 'UPICKLE_JSON',
   },
   {
+    name: 'uPickle JSON pooled',
+    value: 'UPICKLE_POOLED_JSON',
+  },
+  {
     name: 'uPickle MskPack',
     value: 'UPICKLE_MSGPACK',
+  },
+  {
+    name: 'CapNProto',
+    value: 'CAP_N_PROTO',
+  },
+  {
+    name: 'CapNProto pooled',
+    value: 'CAP_N_PROTO_POOLED',
   },
 ];
 const slowLibraries = [
@@ -326,7 +342,7 @@ function exportDimensions(benchmark: string, params: any) {
     throw new Error('Expected 2 parts in a benchmark: ' + benchmark);
   }
 
-  const dataType = dataTypePart.substring(dataTypePart.lastIndexOf('.') + 1);
+  const dataType = dataTypePart.substring(dataTypePart.lastIndexOf('.') + 1).startsWith('Site') ? 'Site' : 'Event';
   const dataSize =
     parseInt((/_(\d+)_K/.exec(params.inputType) || [])[1], 10) * 1000;
 
