@@ -8,6 +8,8 @@ canonicalUrl: https://dkomanov.medium.com/base64-encoding-performance-jdk-vs-apa
 cover: ./cover.jpg
 ---
 
+UPD. [Charts](/charts/base64-jdk-vs-apache-commons) updated with better input data.
+
 Recently I stumbled upon some old code that used [Base64](https://commons.apache.org/proper/commons-codec/apidocs/org/apache/commons/codec/binary/Base64.html) from [Apache Commons](https://commons.apache.org/proper/commons-codec/). So I decided to compare its performance to [java.util.Base64](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Base64.html).
 
 It's not a new topic whatsoever (links at the end), so let's just jump to benchmark results.
