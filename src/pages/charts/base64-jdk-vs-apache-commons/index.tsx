@@ -13,6 +13,8 @@ type JdkVersion = 'openjdk-17' | 'openjdk-11' | 'openjdk-8';
 const jdks: JdkVersion[] = ['openjdk-17', 'openjdk-11', 'openjdk-8'];
 const Lengths = ['1', '10', '50', '100', '500', '1000', '10000'];
 const DefaultLength = '10000';
+type Dataset = 'fixed' | 'random';
+const DefaultDataset: Dataset = 'fixed';
 
 const xDesc = {
   title: 'Library and Operation',
@@ -61,6 +63,7 @@ const yDesc = {
 
 const Base64PerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
   const [length, lengthSet] = useState(DefaultLength);
+  const [dataset, datasetSet] = useState<Dataset>(DefaultDataset);
   const [jdk, jdkSet] = useState<JdkVersion>('openjdk-17');
   const [extractor, extractorSet] = useState({ func: null });
 
@@ -90,6 +93,11 @@ const Base64PerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
         items={getChooseItems(Lengths, (v) => v === DefaultLength)}
         onChange={(value: string) => lengthSet(value)}
       />
+      <Choose
+        label="Data set:"
+        items={getChooseItems(['fixed', 'random'], (v) => v === DefaultDataset)}
+        onChange={(value: Dataset) => datasetSet(value)}
+      />
       <TimeUnits onChange={(func: any) => extractorSet({ func })} />
 
       <h4>Encoding/Decoding Performance for various JDKs</h4>
@@ -97,7 +105,7 @@ const Base64PerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.length === length}
+        filter={(p: any) => p.length === length && p.dataset === dataset}
         title="Encoding/Decoding, nanos"
         xDesc={xDesc}
         yDesc={yDesc}
@@ -115,7 +123,7 @@ const Base64PerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
         chartType="LineChart"
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.jdk === jdk}
+        filter={(p: any) => p.jdk === jdk && p.dataset === dataset}
         title="Encoding/Decoding, nanos"
         xDesc={xDesc}
         yDesc={{

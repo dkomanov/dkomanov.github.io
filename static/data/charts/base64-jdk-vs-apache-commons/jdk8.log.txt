@@ -12,22 +12,22 @@
 
 # Run progress: 0.00% complete, ETA 00:18:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 1141.876 ns/op
-# Warmup Iteration   2: 799.818 ns/op
-# Warmup Iteration   3: 770.805 ns/op
-# Warmup Iteration   4: 799.081 ns/op
-# Warmup Iteration   5: 852.619 ns/op
-Iteration   1: 784.247 ns/op
-Iteration   2: 789.064 ns/op
-Iteration   3: 820.706 ns/op
-Iteration   4: 821.907 ns/op
-Iteration   5: 797.803 ns/op
+# Warmup Iteration   1: 963.441 ns/op
+# Warmup Iteration   2: 710.023 ns/op
+# Warmup Iteration   3: 704.125 ns/op
+# Warmup Iteration   4: 693.600 ns/op
+# Warmup Iteration   5: 759.184 ns/op
+Iteration   1: 696.373 ns/op
+Iteration   2: 710.612 ns/op
+Iteration   3: 732.341 ns/op
+Iteration   4: 736.962 ns/op
+Iteration   5: 739.717 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  802.745 ±(99.9%) 67.895 ns/op [Average]
-  (min, avg, max) = (784.247, 802.745, 821.907), stdev = 17.632
-  CI (99.9%): [734.850, 870.640] (assumes normal distribution)
+  723.201 ±(99.9%) 72.651 ns/op [Average]
+  (min, avg, max) = (696.373, 723.201, 739.717), stdev = 18.867
+  CI (99.9%): [650.550, 795.852] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -42,24 +42,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 0.89% complete, ETA 00:20:01
+# Run progress: 0.89% complete, ETA 00:19:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 1367.363 ns/op
-# Warmup Iteration   2: 917.484 ns/op
-# Warmup Iteration   3: 937.647 ns/op
-# Warmup Iteration   4: 920.521 ns/op
-# Warmup Iteration   5: 956.653 ns/op
-Iteration   1: 893.166 ns/op
-Iteration   2: 912.852 ns/op
-Iteration   3: 1004.972 ns/op
-Iteration   4: 941.263 ns/op
-Iteration   5: 909.448 ns/op
+# Warmup Iteration   1: 1003.341 ns/op
+# Warmup Iteration   2: 809.285 ns/op
+# Warmup Iteration   3: 801.290 ns/op
+# Warmup Iteration   4: 785.197 ns/op
+# Warmup Iteration   5: 804.503 ns/op
+Iteration   1: 833.577 ns/op
+Iteration   2: 880.968 ns/op
+Iteration   3: 821.077 ns/op
+Iteration   4: 812.031 ns/op
+Iteration   5: 787.130 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  932.340 ±(99.9%) 169.968 ns/op [Average]
-  (min, avg, max) = (893.166, 932.340, 1004.972), stdev = 44.140
-  CI (99.9%): [762.372, 1102.308] (assumes normal distribution)
+  826.957 ±(99.9%) 133.453 ns/op [Average]
+  (min, avg, max) = (787.130, 826.957, 880.968), stdev = 34.657
+  CI (99.9%): [693.504, 960.410] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -74,24 +74,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 1.79% complete, ETA 00:19:42
+# Run progress: 1.79% complete, ETA 00:19:29
 # Fork: 1 of 1
-# Warmup Iteration   1: 1988.641 ns/op
-# Warmup Iteration   2: 1591.374 ns/op
-# Warmup Iteration   3: 1573.619 ns/op
-# Warmup Iteration   4: 1547.971 ns/op
-# Warmup Iteration   5: 1580.317 ns/op
-Iteration   1: 1542.027 ns/op
-Iteration   2: 1615.311 ns/op
-Iteration   3: 1511.182 ns/op
-Iteration   4: 1541.036 ns/op
-Iteration   5: 1595.552 ns/op
+# Warmup Iteration   1: 1576.764 ns/op
+# Warmup Iteration   2: 1243.404 ns/op
+# Warmup Iteration   3: 1279.970 ns/op
+# Warmup Iteration   4: 1249.659 ns/op
+# Warmup Iteration   5: 1230.263 ns/op
+Iteration   1: 1310.978 ns/op
+Iteration   2: 1208.922 ns/op
+Iteration   3: 1261.744 ns/op
+Iteration   4: 1217.791 ns/op
+Iteration   5: 1250.608 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  1561.022 ±(99.9%) 165.441 ns/op [Average]
-  (min, avg, max) = (1511.182, 1561.022, 1615.311), stdev = 42.965
-  CI (99.9%): [1395.581, 1726.463] (assumes normal distribution)
+  1250.009 ±(99.9%) 156.194 ns/op [Average]
+  (min, avg, max) = (1208.922, 1250.009, 1310.978), stdev = 40.563
+  CI (99.9%): [1093.815, 1406.202] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -106,24 +106,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 2.68% complete, ETA 00:19:27
+# Run progress: 2.68% complete, ETA 00:19:16
 # Fork: 1 of 1
-# Warmup Iteration   1: 3134.227 ns/op
-# Warmup Iteration   2: 2265.480 ns/op
-# Warmup Iteration   3: 2330.729 ns/op
-# Warmup Iteration   4: 2348.018 ns/op
-# Warmup Iteration   5: 2300.485 ns/op
-Iteration   1: 2307.912 ns/op
-Iteration   2: 2255.642 ns/op
-Iteration   3: 2315.974 ns/op
-Iteration   4: 2291.843 ns/op
-Iteration   5: 2292.658 ns/op
+# Warmup Iteration   1: 2463.161 ns/op
+# Warmup Iteration   2: 1879.613 ns/op
+# Warmup Iteration   3: 1812.653 ns/op
+# Warmup Iteration   4: 1764.679 ns/op
+# Warmup Iteration   5: 1781.514 ns/op
+Iteration   1: 1777.640 ns/op
+Iteration   2: 1809.605 ns/op
+Iteration   3: 1861.021 ns/op
+Iteration   4: 1763.848 ns/op
+Iteration   5: 1758.292 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  2292.806 ±(99.9%) 89.212 ns/op [Average]
-  (min, avg, max) = (2255.642, 2292.806, 2315.974), stdev = 23.168
-  CI (99.9%): [2203.594, 2382.018] (assumes normal distribution)
+  1794.081 ±(99.9%) 163.223 ns/op [Average]
+  (min, avg, max) = (1758.292, 1794.081, 1861.021), stdev = 42.388
+  CI (99.9%): [1630.858, 1957.304] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -138,24 +138,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 3.57% complete, ETA 00:19:14
+# Run progress: 3.57% complete, ETA 00:19:05
 # Fork: 1 of 1
-# Warmup Iteration   1: 11362.921 ns/op
-# Warmup Iteration   2: 9217.553 ns/op
-# Warmup Iteration   3: 8526.678 ns/op
-# Warmup Iteration   4: 8737.557 ns/op
-# Warmup Iteration   5: 9313.278 ns/op
-Iteration   1: 8891.684 ns/op
-Iteration   2: 8799.037 ns/op
-Iteration   3: 8753.120 ns/op
-Iteration   4: 8873.419 ns/op
-Iteration   5: 8649.669 ns/op
+# Warmup Iteration   1: 8079.481 ns/op
+# Warmup Iteration   2: 6948.737 ns/op
+# Warmup Iteration   3: 6588.392 ns/op
+# Warmup Iteration   4: 6762.564 ns/op
+# Warmup Iteration   5: 6654.259 ns/op
+Iteration   1: 6611.289 ns/op
+Iteration   2: 6524.401 ns/op
+Iteration   3: 6738.686 ns/op
+Iteration   4: 6716.991 ns/op
+Iteration   5: 6656.671 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  8793.385 ±(99.9%) 377.165 ns/op [Average]
-  (min, avg, max) = (8649.669, 8793.385, 8891.684), stdev = 97.949
-  CI (99.9%): [8416.220, 9170.551] (assumes normal distribution)
+  6649.608 ±(99.9%) 331.638 ns/op [Average]
+  (min, avg, max) = (6524.401, 6649.608, 6738.686), stdev = 86.125
+  CI (99.9%): [6317.970, 6981.245] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -170,24 +170,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 4.46% complete, ETA 00:19:03
+# Run progress: 4.46% complete, ETA 00:18:53
 # Fork: 1 of 1
-# Warmup Iteration   1: 15002.868 ns/op
-# Warmup Iteration   2: 13728.435 ns/op
-# Warmup Iteration   3: 16060.225 ns/op
-# Warmup Iteration   4: 12591.745 ns/op
-# Warmup Iteration   5: 12405.073 ns/op
-Iteration   1: 11904.389 ns/op
-Iteration   2: 11722.848 ns/op
-Iteration   3: 11479.521 ns/op
-Iteration   4: 12024.490 ns/op
-Iteration   5: 11789.689 ns/op
+# Warmup Iteration   1: 14929.084 ns/op
+# Warmup Iteration   2: 13534.527 ns/op
+# Warmup Iteration   3: 12902.513 ns/op
+# Warmup Iteration   4: 12420.293 ns/op
+# Warmup Iteration   5: 12432.359 ns/op
+Iteration   1: 12373.574 ns/op
+Iteration   2: 12382.470 ns/op
+Iteration   3: 12414.776 ns/op
+Iteration   4: 12435.849 ns/op
+Iteration   5: 12461.931 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  11784.187 ±(99.9%) 791.043 ns/op [Average]
-  (min, avg, max) = (11479.521, 11784.187, 12024.490), stdev = 205.431
-  CI (99.9%): [10993.144, 12575.230] (assumes normal distribution)
+  12413.720 ±(99.9%) 141.525 ns/op [Average]
+  (min, avg, max) = (12373.574, 12413.720, 12461.931), stdev = 36.754
+  CI (99.9%): [12272.195, 12555.245] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -202,24 +202,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 5.36% complete, ETA 00:18:51
+# Run progress: 5.36% complete, ETA 00:18:42
 # Fork: 1 of 1
-# Warmup Iteration   1: 133210.204 ns/op
-# Warmup Iteration   2: 128315.405 ns/op
-# Warmup Iteration   3: 129941.461 ns/op
-# Warmup Iteration   4: 121864.532 ns/op
-# Warmup Iteration   5: 119704.082 ns/op
-Iteration   1: 118883.081 ns/op
-Iteration   2: 118946.413 ns/op
-Iteration   3: 123417.632 ns/op
-Iteration   4: 119337.325 ns/op
-Iteration   5: 118759.457 ns/op
+# Warmup Iteration   1: 96742.321 ns/op
+# Warmup Iteration   2: 91800.531 ns/op
+# Warmup Iteration   3: 87383.998 ns/op
+# Warmup Iteration   4: 85485.764 ns/op
+# Warmup Iteration   5: 85596.681 ns/op
+Iteration   1: 85801.974 ns/op
+Iteration   2: 85670.976 ns/op
+Iteration   3: 85269.202 ns/op
+Iteration   4: 85406.483 ns/op
+Iteration   5: 86139.516 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  119868.782 ±(99.9%) 7684.363 ns/op [Average]
-  (min, avg, max) = (118759.457, 119868.782, 123417.632), stdev = 1995.605
-  CI (99.9%): [112184.418, 127553.145] (assumes normal distribution)
+  85657.630 ±(99.9%) 1315.967 ns/op [Average]
+  (min, avg, max) = (85269.202, 85657.630, 86139.516), stdev = 341.752
+  CI (99.9%): [84341.664, 86973.597] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -234,24 +234,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 6.25% complete, ETA 00:18:40
+# Run progress: 6.25% complete, ETA 00:18:31
 # Fork: 1 of 1
-# Warmup Iteration   1: 1051.885 ns/op
-# Warmup Iteration   2: 805.099 ns/op
-# Warmup Iteration   3: 767.585 ns/op
-# Warmup Iteration   4: 808.666 ns/op
-# Warmup Iteration   5: 807.719 ns/op
-Iteration   1: 765.593 ns/op
-Iteration   2: 769.458 ns/op
-Iteration   3: 752.922 ns/op
-Iteration   4: 841.156 ns/op
-Iteration   5: 764.109 ns/op
+# Warmup Iteration   1: 923.995 ns/op
+# Warmup Iteration   2: 773.188 ns/op
+# Warmup Iteration   3: 699.142 ns/op
+# Warmup Iteration   4: 705.777 ns/op
+# Warmup Iteration   5: 698.682 ns/op
+Iteration   1: 722.695 ns/op
+Iteration   2: 712.514 ns/op
+Iteration   3: 699.883 ns/op
+Iteration   4: 717.847 ns/op
+Iteration   5: 726.608 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  778.648 ±(99.9%) 136.622 ns/op [Average]
-  (min, avg, max) = (752.922, 778.648, 841.156), stdev = 35.480
-  CI (99.9%): [642.026, 915.269] (assumes normal distribution)
+  715.909 ±(99.9%) 40.045 ns/op [Average]
+  (min, avg, max) = (699.883, 715.909, 726.608), stdev = 10.400
+  CI (99.9%): [675.864, 755.955] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -266,24 +266,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 7.14% complete, ETA 00:18:29
+# Run progress: 7.14% complete, ETA 00:18:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 1053.908 ns/op
-# Warmup Iteration   2: 822.078 ns/op
-# Warmup Iteration   3: 790.222 ns/op
-# Warmup Iteration   4: 822.602 ns/op
-# Warmup Iteration   5: 769.698 ns/op
-Iteration   1: 810.218 ns/op
-Iteration   2: 803.506 ns/op
-Iteration   3: 768.503 ns/op
-Iteration   4: 833.237 ns/op
-Iteration   5: 799.176 ns/op
+# Warmup Iteration   1: 1041.788 ns/op
+# Warmup Iteration   2: 817.041 ns/op
+# Warmup Iteration   3: 796.234 ns/op
+# Warmup Iteration   4: 814.743 ns/op
+# Warmup Iteration   5: 789.497 ns/op
+Iteration   1: 787.581 ns/op
+Iteration   2: 798.137 ns/op
+Iteration   3: 830.631 ns/op
+Iteration   4: 802.569 ns/op
+Iteration   5: 812.224 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  802.928 ±(99.9%) 89.715 ns/op [Average]
-  (min, avg, max) = (768.503, 802.928, 833.237), stdev = 23.299
-  CI (99.9%): [713.213, 892.643] (assumes normal distribution)
+  806.228 ±(99.9%) 62.625 ns/op [Average]
+  (min, avg, max) = (787.581, 806.228, 830.631), stdev = 16.263
+  CI (99.9%): [743.603, 868.853] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -298,24 +298,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 8.04% complete, ETA 00:18:18
+# Run progress: 8.04% complete, ETA 00:18:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 1465.045 ns/op
-# Warmup Iteration   2: 1074.056 ns/op
-# Warmup Iteration   3: 1056.577 ns/op
-# Warmup Iteration   4: 1125.409 ns/op
-# Warmup Iteration   5: 1089.245 ns/op
-Iteration   1: 1095.217 ns/op
-Iteration   2: 1087.375 ns/op
-Iteration   3: 1113.512 ns/op
-Iteration   4: 1111.964 ns/op
-Iteration   5: 1097.499 ns/op
+# Warmup Iteration   1: 1625.571 ns/op
+# Warmup Iteration   2: 1252.302 ns/op
+# Warmup Iteration   3: 1290.729 ns/op
+# Warmup Iteration   4: 1271.034 ns/op
+# Warmup Iteration   5: 1271.633 ns/op
+Iteration   1: 1242.998 ns/op
+Iteration   2: 1240.568 ns/op
+Iteration   3: 1270.765 ns/op
+Iteration   4: 1348.334 ns/op
+Iteration   5: 1256.983 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  1101.113 ±(99.9%) 43.397 ns/op [Average]
-  (min, avg, max) = (1087.375, 1101.113, 1113.512), stdev = 11.270
-  CI (99.9%): [1057.716, 1144.510] (assumes normal distribution)
+  1271.929 ±(99.9%) 170.943 ns/op [Average]
+  (min, avg, max) = (1240.568, 1271.929, 1348.334), stdev = 44.393
+  CI (99.9%): [1100.987, 1442.872] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -330,24 +330,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 8.93% complete, ETA 00:18:08
+# Run progress: 8.93% complete, ETA 00:17:56
 # Fork: 1 of 1
-# Warmup Iteration   1: 2120.591 ns/op
-# Warmup Iteration   2: 1543.279 ns/op
-# Warmup Iteration   3: 1522.513 ns/op
-# Warmup Iteration   4: 1546.899 ns/op
-# Warmup Iteration   5: 1594.071 ns/op
-Iteration   1: 1549.870 ns/op
-Iteration   2: 1573.511 ns/op
-Iteration   3: 1532.742 ns/op
-Iteration   4: 1594.629 ns/op
-Iteration   5: 1571.120 ns/op
+# Warmup Iteration   1: 2376.886 ns/op
+# Warmup Iteration   2: 1817.561 ns/op
+# Warmup Iteration   3: 1801.981 ns/op
+# Warmup Iteration   4: 1975.954 ns/op
+# Warmup Iteration   5: 1823.646 ns/op
+Iteration   1: 1820.678 ns/op
+Iteration   2: 1834.670 ns/op
+Iteration   3: 2238.283 ns/op
+Iteration   4: 2097.001 ns/op
+Iteration   5: 1897.138 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  1564.374 ±(99.9%) 91.434 ns/op [Average]
-  (min, avg, max) = (1532.742, 1564.374, 1594.629), stdev = 23.745
-  CI (99.9%): [1472.940, 1655.809] (assumes normal distribution)
+  1977.554 ±(99.9%) 704.099 ns/op [Average]
+  (min, avg, max) = (1820.678, 1977.554, 2238.283), stdev = 182.852
+  CI (99.9%): [1273.455, 2681.653] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -362,24 +362,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 9.82% complete, ETA 00:17:57
+# Run progress: 9.82% complete, ETA 00:17:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 6535.655 ns/op
-# Warmup Iteration   2: 5170.246 ns/op
-# Warmup Iteration   3: 4983.984 ns/op
-# Warmup Iteration   4: 5027.359 ns/op
-# Warmup Iteration   5: 5344.098 ns/op
-Iteration   1: 5061.345 ns/op
-Iteration   2: 5030.909 ns/op
-Iteration   3: 4973.403 ns/op
-Iteration   4: 5176.305 ns/op
-Iteration   5: 5017.963 ns/op
+# Warmup Iteration   1: 9289.122 ns/op
+# Warmup Iteration   2: 6954.346 ns/op
+# Warmup Iteration   3: 6555.079 ns/op
+# Warmup Iteration   4: 6862.547 ns/op
+# Warmup Iteration   5: 6505.848 ns/op
+Iteration   1: 6487.869 ns/op
+Iteration   2: 6479.240 ns/op
+Iteration   3: 6465.680 ns/op
+Iteration   4: 6558.587 ns/op
+Iteration   5: 6497.390 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  5051.985 ±(99.9%) 294.013 ns/op [Average]
-  (min, avg, max) = (4973.403, 5051.985, 5176.305), stdev = 76.354
-  CI (99.9%): [4757.972, 5345.998] (assumes normal distribution)
+  6497.753 ±(99.9%) 138.437 ns/op [Average]
+  (min, avg, max) = (6465.680, 6497.753, 6558.587), stdev = 35.952
+  CI (99.9%): [6359.317, 6636.190] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -394,24 +394,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 10.71% complete, ETA 00:17:46
+# Run progress: 10.71% complete, ETA 00:17:34
 # Fork: 1 of 1
-# Warmup Iteration   1: 10713.170 ns/op
-# Warmup Iteration   2: 9106.704 ns/op
-# Warmup Iteration   3: 9182.251 ns/op
-# Warmup Iteration   4: 9053.993 ns/op
-# Warmup Iteration   5: 8757.325 ns/op
-Iteration   1: 8296.737 ns/op
-Iteration   2: 8638.835 ns/op
-Iteration   3: 8724.248 ns/op
-Iteration   4: 8434.940 ns/op
-Iteration   5: 8701.241 ns/op
+# Warmup Iteration   1: 13507.849 ns/op
+# Warmup Iteration   2: 12961.856 ns/op
+# Warmup Iteration   3: 11540.186 ns/op
+# Warmup Iteration   4: 11412.233 ns/op
+# Warmup Iteration   5: 12743.680 ns/op
+Iteration   1: 11336.825 ns/op
+Iteration   2: 11274.928 ns/op
+Iteration   3: 11301.725 ns/op
+Iteration   4: 11323.346 ns/op
+Iteration   5: 11328.120 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  8559.200 ±(99.9%) 715.446 ns/op [Average]
-  (min, avg, max) = (8296.737, 8559.200, 8724.248), stdev = 185.799
-  CI (99.9%): [7843.754, 9274.647] (assumes normal distribution)
+  11312.989 ±(99.9%) 95.877 ns/op [Average]
+  (min, avg, max) = (11274.928, 11312.989, 11336.825), stdev = 24.899
+  CI (99.9%): [11217.111, 11408.866] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -426,24 +426,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 11.61% complete, ETA 00:17:35
+# Run progress: 11.61% complete, ETA 00:17:23
 # Fork: 1 of 1
-# Warmup Iteration   1: 101470.206 ns/op
-# Warmup Iteration   2: 87036.329 ns/op
-# Warmup Iteration   3: 81484.695 ns/op
-# Warmup Iteration   4: 78182.923 ns/op
-# Warmup Iteration   5: 81015.628 ns/op
-Iteration   1: 81116.207 ns/op
-Iteration   2: 80997.294 ns/op
-Iteration   3: 81281.340 ns/op
-Iteration   4: 81514.260 ns/op
-Iteration   5: 80540.238 ns/op
+# Warmup Iteration   1: 101016.324 ns/op
+# Warmup Iteration   2: 92473.514 ns/op
+# Warmup Iteration   3: 89019.346 ns/op
+# Warmup Iteration   4: 86230.405 ns/op
+# Warmup Iteration   5: 86568.892 ns/op
+Iteration   1: 88251.897 ns/op
+Iteration   2: 88374.866 ns/op
+Iteration   3: 86040.475 ns/op
+Iteration   4: 86652.360 ns/op
+Iteration   5: 86885.705 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
-  81089.868 ±(99.9%) 1399.177 ns/op [Average]
-  (min, avg, max) = (80540.238, 81089.868, 81514.260), stdev = 363.362
-  CI (99.9%): [79690.691, 82489.044] (assumes normal distribution)
+  87241.061 ±(99.9%) 3955.849 ns/op [Average]
+  (min, avg, max) = (86040.475, 87241.061, 88374.866), stdev = 1027.321
+  CI (99.9%): [83285.212, 91196.910] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -458,24 +458,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 12.50% complete, ETA 00:17:25
+# Run progress: 12.50% complete, ETA 00:17:12
 # Fork: 1 of 1
-# Warmup Iteration   1: 1023.521 ns/op
-# Warmup Iteration   2: 837.130 ns/op
-# Warmup Iteration   3: 825.759 ns/op
-# Warmup Iteration   4: 794.673 ns/op
-# Warmup Iteration   5: 813.601 ns/op
-Iteration   1: 786.737 ns/op
-Iteration   2: 835.527 ns/op
-Iteration   3: 817.835 ns/op
-Iteration   4: 822.771 ns/op
-Iteration   5: 790.345 ns/op
+# Warmup Iteration   1: 902.592 ns/op
+# Warmup Iteration   2: 711.993 ns/op
+# Warmup Iteration   3: 704.973 ns/op
+# Warmup Iteration   4: 738.296 ns/op
+# Warmup Iteration   5: 703.782 ns/op
+Iteration   1: 710.954 ns/op
+Iteration   2: 705.833 ns/op
+Iteration   3: 728.872 ns/op
+Iteration   4: 792.174 ns/op
+Iteration   5: 702.224 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  810.643 ±(99.9%) 81.719 ns/op [Average]
-  (min, avg, max) = (786.737, 810.643, 835.527), stdev = 21.222
-  CI (99.9%): [728.924, 892.362] (assumes normal distribution)
+  728.012 ±(99.9%) 143.632 ns/op [Average]
+  (min, avg, max) = (702.224, 728.012, 792.174), stdev = 37.301
+  CI (99.9%): [584.380, 871.644] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -490,24 +490,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 13.39% complete, ETA 00:17:14
+# Run progress: 13.39% complete, ETA 00:17:02
 # Fork: 1 of 1
-# Warmup Iteration   1: 1248.722 ns/op
-# Warmup Iteration   2: 949.414 ns/op
-# Warmup Iteration   3: 887.919 ns/op
-# Warmup Iteration   4: 899.937 ns/op
-# Warmup Iteration   5: 935.126 ns/op
-Iteration   1: 875.196 ns/op
-Iteration   2: 903.939 ns/op
-Iteration   3: 924.490 ns/op
-Iteration   4: 922.250 ns/op
-Iteration   5: 909.635 ns/op
+# Warmup Iteration   1: 1028.785 ns/op
+# Warmup Iteration   2: 848.095 ns/op
+# Warmup Iteration   3: 794.411 ns/op
+# Warmup Iteration   4: 805.264 ns/op
+# Warmup Iteration   5: 791.761 ns/op
+Iteration   1: 791.613 ns/op
+Iteration   2: 830.320 ns/op
+Iteration   3: 812.769 ns/op
+Iteration   4: 793.307 ns/op
+Iteration   5: 791.692 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  907.102 ±(99.9%) 76.195 ns/op [Average]
-  (min, avg, max) = (875.196, 907.102, 924.490), stdev = 19.788
-  CI (99.9%): [830.907, 983.297] (assumes normal distribution)
+  803.940 ±(99.9%) 66.386 ns/op [Average]
+  (min, avg, max) = (791.613, 803.940, 830.320), stdev = 17.240
+  CI (99.9%): [737.554, 870.326] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -522,24 +522,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 14.29% complete, ETA 00:17:03
+# Run progress: 14.29% complete, ETA 00:16:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 2135.048 ns/op
-# Warmup Iteration   2: 1509.787 ns/op
-# Warmup Iteration   3: 1457.705 ns/op
-# Warmup Iteration   4: 1427.693 ns/op
-# Warmup Iteration   5: 1457.418 ns/op
-Iteration   1: 1462.252 ns/op
-Iteration   2: 1431.402 ns/op
-Iteration   3: 1463.143 ns/op
-Iteration   4: 1462.283 ns/op
-Iteration   5: 1533.984 ns/op
+# Warmup Iteration   1: 1514.488 ns/op
+# Warmup Iteration   2: 1200.991 ns/op
+# Warmup Iteration   3: 1195.536 ns/op
+# Warmup Iteration   4: 1157.984 ns/op
+# Warmup Iteration   5: 1164.960 ns/op
+Iteration   1: 1163.652 ns/op
+Iteration   2: 1162.540 ns/op
+Iteration   3: 1157.778 ns/op
+Iteration   4: 1165.945 ns/op
+Iteration   5: 1159.463 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  1470.613 ±(99.9%) 145.976 ns/op [Average]
-  (min, avg, max) = (1431.402, 1470.613, 1533.984), stdev = 37.909
-  CI (99.9%): [1324.637, 1616.589] (assumes normal distribution)
+  1161.876 ±(99.9%) 12.591 ns/op [Average]
+  (min, avg, max) = (1157.778, 1161.876, 1165.945), stdev = 3.270
+  CI (99.9%): [1149.284, 1174.467] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -554,24 +554,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 15.18% complete, ETA 00:16:52
+# Run progress: 15.18% complete, ETA 00:16:42
 # Fork: 1 of 1
-# Warmup Iteration   1: 2884.414 ns/op
-# Warmup Iteration   2: 2165.111 ns/op
-# Warmup Iteration   3: 2242.161 ns/op
-# Warmup Iteration   4: 2146.764 ns/op
-# Warmup Iteration   5: 2119.264 ns/op
-Iteration   1: 2166.122 ns/op
-Iteration   2: 2222.071 ns/op
-Iteration   3: 2136.902 ns/op
-Iteration   4: 2327.784 ns/op
-Iteration   5: 2160.751 ns/op
+# Warmup Iteration   1: 2213.545 ns/op
+# Warmup Iteration   2: 1697.668 ns/op
+# Warmup Iteration   3: 1892.103 ns/op
+# Warmup Iteration   4: 1775.017 ns/op
+# Warmup Iteration   5: 1715.020 ns/op
+Iteration   1: 1731.304 ns/op
+Iteration   2: 1655.653 ns/op
+Iteration   3: 1666.678 ns/op
+Iteration   4: 1676.949 ns/op
+Iteration   5: 1663.063 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  2202.726 ±(99.9%) 294.822 ns/op [Average]
-  (min, avg, max) = (2136.902, 2202.726, 2327.784), stdev = 76.564
-  CI (99.9%): [1907.904, 2497.548] (assumes normal distribution)
+  1678.729 ±(99.9%) 116.961 ns/op [Average]
+  (min, avg, max) = (1655.653, 1678.729, 1731.304), stdev = 30.374
+  CI (99.9%): [1561.769, 1795.690] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -586,24 +586,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 16.07% complete, ETA 00:16:41
+# Run progress: 16.07% complete, ETA 00:16:31
 # Fork: 1 of 1
-# Warmup Iteration   1: 9694.254 ns/op
-# Warmup Iteration   2: 7861.210 ns/op
-# Warmup Iteration   3: 7522.706 ns/op
-# Warmup Iteration   4: 7688.028 ns/op
-# Warmup Iteration   5: 7585.450 ns/op
-Iteration   1: 7490.440 ns/op
-Iteration   2: 7681.180 ns/op
-Iteration   3: 7808.148 ns/op
-Iteration   4: 7609.054 ns/op
-Iteration   5: 8390.909 ns/op
+# Warmup Iteration   1: 7566.073 ns/op
+# Warmup Iteration   2: 6161.509 ns/op
+# Warmup Iteration   3: 6182.351 ns/op
+# Warmup Iteration   4: 6231.940 ns/op
+# Warmup Iteration   5: 5796.493 ns/op
+Iteration   1: 6082.121 ns/op
+Iteration   2: 5826.666 ns/op
+Iteration   3: 5946.986 ns/op
+Iteration   4: 5761.617 ns/op
+Iteration   5: 5810.927 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  7795.946 ±(99.9%) 1355.355 ns/op [Average]
-  (min, avg, max) = (7490.440, 7795.946, 8390.909), stdev = 351.981
-  CI (99.9%): [6440.591, 9151.301] (assumes normal distribution)
+  5885.663 ±(99.9%) 497.648 ns/op [Average]
+  (min, avg, max) = (5761.617, 5885.663, 6082.121), stdev = 129.238
+  CI (99.9%): [5388.015, 6383.312] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -618,24 +618,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 16.96% complete, ETA 00:16:30
+# Run progress: 16.96% complete, ETA 00:16:21
 # Fork: 1 of 1
-# Warmup Iteration   1: 17425.733 ns/op
-# Warmup Iteration   2: 16024.446 ns/op
-# Warmup Iteration   3: 14844.102 ns/op
-# Warmup Iteration   4: 14233.296 ns/op
-# Warmup Iteration   5: 14576.635 ns/op
-Iteration   1: 15231.478 ns/op
-Iteration   2: 14490.223 ns/op
-Iteration   3: 14832.961 ns/op
-Iteration   4: 14794.674 ns/op
-Iteration   5: 14485.671 ns/op
+# Warmup Iteration   1: 13364.563 ns/op
+# Warmup Iteration   2: 12270.842 ns/op
+# Warmup Iteration   3: 10945.906 ns/op
+# Warmup Iteration   4: 10895.574 ns/op
+# Warmup Iteration   5: 10965.107 ns/op
+Iteration   1: 10967.101 ns/op
+Iteration   2: 10963.756 ns/op
+Iteration   3: 11036.696 ns/op
+Iteration   4: 11053.220 ns/op
+Iteration   5: 11002.977 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  14767.001 ±(99.9%) 1181.539 ns/op [Average]
-  (min, avg, max) = (14485.671, 14767.001, 15231.478), stdev = 306.842
-  CI (99.9%): [13585.462, 15948.540] (assumes normal distribution)
+  11004.750 ±(99.9%) 154.878 ns/op [Average]
+  (min, avg, max) = (10963.756, 11004.750, 11053.220), stdev = 40.221
+  CI (99.9%): [10849.872, 11159.628] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -650,24 +650,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 17.86% complete, ETA 00:16:20
+# Run progress: 17.86% complete, ETA 00:16:11
 # Fork: 1 of 1
-# Warmup Iteration   1: 157009.309 ns/op
-# Warmup Iteration   2: 142443.978 ns/op
-# Warmup Iteration   3: 138558.712 ns/op
-# Warmup Iteration   4: 129835.727 ns/op
-# Warmup Iteration   5: 134205.454 ns/op
-Iteration   1: 130309.259 ns/op
-Iteration   2: 140101.971 ns/op
-Iteration   3: 130476.676 ns/op
-Iteration   4: 129331.687 ns/op
-Iteration   5: 131947.652 ns/op
+# Warmup Iteration   1: 105473.531 ns/op
+# Warmup Iteration   2: 99414.434 ns/op
+# Warmup Iteration   3: 93477.822 ns/op
+# Warmup Iteration   4: 95453.368 ns/op
+# Warmup Iteration   5: 92555.379 ns/op
+Iteration   1: 92779.223 ns/op
+Iteration   2: 91761.365 ns/op
+Iteration   3: 92408.340 ns/op
+Iteration   4: 92301.284 ns/op
+Iteration   5: 92020.749 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  132433.449 ±(99.9%) 16895.104 ns/op [Average]
-  (min, avg, max) = (129331.687, 132433.449, 140101.971), stdev = 4387.605
-  CI (99.9%): [115538.345, 149328.553] (assumes normal distribution)
+  92254.192 ±(99.9%) 1490.118 ns/op [Average]
+  (min, avg, max) = (91761.365, 92254.192, 92779.223), stdev = 386.979
+  CI (99.9%): [90764.075, 93744.310] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -682,24 +682,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 18.75% complete, ETA 00:16:09
+# Run progress: 18.75% complete, ETA 00:16:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 1027.394 ns/op
-# Warmup Iteration   2: 788.711 ns/op
-# Warmup Iteration   3: 790.024 ns/op
-# Warmup Iteration   4: 803.525 ns/op
-# Warmup Iteration   5: 773.818 ns/op
-Iteration   1: 776.996 ns/op
-Iteration   2: 805.128 ns/op
-Iteration   3: 823.332 ns/op
-Iteration   4: 774.245 ns/op
-Iteration   5: 822.321 ns/op
+# Warmup Iteration   1: 918.680 ns/op
+# Warmup Iteration   2: 830.799 ns/op
+# Warmup Iteration   3: 705.596 ns/op
+# Warmup Iteration   4: 707.041 ns/op
+# Warmup Iteration   5: 703.345 ns/op
+Iteration   1: 701.390 ns/op
+Iteration   2: 697.205 ns/op
+Iteration   3: 702.769 ns/op
+Iteration   4: 718.205 ns/op
+Iteration   5: 703.163 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  800.404 ±(99.9%) 91.540 ns/op [Average]
-  (min, avg, max) = (774.245, 800.404, 823.332), stdev = 23.773
-  CI (99.9%): [708.864, 891.944] (assumes normal distribution)
+  704.546 ±(99.9%) 30.774 ns/op [Average]
+  (min, avg, max) = (697.205, 704.546, 718.205), stdev = 7.992
+  CI (99.9%): [673.772, 735.321] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -714,24 +714,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 19.64% complete, ETA 00:15:58
+# Run progress: 19.64% complete, ETA 00:15:49
 # Fork: 1 of 1
-# Warmup Iteration   1: 1121.027 ns/op
-# Warmup Iteration   2: 908.812 ns/op
-# Warmup Iteration   3: 909.914 ns/op
-# Warmup Iteration   4: 898.053 ns/op
-# Warmup Iteration   5: 863.724 ns/op
-Iteration   1: 884.776 ns/op
-Iteration   2: 968.453 ns/op
-Iteration   3: 907.710 ns/op
-Iteration   4: 898.430 ns/op
-Iteration   5: 874.094 ns/op
+# Warmup Iteration   1: 1022.955 ns/op
+# Warmup Iteration   2: 798.030 ns/op
+# Warmup Iteration   3: 802.943 ns/op
+# Warmup Iteration   4: 788.014 ns/op
+# Warmup Iteration   5: 818.829 ns/op
+Iteration   1: 799.675 ns/op
+Iteration   2: 788.771 ns/op
+Iteration   3: 786.494 ns/op
+Iteration   4: 790.722 ns/op
+Iteration   5: 819.278 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  906.693 ±(99.9%) 141.831 ns/op [Average]
-  (min, avg, max) = (874.094, 906.693, 968.453), stdev = 36.833
-  CI (99.9%): [764.862, 1048.524] (assumes normal distribution)
+  796.988 ±(99.9%) 51.697 ns/op [Average]
+  (min, avg, max) = (786.494, 796.988, 819.278), stdev = 13.426
+  CI (99.9%): [745.291, 848.685] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -746,24 +746,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 20.54% complete, ETA 00:15:48
+# Run progress: 20.54% complete, ETA 00:15:39
 # Fork: 1 of 1
-# Warmup Iteration   1: 1691.448 ns/op
-# Warmup Iteration   2: 1294.899 ns/op
-# Warmup Iteration   3: 1258.409 ns/op
-# Warmup Iteration   4: 1266.243 ns/op
-# Warmup Iteration   5: 1238.716 ns/op
-Iteration   1: 1281.392 ns/op
-Iteration   2: 1366.673 ns/op
-Iteration   3: 1281.497 ns/op
-Iteration   4: 1250.608 ns/op
-Iteration   5: 1248.790 ns/op
+# Warmup Iteration   1: 1488.439 ns/op
+# Warmup Iteration   2: 1163.663 ns/op
+# Warmup Iteration   3: 1157.597 ns/op
+# Warmup Iteration   4: 1151.616 ns/op
+# Warmup Iteration   5: 1149.079 ns/op
+Iteration   1: 1143.885 ns/op
+Iteration   2: 1152.430 ns/op
+Iteration   3: 1146.731 ns/op
+Iteration   4: 1179.283 ns/op
+Iteration   5: 1196.241 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  1285.792 ±(99.9%) 184.537 ns/op [Average]
-  (min, avg, max) = (1248.790, 1285.792, 1366.673), stdev = 47.924
-  CI (99.9%): [1101.256, 1470.329] (assumes normal distribution)
+  1163.714 ±(99.9%) 88.425 ns/op [Average]
+  (min, avg, max) = (1143.885, 1163.714, 1196.241), stdev = 22.964
+  CI (99.9%): [1075.289, 1252.140] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -778,24 +778,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 21.43% complete, ETA 00:15:37
+# Run progress: 21.43% complete, ETA 00:15:28
 # Fork: 1 of 1
-# Warmup Iteration   1: 2281.025 ns/op
-# Warmup Iteration   2: 1878.057 ns/op
-# Warmup Iteration   3: 1810.990 ns/op
-# Warmup Iteration   4: 1819.539 ns/op
-# Warmup Iteration   5: 1814.030 ns/op
-Iteration   1: 1748.998 ns/op
-Iteration   2: 1770.870 ns/op
-Iteration   3: 1789.551 ns/op
-Iteration   4: 1857.547 ns/op
-Iteration   5: 1743.489 ns/op
+# Warmup Iteration   1: 2183.037 ns/op
+# Warmup Iteration   2: 1672.857 ns/op
+# Warmup Iteration   3: 1663.399 ns/op
+# Warmup Iteration   4: 1649.756 ns/op
+# Warmup Iteration   5: 1657.712 ns/op
+Iteration   1: 1668.053 ns/op
+Iteration   2: 1660.045 ns/op
+Iteration   3: 1657.681 ns/op
+Iteration   4: 1661.777 ns/op
+Iteration   5: 1660.127 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  1782.091 ±(99.9%) 177.093 ns/op [Average]
-  (min, avg, max) = (1743.489, 1782.091, 1857.547), stdev = 45.991
-  CI (99.9%): [1604.998, 1959.184] (assumes normal distribution)
+  1661.536 ±(99.9%) 15.111 ns/op [Average]
+  (min, avg, max) = (1657.681, 1661.536, 1668.053), stdev = 3.924
+  CI (99.9%): [1646.425, 1676.647] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -810,24 +810,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 22.32% complete, ETA 00:15:26
+# Run progress: 22.32% complete, ETA 00:15:17
 # Fork: 1 of 1
-# Warmup Iteration   1: 7146.483 ns/op
-# Warmup Iteration   2: 5678.517 ns/op
-# Warmup Iteration   3: 5418.889 ns/op
-# Warmup Iteration   4: 5428.081 ns/op
-# Warmup Iteration   5: 5562.285 ns/op
-Iteration   1: 5888.728 ns/op
-Iteration   2: 5433.567 ns/op
-Iteration   3: 5482.529 ns/op
-Iteration   4: 5470.856 ns/op
-Iteration   5: 5421.144 ns/op
+# Warmup Iteration   1: 7366.850 ns/op
+# Warmup Iteration   2: 6180.731 ns/op
+# Warmup Iteration   3: 5787.358 ns/op
+# Warmup Iteration   4: 5955.384 ns/op
+# Warmup Iteration   5: 5833.417 ns/op
+Iteration   1: 5968.562 ns/op
+Iteration   2: 5786.814 ns/op
+Iteration   3: 5796.973 ns/op
+Iteration   4: 5839.259 ns/op
+Iteration   5: 5779.949 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  5539.365 ±(99.9%) 758.360 ns/op [Average]
-  (min, avg, max) = (5421.144, 5539.365, 5888.728), stdev = 196.944
-  CI (99.9%): [4781.004, 6297.725] (assumes normal distribution)
+  5834.311 ±(99.9%) 302.302 ns/op [Average]
+  (min, avg, max) = (5779.949, 5834.311, 5968.562), stdev = 78.507
+  CI (99.9%): [5532.010, 6136.613] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -842,24 +842,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 23.21% complete, ETA 00:15:16
+# Run progress: 23.21% complete, ETA 00:15:07
 # Fork: 1 of 1
-# Warmup Iteration   1: 13738.045 ns/op
-# Warmup Iteration   2: 12934.176 ns/op
-# Warmup Iteration   3: 11486.858 ns/op
-# Warmup Iteration   4: 11404.937 ns/op
-# Warmup Iteration   5: 11581.592 ns/op
-Iteration   1: 11559.558 ns/op
-Iteration   2: 11560.615 ns/op
-Iteration   3: 11624.284 ns/op
-Iteration   4: 11840.625 ns/op
-Iteration   5: 11701.745 ns/op
+# Warmup Iteration   1: 13459.068 ns/op
+# Warmup Iteration   2: 12150.604 ns/op
+# Warmup Iteration   3: 11186.426 ns/op
+# Warmup Iteration   4: 11030.935 ns/op
+# Warmup Iteration   5: 11053.756 ns/op
+Iteration   1: 11056.576 ns/op
+Iteration   2: 11046.795 ns/op
+Iteration   3: 11058.564 ns/op
+Iteration   4: 11102.153 ns/op
+Iteration   5: 11134.977 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  11657.365 ±(99.9%) 453.882 ns/op [Average]
-  (min, avg, max) = (11559.558, 11657.365, 11840.625), stdev = 117.872
-  CI (99.9%): [11203.484, 12111.247] (assumes normal distribution)
+  11079.813 ±(99.9%) 144.384 ns/op [Average]
+  (min, avg, max) = (11046.795, 11079.813, 11134.977), stdev = 37.496
+  CI (99.9%): [10935.429, 11224.197] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -874,24 +874,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 24.11% complete, ETA 00:15:05
+# Run progress: 24.11% complete, ETA 00:14:56
 # Fork: 1 of 1
-# Warmup Iteration   1: 115983.372 ns/op
-# Warmup Iteration   2: 102556.529 ns/op
-# Warmup Iteration   3: 98920.431 ns/op
-# Warmup Iteration   4: 96767.783 ns/op
-# Warmup Iteration   5: 94218.015 ns/op
-Iteration   1: 94850.174 ns/op
-Iteration   2: 94335.329 ns/op
-Iteration   3: 95347.496 ns/op
-Iteration   4: 97708.191 ns/op
-Iteration   5: 95399.684 ns/op
+# Warmup Iteration   1: 106876.331 ns/op
+# Warmup Iteration   2: 97570.963 ns/op
+# Warmup Iteration   3: 91569.305 ns/op
+# Warmup Iteration   4: 91140.806 ns/op
+# Warmup Iteration   5: 91483.193 ns/op
+Iteration   1: 90904.683 ns/op
+Iteration   2: 92052.459 ns/op
+Iteration   3: 93277.441 ns/op
+Iteration   4: 90980.382 ns/op
+Iteration   5: 93354.358 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
-  95528.175 ±(99.9%) 4977.689 ns/op [Average]
-  (min, avg, max) = (94335.329, 95528.175, 97708.191), stdev = 1292.690
-  CI (99.9%): [90550.485, 100505.864] (assumes normal distribution)
+  92113.864 ±(99.9%) 4573.767 ns/op [Average]
+  (min, avg, max) = (90904.683, 92113.864, 93354.358), stdev = 1187.793
+  CI (99.9%): [87540.097, 96687.632] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -906,24 +906,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 25.00% complete, ETA 00:14:54
+# Run progress: 25.00% complete, ETA 00:14:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 1077.436 ns/op
-# Warmup Iteration   2: 842.130 ns/op
-# Warmup Iteration   3: 792.689 ns/op
-# Warmup Iteration   4: 814.061 ns/op
-# Warmup Iteration   5: 769.385 ns/op
-Iteration   1: 779.421 ns/op
-Iteration   2: 798.686 ns/op
-Iteration   3: 778.053 ns/op
-Iteration   4: 800.320 ns/op
-Iteration   5: 815.710 ns/op
+# Warmup Iteration   1: 904.403 ns/op
+# Warmup Iteration   2: 757.227 ns/op
+# Warmup Iteration   3: 729.686 ns/op
+# Warmup Iteration   4: 707.777 ns/op
+# Warmup Iteration   5: 765.492 ns/op
+Iteration   1: 722.343 ns/op
+Iteration   2: 706.598 ns/op
+Iteration   3: 714.771 ns/op
+Iteration   4: 708.334 ns/op
+Iteration   5: 736.688 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  794.438 ±(99.9%) 60.857 ns/op [Average]
-  (min, avg, max) = (778.053, 794.438, 815.710), stdev = 15.804
-  CI (99.9%): [733.581, 855.295] (assumes normal distribution)
+  717.747 ±(99.9%) 47.224 ns/op [Average]
+  (min, avg, max) = (706.598, 717.747, 736.688), stdev = 12.264
+  CI (99.9%): [670.522, 764.971] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -938,24 +938,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 25.89% complete, ETA 00:14:44
+# Run progress: 25.89% complete, ETA 00:14:35
 # Fork: 1 of 1
-# Warmup Iteration   1: 1183.036 ns/op
-# Warmup Iteration   2: 895.727 ns/op
-# Warmup Iteration   3: 942.284 ns/op
-# Warmup Iteration   4: 914.120 ns/op
-# Warmup Iteration   5: 872.552 ns/op
-Iteration   1: 943.075 ns/op
-Iteration   2: 924.964 ns/op
-Iteration   3: 883.333 ns/op
-Iteration   4: 885.016 ns/op
-Iteration   5: 881.532 ns/op
+# Warmup Iteration   1: 1128.263 ns/op
+# Warmup Iteration   2: 810.228 ns/op
+# Warmup Iteration   3: 783.997 ns/op
+# Warmup Iteration   4: 867.333 ns/op
+# Warmup Iteration   5: 828.333 ns/op
+Iteration   1: 819.233 ns/op
+Iteration   2: 809.345 ns/op
+Iteration   3: 789.711 ns/op
+Iteration   4: 783.868 ns/op
+Iteration   5: 789.886 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  903.584 ±(99.9%) 109.892 ns/op [Average]
-  (min, avg, max) = (881.532, 903.584, 943.075), stdev = 28.539
-  CI (99.9%): [793.692, 1013.476] (assumes normal distribution)
+  798.409 ±(99.9%) 58.175 ns/op [Average]
+  (min, avg, max) = (783.868, 798.409, 819.233), stdev = 15.108
+  CI (99.9%): [740.234, 856.583] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -970,24 +970,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 26.79% complete, ETA 00:14:33
+# Run progress: 26.79% complete, ETA 00:14:24
 # Fork: 1 of 1
-# Warmup Iteration   1: 1902.448 ns/op
-# Warmup Iteration   2: 1551.099 ns/op
-# Warmup Iteration   3: 1576.747 ns/op
-# Warmup Iteration   4: 1493.769 ns/op
-# Warmup Iteration   5: 1467.548 ns/op
-Iteration   1: 1453.646 ns/op
-Iteration   2: 1442.457 ns/op
-Iteration   3: 1501.196 ns/op
-Iteration   4: 1478.132 ns/op
-Iteration   5: 1483.931 ns/op
+# Warmup Iteration   1: 1606.682 ns/op
+# Warmup Iteration   2: 1191.139 ns/op
+# Warmup Iteration   3: 1171.098 ns/op
+# Warmup Iteration   4: 1168.371 ns/op
+# Warmup Iteration   5: 1173.585 ns/op
+Iteration   1: 1174.878 ns/op
+Iteration   2: 1163.582 ns/op
+Iteration   3: 1165.802 ns/op
+Iteration   4: 1203.889 ns/op
+Iteration   5: 1178.898 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  1471.873 ±(99.9%) 91.162 ns/op [Average]
-  (min, avg, max) = (1442.457, 1471.873, 1501.196), stdev = 23.675
-  CI (99.9%): [1380.710, 1563.035] (assumes normal distribution)
+  1177.410 ±(99.9%) 61.962 ns/op [Average]
+  (min, avg, max) = (1163.582, 1177.410, 1203.889), stdev = 16.091
+  CI (99.9%): [1115.448, 1239.372] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1002,24 +1002,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 27.68% complete, ETA 00:14:22
+# Run progress: 27.68% complete, ETA 00:14:14
 # Fork: 1 of 1
-# Warmup Iteration   1: 2939.074 ns/op
-# Warmup Iteration   2: 2481.462 ns/op
-# Warmup Iteration   3: 2247.322 ns/op
-# Warmup Iteration   4: 2169.470 ns/op
-# Warmup Iteration   5: 2284.134 ns/op
-Iteration   1: 2616.040 ns/op
-Iteration   2: 2216.985 ns/op
-Iteration   3: 2143.185 ns/op
-Iteration   4: 2129.141 ns/op
-Iteration   5: 2390.058 ns/op
+# Warmup Iteration   1: 2706.971 ns/op
+# Warmup Iteration   2: 1791.592 ns/op
+# Warmup Iteration   3: 1697.387 ns/op
+# Warmup Iteration   4: 1739.987 ns/op
+# Warmup Iteration   5: 1716.625 ns/op
+Iteration   1: 1697.245 ns/op
+Iteration   2: 1687.268 ns/op
+Iteration   3: 1687.841 ns/op
+Iteration   4: 1689.725 ns/op
+Iteration   5: 1732.005 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  2299.082 ±(99.9%) 790.702 ns/op [Average]
-  (min, avg, max) = (2129.141, 2299.082, 2616.040), stdev = 205.343
-  CI (99.9%): [1508.380, 3089.784] (assumes normal distribution)
+  1698.817 ±(99.9%) 73.071 ns/op [Average]
+  (min, avg, max) = (1687.268, 1698.817, 1732.005), stdev = 18.976
+  CI (99.9%): [1625.745, 1771.888] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1034,24 +1034,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 28.57% complete, ETA 00:14:11
+# Run progress: 28.57% complete, ETA 00:14:03
 # Fork: 1 of 1
-# Warmup Iteration   1: 10262.289 ns/op
-# Warmup Iteration   2: 8612.099 ns/op
-# Warmup Iteration   3: 8185.695 ns/op
-# Warmup Iteration   4: 8162.889 ns/op
-# Warmup Iteration   5: 8126.439 ns/op
-Iteration   1: 8421.161 ns/op
-Iteration   2: 8695.217 ns/op
-Iteration   3: 8297.772 ns/op
-Iteration   4: 8174.735 ns/op
-Iteration   5: 7926.906 ns/op
+# Warmup Iteration   1: 7420.736 ns/op
+# Warmup Iteration   2: 6183.328 ns/op
+# Warmup Iteration   3: 5999.672 ns/op
+# Warmup Iteration   4: 5920.061 ns/op
+# Warmup Iteration   5: 5988.302 ns/op
+Iteration   1: 5876.319 ns/op
+Iteration   2: 5900.812 ns/op
+Iteration   3: 5859.764 ns/op
+Iteration   4: 5881.845 ns/op
+Iteration   5: 5889.483 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  8303.158 ±(99.9%) 1098.821 ns/op [Average]
-  (min, avg, max) = (7926.906, 8303.158, 8695.217), stdev = 285.360
-  CI (99.9%): [7204.337, 9401.979] (assumes normal distribution)
+  5881.645 ±(99.9%) 58.902 ns/op [Average]
+  (min, avg, max) = (5859.764, 5881.645, 5900.812), stdev = 15.297
+  CI (99.9%): [5822.742, 5940.547] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1066,24 +1066,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 29.46% complete, ETA 00:14:01
+# Run progress: 29.46% complete, ETA 00:13:53
 # Fork: 1 of 1
-# Warmup Iteration   1: 14219.549 ns/op
-# Warmup Iteration   2: 13943.126 ns/op
-# Warmup Iteration   3: 12416.397 ns/op
-# Warmup Iteration   4: 12387.076 ns/op
-# Warmup Iteration   5: 12702.634 ns/op
-Iteration   1: 12188.100 ns/op
-Iteration   2: 12938.888 ns/op
-Iteration   3: 11750.027 ns/op
-Iteration   4: 12256.567 ns/op
-Iteration   5: 11901.137 ns/op
+# Warmup Iteration   1: 13288.278 ns/op
+# Warmup Iteration   2: 12146.994 ns/op
+# Warmup Iteration   3: 10986.123 ns/op
+# Warmup Iteration   4: 11031.328 ns/op
+# Warmup Iteration   5: 11028.801 ns/op
+Iteration   1: 11034.458 ns/op
+Iteration   2: 11531.182 ns/op
+Iteration   3: 11038.145 ns/op
+Iteration   4: 11294.821 ns/op
+Iteration   5: 11139.762 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  12206.944 ±(99.9%) 1765.480 ns/op [Average]
-  (min, avg, max) = (11750.027, 12206.944, 12938.888), stdev = 458.490
-  CI (99.9%): [10441.463, 13972.424] (assumes normal distribution)
+  11207.674 ±(99.9%) 806.818 ns/op [Average]
+  (min, avg, max) = (11034.458, 11207.674, 11531.182), stdev = 209.528
+  CI (99.9%): [10400.856, 12014.491] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1098,24 +1098,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 30.36% complete, ETA 00:13:50
+# Run progress: 30.36% complete, ETA 00:13:43
 # Fork: 1 of 1
-# Warmup Iteration   1: 132838.886 ns/op
-# Warmup Iteration   2: 138869.305 ns/op
-# Warmup Iteration   3: 119446.961 ns/op
-# Warmup Iteration   4: 119903.092 ns/op
-# Warmup Iteration   5: 121192.355 ns/op
-Iteration   1: 123778.315 ns/op
-Iteration   2: 128296.728 ns/op
-Iteration   3: 118645.045 ns/op
-Iteration   4: 120355.164 ns/op
-Iteration   5: 127907.798 ns/op
+# Warmup Iteration   1: 96396.302 ns/op
+# Warmup Iteration   2: 90639.160 ns/op
+# Warmup Iteration   3: 84779.891 ns/op
+# Warmup Iteration   4: 84281.615 ns/op
+# Warmup Iteration   5: 84287.440 ns/op
+Iteration   1: 84738.132 ns/op
+Iteration   2: 83959.704 ns/op
+Iteration   3: 84002.981 ns/op
+Iteration   4: 83860.501 ns/op
+Iteration   5: 84944.649 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  123796.610 ±(99.9%) 16733.189 ns/op [Average]
-  (min, avg, max) = (118645.045, 123796.610, 128296.728), stdev = 4345.556
-  CI (99.9%): [107063.421, 140529.799] (assumes normal distribution)
+  84301.193 ±(99.9%) 1929.848 ns/op [Average]
+  (min, avg, max) = (83860.501, 84301.193, 84944.649), stdev = 501.175
+  CI (99.9%): [82371.346, 86231.041] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1130,24 +1130,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 31.25% complete, ETA 00:13:39
+# Run progress: 31.25% complete, ETA 00:13:32
 # Fork: 1 of 1
-# Warmup Iteration   1: 1047.313 ns/op
-# Warmup Iteration   2: 800.567 ns/op
-# Warmup Iteration   3: 767.024 ns/op
-# Warmup Iteration   4: 745.505 ns/op
-# Warmup Iteration   5: 777.175 ns/op
-Iteration   1: 789.295 ns/op
-Iteration   2: 753.940 ns/op
-Iteration   3: 788.834 ns/op
-Iteration   4: 782.996 ns/op
-Iteration   5: 824.053 ns/op
+# Warmup Iteration   1: 965.961 ns/op
+# Warmup Iteration   2: 717.604 ns/op
+# Warmup Iteration   3: 699.378 ns/op
+# Warmup Iteration   4: 698.929 ns/op
+# Warmup Iteration   5: 700.473 ns/op
+Iteration   1: 708.619 ns/op
+Iteration   2: 702.042 ns/op
+Iteration   3: 703.622 ns/op
+Iteration   4: 696.652 ns/op
+Iteration   5: 702.551 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  787.824 ±(99.9%) 96.019 ns/op [Average]
-  (min, avg, max) = (753.940, 787.824, 824.053), stdev = 24.936
-  CI (99.9%): [691.804, 883.843] (assumes normal distribution)
+  702.697 ±(99.9%) 16.441 ns/op [Average]
+  (min, avg, max) = (696.652, 702.697, 708.619), stdev = 4.270
+  CI (99.9%): [686.257, 719.138] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1162,24 +1162,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 32.14% complete, ETA 00:13:28
+# Run progress: 32.14% complete, ETA 00:13:21
 # Fork: 1 of 1
-# Warmup Iteration   1: 1106.689 ns/op
-# Warmup Iteration   2: 799.536 ns/op
-# Warmup Iteration   3: 825.137 ns/op
-# Warmup Iteration   4: 791.304 ns/op
-# Warmup Iteration   5: 830.080 ns/op
-Iteration   1: 817.559 ns/op
-Iteration   2: 869.650 ns/op
-Iteration   3: 801.066 ns/op
-Iteration   4: 807.316 ns/op
-Iteration   5: 871.647 ns/op
+# Warmup Iteration   1: 1021.580 ns/op
+# Warmup Iteration   2: 806.420 ns/op
+# Warmup Iteration   3: 817.255 ns/op
+# Warmup Iteration   4: 808.078 ns/op
+# Warmup Iteration   5: 800.310 ns/op
+Iteration   1: 839.553 ns/op
+Iteration   2: 793.564 ns/op
+Iteration   3: 794.088 ns/op
+Iteration   4: 811.062 ns/op
+Iteration   5: 790.599 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  833.447 ±(99.9%) 132.745 ns/op [Average]
-  (min, avg, max) = (801.066, 833.447, 871.647), stdev = 34.473
-  CI (99.9%): [700.703, 966.192] (assumes normal distribution)
+  805.773 ±(99.9%) 79.030 ns/op [Average]
+  (min, avg, max) = (790.599, 805.773, 839.553), stdev = 20.524
+  CI (99.9%): [726.744, 884.803] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1194,24 +1194,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 33.04% complete, ETA 00:13:18
+# Run progress: 33.04% complete, ETA 00:13:11
 # Fork: 1 of 1
-# Warmup Iteration   1: 1418.201 ns/op
-# Warmup Iteration   2: 1116.297 ns/op
-# Warmup Iteration   3: 1157.185 ns/op
-# Warmup Iteration   4: 1038.164 ns/op
-# Warmup Iteration   5: 1059.569 ns/op
-Iteration   1: 1112.313 ns/op
-Iteration   2: 1049.963 ns/op
-Iteration   3: 1062.864 ns/op
-Iteration   4: 1054.425 ns/op
-Iteration   5: 1122.100 ns/op
+# Warmup Iteration   1: 1555.021 ns/op
+# Warmup Iteration   2: 1193.374 ns/op
+# Warmup Iteration   3: 1172.486 ns/op
+# Warmup Iteration   4: 1173.102 ns/op
+# Warmup Iteration   5: 1282.823 ns/op
+Iteration   1: 1262.295 ns/op
+Iteration   2: 1174.841 ns/op
+Iteration   3: 1170.531 ns/op
+Iteration   4: 1170.972 ns/op
+Iteration   5: 1171.552 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  1080.333 ±(99.9%) 131.514 ns/op [Average]
-  (min, avg, max) = (1049.963, 1080.333, 1122.100), stdev = 34.154
-  CI (99.9%): [948.819, 1211.847] (assumes normal distribution)
+  1190.038 ±(99.9%) 155.674 ns/op [Average]
+  (min, avg, max) = (1170.531, 1190.038, 1262.295), stdev = 40.428
+  CI (99.9%): [1034.364, 1345.712] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1226,24 +1226,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 33.93% complete, ETA 00:13:07
+# Run progress: 33.93% complete, ETA 00:13:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 2074.026 ns/op
-# Warmup Iteration   2: 1581.482 ns/op
-# Warmup Iteration   3: 1660.060 ns/op
-# Warmup Iteration   4: 1586.351 ns/op
-# Warmup Iteration   5: 1552.849 ns/op
-Iteration   1: 1555.395 ns/op
-Iteration   2: 1605.785 ns/op
-Iteration   3: 1552.560 ns/op
-Iteration   4: 1523.835 ns/op
-Iteration   5: 1553.943 ns/op
+# Warmup Iteration   1: 2250.043 ns/op
+# Warmup Iteration   2: 1710.636 ns/op
+# Warmup Iteration   3: 1710.151 ns/op
+# Warmup Iteration   4: 1713.176 ns/op
+# Warmup Iteration   5: 1700.272 ns/op
+Iteration   1: 1736.769 ns/op
+Iteration   2: 1703.351 ns/op
+Iteration   3: 1704.009 ns/op
+Iteration   4: 1703.446 ns/op
+Iteration   5: 1703.140 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  1558.303 ±(99.9%) 113.952 ns/op [Average]
-  (min, avg, max) = (1523.835, 1558.303, 1605.785), stdev = 29.593
-  CI (99.9%): [1444.351, 1672.256] (assumes normal distribution)
+  1710.143 ±(99.9%) 57.327 ns/op [Average]
+  (min, avg, max) = (1703.140, 1710.143, 1736.769), stdev = 14.888
+  CI (99.9%): [1652.816, 1767.470] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1258,24 +1258,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 34.82% complete, ETA 00:12:57
+# Run progress: 34.82% complete, ETA 00:12:49
 # Fork: 1 of 1
-# Warmup Iteration   1: 6495.537 ns/op
-# Warmup Iteration   2: 5556.701 ns/op
-# Warmup Iteration   3: 5011.149 ns/op
-# Warmup Iteration   4: 5095.980 ns/op
-# Warmup Iteration   5: 5382.862 ns/op
-Iteration   1: 5029.258 ns/op
-Iteration   2: 5058.335 ns/op
-Iteration   3: 4968.062 ns/op
-Iteration   4: 5211.091 ns/op
-Iteration   5: 4979.675 ns/op
+# Warmup Iteration   1: 7679.714 ns/op
+# Warmup Iteration   2: 6207.000 ns/op
+# Warmup Iteration   3: 5823.794 ns/op
+# Warmup Iteration   4: 5832.926 ns/op
+# Warmup Iteration   5: 5876.190 ns/op
+Iteration   1: 5864.649 ns/op
+Iteration   2: 5855.539 ns/op
+Iteration   3: 5859.179 ns/op
+Iteration   4: 5869.880 ns/op
+Iteration   5: 5892.673 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  5049.284 ±(99.9%) 375.842 ns/op [Average]
-  (min, avg, max) = (4968.062, 5049.284, 5211.091), stdev = 97.605
-  CI (99.9%): [4673.442, 5425.126] (assumes normal distribution)
+  5868.384 ±(99.9%) 56.326 ns/op [Average]
+  (min, avg, max) = (5855.539, 5868.384, 5892.673), stdev = 14.628
+  CI (99.9%): [5812.058, 5924.710] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1290,24 +1290,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 35.71% complete, ETA 00:12:46
+# Run progress: 35.71% complete, ETA 00:12:39
 # Fork: 1 of 1
-# Warmup Iteration   1: 11193.695 ns/op
-# Warmup Iteration   2: 9692.014 ns/op
-# Warmup Iteration   3: 8694.618 ns/op
-# Warmup Iteration   4: 8533.938 ns/op
-# Warmup Iteration   5: 8322.373 ns/op
-Iteration   1: 8680.317 ns/op
-Iteration   2: 8592.012 ns/op
-Iteration   3: 8903.089 ns/op
-Iteration   4: 8756.849 ns/op
-Iteration   5: 8806.361 ns/op
+# Warmup Iteration   1: 13377.981 ns/op
+# Warmup Iteration   2: 12126.987 ns/op
+# Warmup Iteration   3: 11017.990 ns/op
+# Warmup Iteration   4: 11014.420 ns/op
+# Warmup Iteration   5: 11018.044 ns/op
+Iteration   1: 11021.439 ns/op
+Iteration   2: 11115.037 ns/op
+Iteration   3: 11031.212 ns/op
+Iteration   4: 11040.741 ns/op
+Iteration   5: 11109.262 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  8747.726 ±(99.9%) 457.440 ns/op [Average]
-  (min, avg, max) = (8592.012, 8747.726, 8903.089), stdev = 118.796
-  CI (99.9%): [8290.285, 9205.166] (assumes normal distribution)
+  11063.538 ±(99.9%) 173.063 ns/op [Average]
+  (min, avg, max) = (11021.439, 11063.538, 11115.037), stdev = 44.944
+  CI (99.9%): [10890.475, 11236.601] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1322,24 +1322,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 36.61% complete, ETA 00:12:35
+# Run progress: 36.61% complete, ETA 00:12:28
 # Fork: 1 of 1
-# Warmup Iteration   1: 106020.699 ns/op
-# Warmup Iteration   2: 97332.734 ns/op
-# Warmup Iteration   3: 107496.010 ns/op
-# Warmup Iteration   4: 94994.452 ns/op
-# Warmup Iteration   5: 92379.794 ns/op
-Iteration   1: 91368.798 ns/op
-Iteration   2: 101363.149 ns/op
-Iteration   3: 100798.260 ns/op
-Iteration   4: 94765.818 ns/op
-Iteration   5: 94526.015 ns/op
+# Warmup Iteration   1: 106360.391 ns/op
+# Warmup Iteration   2: 92475.299 ns/op
+# Warmup Iteration   3: 88604.539 ns/op
+# Warmup Iteration   4: 86015.946 ns/op
+# Warmup Iteration   5: 86191.004 ns/op
+Iteration   1: 85882.093 ns/op
+Iteration   2: 85801.536 ns/op
+Iteration   3: 86014.245 ns/op
+Iteration   4: 85669.359 ns/op
+Iteration   5: 86090.708 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
-  96564.408 ±(99.9%) 16711.278 ns/op [Average]
-  (min, avg, max) = (91368.798, 96564.408, 101363.149), stdev = 4339.866
-  CI (99.9%): [79853.130, 113275.686] (assumes normal distribution)
+  85891.588 ±(99.9%) 645.137 ns/op [Average]
+  (min, avg, max) = (85669.359, 85891.588, 86090.708), stdev = 167.540
+  CI (99.9%): [85246.451, 86536.725] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1354,24 +1354,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 37.50% complete, ETA 00:12:25
+# Run progress: 37.50% complete, ETA 00:12:17
 # Fork: 1 of 1
-# Warmup Iteration   1: 1099.871 ns/op
-# Warmup Iteration   2: 815.798 ns/op
-# Warmup Iteration   3: 799.598 ns/op
-# Warmup Iteration   4: 826.523 ns/op
-# Warmup Iteration   5: 870.521 ns/op
-Iteration   1: 800.055 ns/op
-Iteration   2: 785.852 ns/op
-Iteration   3: 827.997 ns/op
-Iteration   4: 823.681 ns/op
-Iteration   5: 832.317 ns/op
+# Warmup Iteration   1: 933.587 ns/op
+# Warmup Iteration   2: 738.173 ns/op
+# Warmup Iteration   3: 694.981 ns/op
+# Warmup Iteration   4: 735.817 ns/op
+# Warmup Iteration   5: 700.056 ns/op
+Iteration   1: 756.773 ns/op
+Iteration   2: 727.679 ns/op
+Iteration   3: 698.921 ns/op
+Iteration   4: 697.384 ns/op
+Iteration   5: 697.722 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  813.980 ±(99.9%) 77.299 ns/op [Average]
-  (min, avg, max) = (785.852, 813.980, 832.317), stdev = 20.074
-  CI (99.9%): [736.681, 891.280] (assumes normal distribution)
+  715.696 ±(99.9%) 101.344 ns/op [Average]
+  (min, avg, max) = (697.384, 715.696, 756.773), stdev = 26.319
+  CI (99.9%): [614.352, 817.039] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1386,24 +1386,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 38.39% complete, ETA 00:12:14
+# Run progress: 38.39% complete, ETA 00:12:07
 # Fork: 1 of 1
-# Warmup Iteration   1: 1211.938 ns/op
-# Warmup Iteration   2: 924.201 ns/op
-# Warmup Iteration   3: 956.644 ns/op
-# Warmup Iteration   4: 895.446 ns/op
-# Warmup Iteration   5: 901.290 ns/op
-Iteration   1: 1002.434 ns/op
-Iteration   2: 890.095 ns/op
-Iteration   3: 882.341 ns/op
-Iteration   4: 935.315 ns/op
-Iteration   5: 905.968 ns/op
+# Warmup Iteration   1: 1026.995 ns/op
+# Warmup Iteration   2: 823.470 ns/op
+# Warmup Iteration   3: 784.857 ns/op
+# Warmup Iteration   4: 810.299 ns/op
+# Warmup Iteration   5: 792.126 ns/op
+Iteration   1: 815.165 ns/op
+Iteration   2: 803.155 ns/op
+Iteration   3: 783.332 ns/op
+Iteration   4: 827.555 ns/op
+Iteration   5: 789.525 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  923.231 ±(99.9%) 187.530 ns/op [Average]
-  (min, avg, max) = (882.341, 923.231, 1002.434), stdev = 48.701
-  CI (99.9%): [735.700, 1110.761] (assumes normal distribution)
+  803.746 ±(99.9%) 69.860 ns/op [Average]
+  (min, avg, max) = (783.332, 803.746, 827.555), stdev = 18.142
+  CI (99.9%): [733.887, 873.606] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1418,24 +1418,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 39.29% complete, ETA 00:12:03
+# Run progress: 39.29% complete, ETA 00:11:57
 # Fork: 1 of 1
-# Warmup Iteration   1: 1862.373 ns/op
-# Warmup Iteration   2: 1558.941 ns/op
-# Warmup Iteration   3: 1403.446 ns/op
-# Warmup Iteration   4: 1413.004 ns/op
-# Warmup Iteration   5: 1390.063 ns/op
-Iteration   1: 1413.263 ns/op
-Iteration   2: 1386.077 ns/op
-Iteration   3: 1498.078 ns/op
-Iteration   4: 1483.252 ns/op
-Iteration   5: 1380.694 ns/op
+# Warmup Iteration   1: 1477.995 ns/op
+# Warmup Iteration   2: 1151.658 ns/op
+# Warmup Iteration   3: 1142.298 ns/op
+# Warmup Iteration   4: 1149.651 ns/op
+# Warmup Iteration   5: 1164.854 ns/op
+Iteration   1: 1163.204 ns/op
+Iteration   2: 1165.371 ns/op
+Iteration   3: 1145.119 ns/op
+Iteration   4: 1144.164 ns/op
+Iteration   5: 1143.198 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  1432.273 ±(99.9%) 211.654 ns/op [Average]
-  (min, avg, max) = (1380.694, 1432.273, 1498.078), stdev = 54.966
-  CI (99.9%): [1220.618, 1643.927] (assumes normal distribution)
+  1152.211 ±(99.9%) 42.632 ns/op [Average]
+  (min, avg, max) = (1143.198, 1152.211, 1165.371), stdev = 11.071
+  CI (99.9%): [1109.579, 1194.844] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1450,24 +1450,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 40.18% complete, ETA 00:11:53
+# Run progress: 40.18% complete, ETA 00:11:46
 # Fork: 1 of 1
-# Warmup Iteration   1: 2876.159 ns/op
-# Warmup Iteration   2: 2105.413 ns/op
-# Warmup Iteration   3: 2084.202 ns/op
-# Warmup Iteration   4: 2177.241 ns/op
-# Warmup Iteration   5: 2220.262 ns/op
-Iteration   1: 2104.532 ns/op
-Iteration   2: 2050.156 ns/op
-Iteration   3: 2125.284 ns/op
-Iteration   4: 2142.299 ns/op
-Iteration   5: 2059.057 ns/op
+# Warmup Iteration   1: 2107.657 ns/op
+# Warmup Iteration   2: 1615.743 ns/op
+# Warmup Iteration   3: 1615.193 ns/op
+# Warmup Iteration   4: 1732.131 ns/op
+# Warmup Iteration   5: 1603.003 ns/op
+Iteration   1: 1608.397 ns/op
+Iteration   2: 1669.670 ns/op
+Iteration   3: 1610.680 ns/op
+Iteration   4: 1611.748 ns/op
+Iteration   5: 1612.420 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  2096.265 ±(99.9%) 155.702 ns/op [Average]
-  (min, avg, max) = (2050.156, 2096.265, 2142.299), stdev = 40.435
-  CI (99.9%): [1940.563, 2251.967] (assumes normal distribution)
+  1622.583 ±(99.9%) 101.528 ns/op [Average]
+  (min, avg, max) = (1608.397, 1622.583, 1669.670), stdev = 26.367
+  CI (99.9%): [1521.055, 1724.111] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1482,24 +1482,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 41.07% complete, ETA 00:11:42
+# Run progress: 41.07% complete, ETA 00:11:36
 # Fork: 1 of 1
-# Warmup Iteration   1: 9469.260 ns/op
-# Warmup Iteration   2: 7889.483 ns/op
-# Warmup Iteration   3: 7529.571 ns/op
-# Warmup Iteration   4: 7300.954 ns/op
-# Warmup Iteration   5: 7522.618 ns/op
-Iteration   1: 7484.577 ns/op
-Iteration   2: 7778.759 ns/op
-Iteration   3: 7389.752 ns/op
-Iteration   4: 7497.921 ns/op
-Iteration   5: 7404.955 ns/op
+# Warmup Iteration   1: 6866.322 ns/op
+# Warmup Iteration   2: 5638.408 ns/op
+# Warmup Iteration   3: 5672.936 ns/op
+# Warmup Iteration   4: 5389.363 ns/op
+# Warmup Iteration   5: 5399.280 ns/op
+Iteration   1: 5391.953 ns/op
+Iteration   2: 5396.569 ns/op
+Iteration   3: 5396.642 ns/op
+Iteration   4: 5395.483 ns/op
+Iteration   5: 5392.926 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  7511.193 ±(99.9%) 604.289 ns/op [Average]
-  (min, avg, max) = (7389.752, 7511.193, 7778.759), stdev = 156.932
-  CI (99.9%): [6906.903, 8115.482] (assumes normal distribution)
+  5394.715 ±(99.9%) 8.296 ns/op [Average]
+  (min, avg, max) = (5391.953, 5394.715, 5396.642), stdev = 2.154
+  CI (99.9%): [5386.419, 5403.010] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1514,24 +1514,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 41.96% complete, ETA 00:11:31
+# Run progress: 41.96% complete, ETA 00:11:25
 # Fork: 1 of 1
-# Warmup Iteration   1: 16733.175 ns/op
-# Warmup Iteration   2: 16242.144 ns/op
-# Warmup Iteration   3: 16271.072 ns/op
-# Warmup Iteration   4: 15154.471 ns/op
-# Warmup Iteration   5: 15535.435 ns/op
-Iteration   1: 14809.548 ns/op
-Iteration   2: 15277.181 ns/op
-Iteration   3: 15262.968 ns/op
-Iteration   4: 14721.363 ns/op
-Iteration   5: 14740.957 ns/op
+# Warmup Iteration   1: 13477.448 ns/op
+# Warmup Iteration   2: 11442.100 ns/op
+# Warmup Iteration   3: 10541.470 ns/op
+# Warmup Iteration   4: 10437.673 ns/op
+# Warmup Iteration   5: 10471.292 ns/op
+Iteration   1: 10728.556 ns/op
+Iteration   2: 10825.539 ns/op
+Iteration   3: 10782.678 ns/op
+Iteration   4: 10529.764 ns/op
+Iteration   5: 10573.933 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  14962.404 ±(99.9%) 1089.004 ns/op [Average]
-  (min, avg, max) = (14721.363, 14962.404, 15277.181), stdev = 282.811
-  CI (99.9%): [13873.400, 16051.407] (assumes normal distribution)
+  10688.094 ±(99.9%) 500.493 ns/op [Average]
+  (min, avg, max) = (10529.764, 10688.094, 10825.539), stdev = 129.976
+  CI (99.9%): [10187.601, 11188.587] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1546,24 +1546,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 42.86% complete, ETA 00:11:21
+# Run progress: 42.86% complete, ETA 00:11:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 151415.155 ns/op
-# Warmup Iteration   2: 137370.889 ns/op
-# Warmup Iteration   3: 137726.219 ns/op
-# Warmup Iteration   4: 127863.951 ns/op
-# Warmup Iteration   5: 128341.669 ns/op
-Iteration   1: 131470.472 ns/op
-Iteration   2: 127786.151 ns/op
-Iteration   3: 128011.638 ns/op
-Iteration   4: 129451.794 ns/op
-Iteration   5: 134181.407 ns/op
+# Warmup Iteration   1: 104228.552 ns/op
+# Warmup Iteration   2: 99608.393 ns/op
+# Warmup Iteration   3: 92249.951 ns/op
+# Warmup Iteration   4: 91351.092 ns/op
+# Warmup Iteration   5: 91004.704 ns/op
+Iteration   1: 91395.576 ns/op
+Iteration   2: 91290.000 ns/op
+Iteration   3: 90862.634 ns/op
+Iteration   4: 90977.124 ns/op
+Iteration   5: 91395.484 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  130180.292 ±(99.9%) 10303.469 ns/op [Average]
-  (min, avg, max) = (127786.151, 130180.292, 134181.407), stdev = 2675.778
-  CI (99.9%): [119876.823, 140483.762] (assumes normal distribution)
+  91184.164 ±(99.9%) 956.479 ns/op [Average]
+  (min, avg, max) = (90862.634, 91184.164, 91395.576), stdev = 248.395
+  CI (99.9%): [90227.685, 92140.643] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1578,24 +1578,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 43.75% complete, ETA 00:11:10
+# Run progress: 43.75% complete, ETA 00:11:04
 # Fork: 1 of 1
-# Warmup Iteration   1: 1011.364 ns/op
-# Warmup Iteration   2: 906.800 ns/op
-# Warmup Iteration   3: 882.898 ns/op
-# Warmup Iteration   4: 806.155 ns/op
-# Warmup Iteration   5: 860.689 ns/op
-Iteration   1: 793.173 ns/op
-Iteration   2: 800.456 ns/op
-Iteration   3: 797.896 ns/op
-Iteration   4: 779.445 ns/op
-Iteration   5: 801.353 ns/op
+# Warmup Iteration   1: 969.212 ns/op
+# Warmup Iteration   2: 734.375 ns/op
+# Warmup Iteration   3: 720.903 ns/op
+# Warmup Iteration   4: 732.410 ns/op
+# Warmup Iteration   5: 750.368 ns/op
+Iteration   1: 707.582 ns/op
+Iteration   2: 714.596 ns/op
+Iteration   3: 715.594 ns/op
+Iteration   4: 787.960 ns/op
+Iteration   5: 701.651 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  794.465 ±(99.9%) 34.569 ns/op [Average]
-  (min, avg, max) = (779.445, 794.465, 801.353), stdev = 8.977
-  CI (99.9%): [759.895, 829.034] (assumes normal distribution)
+  725.476 ±(99.9%) 136.252 ns/op [Average]
+  (min, avg, max) = (701.651, 725.476, 787.960), stdev = 35.384
+  CI (99.9%): [589.225, 861.728] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1610,24 +1610,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 44.64% complete, ETA 00:10:59
+# Run progress: 44.64% complete, ETA 00:10:53
 # Fork: 1 of 1
-# Warmup Iteration   1: 1162.907 ns/op
-# Warmup Iteration   2: 876.101 ns/op
-# Warmup Iteration   3: 901.550 ns/op
-# Warmup Iteration   4: 869.937 ns/op
-# Warmup Iteration   5: 860.784 ns/op
-Iteration   1: 897.346 ns/op
-Iteration   2: 860.565 ns/op
-Iteration   3: 872.672 ns/op
-Iteration   4: 888.375 ns/op
-Iteration   5: 860.191 ns/op
+# Warmup Iteration   1: 1012.822 ns/op
+# Warmup Iteration   2: 794.646 ns/op
+# Warmup Iteration   3: 838.869 ns/op
+# Warmup Iteration   4: 784.088 ns/op
+# Warmup Iteration   5: 783.081 ns/op
+Iteration   1: 783.134 ns/op
+Iteration   2: 780.297 ns/op
+Iteration   3: 808.487 ns/op
+Iteration   4: 789.602 ns/op
+Iteration   5: 780.196 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  875.830 ±(99.9%) 64.084 ns/op [Average]
-  (min, avg, max) = (860.191, 875.830, 897.346), stdev = 16.642
-  CI (99.9%): [811.746, 939.914] (assumes normal distribution)
+  788.343 ±(99.9%) 45.789 ns/op [Average]
+  (min, avg, max) = (780.196, 788.343, 808.487), stdev = 11.891
+  CI (99.9%): [742.555, 834.132] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1642,24 +1642,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 45.54% complete, ETA 00:10:49
+# Run progress: 45.54% complete, ETA 00:10:43
 # Fork: 1 of 1
-# Warmup Iteration   1: 1718.851 ns/op
-# Warmup Iteration   2: 1274.297 ns/op
-# Warmup Iteration   3: 1279.477 ns/op
-# Warmup Iteration   4: 1275.785 ns/op
-# Warmup Iteration   5: 1309.909 ns/op
-Iteration   1: 1236.164 ns/op
-Iteration   2: 1265.959 ns/op
-Iteration   3: 1285.835 ns/op
-Iteration   4: 1315.166 ns/op
-Iteration   5: 1266.151 ns/op
+# Warmup Iteration   1: 1560.919 ns/op
+# Warmup Iteration   2: 1163.054 ns/op
+# Warmup Iteration   3: 1186.113 ns/op
+# Warmup Iteration   4: 1131.781 ns/op
+# Warmup Iteration   5: 1153.647 ns/op
+Iteration   1: 1143.928 ns/op
+Iteration   2: 1161.410 ns/op
+Iteration   3: 1239.021 ns/op
+Iteration   4: 1132.197 ns/op
+Iteration   5: 1143.046 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  1273.855 ±(99.9%) 112.140 ns/op [Average]
-  (min, avg, max) = (1236.164, 1273.855, 1315.166), stdev = 29.122
-  CI (99.9%): [1161.715, 1385.995] (assumes normal distribution)
+  1163.921 ±(99.9%) 166.607 ns/op [Average]
+  (min, avg, max) = (1132.197, 1163.921, 1239.021), stdev = 43.267
+  CI (99.9%): [997.313, 1330.528] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1674,24 +1674,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 46.43% complete, ETA 00:10:38
+# Run progress: 46.43% complete, ETA 00:10:32
 # Fork: 1 of 1
-# Warmup Iteration   1: 2443.372 ns/op
-# Warmup Iteration   2: 1801.063 ns/op
-# Warmup Iteration   3: 1839.632 ns/op
-# Warmup Iteration   4: 1740.637 ns/op
-# Warmup Iteration   5: 1744.250 ns/op
-Iteration   1: 1744.748 ns/op
-Iteration   2: 1780.747 ns/op
-Iteration   3: 1748.908 ns/op
-Iteration   4: 1768.711 ns/op
-Iteration   5: 1861.349 ns/op
+# Warmup Iteration   1: 2236.889 ns/op
+# Warmup Iteration   2: 1675.044 ns/op
+# Warmup Iteration   3: 1662.055 ns/op
+# Warmup Iteration   4: 1645.188 ns/op
+# Warmup Iteration   5: 1624.187 ns/op
+Iteration   1: 1609.273 ns/op
+Iteration   2: 1605.437 ns/op
+Iteration   3: 1611.136 ns/op
+Iteration   4: 1592.854 ns/op
+Iteration   5: 1604.727 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  1780.893 ±(99.9%) 182.156 ns/op [Average]
-  (min, avg, max) = (1744.748, 1780.893, 1861.349), stdev = 47.305
-  CI (99.9%): [1598.737, 1963.048] (assumes normal distribution)
+  1604.685 ±(99.9%) 27.446 ns/op [Average]
+  (min, avg, max) = (1592.854, 1604.685, 1611.136), stdev = 7.128
+  CI (99.9%): [1577.240, 1632.131] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1706,24 +1706,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 47.32% complete, ETA 00:10:27
+# Run progress: 47.32% complete, ETA 00:10:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 7410.337 ns/op
-# Warmup Iteration   2: 6762.327 ns/op
-# Warmup Iteration   3: 6039.756 ns/op
-# Warmup Iteration   4: 6140.922 ns/op
-# Warmup Iteration   5: 5938.555 ns/op
-Iteration   1: 5960.058 ns/op
-Iteration   2: 5936.083 ns/op
-Iteration   3: 5961.405 ns/op
-Iteration   4: 5948.589 ns/op
-Iteration   5: 5956.258 ns/op
+# Warmup Iteration   1: 6900.318 ns/op
+# Warmup Iteration   2: 5927.572 ns/op
+# Warmup Iteration   3: 5481.190 ns/op
+# Warmup Iteration   4: 5632.560 ns/op
+# Warmup Iteration   5: 5388.373 ns/op
+Iteration   1: 5440.559 ns/op
+Iteration   2: 5394.126 ns/op
+Iteration   3: 5441.023 ns/op
+Iteration   4: 5423.721 ns/op
+Iteration   5: 5421.389 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  5952.479 ±(99.9%) 40.173 ns/op [Average]
-  (min, avg, max) = (5936.083, 5952.479, 5961.405), stdev = 10.433
-  CI (99.9%): [5912.306, 5992.652] (assumes normal distribution)
+  5424.164 ±(99.9%) 73.647 ns/op [Average]
+  (min, avg, max) = (5394.126, 5424.164, 5441.023), stdev = 19.126
+  CI (99.9%): [5350.517, 5497.811] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1738,24 +1738,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 48.21% complete, ETA 00:10:17
+# Run progress: 48.21% complete, ETA 00:10:11
 # Fork: 1 of 1
-# Warmup Iteration   1: 14181.932 ns/op
-# Warmup Iteration   2: 12426.303 ns/op
-# Warmup Iteration   3: 10958.461 ns/op
-# Warmup Iteration   4: 10825.157 ns/op
-# Warmup Iteration   5: 11255.239 ns/op
-Iteration   1: 11388.393 ns/op
-Iteration   2: 10719.460 ns/op
-Iteration   3: 11224.768 ns/op
-Iteration   4: 11338.358 ns/op
-Iteration   5: 11058.845 ns/op
+# Warmup Iteration   1: 12937.854 ns/op
+# Warmup Iteration   2: 11422.141 ns/op
+# Warmup Iteration   3: 10561.883 ns/op
+# Warmup Iteration   4: 10606.330 ns/op
+# Warmup Iteration   5: 10554.237 ns/op
+Iteration   1: 10533.809 ns/op
+Iteration   2: 10558.377 ns/op
+Iteration   3: 10690.324 ns/op
+Iteration   4: 10998.023 ns/op
+Iteration   5: 10601.695 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  11145.965 ±(99.9%) 1039.482 ns/op [Average]
-  (min, avg, max) = (10719.460, 11145.965, 11388.393), stdev = 269.950
-  CI (99.9%): [10106.483, 12185.447] (assumes normal distribution)
+  10676.445 ±(99.9%) 729.282 ns/op [Average]
+  (min, avg, max) = (10533.809, 10676.445, 10998.023), stdev = 189.392
+  CI (99.9%): [9947.163, 11405.728] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1770,24 +1770,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 49.11% complete, ETA 00:10:06
+# Run progress: 49.11% complete, ETA 00:10:00
 # Fork: 1 of 1
-# Warmup Iteration   1: 113630.018 ns/op
-# Warmup Iteration   2: 101874.580 ns/op
-# Warmup Iteration   3: 97544.527 ns/op
-# Warmup Iteration   4: 95033.606 ns/op
-# Warmup Iteration   5: 100091.350 ns/op
-Iteration   1: 98101.133 ns/op
-Iteration   2: 99558.439 ns/op
-Iteration   3: 97679.261 ns/op
-Iteration   4: 96717.036 ns/op
-Iteration   5: 96142.961 ns/op
+# Warmup Iteration   1: 109796.178 ns/op
+# Warmup Iteration   2: 99408.768 ns/op
+# Warmup Iteration   3: 94456.259 ns/op
+# Warmup Iteration   4: 92434.007 ns/op
+# Warmup Iteration   5: 92449.383 ns/op
+Iteration   1: 91930.511 ns/op
+Iteration   2: 92194.300 ns/op
+Iteration   3: 92188.877 ns/op
+Iteration   4: 92477.354 ns/op
+Iteration   5: 94546.131 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
-  97639.766 ±(99.9%) 5089.403 ns/op [Average]
-  (min, avg, max) = (96142.961, 97639.766, 99558.439), stdev = 1321.702
-  CI (99.9%): [92550.364, 102729.169] (assumes normal distribution)
+  92667.434 ±(99.9%) 4112.066 ns/op [Average]
+  (min, avg, max) = (91930.511, 92667.434, 94546.131), stdev = 1067.891
+  CI (99.9%): [88555.368, 96779.501] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1802,24 +1802,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 50.00% complete, ETA 00:09:55
+# Run progress: 50.00% complete, ETA 00:09:50
 # Fork: 1 of 1
-# Warmup Iteration   1: 79.115 ns/op
-# Warmup Iteration   2: 73.592 ns/op
-# Warmup Iteration   3: 74.355 ns/op
-# Warmup Iteration   4: 70.387 ns/op
-# Warmup Iteration   5: 70.184 ns/op
-Iteration   1: 70.252 ns/op
-Iteration   2: 70.432 ns/op
-Iteration   3: 72.038 ns/op
-Iteration   4: 70.692 ns/op
-Iteration   5: 73.766 ns/op
+# Warmup Iteration   1: 65.670 ns/op
+# Warmup Iteration   2: 65.210 ns/op
+# Warmup Iteration   3: 58.858 ns/op
+# Warmup Iteration   4: 57.520 ns/op
+# Warmup Iteration   5: 57.915 ns/op
+Iteration   1: 57.982 ns/op
+Iteration   2: 57.490 ns/op
+Iteration   3: 57.597 ns/op
+Iteration   4: 57.524 ns/op
+Iteration   5: 57.283 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  71.436 ±(99.9%) 5.696 ns/op [Average]
-  (min, avg, max) = (70.252, 71.436, 73.766), stdev = 1.479
-  CI (99.9%): [65.740, 77.132] (assumes normal distribution)
+  57.575 ±(99.9%) 0.983 ns/op [Average]
+  (min, avg, max) = (57.283, 57.575, 57.982), stdev = 0.255
+  CI (99.9%): [56.592, 58.559] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1834,24 +1834,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 50.89% complete, ETA 00:09:45
+# Run progress: 50.89% complete, ETA 00:09:39
 # Fork: 1 of 1
-# Warmup Iteration   1: 134.566 ns/op
-# Warmup Iteration   2: 132.449 ns/op
-# Warmup Iteration   3: 122.790 ns/op
-# Warmup Iteration   4: 121.719 ns/op
-# Warmup Iteration   5: 124.242 ns/op
-Iteration   1: 122.513 ns/op
-Iteration   2: 120.488 ns/op
-Iteration   3: 120.841 ns/op
-Iteration   4: 133.901 ns/op
-Iteration   5: 120.964 ns/op
+# Warmup Iteration   1: 99.610 ns/op
+# Warmup Iteration   2: 98.044 ns/op
+# Warmup Iteration   3: 90.901 ns/op
+# Warmup Iteration   4: 90.993 ns/op
+# Warmup Iteration   5: 91.283 ns/op
+Iteration   1: 91.184 ns/op
+Iteration   2: 92.428 ns/op
+Iteration   3: 91.680 ns/op
+Iteration   4: 91.419 ns/op
+Iteration   5: 93.611 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  123.741 ±(99.9%) 22.072 ns/op [Average]
-  (min, avg, max) = (120.488, 123.741, 133.901), stdev = 5.732
-  CI (99.9%): [101.669, 145.814] (assumes normal distribution)
+  92.064 ±(99.9%) 3.785 ns/op [Average]
+  (min, avg, max) = (91.184, 92.064, 93.611), stdev = 0.983
+  CI (99.9%): [88.280, 95.849] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1866,24 +1866,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 51.79% complete, ETA 00:09:34
+# Run progress: 51.79% complete, ETA 00:09:29
 # Fork: 1 of 1
-# Warmup Iteration   1: 398.645 ns/op
-# Warmup Iteration   2: 372.996 ns/op
-# Warmup Iteration   3: 365.752 ns/op
-# Warmup Iteration   4: 359.753 ns/op
-# Warmup Iteration   5: 372.177 ns/op
-Iteration   1: 365.873 ns/op
-Iteration   2: 355.526 ns/op
-Iteration   3: 364.679 ns/op
-Iteration   4: 367.225 ns/op
-Iteration   5: 363.977 ns/op
+# Warmup Iteration   1: 283.778 ns/op
+# Warmup Iteration   2: 278.384 ns/op
+# Warmup Iteration   3: 260.798 ns/op
+# Warmup Iteration   4: 261.368 ns/op
+# Warmup Iteration   5: 261.310 ns/op
+Iteration   1: 261.344 ns/op
+Iteration   2: 262.341 ns/op
+Iteration   3: 264.186 ns/op
+Iteration   4: 271.234 ns/op
+Iteration   5: 261.869 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  363.456 ±(99.9%) 17.719 ns/op [Average]
-  (min, avg, max) = (355.526, 363.456, 367.225), stdev = 4.602
-  CI (99.9%): [345.737, 381.175] (assumes normal distribution)
+  264.195 ±(99.9%) 15.703 ns/op [Average]
+  (min, avg, max) = (261.344, 264.195, 271.234), stdev = 4.078
+  CI (99.9%): [248.491, 279.898] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1898,24 +1898,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 52.68% complete, ETA 00:09:23
+# Run progress: 52.68% complete, ETA 00:09:18
 # Fork: 1 of 1
-# Warmup Iteration   1: 964.983 ns/op
-# Warmup Iteration   2: 770.779 ns/op
-# Warmup Iteration   3: 678.729 ns/op
-# Warmup Iteration   4: 635.788 ns/op
-# Warmup Iteration   5: 631.293 ns/op
-Iteration   1: 697.302 ns/op
-Iteration   2: 645.047 ns/op
-Iteration   3: 663.902 ns/op
-Iteration   4: 645.944 ns/op
-Iteration   5: 653.934 ns/op
+# Warmup Iteration   1: 497.431 ns/op
+# Warmup Iteration   2: 481.406 ns/op
+# Warmup Iteration   3: 455.784 ns/op
+# Warmup Iteration   4: 454.733 ns/op
+# Warmup Iteration   5: 454.550 ns/op
+Iteration   1: 454.470 ns/op
+Iteration   2: 456.647 ns/op
+Iteration   3: 455.152 ns/op
+Iteration   4: 455.547 ns/op
+Iteration   5: 470.934 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  661.226 ±(99.9%) 82.970 ns/op [Average]
-  (min, avg, max) = (645.047, 661.226, 697.302), stdev = 21.547
-  CI (99.9%): [578.256, 744.196] (assumes normal distribution)
+  458.550 ±(99.9%) 26.830 ns/op [Average]
+  (min, avg, max) = (454.470, 458.550, 470.934), stdev = 6.968
+  CI (99.9%): [431.720, 485.380] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1930,24 +1930,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 53.57% complete, ETA 00:09:13
+# Run progress: 53.57% complete, ETA 00:09:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 3582.555 ns/op
-# Warmup Iteration   2: 3489.896 ns/op
-# Warmup Iteration   3: 3361.215 ns/op
-# Warmup Iteration   4: 3419.468 ns/op
-# Warmup Iteration   5: 3302.258 ns/op
-Iteration   1: 3361.008 ns/op
-Iteration   2: 3363.990 ns/op
-Iteration   3: 3312.189 ns/op
-Iteration   4: 3292.930 ns/op
-Iteration   5: 3435.296 ns/op
+# Warmup Iteration   1: 2547.932 ns/op
+# Warmup Iteration   2: 2377.231 ns/op
+# Warmup Iteration   3: 2361.410 ns/op
+# Warmup Iteration   4: 2368.403 ns/op
+# Warmup Iteration   5: 2373.353 ns/op
+Iteration   1: 2371.596 ns/op
+Iteration   2: 2413.231 ns/op
+Iteration   3: 2416.906 ns/op
+Iteration   4: 2377.545 ns/op
+Iteration   5: 2364.339 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  3353.083 ±(99.9%) 212.933 ns/op [Average]
-  (min, avg, max) = (3292.930, 3353.083, 3435.296), stdev = 55.298
-  CI (99.9%): [3140.150, 3566.016] (assumes normal distribution)
+  2388.724 ±(99.9%) 94.473 ns/op [Average]
+  (min, avg, max) = (2364.339, 2388.724, 2416.906), stdev = 24.534
+  CI (99.9%): [2294.250, 2483.197] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1962,24 +1962,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 54.46% complete, ETA 00:09:02
+# Run progress: 54.46% complete, ETA 00:08:57
 # Fork: 1 of 1
-# Warmup Iteration   1: 6612.162 ns/op
-# Warmup Iteration   2: 6292.423 ns/op
-# Warmup Iteration   3: 5809.393 ns/op
-# Warmup Iteration   4: 5779.500 ns/op
-# Warmup Iteration   5: 6355.623 ns/op
-Iteration   1: 5867.387 ns/op
-Iteration   2: 6579.020 ns/op
-Iteration   3: 6122.782 ns/op
-Iteration   4: 6681.815 ns/op
-Iteration   5: 6964.481 ns/op
+# Warmup Iteration   1: 4697.056 ns/op
+# Warmup Iteration   2: 4497.679 ns/op
+# Warmup Iteration   3: 4265.115 ns/op
+# Warmup Iteration   4: 4258.098 ns/op
+# Warmup Iteration   5: 4259.313 ns/op
+Iteration   1: 4262.570 ns/op
+Iteration   2: 4655.444 ns/op
+Iteration   3: 4260.640 ns/op
+Iteration   4: 4264.631 ns/op
+Iteration   5: 4261.823 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  6443.097 ±(99.9%) 1701.866 ns/op [Average]
-  (min, avg, max) = (5867.387, 6443.097, 6964.481), stdev = 441.969
-  CI (99.9%): [4741.231, 8144.962] (assumes normal distribution)
+  4341.021 ±(99.9%) 676.841 ns/op [Average]
+  (min, avg, max) = (4260.640, 4341.021, 4655.444), stdev = 175.773
+  CI (99.9%): [3664.181, 5017.862] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -1994,24 +1994,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 55.36% complete, ETA 00:08:51
+# Run progress: 55.36% complete, ETA 00:08:47
 # Fork: 1 of 1
-# Warmup Iteration   1: 95883.679 ns/op
-# Warmup Iteration   2: 89360.871 ns/op
-# Warmup Iteration   3: 89899.538 ns/op
-# Warmup Iteration   4: 100214.218 ns/op
-# Warmup Iteration   5: 116684.560 ns/op
-Iteration   1: 94149.279 ns/op
-Iteration   2: 97048.862 ns/op
-Iteration   3: 92598.772 ns/op
-Iteration   4: 101662.360 ns/op
-Iteration   5: 102288.921 ns/op
+# Warmup Iteration   1: 68187.909 ns/op
+# Warmup Iteration   2: 64045.504 ns/op
+# Warmup Iteration   3: 64104.034 ns/op
+# Warmup Iteration   4: 64124.705 ns/op
+# Warmup Iteration   5: 63919.946 ns/op
+Iteration   1: 63997.453 ns/op
+Iteration   2: 64134.354 ns/op
+Iteration   3: 66973.124 ns/op
+Iteration   4: 65882.230 ns/op
+Iteration   5: 63872.901 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  97549.639 ±(99.9%) 16751.361 ns/op [Average]
-  (min, avg, max) = (92598.772, 97549.639, 102288.921), stdev = 4350.275
-  CI (99.9%): [80798.278, 114301.000] (assumes normal distribution)
+  64972.012 ±(99.9%) 5339.923 ns/op [Average]
+  (min, avg, max) = (63872.901, 64972.012, 66973.124), stdev = 1386.761
+  CI (99.9%): [59632.089, 70311.936] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2026,24 +2026,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 56.25% complete, ETA 00:08:41
+# Run progress: 56.25% complete, ETA 00:08:36
 # Fork: 1 of 1
-# Warmup Iteration   1: 75.061 ns/op
-# Warmup Iteration   2: 68.965 ns/op
-# Warmup Iteration   3: 69.383 ns/op
-# Warmup Iteration   4: 64.786 ns/op
-# Warmup Iteration   5: 61.221 ns/op
-Iteration   1: 68.277 ns/op
-Iteration   2: 65.954 ns/op
-Iteration   3: 59.534 ns/op
-Iteration   4: 59.176 ns/op
-Iteration   5: 58.536 ns/op
+# Warmup Iteration   1: 65.967 ns/op
+# Warmup Iteration   2: 65.325 ns/op
+# Warmup Iteration   3: 58.913 ns/op
+# Warmup Iteration   4: 57.493 ns/op
+# Warmup Iteration   5: 57.281 ns/op
+Iteration   1: 57.322 ns/op
+Iteration   2: 57.276 ns/op
+Iteration   3: 57.373 ns/op
+Iteration   4: 57.281 ns/op
+Iteration   5: 57.480 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  62.296 ±(99.9%) 17.290 ns/op [Average]
-  (min, avg, max) = (58.536, 62.296, 68.277), stdev = 4.490
-  CI (99.9%): [45.005, 79.586] (assumes normal distribution)
+  57.346 ±(99.9%) 0.325 ns/op [Average]
+  (min, avg, max) = (57.276, 57.346, 57.480), stdev = 0.085
+  CI (99.9%): [57.021, 57.672] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2058,24 +2058,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 57.14% complete, ETA 00:08:30
+# Run progress: 57.14% complete, ETA 00:08:26
 # Fork: 1 of 1
-# Warmup Iteration   1: 106.099 ns/op
-# Warmup Iteration   2: 102.133 ns/op
-# Warmup Iteration   3: 94.321 ns/op
-# Warmup Iteration   4: 88.852 ns/op
-# Warmup Iteration   5: 90.996 ns/op
-Iteration   1: 88.611 ns/op
-Iteration   2: 91.634 ns/op
-Iteration   3: 92.245 ns/op
-Iteration   4: 90.605 ns/op
-Iteration   5: 91.561 ns/op
+# Warmup Iteration   1: 99.587 ns/op
+# Warmup Iteration   2: 98.272 ns/op
+# Warmup Iteration   3: 100.403 ns/op
+# Warmup Iteration   4: 90.922 ns/op
+# Warmup Iteration   5: 91.522 ns/op
+Iteration   1: 92.850 ns/op
+Iteration   2: 90.968 ns/op
+Iteration   3: 90.947 ns/op
+Iteration   4: 90.871 ns/op
+Iteration   5: 91.594 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  90.931 ±(99.9%) 5.481 ns/op [Average]
-  (min, avg, max) = (88.611, 90.931, 92.245), stdev = 1.424
-  CI (99.9%): [85.450, 96.413] (assumes normal distribution)
+  91.446 ±(99.9%) 3.223 ns/op [Average]
+  (min, avg, max) = (90.871, 91.446, 92.850), stdev = 0.837
+  CI (99.9%): [88.223, 94.669] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2090,24 +2090,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 58.04% complete, ETA 00:08:20
+# Run progress: 58.04% complete, ETA 00:08:15
 # Fork: 1 of 1
-# Warmup Iteration   1: 246.033 ns/op
-# Warmup Iteration   2: 251.186 ns/op
-# Warmup Iteration   3: 239.964 ns/op
-# Warmup Iteration   4: 222.412 ns/op
-# Warmup Iteration   5: 229.050 ns/op
-Iteration   1: 223.126 ns/op
-Iteration   2: 225.040 ns/op
-Iteration   3: 222.029 ns/op
-Iteration   4: 236.297 ns/op
-Iteration   5: 228.050 ns/op
+# Warmup Iteration   1: 285.064 ns/op
+# Warmup Iteration   2: 279.448 ns/op
+# Warmup Iteration   3: 264.657 ns/op
+# Warmup Iteration   4: 269.722 ns/op
+# Warmup Iteration   5: 261.178 ns/op
+Iteration   1: 261.063 ns/op
+Iteration   2: 261.135 ns/op
+Iteration   3: 266.753 ns/op
+Iteration   4: 266.739 ns/op
+Iteration   5: 262.579 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  226.908 ±(99.9%) 22.041 ns/op [Average]
-  (min, avg, max) = (222.029, 226.908, 236.297), stdev = 5.724
-  CI (99.9%): [204.868, 248.949] (assumes normal distribution)
+  263.654 ±(99.9%) 11.116 ns/op [Average]
+  (min, avg, max) = (261.063, 263.654, 266.753), stdev = 2.887
+  CI (99.9%): [252.538, 274.770] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2122,24 +2122,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 58.93% complete, ETA 00:08:09
+# Run progress: 58.93% complete, ETA 00:08:04
 # Fork: 1 of 1
-# Warmup Iteration   1: 433.308 ns/op
-# Warmup Iteration   2: 422.667 ns/op
-# Warmup Iteration   3: 407.616 ns/op
-# Warmup Iteration   4: 396.434 ns/op
-# Warmup Iteration   5: 395.314 ns/op
-Iteration   1: 437.453 ns/op
-Iteration   2: 408.658 ns/op
-Iteration   3: 410.978 ns/op
-Iteration   4: 409.440 ns/op
-Iteration   5: 411.255 ns/op
+# Warmup Iteration   1: 510.203 ns/op
+# Warmup Iteration   2: 482.086 ns/op
+# Warmup Iteration   3: 454.931 ns/op
+# Warmup Iteration   4: 454.979 ns/op
+# Warmup Iteration   5: 455.730 ns/op
+Iteration   1: 455.504 ns/op
+Iteration   2: 456.103 ns/op
+Iteration   3: 456.730 ns/op
+Iteration   4: 456.843 ns/op
+Iteration   5: 456.507 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  415.557 ±(99.9%) 47.315 ns/op [Average]
-  (min, avg, max) = (408.658, 415.557, 437.453), stdev = 12.287
-  CI (99.9%): [368.242, 462.872] (assumes normal distribution)
+  456.337 ±(99.9%) 2.099 ns/op [Average]
+  (min, avg, max) = (455.504, 456.337, 456.843), stdev = 0.545
+  CI (99.9%): [454.239, 458.436] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2154,24 +2154,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 59.82% complete, ETA 00:07:58
+# Run progress: 59.82% complete, ETA 00:07:54
 # Fork: 1 of 1
-# Warmup Iteration   1: 1959.328 ns/op
-# Warmup Iteration   2: 1916.331 ns/op
-# Warmup Iteration   3: 1833.678 ns/op
-# Warmup Iteration   4: 1783.683 ns/op
-# Warmup Iteration   5: 1857.096 ns/op
-Iteration   1: 1870.714 ns/op
-Iteration   2: 1787.753 ns/op
-Iteration   3: 1864.113 ns/op
-Iteration   4: 1753.905 ns/op
-Iteration   5: 1758.084 ns/op
+# Warmup Iteration   1: 2559.452 ns/op
+# Warmup Iteration   2: 2457.993 ns/op
+# Warmup Iteration   3: 2333.052 ns/op
+# Warmup Iteration   4: 2340.732 ns/op
+# Warmup Iteration   5: 2338.936 ns/op
+Iteration   1: 2320.399 ns/op
+Iteration   2: 2339.203 ns/op
+Iteration   3: 2330.531 ns/op
+Iteration   4: 2331.448 ns/op
+Iteration   5: 2366.641 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  1806.914 ±(99.9%) 218.706 ns/op [Average]
-  (min, avg, max) = (1753.905, 1806.914, 1870.714), stdev = 56.797
-  CI (99.9%): [1588.208, 2025.619] (assumes normal distribution)
+  2337.644 ±(99.9%) 67.513 ns/op [Average]
+  (min, avg, max) = (2320.399, 2337.644, 2366.641), stdev = 17.533
+  CI (99.9%): [2270.132, 2405.157] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2186,24 +2186,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 60.71% complete, ETA 00:07:48
+# Run progress: 60.71% complete, ETA 00:07:43
 # Fork: 1 of 1
-# Warmup Iteration   1: 4830.775 ns/op
-# Warmup Iteration   2: 3979.251 ns/op
-# Warmup Iteration   3: 3695.773 ns/op
-# Warmup Iteration   4: 3427.992 ns/op
-# Warmup Iteration   5: 3485.949 ns/op
-Iteration   1: 3459.265 ns/op
-Iteration   2: 3421.273 ns/op
-Iteration   3: 3488.102 ns/op
-Iteration   4: 4430.964 ns/op
-Iteration   5: 4499.293 ns/op
+# Warmup Iteration   1: 4720.477 ns/op
+# Warmup Iteration   2: 4511.229 ns/op
+# Warmup Iteration   3: 4330.938 ns/op
+# Warmup Iteration   4: 4263.442 ns/op
+# Warmup Iteration   5: 4264.258 ns/op
+Iteration   1: 4265.475 ns/op
+Iteration   2: 4257.333 ns/op
+Iteration   3: 4259.365 ns/op
+Iteration   4: 4273.099 ns/op
+Iteration   5: 4268.053 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  3859.779 ±(99.9%) 2131.874 ns/op [Average]
-  (min, avg, max) = (3421.273, 3859.779, 4499.293), stdev = 553.641
-  CI (99.9%): [1727.905, 5991.653] (assumes normal distribution)
+  4264.665 ±(99.9%) 24.740 ns/op [Average]
+  (min, avg, max) = (4257.333, 4264.665, 4273.099), stdev = 6.425
+  CI (99.9%): [4239.925, 4289.405] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2218,24 +2218,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 61.61% complete, ETA 00:07:37
+# Run progress: 61.61% complete, ETA 00:07:33
 # Fork: 1 of 1
-# Warmup Iteration   1: 41381.921 ns/op
-# Warmup Iteration   2: 35197.017 ns/op
-# Warmup Iteration   3: 33437.744 ns/op
-# Warmup Iteration   4: 30731.650 ns/op
-# Warmup Iteration   5: 32741.140 ns/op
-Iteration   1: 50716.696 ns/op
-Iteration   2: 37643.527 ns/op
-Iteration   3: 34186.103 ns/op
-Iteration   4: 32803.258 ns/op
-Iteration   5: 34318.809 ns/op
+# Warmup Iteration   1: 54795.743 ns/op
+# Warmup Iteration   2: 48882.672 ns/op
+# Warmup Iteration   3: 48400.446 ns/op
+# Warmup Iteration   4: 47988.695 ns/op
+# Warmup Iteration   5: 48110.751 ns/op
+Iteration   1: 48218.693 ns/op
+Iteration   2: 48316.102 ns/op
+Iteration   3: 48287.012 ns/op
+Iteration   4: 48244.287 ns/op
+Iteration   5: 48437.969 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
-  37933.678 ±(99.9%) 28356.702 ns/op [Average]
-  (min, avg, max) = (32803.258, 37933.678, 50716.696), stdev = 7364.146
-  CI (99.9%): [9576.976, 66290.381] (assumes normal distribution)
+  48300.812 ±(99.9%) 328.858 ns/op [Average]
+  (min, avg, max) = (48218.693, 48300.812, 48437.969), stdev = 85.403
+  CI (99.9%): [47971.955, 48629.670] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2250,24 +2250,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 62.50% complete, ETA 00:07:26
+# Run progress: 62.50% complete, ETA 00:07:22
 # Fork: 1 of 1
-# Warmup Iteration   1: 88.733 ns/op
-# Warmup Iteration   2: 89.589 ns/op
-# Warmup Iteration   3: 86.623 ns/op
-# Warmup Iteration   4: 69.466 ns/op
-# Warmup Iteration   5: 67.802 ns/op
-Iteration   1: 68.458 ns/op
-Iteration   2: 70.155 ns/op
-Iteration   3: 72.271 ns/op
-Iteration   4: 72.936 ns/op
-Iteration   5: 74.238 ns/op
+# Warmup Iteration   1: 58.873 ns/op
+# Warmup Iteration   2: 58.295 ns/op
+# Warmup Iteration   3: 48.731 ns/op
+# Warmup Iteration   4: 48.636 ns/op
+# Warmup Iteration   5: 48.726 ns/op
+Iteration   1: 48.783 ns/op
+Iteration   2: 48.810 ns/op
+Iteration   3: 48.713 ns/op
+Iteration   4: 49.845 ns/op
+Iteration   5: 49.543 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  71.611 ±(99.9%) 8.854 ns/op [Average]
-  (min, avg, max) = (68.458, 71.611, 74.238), stdev = 2.299
-  CI (99.9%): [62.757, 80.466] (assumes normal distribution)
+  49.139 ±(99.9%) 1.999 ns/op [Average]
+  (min, avg, max) = (48.713, 49.139, 49.845), stdev = 0.519
+  CI (99.9%): [47.140, 51.138] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2282,24 +2282,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 63.39% complete, ETA 00:07:16
+# Run progress: 63.39% complete, ETA 00:07:12
 # Fork: 1 of 1
-# Warmup Iteration   1: 107.222 ns/op
-# Warmup Iteration   2: 98.875 ns/op
-# Warmup Iteration   3: 87.234 ns/op
-# Warmup Iteration   4: 86.288 ns/op
-# Warmup Iteration   5: 86.779 ns/op
-Iteration   1: 88.438 ns/op
-Iteration   2: 91.788 ns/op
-Iteration   3: 85.854 ns/op
-Iteration   4: 87.034 ns/op
-Iteration   5: 86.471 ns/op
+# Warmup Iteration   1: 88.811 ns/op
+# Warmup Iteration   2: 87.705 ns/op
+# Warmup Iteration   3: 79.808 ns/op
+# Warmup Iteration   4: 77.551 ns/op
+# Warmup Iteration   5: 77.916 ns/op
+Iteration   1: 77.788 ns/op
+Iteration   2: 77.722 ns/op
+Iteration   3: 77.951 ns/op
+Iteration   4: 77.676 ns/op
+Iteration   5: 78.852 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  87.917 ±(99.9%) 9.109 ns/op [Average]
-  (min, avg, max) = (85.854, 87.917, 91.788), stdev = 2.366
-  CI (99.9%): [78.808, 97.026] (assumes normal distribution)
+  77.998 ±(99.9%) 1.882 ns/op [Average]
+  (min, avg, max) = (77.676, 77.998, 78.852), stdev = 0.489
+  CI (99.9%): [76.116, 79.880] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2314,24 +2314,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 64.29% complete, ETA 00:07:05
+# Run progress: 64.29% complete, ETA 00:07:01
 # Fork: 1 of 1
-# Warmup Iteration   1: 208.665 ns/op
-# Warmup Iteration   2: 214.196 ns/op
-# Warmup Iteration   3: 199.347 ns/op
-# Warmup Iteration   4: 190.721 ns/op
-# Warmup Iteration   5: 186.178 ns/op
-Iteration   1: 193.881 ns/op
-Iteration   2: 194.945 ns/op
-Iteration   3: 249.649 ns/op
-Iteration   4: 197.529 ns/op
-Iteration   5: 209.997 ns/op
+# Warmup Iteration   1: 158.666 ns/op
+# Warmup Iteration   2: 153.601 ns/op
+# Warmup Iteration   3: 151.648 ns/op
+# Warmup Iteration   4: 143.044 ns/op
+# Warmup Iteration   5: 142.748 ns/op
+Iteration   1: 142.473 ns/op
+Iteration   2: 143.851 ns/op
+Iteration   3: 143.287 ns/op
+Iteration   4: 142.333 ns/op
+Iteration   5: 146.970 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  209.200 ±(99.9%) 90.528 ns/op [Average]
-  (min, avg, max) = (193.881, 209.200, 249.649), stdev = 23.510
-  CI (99.9%): [118.671, 299.728] (assumes normal distribution)
+  143.783 ±(99.9%) 7.261 ns/op [Average]
+  (min, avg, max) = (142.333, 143.783, 146.970), stdev = 1.886
+  CI (99.9%): [136.522, 151.044] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2346,24 +2346,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 65.18% complete, ETA 00:06:54
+# Run progress: 65.18% complete, ETA 00:06:51
 # Fork: 1 of 1
-# Warmup Iteration   1: 393.626 ns/op
-# Warmup Iteration   2: 427.676 ns/op
-# Warmup Iteration   3: 324.826 ns/op
-# Warmup Iteration   4: 300.099 ns/op
-# Warmup Iteration   5: 312.956 ns/op
-Iteration   1: 312.477 ns/op
-Iteration   2: 327.285 ns/op
-Iteration   3: 300.839 ns/op
-Iteration   4: 303.178 ns/op
-Iteration   5: 304.220 ns/op
+# Warmup Iteration   1: 262.092 ns/op
+# Warmup Iteration   2: 253.664 ns/op
+# Warmup Iteration   3: 244.937 ns/op
+# Warmup Iteration   4: 231.232 ns/op
+# Warmup Iteration   5: 231.551 ns/op
+Iteration   1: 248.284 ns/op
+Iteration   2: 235.956 ns/op
+Iteration   3: 231.792 ns/op
+Iteration   4: 232.080 ns/op
+Iteration   5: 232.253 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  309.600 ±(99.9%) 41.651 ns/op [Average]
-  (min, avg, max) = (300.839, 309.600, 327.285), stdev = 10.817
-  CI (99.9%): [267.949, 351.251] (assumes normal distribution)
+  236.073 ±(99.9%) 27.090 ns/op [Average]
+  (min, avg, max) = (231.792, 236.073, 248.284), stdev = 7.035
+  CI (99.9%): [208.983, 263.163] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2378,24 +2378,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 66.07% complete, ETA 00:06:44
+# Run progress: 66.07% complete, ETA 00:06:40
 # Fork: 1 of 1
-# Warmup Iteration   1: 1445.420 ns/op
-# Warmup Iteration   2: 1389.584 ns/op
-# Warmup Iteration   3: 1305.048 ns/op
-# Warmup Iteration   4: 1241.445 ns/op
-# Warmup Iteration   5: 1380.001 ns/op
-Iteration   1: 1245.227 ns/op
-Iteration   2: 1215.944 ns/op
-Iteration   3: 1252.630 ns/op
-Iteration   4: 1281.324 ns/op
-Iteration   5: 1263.371 ns/op
+# Warmup Iteration   1: 1044.022 ns/op
+# Warmup Iteration   2: 1000.075 ns/op
+# Warmup Iteration   3: 903.870 ns/op
+# Warmup Iteration   4: 890.701 ns/op
+# Warmup Iteration   5: 892.492 ns/op
+Iteration   1: 895.093 ns/op
+Iteration   2: 923.469 ns/op
+Iteration   3: 895.437 ns/op
+Iteration   4: 895.730 ns/op
+Iteration   5: 898.362 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  1251.699 ±(99.9%) 93.036 ns/op [Average]
-  (min, avg, max) = (1215.944, 1251.699, 1281.324), stdev = 24.161
-  CI (99.9%): [1158.663, 1344.735] (assumes normal distribution)
+  901.618 ±(99.9%) 47.299 ns/op [Average]
+  (min, avg, max) = (895.093, 901.618, 923.469), stdev = 12.283
+  CI (99.9%): [854.319, 948.917] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2410,24 +2410,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 66.96% complete, ETA 00:06:33
+# Run progress: 66.96% complete, ETA 00:06:29
 # Fork: 1 of 1
-# Warmup Iteration   1: 2845.515 ns/op
-# Warmup Iteration   2: 2748.937 ns/op
-# Warmup Iteration   3: 2560.513 ns/op
-# Warmup Iteration   4: 2458.297 ns/op
-# Warmup Iteration   5: 2462.506 ns/op
-Iteration   1: 2507.985 ns/op
-Iteration   2: 2526.654 ns/op
-Iteration   3: 2540.403 ns/op
-Iteration   4: 2523.205 ns/op
-Iteration   5: 2532.809 ns/op
+# Warmup Iteration   1: 2064.994 ns/op
+# Warmup Iteration   2: 1972.334 ns/op
+# Warmup Iteration   3: 1823.221 ns/op
+# Warmup Iteration   4: 1794.628 ns/op
+# Warmup Iteration   5: 1778.158 ns/op
+Iteration   1: 1780.628 ns/op
+Iteration   2: 1812.385 ns/op
+Iteration   3: 1826.936 ns/op
+Iteration   4: 1783.137 ns/op
+Iteration   5: 1839.644 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  2526.211 ±(99.9%) 46.622 ns/op [Average]
-  (min, avg, max) = (2507.985, 2526.211, 2540.403), stdev = 12.108
-  CI (99.9%): [2479.589, 2572.834] (assumes normal distribution)
+  1808.546 ±(99.9%) 100.874 ns/op [Average]
+  (min, avg, max) = (1780.628, 1808.546, 1839.644), stdev = 26.197
+  CI (99.9%): [1707.672, 1909.420] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2442,24 +2442,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 67.86% complete, ETA 00:06:23
+# Run progress: 67.86% complete, ETA 00:06:19
 # Fork: 1 of 1
-# Warmup Iteration   1: 28491.354 ns/op
-# Warmup Iteration   2: 26431.924 ns/op
-# Warmup Iteration   3: 25420.654 ns/op
-# Warmup Iteration   4: 23805.273 ns/op
-# Warmup Iteration   5: 23482.409 ns/op
-Iteration   1: 24167.070 ns/op
-Iteration   2: 25014.766 ns/op
-Iteration   3: 24455.213 ns/op
-Iteration   4: 24981.712 ns/op
-Iteration   5: 24673.256 ns/op
+# Warmup Iteration   1: 20022.837 ns/op
+# Warmup Iteration   2: 18871.405 ns/op
+# Warmup Iteration   3: 16876.113 ns/op
+# Warmup Iteration   4: 16871.464 ns/op
+# Warmup Iteration   5: 16917.901 ns/op
+Iteration   1: 17996.859 ns/op
+Iteration   2: 16938.401 ns/op
+Iteration   3: 16945.541 ns/op
+Iteration   4: 17077.486 ns/op
+Iteration   5: 18300.268 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  24658.403 ±(99.9%) 1380.923 ns/op [Average]
-  (min, avg, max) = (24167.070, 24658.403, 25014.766), stdev = 358.621
-  CI (99.9%): [23277.480, 26039.327] (assumes normal distribution)
+  17451.711 ±(99.9%) 2493.254 ns/op [Average]
+  (min, avg, max) = (16938.401, 17451.711, 18300.268), stdev = 647.490
+  CI (99.9%): [14958.457, 19944.964] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2474,24 +2474,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 68.75% complete, ETA 00:06:12
+# Run progress: 68.75% complete, ETA 00:06:08
 # Fork: 1 of 1
-# Warmup Iteration   1: 77.343 ns/op
-# Warmup Iteration   2: 72.456 ns/op
-# Warmup Iteration   3: 69.500 ns/op
-# Warmup Iteration   4: 65.971 ns/op
-# Warmup Iteration   5: 66.646 ns/op
-Iteration   1: 65.565 ns/op
-Iteration   2: 65.596 ns/op
-Iteration   3: 66.978 ns/op
-Iteration   4: 68.811 ns/op
-Iteration   5: 65.948 ns/op
+# Warmup Iteration   1: 59.040 ns/op
+# Warmup Iteration   2: 58.310 ns/op
+# Warmup Iteration   3: 48.763 ns/op
+# Warmup Iteration   4: 48.867 ns/op
+# Warmup Iteration   5: 48.813 ns/op
+Iteration   1: 49.408 ns/op
+Iteration   2: 48.983 ns/op
+Iteration   3: 49.014 ns/op
+Iteration   4: 48.918 ns/op
+Iteration   5: 50.044 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  66.580 ±(99.9%) 5.284 ns/op [Average]
-  (min, avg, max) = (65.565, 66.580, 68.811), stdev = 1.372
-  CI (99.9%): [61.295, 71.864] (assumes normal distribution)
+  49.273 ±(99.9%) 1.816 ns/op [Average]
+  (min, avg, max) = (48.918, 49.273, 50.044), stdev = 0.472
+  CI (99.9%): [47.457, 51.090] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2506,24 +2506,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 69.64% complete, ETA 00:06:01
+# Run progress: 69.64% complete, ETA 00:05:58
 # Fork: 1 of 1
-# Warmup Iteration   1: 89.271 ns/op
-# Warmup Iteration   2: 87.896 ns/op
-# Warmup Iteration   3: 82.957 ns/op
-# Warmup Iteration   4: 82.153 ns/op
-# Warmup Iteration   5: 83.497 ns/op
-Iteration   1: 82.988 ns/op
-Iteration   2: 82.357 ns/op
-Iteration   3: 81.840 ns/op
-Iteration   4: 80.310 ns/op
-Iteration   5: 81.595 ns/op
+# Warmup Iteration   1: 89.263 ns/op
+# Warmup Iteration   2: 88.178 ns/op
+# Warmup Iteration   3: 80.039 ns/op
+# Warmup Iteration   4: 77.340 ns/op
+# Warmup Iteration   5: 77.467 ns/op
+Iteration   1: 78.889 ns/op
+Iteration   2: 81.258 ns/op
+Iteration   3: 80.742 ns/op
+Iteration   4: 77.441 ns/op
+Iteration   5: 77.496 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  81.818 ±(99.9%) 3.844 ns/op [Average]
-  (min, avg, max) = (80.310, 81.818, 82.988), stdev = 0.998
-  CI (99.9%): [77.975, 85.662] (assumes normal distribution)
+  79.165 ±(99.9%) 6.861 ns/op [Average]
+  (min, avg, max) = (77.441, 79.165, 81.258), stdev = 1.782
+  CI (99.9%): [72.304, 86.026] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2538,24 +2538,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 70.54% complete, ETA 00:05:51
+# Run progress: 70.54% complete, ETA 00:05:47
 # Fork: 1 of 1
-# Warmup Iteration   1: 169.188 ns/op
-# Warmup Iteration   2: 160.686 ns/op
-# Warmup Iteration   3: 154.448 ns/op
-# Warmup Iteration   4: 145.642 ns/op
-# Warmup Iteration   5: 146.511 ns/op
-Iteration   1: 145.724 ns/op
-Iteration   2: 146.643 ns/op
-Iteration   3: 147.211 ns/op
-Iteration   4: 144.333 ns/op
-Iteration   5: 147.633 ns/op
+# Warmup Iteration   1: 158.729 ns/op
+# Warmup Iteration   2: 153.876 ns/op
+# Warmup Iteration   3: 150.565 ns/op
+# Warmup Iteration   4: 142.552 ns/op
+# Warmup Iteration   5: 142.599 ns/op
+Iteration   1: 142.505 ns/op
+Iteration   2: 143.194 ns/op
+Iteration   3: 143.368 ns/op
+Iteration   4: 143.393 ns/op
+Iteration   5: 143.680 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  146.309 ±(99.9%) 5.066 ns/op [Average]
-  (min, avg, max) = (144.333, 146.309, 147.633), stdev = 1.316
-  CI (99.9%): [141.243, 151.375] (assumes normal distribution)
+  143.228 ±(99.9%) 1.694 ns/op [Average]
+  (min, avg, max) = (142.505, 143.228, 143.680), stdev = 0.440
+  CI (99.9%): [141.534, 144.922] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2570,24 +2570,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 71.43% complete, ETA 00:05:40
+# Run progress: 71.43% complete, ETA 00:05:37
 # Fork: 1 of 1
-# Warmup Iteration   1: 270.253 ns/op
-# Warmup Iteration   2: 265.049 ns/op
-# Warmup Iteration   3: 249.734 ns/op
-# Warmup Iteration   4: 240.193 ns/op
-# Warmup Iteration   5: 244.342 ns/op
-Iteration   1: 247.451 ns/op
-Iteration   2: 236.124 ns/op
-Iteration   3: 241.536 ns/op
-Iteration   4: 249.206 ns/op
-Iteration   5: 242.351 ns/op
+# Warmup Iteration   1: 262.670 ns/op
+# Warmup Iteration   2: 253.613 ns/op
+# Warmup Iteration   3: 244.670 ns/op
+# Warmup Iteration   4: 231.459 ns/op
+# Warmup Iteration   5: 231.995 ns/op
+Iteration   1: 232.330 ns/op
+Iteration   2: 231.831 ns/op
+Iteration   3: 232.068 ns/op
+Iteration   4: 232.949 ns/op
+Iteration   5: 233.159 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  243.334 ±(99.9%) 19.972 ns/op [Average]
-  (min, avg, max) = (236.124, 243.334, 249.206), stdev = 5.187
-  CI (99.9%): [223.361, 263.306] (assumes normal distribution)
+  232.467 ±(99.9%) 2.190 ns/op [Average]
+  (min, avg, max) = (231.831, 232.467, 233.159), stdev = 0.569
+  CI (99.9%): [230.277, 234.657] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2602,24 +2602,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 72.32% complete, ETA 00:05:29
+# Run progress: 72.32% complete, ETA 00:05:26
 # Fork: 1 of 1
-# Warmup Iteration   1: 1055.746 ns/op
-# Warmup Iteration   2: 1093.201 ns/op
-# Warmup Iteration   3: 1031.336 ns/op
-# Warmup Iteration   4: 949.209 ns/op
-# Warmup Iteration   5: 944.146 ns/op
-Iteration   1: 951.817 ns/op
-Iteration   2: 932.425 ns/op
-Iteration   3: 992.760 ns/op
-Iteration   4: 982.791 ns/op
-Iteration   5: 949.707 ns/op
+# Warmup Iteration   1: 1041.597 ns/op
+# Warmup Iteration   2: 1001.049 ns/op
+# Warmup Iteration   3: 906.327 ns/op
+# Warmup Iteration   4: 892.116 ns/op
+# Warmup Iteration   5: 892.602 ns/op
+Iteration   1: 894.036 ns/op
+Iteration   2: 895.312 ns/op
+Iteration   3: 894.148 ns/op
+Iteration   4: 921.737 ns/op
+Iteration   5: 896.944 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  961.900 ±(99.9%) 96.419 ns/op [Average]
-  (min, avg, max) = (932.425, 961.900, 992.760), stdev = 25.040
-  CI (99.9%): [865.481, 1058.319] (assumes normal distribution)
+  900.436 ±(99.9%) 46.074 ns/op [Average]
+  (min, avg, max) = (894.036, 900.436, 921.737), stdev = 11.965
+  CI (99.9%): [854.362, 946.509] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2634,24 +2634,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 73.21% complete, ETA 00:05:19
+# Run progress: 73.21% complete, ETA 00:05:16
 # Fork: 1 of 1
-# Warmup Iteration   1: 2195.410 ns/op
-# Warmup Iteration   2: 2061.232 ns/op
-# Warmup Iteration   3: 1868.226 ns/op
-# Warmup Iteration   4: 1853.399 ns/op
-# Warmup Iteration   5: 1865.414 ns/op
-Iteration   1: 1881.733 ns/op
-Iteration   2: 1841.055 ns/op
-Iteration   3: 1874.825 ns/op
-Iteration   4: 1850.147 ns/op
-Iteration   5: 1822.456 ns/op
+# Warmup Iteration   1: 2175.468 ns/op
+# Warmup Iteration   2: 1958.056 ns/op
+# Warmup Iteration   3: 1839.375 ns/op
+# Warmup Iteration   4: 1775.233 ns/op
+# Warmup Iteration   5: 1774.674 ns/op
+Iteration   1: 1779.400 ns/op
+Iteration   2: 1778.309 ns/op
+Iteration   3: 1776.109 ns/op
+Iteration   4: 1780.908 ns/op
+Iteration   5: 1949.808 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  1854.043 ±(99.9%) 93.932 ns/op [Average]
-  (min, avg, max) = (1822.456, 1854.043, 1881.733), stdev = 24.394
-  CI (99.9%): [1760.111, 1947.975] (assumes normal distribution)
+  1812.907 ±(99.9%) 294.767 ns/op [Average]
+  (min, avg, max) = (1776.109, 1812.907, 1949.808), stdev = 76.550
+  CI (99.9%): [1518.140, 2107.674] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2666,24 +2666,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 74.11% complete, ETA 00:05:08
+# Run progress: 74.11% complete, ETA 00:05:05
 # Fork: 1 of 1
-# Warmup Iteration   1: 22818.474 ns/op
-# Warmup Iteration   2: 19310.735 ns/op
-# Warmup Iteration   3: 18651.978 ns/op
-# Warmup Iteration   4: 18637.049 ns/op
-# Warmup Iteration   5: 17955.577 ns/op
-Iteration   1: 18271.653 ns/op
-Iteration   2: 17659.997 ns/op
-Iteration   3: 17917.872 ns/op
-Iteration   4: 21267.481 ns/op
-Iteration   5: 18288.008 ns/op
+# Warmup Iteration   1: 20818.689 ns/op
+# Warmup Iteration   2: 18888.073 ns/op
+# Warmup Iteration   3: 17149.187 ns/op
+# Warmup Iteration   4: 16850.453 ns/op
+# Warmup Iteration   5: 16898.509 ns/op
+Iteration   1: 16914.648 ns/op
+Iteration   2: 16963.487 ns/op
+Iteration   3: 16994.200 ns/op
+Iteration   4: 17501.783 ns/op
+Iteration   5: 17041.180 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
-  18681.002 ±(99.9%) 5658.187 ns/op [Average]
-  (min, avg, max) = (17659.997, 18681.002, 21267.481), stdev = 1469.413
-  CI (99.9%): [13022.816, 24339.189] (assumes normal distribution)
+  17083.060 ±(99.9%) 918.601 ns/op [Average]
+  (min, avg, max) = (16914.648, 17083.060, 17501.783), stdev = 238.558
+  CI (99.9%): [16164.459, 18001.660] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2698,24 +2698,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 75.00% complete, ETA 00:04:57
+# Run progress: 75.00% complete, ETA 00:04:55
 # Fork: 1 of 1
-# Warmup Iteration   1: 71.563 ns/op
-# Warmup Iteration   2: 70.002 ns/op
-# Warmup Iteration   3: 68.038 ns/op
-# Warmup Iteration   4: 63.234 ns/op
-# Warmup Iteration   5: 62.388 ns/op
-Iteration   1: 64.488 ns/op
-Iteration   2: 63.894 ns/op
-Iteration   3: 63.943 ns/op
-Iteration   4: 63.962 ns/op
-Iteration   5: 63.895 ns/op
+# Warmup Iteration   1: 63.722 ns/op
+# Warmup Iteration   2: 63.658 ns/op
+# Warmup Iteration   3: 54.473 ns/op
+# Warmup Iteration   4: 54.069 ns/op
+# Warmup Iteration   5: 54.571 ns/op
+Iteration   1: 54.157 ns/op
+Iteration   2: 54.183 ns/op
+Iteration   3: 54.166 ns/op
+Iteration   4: 54.210 ns/op
+Iteration   5: 55.105 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  64.036 ±(99.9%) 0.978 ns/op [Average]
-  (min, avg, max) = (63.894, 64.036, 64.488), stdev = 0.254
-  CI (99.9%): [63.058, 65.014] (assumes normal distribution)
+  54.364 ±(99.9%) 1.596 ns/op [Average]
+  (min, avg, max) = (54.157, 54.364, 55.105), stdev = 0.415
+  CI (99.9%): [52.768, 55.961] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2730,24 +2730,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 75.89% complete, ETA 00:04:47
+# Run progress: 75.89% complete, ETA 00:04:44
 # Fork: 1 of 1
-# Warmup Iteration   1: 111.655 ns/op
-# Warmup Iteration   2: 107.412 ns/op
-# Warmup Iteration   3: 112.603 ns/op
-# Warmup Iteration   4: 105.193 ns/op
-# Warmup Iteration   5: 98.332 ns/op
-Iteration   1: 97.764 ns/op
-Iteration   2: 100.438 ns/op
-Iteration   3: 102.285 ns/op
-Iteration   4: 97.664 ns/op
-Iteration   5: 99.674 ns/op
+# Warmup Iteration   1: 89.172 ns/op
+# Warmup Iteration   2: 86.785 ns/op
+# Warmup Iteration   3: 80.916 ns/op
+# Warmup Iteration   4: 77.068 ns/op
+# Warmup Iteration   5: 78.840 ns/op
+Iteration   1: 79.128 ns/op
+Iteration   2: 83.585 ns/op
+Iteration   3: 77.190 ns/op
+Iteration   4: 77.455 ns/op
+Iteration   5: 77.337 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  99.565 ±(99.9%) 7.463 ns/op [Average]
-  (min, avg, max) = (97.664, 99.565, 102.285), stdev = 1.938
-  CI (99.9%): [92.102, 107.028] (assumes normal distribution)
+  78.939 ±(99.9%) 10.448 ns/op [Average]
+  (min, avg, max) = (77.190, 78.939, 83.585), stdev = 2.713
+  CI (99.9%): [68.491, 89.388] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2762,24 +2762,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 76.79% complete, ETA 00:04:36
+# Run progress: 76.79% complete, ETA 00:04:33
 # Fork: 1 of 1
-# Warmup Iteration   1: 298.991 ns/op
-# Warmup Iteration   2: 286.033 ns/op
-# Warmup Iteration   3: 287.509 ns/op
-# Warmup Iteration   4: 275.272 ns/op
-# Warmup Iteration   5: 283.615 ns/op
-Iteration   1: 265.158 ns/op
-Iteration   2: 274.194 ns/op
-Iteration   3: 270.326 ns/op
-Iteration   4: 265.202 ns/op
-Iteration   5: 269.879 ns/op
+# Warmup Iteration   1: 222.748 ns/op
+# Warmup Iteration   2: 213.813 ns/op
+# Warmup Iteration   3: 214.938 ns/op
+# Warmup Iteration   4: 199.606 ns/op
+# Warmup Iteration   5: 199.364 ns/op
+Iteration   1: 199.579 ns/op
+Iteration   2: 199.255 ns/op
+Iteration   3: 199.707 ns/op
+Iteration   4: 200.488 ns/op
+Iteration   5: 199.829 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  268.952 ±(99.9%) 14.749 ns/op [Average]
-  (min, avg, max) = (265.158, 268.952, 274.194), stdev = 3.830
-  CI (99.9%): [254.203, 283.701] (assumes normal distribution)
+  199.772 ±(99.9%) 1.747 ns/op [Average]
+  (min, avg, max) = (199.255, 199.772, 200.488), stdev = 0.454
+  CI (99.9%): [198.024, 201.519] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2794,24 +2794,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 77.68% complete, ETA 00:04:25
+# Run progress: 77.68% complete, ETA 00:04:23
 # Fork: 1 of 1
-# Warmup Iteration   1: 538.720 ns/op
-# Warmup Iteration   2: 495.329 ns/op
-# Warmup Iteration   3: 496.005 ns/op
-# Warmup Iteration   4: 471.688 ns/op
-# Warmup Iteration   5: 485.767 ns/op
-Iteration   1: 496.117 ns/op
-Iteration   2: 470.447 ns/op
-Iteration   3: 473.580 ns/op
-Iteration   4: 458.170 ns/op
-Iteration   5: 472.487 ns/op
+# Warmup Iteration   1: 367.564 ns/op
+# Warmup Iteration   2: 359.523 ns/op
+# Warmup Iteration   3: 344.637 ns/op
+# Warmup Iteration   4: 344.204 ns/op
+# Warmup Iteration   5: 344.685 ns/op
+Iteration   1: 345.435 ns/op
+Iteration   2: 345.907 ns/op
+Iteration   3: 358.624 ns/op
+Iteration   4: 346.294 ns/op
+Iteration   5: 352.627 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  474.160 ±(99.9%) 52.893 ns/op [Average]
-  (min, avg, max) = (458.170, 474.160, 496.117), stdev = 13.736
-  CI (99.9%): [421.268, 527.053] (assumes normal distribution)
+  349.777 ±(99.9%) 22.150 ns/op [Average]
+  (min, avg, max) = (345.435, 349.777, 358.624), stdev = 5.752
+  CI (99.9%): [327.628, 371.927] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2826,24 +2826,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 78.57% complete, ETA 00:04:15
+# Run progress: 78.57% complete, ETA 00:04:12
 # Fork: 1 of 1
-# Warmup Iteration   1: 2441.628 ns/op
-# Warmup Iteration   2: 2341.205 ns/op
-# Warmup Iteration   3: 2292.629 ns/op
-# Warmup Iteration   4: 2208.155 ns/op
-# Warmup Iteration   5: 2266.201 ns/op
-Iteration   1: 2200.324 ns/op
-Iteration   2: 2268.015 ns/op
-Iteration   3: 2278.014 ns/op
-Iteration   4: 2191.559 ns/op
-Iteration   5: 2320.229 ns/op
+# Warmup Iteration   1: 1735.739 ns/op
+# Warmup Iteration   2: 1658.739 ns/op
+# Warmup Iteration   3: 1573.026 ns/op
+# Warmup Iteration   4: 1575.363 ns/op
+# Warmup Iteration   5: 1576.253 ns/op
+Iteration   1: 1575.630 ns/op
+Iteration   2: 1629.355 ns/op
+Iteration   3: 1594.032 ns/op
+Iteration   4: 1603.124 ns/op
+Iteration   5: 1583.814 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  2251.628 ±(99.9%) 210.127 ns/op [Average]
-  (min, avg, max) = (2191.559, 2251.628, 2320.229), stdev = 54.569
-  CI (99.9%): [2041.502, 2461.755] (assumes normal distribution)
+  1597.191 ±(99.9%) 79.930 ns/op [Average]
+  (min, avg, max) = (1575.630, 1597.191, 1629.355), stdev = 20.758
+  CI (99.9%): [1517.261, 1677.121] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2858,24 +2858,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 79.46% complete, ETA 00:04:04
+# Run progress: 79.46% complete, ETA 00:04:02
 # Fork: 1 of 1
-# Warmup Iteration   1: 5125.685 ns/op
-# Warmup Iteration   2: 4452.698 ns/op
-# Warmup Iteration   3: 4679.597 ns/op
-# Warmup Iteration   4: 4259.762 ns/op
-# Warmup Iteration   5: 4380.188 ns/op
-Iteration   1: 4287.382 ns/op
-Iteration   2: 4253.233 ns/op
-Iteration   3: 4293.013 ns/op
-Iteration   4: 4430.890 ns/op
-Iteration   5: 4447.694 ns/op
+# Warmup Iteration   1: 3395.121 ns/op
+# Warmup Iteration   2: 3254.068 ns/op
+# Warmup Iteration   3: 3089.593 ns/op
+# Warmup Iteration   4: 3096.753 ns/op
+# Warmup Iteration   5: 3092.070 ns/op
+Iteration   1: 3099.237 ns/op
+Iteration   2: 3091.211 ns/op
+Iteration   3: 3203.233 ns/op
+Iteration   4: 3104.715 ns/op
+Iteration   5: 3114.112 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  4342.442 ±(99.9%) 346.206 ns/op [Average]
-  (min, avg, max) = (4253.233, 4342.442, 4447.694), stdev = 89.909
-  CI (99.9%): [3996.236, 4688.648] (assumes normal distribution)
+  3122.502 ±(99.9%) 176.717 ns/op [Average]
+  (min, avg, max) = (3091.211, 3122.502, 3203.233), stdev = 45.893
+  CI (99.9%): [2945.784, 3299.219] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2890,24 +2890,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 80.36% complete, ETA 00:03:54
+# Run progress: 80.36% complete, ETA 00:03:51
 # Fork: 1 of 1
-# Warmup Iteration   1: 45842.869 ns/op
-# Warmup Iteration   2: 43431.785 ns/op
-# Warmup Iteration   3: 41655.939 ns/op
-# Warmup Iteration   4: 41524.337 ns/op
-# Warmup Iteration   5: 42377.688 ns/op
-Iteration   1: 41426.580 ns/op
-Iteration   2: 42660.952 ns/op
-Iteration   3: 42228.673 ns/op
-Iteration   4: 42086.822 ns/op
-Iteration   5: 43395.241 ns/op
+# Warmup Iteration   1: 32493.234 ns/op
+# Warmup Iteration   2: 31108.211 ns/op
+# Warmup Iteration   3: 29939.738 ns/op
+# Warmup Iteration   4: 29898.350 ns/op
+# Warmup Iteration   5: 29768.026 ns/op
+Iteration   1: 30254.738 ns/op
+Iteration   2: 29825.889 ns/op
+Iteration   3: 29755.171 ns/op
+Iteration   4: 29826.422 ns/op
+Iteration   5: 29992.589 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  42359.654 ±(99.9%) 2806.906 ns/op [Average]
-  (min, avg, max) = (41426.580, 42359.654, 43395.241), stdev = 728.945
-  CI (99.9%): [39552.747, 45166.560] (assumes normal distribution)
+  29930.962 ±(99.9%) 773.731 ns/op [Average]
+  (min, avg, max) = (29755.171, 29930.962, 30254.738), stdev = 200.935
+  CI (99.9%): [29157.231, 30704.693] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2922,24 +2922,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 81.25% complete, ETA 00:03:43
+# Run progress: 81.25% complete, ETA 00:03:41
 # Fork: 1 of 1
-# Warmup Iteration   1: 67.767 ns/op
-# Warmup Iteration   2: 66.453 ns/op
-# Warmup Iteration   3: 60.649 ns/op
-# Warmup Iteration   4: 65.003 ns/op
-# Warmup Iteration   5: 59.473 ns/op
-Iteration   1: 59.035 ns/op
-Iteration   2: 58.579 ns/op
-Iteration   3: 59.221 ns/op
-Iteration   4: 58.635 ns/op
-Iteration   5: 58.845 ns/op
+# Warmup Iteration   1: 65.240 ns/op
+# Warmup Iteration   2: 63.026 ns/op
+# Warmup Iteration   3: 55.965 ns/op
+# Warmup Iteration   4: 54.095 ns/op
+# Warmup Iteration   5: 54.161 ns/op
+Iteration   1: 55.233 ns/op
+Iteration   2: 54.682 ns/op
+Iteration   3: 57.591 ns/op
+Iteration   4: 54.254 ns/op
+Iteration   5: 54.698 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  58.863 ±(99.9%) 1.037 ns/op [Average]
-  (min, avg, max) = (58.579, 58.863, 59.221), stdev = 0.269
-  CI (99.9%): [57.826, 59.900] (assumes normal distribution)
+  55.292 ±(99.9%) 5.127 ns/op [Average]
+  (min, avg, max) = (54.254, 55.292, 57.591), stdev = 1.331
+  CI (99.9%): [50.165, 60.418] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2954,24 +2954,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 10)
 
-# Run progress: 82.14% complete, ETA 00:03:32
+# Run progress: 82.14% complete, ETA 00:03:30
 # Fork: 1 of 1
-# Warmup Iteration   1: 101.132 ns/op
-# Warmup Iteration   2: 97.847 ns/op
-# Warmup Iteration   3: 98.783 ns/op
-# Warmup Iteration   4: 89.853 ns/op
-# Warmup Iteration   5: 92.033 ns/op
-Iteration   1: 97.633 ns/op
-Iteration   2: 89.573 ns/op
-Iteration   3: 90.601 ns/op
-Iteration   4: 93.290 ns/op
-Iteration   5: 88.943 ns/op
+# Warmup Iteration   1: 89.069 ns/op
+# Warmup Iteration   2: 86.753 ns/op
+# Warmup Iteration   3: 79.483 ns/op
+# Warmup Iteration   4: 77.015 ns/op
+# Warmup Iteration   5: 77.179 ns/op
+Iteration   1: 76.988 ns/op
+Iteration   2: 76.990 ns/op
+Iteration   3: 77.159 ns/op
+Iteration   4: 77.205 ns/op
+Iteration   5: 77.358 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  92.008 ±(99.9%) 13.694 ns/op [Average]
-  (min, avg, max) = (88.943, 92.008, 97.633), stdev = 3.556
-  CI (99.9%): [78.314, 105.702] (assumes normal distribution)
+  77.140 ±(99.9%) 0.602 ns/op [Average]
+  (min, avg, max) = (76.988, 77.140, 77.358), stdev = 0.156
+  CI (99.9%): [76.538, 77.741] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -2986,24 +2986,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 83.04% complete, ETA 00:03:22
+# Run progress: 83.04% complete, ETA 00:03:20
 # Fork: 1 of 1
-# Warmup Iteration   1: 243.673 ns/op
-# Warmup Iteration   2: 237.902 ns/op
-# Warmup Iteration   3: 240.039 ns/op
-# Warmup Iteration   4: 220.884 ns/op
-# Warmup Iteration   5: 221.145 ns/op
-Iteration   1: 224.410 ns/op
-Iteration   2: 225.296 ns/op
-Iteration   3: 221.575 ns/op
-Iteration   4: 225.392 ns/op
-Iteration   5: 219.307 ns/op
+# Warmup Iteration   1: 220.230 ns/op
+# Warmup Iteration   2: 214.710 ns/op
+# Warmup Iteration   3: 213.730 ns/op
+# Warmup Iteration   4: 199.658 ns/op
+# Warmup Iteration   5: 199.586 ns/op
+Iteration   1: 199.368 ns/op
+Iteration   2: 199.476 ns/op
+Iteration   3: 199.895 ns/op
+Iteration   4: 200.167 ns/op
+Iteration   5: 203.488 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  223.196 ±(99.9%) 10.271 ns/op [Average]
-  (min, avg, max) = (219.307, 223.196, 225.392), stdev = 2.667
-  CI (99.9%): [212.925, 233.467] (assumes normal distribution)
+  200.479 ±(99.9%) 6.595 ns/op [Average]
+  (min, avg, max) = (199.368, 200.479, 203.488), stdev = 1.713
+  CI (99.9%): [193.884, 207.073] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3018,24 +3018,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 100)
 
-# Run progress: 83.93% complete, ETA 00:03:11
+# Run progress: 83.93% complete, ETA 00:03:09
 # Fork: 1 of 1
-# Warmup Iteration   1: 425.461 ns/op
-# Warmup Iteration   2: 418.019 ns/op
-# Warmup Iteration   3: 404.949 ns/op
-# Warmup Iteration   4: 409.814 ns/op
-# Warmup Iteration   5: 401.438 ns/op
-Iteration   1: 397.529 ns/op
-Iteration   2: 410.944 ns/op
-Iteration   3: 415.898 ns/op
-Iteration   4: 422.729 ns/op
-Iteration   5: 394.096 ns/op
+# Warmup Iteration   1: 382.737 ns/op
+# Warmup Iteration   2: 362.994 ns/op
+# Warmup Iteration   3: 373.327 ns/op
+# Warmup Iteration   4: 358.601 ns/op
+# Warmup Iteration   5: 343.433 ns/op
+Iteration   1: 346.132 ns/op
+Iteration   2: 344.022 ns/op
+Iteration   3: 344.560 ns/op
+Iteration   4: 344.110 ns/op
+Iteration   5: 343.210 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  408.239 ±(99.9%) 46.793 ns/op [Average]
-  (min, avg, max) = (394.096, 408.239, 422.729), stdev = 12.152
-  CI (99.9%): [361.446, 455.032] (assumes normal distribution)
+  344.407 ±(99.9%) 4.159 ns/op [Average]
+  (min, avg, max) = (343.210, 344.407, 346.132), stdev = 1.080
+  CI (99.9%): [340.248, 348.566] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3050,24 +3050,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 500)
 
-# Run progress: 84.82% complete, ETA 00:03:00
+# Run progress: 84.82% complete, ETA 00:02:59
 # Fork: 1 of 1
-# Warmup Iteration   1: 1942.393 ns/op
-# Warmup Iteration   2: 1906.825 ns/op
-# Warmup Iteration   3: 1918.933 ns/op
-# Warmup Iteration   4: 1787.668 ns/op
-# Warmup Iteration   5: 1814.359 ns/op
-Iteration   1: 1923.742 ns/op
-Iteration   2: 1901.094 ns/op
-Iteration   3: 1785.737 ns/op
-Iteration   4: 1862.266 ns/op
-Iteration   5: 2116.255 ns/op
+# Warmup Iteration   1: 1733.751 ns/op
+# Warmup Iteration   2: 1686.770 ns/op
+# Warmup Iteration   3: 1572.374 ns/op
+# Warmup Iteration   4: 1571.067 ns/op
+# Warmup Iteration   5: 1571.354 ns/op
+Iteration   1: 1571.467 ns/op
+Iteration   2: 1577.147 ns/op
+Iteration   3: 1578.473 ns/op
+Iteration   4: 1576.585 ns/op
+Iteration   5: 1590.228 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  1917.819 ±(99.9%) 472.482 ns/op [Average]
-  (min, avg, max) = (1785.737, 1917.819, 2116.255), stdev = 122.702
-  CI (99.9%): [1445.337, 2390.301] (assumes normal distribution)
+  1578.780 ±(99.9%) 26.686 ns/op [Average]
+  (min, avg, max) = (1571.467, 1578.780, 1590.228), stdev = 6.930
+  CI (99.9%): [1552.094, 1605.466] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3082,24 +3082,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 1000)
 
-# Run progress: 85.71% complete, ETA 00:02:50
+# Run progress: 85.71% complete, ETA 00:02:48
 # Fork: 1 of 1
-# Warmup Iteration   1: 4856.480 ns/op
-# Warmup Iteration   2: 4014.378 ns/op
-# Warmup Iteration   3: 4027.910 ns/op
-# Warmup Iteration   4: 3846.439 ns/op
-# Warmup Iteration   5: 3849.149 ns/op
-Iteration   1: 3469.743 ns/op
-Iteration   2: 3515.954 ns/op
-Iteration   3: 3489.612 ns/op
-Iteration   4: 3543.035 ns/op
-Iteration   5: 3401.572 ns/op
+# Warmup Iteration   1: 3420.213 ns/op
+# Warmup Iteration   2: 3275.386 ns/op
+# Warmup Iteration   3: 3391.503 ns/op
+# Warmup Iteration   4: 3089.209 ns/op
+# Warmup Iteration   5: 3171.690 ns/op
+Iteration   1: 3084.852 ns/op
+Iteration   2: 3105.605 ns/op
+Iteration   3: 3088.795 ns/op
+Iteration   4: 3107.680 ns/op
+Iteration   5: 3099.821 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  3483.983 ±(99.9%) 206.785 ns/op [Average]
-  (min, avg, max) = (3401.572, 3483.983, 3543.035), stdev = 53.701
-  CI (99.9%): [3277.198, 3690.768] (assumes normal distribution)
+  3097.351 ±(99.9%) 39.001 ns/op [Average]
+  (min, avg, max) = (3084.852, 3097.351, 3107.680), stdev = 10.128
+  CI (99.9%): [3058.350, 3136.352] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3114,24 +3114,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode
 # Parameters: (dataset = random, length = 10000)
 
-# Run progress: 86.61% complete, ETA 00:02:39
+# Run progress: 86.61% complete, ETA 00:02:38
 # Fork: 1 of 1
-# Warmup Iteration   1: 35606.166 ns/op
-# Warmup Iteration   2: 31587.661 ns/op
-# Warmup Iteration   3: 32313.307 ns/op
-# Warmup Iteration   4: 32315.466 ns/op
-# Warmup Iteration   5: 33713.451 ns/op
-Iteration   1: 30149.235 ns/op
-Iteration   2: 30545.997 ns/op
-Iteration   3: 31423.568 ns/op
-Iteration   4: 40015.612 ns/op
-Iteration   5: 36104.779 ns/op
+# Warmup Iteration   1: 33416.100 ns/op
+# Warmup Iteration   2: 30883.140 ns/op
+# Warmup Iteration   3: 31950.928 ns/op
+# Warmup Iteration   4: 29913.016 ns/op
+# Warmup Iteration   5: 29667.128 ns/op
+Iteration   1: 30620.265 ns/op
+Iteration   2: 29899.944 ns/op
+Iteration   3: 29724.898 ns/op
+Iteration   4: 29721.377 ns/op
+Iteration   5: 29747.863 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
-  33647.838 ±(99.9%) 16494.305 ns/op [Average]
-  (min, avg, max) = (30149.235, 33647.838, 40015.612), stdev = 4283.519
-  CI (99.9%): [17153.534, 50142.143] (assumes normal distribution)
+  29942.869 ±(99.9%) 1485.501 ns/op [Average]
+  (min, avg, max) = (29721.377, 29942.869, 30620.265), stdev = 385.780
+  CI (99.9%): [28457.368, 31428.371] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3146,24 +3146,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlDecode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 1)
 
-# Run progress: 87.50% complete, ETA 00:02:28
+# Run progress: 87.50% complete, ETA 00:02:27
 # Fork: 1 of 1
-# Warmup Iteration   1: 80.856 ns/op
-# Warmup Iteration   2: 76.734 ns/op
-# Warmup Iteration   3: 80.772 ns/op
-# Warmup Iteration   4: 76.217 ns/op
-# Warmup Iteration   5: 71.626 ns/op
-Iteration   1: 74.724 ns/op
-Iteration   2: 76.438 ns/op
-Iteration   3: 79.981 ns/op
-Iteration   4: 75.710 ns/op
-Iteration   5: 72.461 ns/op
+# Warmup Iteration   1: 58.911 ns/op
+# Warmup Iteration   2: 59.063 ns/op
+# Warmup Iteration   3: 50.912 ns/op
+# Warmup Iteration   4: 50.837 ns/op
+# Warmup Iteration   5: 50.958 ns/op
+Iteration   1: 50.967 ns/op
+Iteration   2: 50.941 ns/op
+Iteration   3: 51.163 ns/op
+Iteration   4: 51.729 ns/op
+Iteration   5: 50.986 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  75.863 ±(99.9%) 10.578 ns/op [Average]
-  (min, avg, max) = (72.461, 75.863, 79.981), stdev = 2.747
-  CI (99.9%): [65.285, 86.441] (assumes normal distribution)
+  51.157 ±(99.9%) 1.276 ns/op [Average]
+  (min, avg, max) = (50.941, 51.157, 51.729), stdev = 0.331
+  CI (99.9%): [49.881, 52.433] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3178,24 +3178,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 10)
 
-# Run progress: 88.39% complete, ETA 00:02:18
+# Run progress: 88.39% complete, ETA 00:02:16
 # Fork: 1 of 1
-# Warmup Iteration   1: 101.181 ns/op
-# Warmup Iteration   2: 102.697 ns/op
-# Warmup Iteration   3: 87.713 ns/op
-# Warmup Iteration   4: 86.593 ns/op
-# Warmup Iteration   5: 87.228 ns/op
-Iteration   1: 86.814 ns/op
-Iteration   2: 88.760 ns/op
-Iteration   3: 86.882 ns/op
-Iteration   4: 87.165 ns/op
-Iteration   5: 88.067 ns/op
+# Warmup Iteration   1: 89.997 ns/op
+# Warmup Iteration   2: 88.034 ns/op
+# Warmup Iteration   3: 84.139 ns/op
+# Warmup Iteration   4: 78.154 ns/op
+# Warmup Iteration   5: 78.088 ns/op
+Iteration   1: 78.011 ns/op
+Iteration   2: 77.750 ns/op
+Iteration   3: 78.606 ns/op
+Iteration   4: 77.823 ns/op
+Iteration   5: 78.305 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  87.538 ±(99.9%) 3.260 ns/op [Average]
-  (min, avg, max) = (86.814, 87.538, 88.760), stdev = 0.847
-  CI (99.9%): [84.278, 90.798] (assumes normal distribution)
+  78.099 ±(99.9%) 1.368 ns/op [Average]
+  (min, avg, max) = (77.750, 78.099, 78.606), stdev = 0.355
+  CI (99.9%): [76.731, 79.467] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3210,24 +3210,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 50)
 
-# Run progress: 89.29% complete, ETA 00:02:07
+# Run progress: 89.29% complete, ETA 00:02:06
 # Fork: 1 of 1
-# Warmup Iteration   1: 208.336 ns/op
-# Warmup Iteration   2: 200.969 ns/op
-# Warmup Iteration   3: 185.515 ns/op
-# Warmup Iteration   4: 185.528 ns/op
-# Warmup Iteration   5: 184.564 ns/op
-Iteration   1: 187.163 ns/op
-Iteration   2: 196.449 ns/op
-Iteration   3: 187.967 ns/op
-Iteration   4: 187.862 ns/op
-Iteration   5: 190.171 ns/op
+# Warmup Iteration   1: 179.046 ns/op
+# Warmup Iteration   2: 173.450 ns/op
+# Warmup Iteration   3: 163.178 ns/op
+# Warmup Iteration   4: 155.958 ns/op
+# Warmup Iteration   5: 157.168 ns/op
+Iteration   1: 156.431 ns/op
+Iteration   2: 154.542 ns/op
+Iteration   3: 154.809 ns/op
+Iteration   4: 154.536 ns/op
+Iteration   5: 157.956 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  189.922 ±(99.9%) 14.705 ns/op [Average]
-  (min, avg, max) = (187.163, 189.922, 196.449), stdev = 3.819
-  CI (99.9%): [175.217, 204.627] (assumes normal distribution)
+  155.655 ±(99.9%) 5.809 ns/op [Average]
+  (min, avg, max) = (154.536, 155.655, 157.956), stdev = 1.508
+  CI (99.9%): [149.846, 161.463] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3242,24 +3242,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 100)
 
-# Run progress: 90.18% complete, ETA 00:01:57
+# Run progress: 90.18% complete, ETA 00:01:55
 # Fork: 1 of 1
-# Warmup Iteration   1: 324.793 ns/op
-# Warmup Iteration   2: 317.137 ns/op
-# Warmup Iteration   3: 302.870 ns/op
-# Warmup Iteration   4: 334.432 ns/op
-# Warmup Iteration   5: 422.792 ns/op
-Iteration   1: 313.135 ns/op
-Iteration   2: 304.341 ns/op
-Iteration   3: 303.578 ns/op
-Iteration   4: 304.141 ns/op
-Iteration   5: 320.416 ns/op
+# Warmup Iteration   1: 258.184 ns/op
+# Warmup Iteration   2: 250.660 ns/op
+# Warmup Iteration   3: 240.071 ns/op
+# Warmup Iteration   4: 228.137 ns/op
+# Warmup Iteration   5: 228.281 ns/op
+Iteration   1: 231.732 ns/op
+Iteration   2: 229.068 ns/op
+Iteration   3: 228.615 ns/op
+Iteration   4: 229.170 ns/op
+Iteration   5: 229.233 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  309.122 ±(99.9%) 28.691 ns/op [Average]
-  (min, avg, max) = (303.578, 309.122, 320.416), stdev = 7.451
-  CI (99.9%): [280.431, 337.813] (assumes normal distribution)
+  229.564 ±(99.9%) 4.760 ns/op [Average]
+  (min, avg, max) = (228.615, 229.564, 231.732), stdev = 1.236
+  CI (99.9%): [224.804, 234.324] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3274,24 +3274,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 500)
 
-# Run progress: 91.07% complete, ETA 00:01:46
+# Run progress: 91.07% complete, ETA 00:01:45
 # Fork: 1 of 1
-# Warmup Iteration   1: 1424.545 ns/op
-# Warmup Iteration   2: 1348.580 ns/op
-# Warmup Iteration   3: 1271.581 ns/op
-# Warmup Iteration   4: 1257.995 ns/op
-# Warmup Iteration   5: 1251.574 ns/op
-Iteration   1: 1261.629 ns/op
-Iteration   2: 1220.371 ns/op
-Iteration   3: 1263.045 ns/op
-Iteration   4: 1228.575 ns/op
-Iteration   5: 1303.407 ns/op
+# Warmup Iteration   1: 1035.522 ns/op
+# Warmup Iteration   2: 992.587 ns/op
+# Warmup Iteration   3: 900.585 ns/op
+# Warmup Iteration   4: 926.850 ns/op
+# Warmup Iteration   5: 913.724 ns/op
+Iteration   1: 887.490 ns/op
+Iteration   2: 887.289 ns/op
+Iteration   3: 888.274 ns/op
+Iteration   4: 890.644 ns/op
+Iteration   5: 973.003 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  1255.405 ±(99.9%) 126.962 ns/op [Average]
-  (min, avg, max) = (1220.371, 1255.405, 1303.407), stdev = 32.972
-  CI (99.9%): [1128.444, 1382.367] (assumes normal distribution)
+  905.340 ±(99.9%) 145.740 ns/op [Average]
+  (min, avg, max) = (887.289, 905.340, 973.003), stdev = 37.848
+  CI (99.9%): [759.600, 1051.080] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3306,24 +3306,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 1000)
 
-# Run progress: 91.96% complete, ETA 00:01:35
+# Run progress: 91.96% complete, ETA 00:01:34
 # Fork: 1 of 1
-# Warmup Iteration   1: 2881.122 ns/op
-# Warmup Iteration   2: 2707.267 ns/op
-# Warmup Iteration   3: 2580.649 ns/op
-# Warmup Iteration   4: 2517.693 ns/op
-# Warmup Iteration   5: 2435.914 ns/op
-Iteration   1: 2478.183 ns/op
-Iteration   2: 2448.618 ns/op
-Iteration   3: 2421.841 ns/op
-Iteration   4: 2597.047 ns/op
-Iteration   5: 2443.866 ns/op
+# Warmup Iteration   1: 2029.464 ns/op
+# Warmup Iteration   2: 1954.609 ns/op
+# Warmup Iteration   3: 1773.388 ns/op
+# Warmup Iteration   4: 1760.846 ns/op
+# Warmup Iteration   5: 1758.368 ns/op
+Iteration   1: 1814.492 ns/op
+Iteration   2: 1759.106 ns/op
+Iteration   3: 1758.909 ns/op
+Iteration   4: 1768.391 ns/op
+Iteration   5: 1766.503 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  2477.911 ±(99.9%) 267.851 ns/op [Average]
-  (min, avg, max) = (2421.841, 2477.911, 2597.047), stdev = 69.560
-  CI (99.9%): [2210.060, 2745.762] (assumes normal distribution)
+  1773.480 ±(99.9%) 89.801 ns/op [Average]
+  (min, avg, max) = (1758.909, 1773.480, 1814.492), stdev = 23.321
+  CI (99.9%): [1683.679, 1863.281] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3338,24 +3338,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = fixed, length = 10000)
 
-# Run progress: 92.86% complete, ETA 00:01:25
+# Run progress: 92.86% complete, ETA 00:01:24
 # Fork: 1 of 1
-# Warmup Iteration   1: 28764.378 ns/op
-# Warmup Iteration   2: 27027.622 ns/op
-# Warmup Iteration   3: 26550.323 ns/op
-# Warmup Iteration   4: 23901.414 ns/op
-# Warmup Iteration   5: 24167.490 ns/op
-Iteration   1: 24955.185 ns/op
-Iteration   2: 23877.557 ns/op
-Iteration   3: 23956.396 ns/op
-Iteration   4: 23955.875 ns/op
-Iteration   5: 27998.159 ns/op
+# Warmup Iteration   1: 20132.911 ns/op
+# Warmup Iteration   2: 18955.088 ns/op
+# Warmup Iteration   3: 16965.811 ns/op
+# Warmup Iteration   4: 16925.111 ns/op
+# Warmup Iteration   5: 17020.932 ns/op
+Iteration   1: 16993.211 ns/op
+Iteration   2: 17011.887 ns/op
+Iteration   3: 18220.794 ns/op
+Iteration   4: 17033.701 ns/op
+Iteration   5: 17102.626 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  24948.634 ±(99.9%) 6784.393 ns/op [Average]
-  (min, avg, max) = (23877.557, 24948.634, 27998.159), stdev = 1761.885
-  CI (99.9%): [18164.241, 31733.027] (assumes normal distribution)
+  17272.444 ±(99.9%) 2047.609 ns/op [Average]
+  (min, avg, max) = (16993.211, 17272.444, 18220.794), stdev = 531.758
+  CI (99.9%): [15224.835, 19320.053] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3370,24 +3370,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = random, length = 1)
 
-# Run progress: 93.75% complete, ETA 00:01:14
+# Run progress: 93.75% complete, ETA 00:01:13
 # Fork: 1 of 1
-# Warmup Iteration   1: 73.513 ns/op
-# Warmup Iteration   2: 71.029 ns/op
-# Warmup Iteration   3: 70.848 ns/op
-# Warmup Iteration   4: 66.133 ns/op
-# Warmup Iteration   5: 67.015 ns/op
-Iteration   1: 66.500 ns/op
-Iteration   2: 61.795 ns/op
-Iteration   3: 62.131 ns/op
-Iteration   4: 63.738 ns/op
-Iteration   5: 70.826 ns/op
+# Warmup Iteration   1: 59.715 ns/op
+# Warmup Iteration   2: 58.526 ns/op
+# Warmup Iteration   3: 51.118 ns/op
+# Warmup Iteration   4: 51.052 ns/op
+# Warmup Iteration   5: 51.032 ns/op
+Iteration   1: 50.944 ns/op
+Iteration   2: 51.088 ns/op
+Iteration   3: 50.869 ns/op
+Iteration   4: 51.168 ns/op
+Iteration   5: 51.296 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  64.998 ±(99.9%) 14.444 ns/op [Average]
-  (min, avg, max) = (61.795, 64.998, 70.826), stdev = 3.751
-  CI (99.9%): [50.554, 79.442] (assumes normal distribution)
+  51.073 ±(99.9%) 0.660 ns/op [Average]
+  (min, avg, max) = (50.869, 51.073, 51.296), stdev = 0.171
+  CI (99.9%): [50.414, 51.733] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3404,22 +3404,22 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 
 # Run progress: 94.64% complete, ETA 00:01:03
 # Fork: 1 of 1
-# Warmup Iteration   1: 107.361 ns/op
-# Warmup Iteration   2: 101.689 ns/op
-# Warmup Iteration   3: 88.033 ns/op
-# Warmup Iteration   4: 83.542 ns/op
-# Warmup Iteration   5: 77.481 ns/op
-Iteration   1: 78.840 ns/op
-Iteration   2: 80.322 ns/op
-Iteration   3: 78.978 ns/op
-Iteration   4: 80.584 ns/op
-Iteration   5: 80.241 ns/op
+# Warmup Iteration   1: 90.060 ns/op
+# Warmup Iteration   2: 88.050 ns/op
+# Warmup Iteration   3: 81.592 ns/op
+# Warmup Iteration   4: 78.382 ns/op
+# Warmup Iteration   5: 78.524 ns/op
+Iteration   1: 78.432 ns/op
+Iteration   2: 78.518 ns/op
+Iteration   3: 78.259 ns/op
+Iteration   4: 79.026 ns/op
+Iteration   5: 78.832 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  79.793 ±(99.9%) 3.151 ns/op [Average]
-  (min, avg, max) = (78.840, 79.793, 80.584), stdev = 0.818
-  CI (99.9%): [76.642, 82.944] (assumes normal distribution)
+  78.613 ±(99.9%) 1.195 ns/op [Average]
+  (min, avg, max) = (78.259, 78.613, 79.026), stdev = 0.310
+  CI (99.9%): [77.418, 79.808] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3434,24 +3434,24 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 # Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode
 # Parameters: (dataset = random, length = 50)
 
-# Run progress: 95.54% complete, ETA 00:00:53
+# Run progress: 95.54% complete, ETA 00:00:52
 # Fork: 1 of 1
-# Warmup Iteration   1: 167.543 ns/op
-# Warmup Iteration   2: 171.438 ns/op
-# Warmup Iteration   3: 157.162 ns/op
-# Warmup Iteration   4: 142.046 ns/op
-# Warmup Iteration   5: 146.777 ns/op
-Iteration   1: 143.840 ns/op
-Iteration   2: 143.166 ns/op
-Iteration   3: 142.420 ns/op
-Iteration   4: 143.465 ns/op
-Iteration   5: 144.041 ns/op
+# Warmup Iteration   1: 195.309 ns/op
+# Warmup Iteration   2: 175.548 ns/op
+# Warmup Iteration   3: 154.953 ns/op
+# Warmup Iteration   4: 157.342 ns/op
+# Warmup Iteration   5: 155.879 ns/op
+Iteration   1: 158.420 ns/op
+Iteration   2: 156.253 ns/op
+Iteration   3: 154.754 ns/op
+Iteration   4: 155.857 ns/op
+Iteration   5: 158.143 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  143.386 ±(99.9%) 2.452 ns/op [Average]
-  (min, avg, max) = (142.420, 143.386, 144.041), stdev = 0.637
-  CI (99.9%): [140.934, 145.839] (assumes normal distribution)
+  156.685 ±(99.9%) 6.008 ns/op [Average]
+  (min, avg, max) = (154.754, 156.685, 158.420), stdev = 1.560
+  CI (99.9%): [150.677, 162.693] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3468,22 +3468,22 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 
 # Run progress: 96.43% complete, ETA 00:00:42
 # Fork: 1 of 1
-# Warmup Iteration   1: 353.800 ns/op
-# Warmup Iteration   2: 253.867 ns/op
-# Warmup Iteration   3: 248.794 ns/op
-# Warmup Iteration   4: 230.912 ns/op
-# Warmup Iteration   5: 228.403 ns/op
-Iteration   1: 234.751 ns/op
-Iteration   2: 235.345 ns/op
-Iteration   3: 234.608 ns/op
-Iteration   4: 245.023 ns/op
-Iteration   5: 254.357 ns/op
+# Warmup Iteration   1: 259.183 ns/op
+# Warmup Iteration   2: 250.075 ns/op
+# Warmup Iteration   3: 241.311 ns/op
+# Warmup Iteration   4: 228.416 ns/op
+# Warmup Iteration   5: 228.605 ns/op
+Iteration   1: 229.281 ns/op
+Iteration   2: 230.694 ns/op
+Iteration   3: 229.391 ns/op
+Iteration   4: 229.252 ns/op
+Iteration   5: 229.108 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  240.817 ±(99.9%) 33.698 ns/op [Average]
-  (min, avg, max) = (234.608, 240.817, 254.357), stdev = 8.751
-  CI (99.9%): [207.119, 274.514] (assumes normal distribution)
+  229.545 ±(99.9%) 2.502 ns/op [Average]
+  (min, avg, max) = (229.108, 229.545, 230.694), stdev = 0.650
+  CI (99.9%): [227.043, 232.047] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3500,22 +3500,22 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 
 # Run progress: 97.32% complete, ETA 00:00:31
 # Fork: 1 of 1
-# Warmup Iteration   1: 1023.401 ns/op
-# Warmup Iteration   2: 991.581 ns/op
-# Warmup Iteration   3: 884.389 ns/op
-# Warmup Iteration   4: 878.924 ns/op
-# Warmup Iteration   5: 905.211 ns/op
-Iteration   1: 888.633 ns/op
-Iteration   2: 922.132 ns/op
-Iteration   3: 891.274 ns/op
-Iteration   4: 879.884 ns/op
-Iteration   5: 884.309 ns/op
+# Warmup Iteration   1: 1030.379 ns/op
+# Warmup Iteration   2: 993.810 ns/op
+# Warmup Iteration   3: 894.341 ns/op
+# Warmup Iteration   4: 884.743 ns/op
+# Warmup Iteration   5: 886.117 ns/op
+Iteration   1: 888.343 ns/op
+Iteration   2: 889.565 ns/op
+Iteration   3: 889.151 ns/op
+Iteration   4: 891.295 ns/op
+Iteration   5: 894.236 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  893.246 ±(99.9%) 64.375 ns/op [Average]
-  (min, avg, max) = (879.884, 893.246, 922.132), stdev = 16.718
-  CI (99.9%): [828.871, 957.622] (assumes normal distribution)
+  890.518 ±(99.9%) 9.018 ns/op [Average]
+  (min, avg, max) = (888.343, 890.518, 894.236), stdev = 2.342
+  CI (99.9%): [881.501, 899.536] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3532,22 +3532,22 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 
 # Run progress: 98.21% complete, ETA 00:00:21
 # Fork: 1 of 1
-# Warmup Iteration   1: 2096.179 ns/op
-# Warmup Iteration   2: 1979.492 ns/op
-# Warmup Iteration   3: 1816.463 ns/op
-# Warmup Iteration   4: 1816.713 ns/op
-# Warmup Iteration   5: 1775.394 ns/op
-Iteration   1: 1781.279 ns/op
-Iteration   2: 1839.397 ns/op
-Iteration   3: 1767.706 ns/op
-Iteration   4: 1929.800 ns/op
-Iteration   5: 1791.833 ns/op
+# Warmup Iteration   1: 2031.436 ns/op
+# Warmup Iteration   2: 1957.162 ns/op
+# Warmup Iteration   3: 1783.391 ns/op
+# Warmup Iteration   4: 1754.026 ns/op
+# Warmup Iteration   5: 1800.942 ns/op
+Iteration   1: 1758.618 ns/op
+Iteration   2: 1761.724 ns/op
+Iteration   3: 1757.553 ns/op
+Iteration   4: 1760.911 ns/op
+Iteration   5: 1762.914 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  1822.003 ±(99.9%) 254.256 ns/op [Average]
-  (min, avg, max) = (1767.706, 1822.003, 1929.800), stdev = 66.030
-  CI (99.9%): [1567.747, 2076.259] (assumes normal distribution)
+  1760.344 ±(99.9%) 8.523 ns/op [Average]
+  (min, avg, max) = (1757.553, 1760.344, 1762.914), stdev = 2.214
+  CI (99.9%): [1751.820, 1768.867] (assumes normal distribution)
 
 
 # JMH version: 1.20
@@ -3564,138 +3564,138 @@ Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
 
 # Run progress: 99.11% complete, ETA 00:00:10
 # Fork: 1 of 1
-# Warmup Iteration   1: 21687.755 ns/op
-# Warmup Iteration   2: 19126.188 ns/op
-# Warmup Iteration   3: 17053.772 ns/op
-# Warmup Iteration   4: 17395.080 ns/op
-# Warmup Iteration   5: 17140.307 ns/op
-Iteration   1: 17442.791 ns/op
-Iteration   2: 17476.703 ns/op
-Iteration   3: 17044.060 ns/op
-Iteration   4: 17003.070 ns/op
-Iteration   5: 17276.279 ns/op
+# Warmup Iteration   1: 20423.882 ns/op
+# Warmup Iteration   2: 18971.359 ns/op
+# Warmup Iteration   3: 17118.423 ns/op
+# Warmup Iteration   4: 16965.129 ns/op
+# Warmup Iteration   5: 17866.898 ns/op
+Iteration   1: 16994.156 ns/op
+Iteration   2: 17008.795 ns/op
+Iteration   3: 17046.342 ns/op
+Iteration   4: 17011.509 ns/op
+Iteration   5: 17068.204 ns/op
 
 
 Result "com.komanov.jwt.base64.jmh.Base64Benchmarks.jdkUrlEncode":
-  17248.581 ±(99.9%) 845.014 ns/op [Average]
-  (min, avg, max) = (17003.070, 17248.581, 17476.703), stdev = 219.447
-  CI (99.9%): [16403.567, 18093.595] (assumes normal distribution)
+  17025.801 ±(99.9%) 117.346 ns/op [Average]
+  (min, avg, max) = (16994.156, 17025.801, 17068.204), stdev = 30.474
+  CI (99.9%): [16908.455, 17143.147] (assumes normal distribution)
 
 
-# Run complete. Total time: 00:19:51
+# Run complete. Total time: 00:19:39
 
-Benchmark                          (dataset)  (length)  Mode  Cnt       Score       Error  Units
-Base64Benchmarks.commonsDecode         fixed         1  avgt    5     802.745 ±    67.895  ns/op
-Base64Benchmarks.commonsDecode         fixed        10  avgt    5     932.340 ±   169.968  ns/op
-Base64Benchmarks.commonsDecode         fixed        50  avgt    5    1561.022 ±   165.441  ns/op
-Base64Benchmarks.commonsDecode         fixed       100  avgt    5    2292.806 ±    89.212  ns/op
-Base64Benchmarks.commonsDecode         fixed       500  avgt    5    8793.385 ±   377.165  ns/op
-Base64Benchmarks.commonsDecode         fixed      1000  avgt    5   11784.187 ±   791.043  ns/op
-Base64Benchmarks.commonsDecode         fixed     10000  avgt    5  119868.782 ±  7684.363  ns/op
-Base64Benchmarks.commonsDecode        random         1  avgt    5     778.648 ±   136.622  ns/op
-Base64Benchmarks.commonsDecode        random        10  avgt    5     802.928 ±    89.715  ns/op
-Base64Benchmarks.commonsDecode        random        50  avgt    5    1101.113 ±    43.397  ns/op
-Base64Benchmarks.commonsDecode        random       100  avgt    5    1564.374 ±    91.434  ns/op
-Base64Benchmarks.commonsDecode        random       500  avgt    5    5051.985 ±   294.013  ns/op
-Base64Benchmarks.commonsDecode        random      1000  avgt    5    8559.200 ±   715.446  ns/op
-Base64Benchmarks.commonsDecode        random     10000  avgt    5   81089.868 ±  1399.177  ns/op
-Base64Benchmarks.commonsEncode         fixed         1  avgt    5     810.643 ±    81.719  ns/op
-Base64Benchmarks.commonsEncode         fixed        10  avgt    5     907.102 ±    76.195  ns/op
-Base64Benchmarks.commonsEncode         fixed        50  avgt    5    1470.613 ±   145.976  ns/op
-Base64Benchmarks.commonsEncode         fixed       100  avgt    5    2202.726 ±   294.822  ns/op
-Base64Benchmarks.commonsEncode         fixed       500  avgt    5    7795.946 ±  1355.355  ns/op
-Base64Benchmarks.commonsEncode         fixed      1000  avgt    5   14767.001 ±  1181.539  ns/op
-Base64Benchmarks.commonsEncode         fixed     10000  avgt    5  132433.449 ± 16895.104  ns/op
-Base64Benchmarks.commonsEncode        random         1  avgt    5     800.404 ±    91.540  ns/op
-Base64Benchmarks.commonsEncode        random        10  avgt    5     906.693 ±   141.831  ns/op
-Base64Benchmarks.commonsEncode        random        50  avgt    5    1285.792 ±   184.537  ns/op
-Base64Benchmarks.commonsEncode        random       100  avgt    5    1782.091 ±   177.093  ns/op
-Base64Benchmarks.commonsEncode        random       500  avgt    5    5539.365 ±   758.360  ns/op
-Base64Benchmarks.commonsEncode        random      1000  avgt    5   11657.365 ±   453.882  ns/op
-Base64Benchmarks.commonsEncode        random     10000  avgt    5   95528.175 ±  4977.689  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed         1  avgt    5     794.438 ±    60.857  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed        10  avgt    5     903.584 ±   109.892  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed        50  avgt    5    1471.873 ±    91.162  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed       100  avgt    5    2299.082 ±   790.702  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed       500  avgt    5    8303.158 ±  1098.821  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed      1000  avgt    5   12206.944 ±  1765.480  ns/op
-Base64Benchmarks.commonsUrlDecode      fixed     10000  avgt    5  123796.610 ± 16733.189  ns/op
-Base64Benchmarks.commonsUrlDecode     random         1  avgt    5     787.824 ±    96.019  ns/op
-Base64Benchmarks.commonsUrlDecode     random        10  avgt    5     833.447 ±   132.745  ns/op
-Base64Benchmarks.commonsUrlDecode     random        50  avgt    5    1080.333 ±   131.514  ns/op
-Base64Benchmarks.commonsUrlDecode     random       100  avgt    5    1558.303 ±   113.952  ns/op
-Base64Benchmarks.commonsUrlDecode     random       500  avgt    5    5049.284 ±   375.842  ns/op
-Base64Benchmarks.commonsUrlDecode     random      1000  avgt    5    8747.726 ±   457.440  ns/op
-Base64Benchmarks.commonsUrlDecode     random     10000  avgt    5   96564.408 ± 16711.278  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed         1  avgt    5     813.980 ±    77.299  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed        10  avgt    5     923.231 ±   187.530  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed        50  avgt    5    1432.273 ±   211.654  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed       100  avgt    5    2096.265 ±   155.702  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed       500  avgt    5    7511.193 ±   604.289  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed      1000  avgt    5   14962.404 ±  1089.004  ns/op
-Base64Benchmarks.commonsUrlEncode      fixed     10000  avgt    5  130180.292 ± 10303.469  ns/op
-Base64Benchmarks.commonsUrlEncode     random         1  avgt    5     794.465 ±    34.569  ns/op
-Base64Benchmarks.commonsUrlEncode     random        10  avgt    5     875.830 ±    64.084  ns/op
-Base64Benchmarks.commonsUrlEncode     random        50  avgt    5    1273.855 ±   112.140  ns/op
-Base64Benchmarks.commonsUrlEncode     random       100  avgt    5    1780.893 ±   182.156  ns/op
-Base64Benchmarks.commonsUrlEncode     random       500  avgt    5    5952.479 ±    40.173  ns/op
-Base64Benchmarks.commonsUrlEncode     random      1000  avgt    5   11145.965 ±  1039.482  ns/op
-Base64Benchmarks.commonsUrlEncode     random     10000  avgt    5   97639.766 ±  5089.403  ns/op
-Base64Benchmarks.jdkDecode             fixed         1  avgt    5      71.436 ±     5.696  ns/op
-Base64Benchmarks.jdkDecode             fixed        10  avgt    5     123.741 ±    22.072  ns/op
-Base64Benchmarks.jdkDecode             fixed        50  avgt    5     363.456 ±    17.719  ns/op
-Base64Benchmarks.jdkDecode             fixed       100  avgt    5     661.226 ±    82.970  ns/op
-Base64Benchmarks.jdkDecode             fixed       500  avgt    5    3353.083 ±   212.933  ns/op
-Base64Benchmarks.jdkDecode             fixed      1000  avgt    5    6443.097 ±  1701.866  ns/op
-Base64Benchmarks.jdkDecode             fixed     10000  avgt    5   97549.639 ± 16751.361  ns/op
-Base64Benchmarks.jdkDecode            random         1  avgt    5      62.296 ±    17.290  ns/op
-Base64Benchmarks.jdkDecode            random        10  avgt    5      90.931 ±     5.481  ns/op
-Base64Benchmarks.jdkDecode            random        50  avgt    5     226.908 ±    22.041  ns/op
-Base64Benchmarks.jdkDecode            random       100  avgt    5     415.557 ±    47.315  ns/op
-Base64Benchmarks.jdkDecode            random       500  avgt    5    1806.914 ±   218.706  ns/op
-Base64Benchmarks.jdkDecode            random      1000  avgt    5    3859.779 ±  2131.874  ns/op
-Base64Benchmarks.jdkDecode            random     10000  avgt    5   37933.678 ± 28356.702  ns/op
-Base64Benchmarks.jdkEncode             fixed         1  avgt    5      71.611 ±     8.854  ns/op
-Base64Benchmarks.jdkEncode             fixed        10  avgt    5      87.917 ±     9.109  ns/op
-Base64Benchmarks.jdkEncode             fixed        50  avgt    5     209.200 ±    90.528  ns/op
-Base64Benchmarks.jdkEncode             fixed       100  avgt    5     309.600 ±    41.651  ns/op
-Base64Benchmarks.jdkEncode             fixed       500  avgt    5    1251.699 ±    93.036  ns/op
-Base64Benchmarks.jdkEncode             fixed      1000  avgt    5    2526.211 ±    46.622  ns/op
-Base64Benchmarks.jdkEncode             fixed     10000  avgt    5   24658.403 ±  1380.923  ns/op
-Base64Benchmarks.jdkEncode            random         1  avgt    5      66.580 ±     5.284  ns/op
-Base64Benchmarks.jdkEncode            random        10  avgt    5      81.818 ±     3.844  ns/op
-Base64Benchmarks.jdkEncode            random        50  avgt    5     146.309 ±     5.066  ns/op
-Base64Benchmarks.jdkEncode            random       100  avgt    5     243.334 ±    19.972  ns/op
-Base64Benchmarks.jdkEncode            random       500  avgt    5     961.900 ±    96.419  ns/op
-Base64Benchmarks.jdkEncode            random      1000  avgt    5    1854.043 ±    93.932  ns/op
-Base64Benchmarks.jdkEncode            random     10000  avgt    5   18681.002 ±  5658.187  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed         1  avgt    5      64.036 ±     0.978  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed        10  avgt    5      99.565 ±     7.463  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed        50  avgt    5     268.952 ±    14.749  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed       100  avgt    5     474.160 ±    52.893  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed       500  avgt    5    2251.628 ±   210.127  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed      1000  avgt    5    4342.442 ±   346.206  ns/op
-Base64Benchmarks.jdkUrlDecode          fixed     10000  avgt    5   42359.654 ±  2806.906  ns/op
-Base64Benchmarks.jdkUrlDecode         random         1  avgt    5      58.863 ±     1.037  ns/op
-Base64Benchmarks.jdkUrlDecode         random        10  avgt    5      92.008 ±    13.694  ns/op
-Base64Benchmarks.jdkUrlDecode         random        50  avgt    5     223.196 ±    10.271  ns/op
-Base64Benchmarks.jdkUrlDecode         random       100  avgt    5     408.239 ±    46.793  ns/op
-Base64Benchmarks.jdkUrlDecode         random       500  avgt    5    1917.819 ±   472.482  ns/op
-Base64Benchmarks.jdkUrlDecode         random      1000  avgt    5    3483.983 ±   206.785  ns/op
-Base64Benchmarks.jdkUrlDecode         random     10000  avgt    5   33647.838 ± 16494.305  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed         1  avgt    5      75.863 ±    10.578  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed        10  avgt    5      87.538 ±     3.260  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed        50  avgt    5     189.922 ±    14.705  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed       100  avgt    5     309.122 ±    28.691  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed       500  avgt    5    1255.405 ±   126.962  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed      1000  avgt    5    2477.911 ±   267.851  ns/op
-Base64Benchmarks.jdkUrlEncode          fixed     10000  avgt    5   24948.634 ±  6784.393  ns/op
-Base64Benchmarks.jdkUrlEncode         random         1  avgt    5      64.998 ±    14.444  ns/op
-Base64Benchmarks.jdkUrlEncode         random        10  avgt    5      79.793 ±     3.151  ns/op
-Base64Benchmarks.jdkUrlEncode         random        50  avgt    5     143.386 ±     2.452  ns/op
-Base64Benchmarks.jdkUrlEncode         random       100  avgt    5     240.817 ±    33.698  ns/op
-Base64Benchmarks.jdkUrlEncode         random       500  avgt    5     893.246 ±    64.375  ns/op
-Base64Benchmarks.jdkUrlEncode         random      1000  avgt    5    1822.003 ±   254.256  ns/op
-Base64Benchmarks.jdkUrlEncode         random     10000  avgt    5   17248.581 ±   845.014  ns/op
+Benchmark                          (dataset)  (length)  Mode  Cnt      Score      Error  Units
+Base64Benchmarks.commonsDecode         fixed         1  avgt    5    723.201 ±   72.651  ns/op
+Base64Benchmarks.commonsDecode         fixed        10  avgt    5    826.957 ±  133.453  ns/op
+Base64Benchmarks.commonsDecode         fixed        50  avgt    5   1250.009 ±  156.194  ns/op
+Base64Benchmarks.commonsDecode         fixed       100  avgt    5   1794.081 ±  163.223  ns/op
+Base64Benchmarks.commonsDecode         fixed       500  avgt    5   6649.608 ±  331.638  ns/op
+Base64Benchmarks.commonsDecode         fixed      1000  avgt    5  12413.720 ±  141.525  ns/op
+Base64Benchmarks.commonsDecode         fixed     10000  avgt    5  85657.630 ± 1315.967  ns/op
+Base64Benchmarks.commonsDecode        random         1  avgt    5    715.909 ±   40.045  ns/op
+Base64Benchmarks.commonsDecode        random        10  avgt    5    806.228 ±   62.625  ns/op
+Base64Benchmarks.commonsDecode        random        50  avgt    5   1271.929 ±  170.943  ns/op
+Base64Benchmarks.commonsDecode        random       100  avgt    5   1977.554 ±  704.099  ns/op
+Base64Benchmarks.commonsDecode        random       500  avgt    5   6497.753 ±  138.437  ns/op
+Base64Benchmarks.commonsDecode        random      1000  avgt    5  11312.989 ±   95.877  ns/op
+Base64Benchmarks.commonsDecode        random     10000  avgt    5  87241.061 ± 3955.849  ns/op
+Base64Benchmarks.commonsEncode         fixed         1  avgt    5    728.012 ±  143.632  ns/op
+Base64Benchmarks.commonsEncode         fixed        10  avgt    5    803.940 ±   66.386  ns/op
+Base64Benchmarks.commonsEncode         fixed        50  avgt    5   1161.876 ±   12.591  ns/op
+Base64Benchmarks.commonsEncode         fixed       100  avgt    5   1678.729 ±  116.961  ns/op
+Base64Benchmarks.commonsEncode         fixed       500  avgt    5   5885.663 ±  497.648  ns/op
+Base64Benchmarks.commonsEncode         fixed      1000  avgt    5  11004.750 ±  154.878  ns/op
+Base64Benchmarks.commonsEncode         fixed     10000  avgt    5  92254.192 ± 1490.118  ns/op
+Base64Benchmarks.commonsEncode        random         1  avgt    5    704.546 ±   30.774  ns/op
+Base64Benchmarks.commonsEncode        random        10  avgt    5    796.988 ±   51.697  ns/op
+Base64Benchmarks.commonsEncode        random        50  avgt    5   1163.714 ±   88.425  ns/op
+Base64Benchmarks.commonsEncode        random       100  avgt    5   1661.536 ±   15.111  ns/op
+Base64Benchmarks.commonsEncode        random       500  avgt    5   5834.311 ±  302.302  ns/op
+Base64Benchmarks.commonsEncode        random      1000  avgt    5  11079.813 ±  144.384  ns/op
+Base64Benchmarks.commonsEncode        random     10000  avgt    5  92113.864 ± 4573.767  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed         1  avgt    5    717.747 ±   47.224  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed        10  avgt    5    798.409 ±   58.175  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed        50  avgt    5   1177.410 ±   61.962  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed       100  avgt    5   1698.817 ±   73.071  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed       500  avgt    5   5881.645 ±   58.902  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed      1000  avgt    5  11207.674 ±  806.818  ns/op
+Base64Benchmarks.commonsUrlDecode      fixed     10000  avgt    5  84301.193 ± 1929.848  ns/op
+Base64Benchmarks.commonsUrlDecode     random         1  avgt    5    702.697 ±   16.441  ns/op
+Base64Benchmarks.commonsUrlDecode     random        10  avgt    5    805.773 ±   79.030  ns/op
+Base64Benchmarks.commonsUrlDecode     random        50  avgt    5   1190.038 ±  155.674  ns/op
+Base64Benchmarks.commonsUrlDecode     random       100  avgt    5   1710.143 ±   57.327  ns/op
+Base64Benchmarks.commonsUrlDecode     random       500  avgt    5   5868.384 ±   56.326  ns/op
+Base64Benchmarks.commonsUrlDecode     random      1000  avgt    5  11063.538 ±  173.063  ns/op
+Base64Benchmarks.commonsUrlDecode     random     10000  avgt    5  85891.588 ±  645.137  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed         1  avgt    5    715.696 ±  101.344  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed        10  avgt    5    803.746 ±   69.860  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed        50  avgt    5   1152.211 ±   42.632  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed       100  avgt    5   1622.583 ±  101.528  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed       500  avgt    5   5394.715 ±    8.296  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed      1000  avgt    5  10688.094 ±  500.493  ns/op
+Base64Benchmarks.commonsUrlEncode      fixed     10000  avgt    5  91184.164 ±  956.479  ns/op
+Base64Benchmarks.commonsUrlEncode     random         1  avgt    5    725.476 ±  136.252  ns/op
+Base64Benchmarks.commonsUrlEncode     random        10  avgt    5    788.343 ±   45.789  ns/op
+Base64Benchmarks.commonsUrlEncode     random        50  avgt    5   1163.921 ±  166.607  ns/op
+Base64Benchmarks.commonsUrlEncode     random       100  avgt    5   1604.685 ±   27.446  ns/op
+Base64Benchmarks.commonsUrlEncode     random       500  avgt    5   5424.164 ±   73.647  ns/op
+Base64Benchmarks.commonsUrlEncode     random      1000  avgt    5  10676.445 ±  729.282  ns/op
+Base64Benchmarks.commonsUrlEncode     random     10000  avgt    5  92667.434 ± 4112.066  ns/op
+Base64Benchmarks.jdkDecode             fixed         1  avgt    5     57.575 ±    0.983  ns/op
+Base64Benchmarks.jdkDecode             fixed        10  avgt    5     92.064 ±    3.785  ns/op
+Base64Benchmarks.jdkDecode             fixed        50  avgt    5    264.195 ±   15.703  ns/op
+Base64Benchmarks.jdkDecode             fixed       100  avgt    5    458.550 ±   26.830  ns/op
+Base64Benchmarks.jdkDecode             fixed       500  avgt    5   2388.724 ±   94.473  ns/op
+Base64Benchmarks.jdkDecode             fixed      1000  avgt    5   4341.021 ±  676.841  ns/op
+Base64Benchmarks.jdkDecode             fixed     10000  avgt    5  64972.012 ± 5339.923  ns/op
+Base64Benchmarks.jdkDecode            random         1  avgt    5     57.346 ±    0.325  ns/op
+Base64Benchmarks.jdkDecode            random        10  avgt    5     91.446 ±    3.223  ns/op
+Base64Benchmarks.jdkDecode            random        50  avgt    5    263.654 ±   11.116  ns/op
+Base64Benchmarks.jdkDecode            random       100  avgt    5    456.337 ±    2.099  ns/op
+Base64Benchmarks.jdkDecode            random       500  avgt    5   2337.644 ±   67.513  ns/op
+Base64Benchmarks.jdkDecode            random      1000  avgt    5   4264.665 ±   24.740  ns/op
+Base64Benchmarks.jdkDecode            random     10000  avgt    5  48300.812 ±  328.858  ns/op
+Base64Benchmarks.jdkEncode             fixed         1  avgt    5     49.139 ±    1.999  ns/op
+Base64Benchmarks.jdkEncode             fixed        10  avgt    5     77.998 ±    1.882  ns/op
+Base64Benchmarks.jdkEncode             fixed        50  avgt    5    143.783 ±    7.261  ns/op
+Base64Benchmarks.jdkEncode             fixed       100  avgt    5    236.073 ±   27.090  ns/op
+Base64Benchmarks.jdkEncode             fixed       500  avgt    5    901.618 ±   47.299  ns/op
+Base64Benchmarks.jdkEncode             fixed      1000  avgt    5   1808.546 ±  100.874  ns/op
+Base64Benchmarks.jdkEncode             fixed     10000  avgt    5  17451.711 ± 2493.254  ns/op
+Base64Benchmarks.jdkEncode            random         1  avgt    5     49.273 ±    1.816  ns/op
+Base64Benchmarks.jdkEncode            random        10  avgt    5     79.165 ±    6.861  ns/op
+Base64Benchmarks.jdkEncode            random        50  avgt    5    143.228 ±    1.694  ns/op
+Base64Benchmarks.jdkEncode            random       100  avgt    5    232.467 ±    2.190  ns/op
+Base64Benchmarks.jdkEncode            random       500  avgt    5    900.436 ±   46.074  ns/op
+Base64Benchmarks.jdkEncode            random      1000  avgt    5   1812.907 ±  294.767  ns/op
+Base64Benchmarks.jdkEncode            random     10000  avgt    5  17083.060 ±  918.601  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed         1  avgt    5     54.364 ±    1.596  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed        10  avgt    5     78.939 ±   10.448  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed        50  avgt    5    199.772 ±    1.747  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed       100  avgt    5    349.777 ±   22.150  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed       500  avgt    5   1597.191 ±   79.930  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed      1000  avgt    5   3122.502 ±  176.717  ns/op
+Base64Benchmarks.jdkUrlDecode          fixed     10000  avgt    5  29930.962 ±  773.731  ns/op
+Base64Benchmarks.jdkUrlDecode         random         1  avgt    5     55.292 ±    5.127  ns/op
+Base64Benchmarks.jdkUrlDecode         random        10  avgt    5     77.140 ±    0.602  ns/op
+Base64Benchmarks.jdkUrlDecode         random        50  avgt    5    200.479 ±    6.595  ns/op
+Base64Benchmarks.jdkUrlDecode         random       100  avgt    5    344.407 ±    4.159  ns/op
+Base64Benchmarks.jdkUrlDecode         random       500  avgt    5   1578.780 ±   26.686  ns/op
+Base64Benchmarks.jdkUrlDecode         random      1000  avgt    5   3097.351 ±   39.001  ns/op
+Base64Benchmarks.jdkUrlDecode         random     10000  avgt    5  29942.869 ± 1485.501  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed         1  avgt    5     51.157 ±    1.276  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed        10  avgt    5     78.099 ±    1.368  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed        50  avgt    5    155.655 ±    5.809  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed       100  avgt    5    229.564 ±    4.760  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed       500  avgt    5    905.340 ±  145.740  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed      1000  avgt    5   1773.480 ±   89.801  ns/op
+Base64Benchmarks.jdkUrlEncode          fixed     10000  avgt    5  17272.444 ± 2047.609  ns/op
+Base64Benchmarks.jdkUrlEncode         random         1  avgt    5     51.073 ±    0.660  ns/op
+Base64Benchmarks.jdkUrlEncode         random        10  avgt    5     78.613 ±    1.195  ns/op
+Base64Benchmarks.jdkUrlEncode         random        50  avgt    5    156.685 ±    6.008  ns/op
+Base64Benchmarks.jdkUrlEncode         random       100  avgt    5    229.545 ±    2.502  ns/op
+Base64Benchmarks.jdkUrlEncode         random       500  avgt    5    890.518 ±    9.018  ns/op
+Base64Benchmarks.jdkUrlEncode         random      1000  avgt    5   1760.344 ±    8.523  ns/op
+Base64Benchmarks.jdkUrlEncode         random     10000  avgt    5  17025.801 ±  117.346  ns/op
 
-Benchmark result is saved to /static/data/charts/base64-jni/jdk8.json
+Benchmark result is saved to /static/data/charts/base64-jdk-vs-apache-commons/jdk8.json
