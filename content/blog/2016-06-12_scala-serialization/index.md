@@ -6,6 +6,8 @@ description: Performance comparison of popular serialization libraries for Scala
 tags: ["scala", "serialization", "benchmark", "performance"]
 canonicalUrl: https://medium.com/@dkomanov/scala-serialization-419d175c888a
 ---
+
+*UPD-2022*: A [remake](/p/scala-serialization-2022) of this blog post on 2022.
 *UPD*: Recent benchmark charts are [here](/charts/scala-serialization/).
 
 It’s common to use [JSON](http://json.org/) as the main format of serialized data. It’s very convenient to use it both on client and server. Obviously, it’s not the best choice in terms of both data size and performance.
