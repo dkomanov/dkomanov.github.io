@@ -28,55 +28,55 @@ const xDesc = {
     },
     {
       name: 'base64 encode',
-      value: 'jniBase64_url_encode',
+      value: 'jni_url_encodeConfig',
     },
     {
-      name: 'base64 encode opt. 1',
-      value: 'jniBase64_url_encodeHacky1',
+      name: 'encode_config_slice (no cache)',
+      value: 'jni_url_encodeConfigSlice1NoCache',
     },
     {
-      name: 'base64 encode opt. 2',
-      value: 'jniBase64_url_encodeHacky2',
+      name: 'encode_config_slice (cache output)',
+      value: 'jni_url_encodeConfigSlice1Cache',
     },
     {
-      name: 'base64 encode opt. 3',
-      value: 'jniBase64_url_encodeHacky3',
+      name: 'encode_config_slice (cache input/output)',
+      value: 'jni_url_encodeConfigSlice2CacheInputOutput',
     },
     {
       name: 'j.u.Base64 decode',
       value: 'jdk_url_decode',
     },
     {
-      name: 'base64 decode',
-      value: 'jniBase64_url_decode',
+      name: 'decode_config #1',
+      value: 'jni_url_decodeConfig1',
     },
     {
-      name: 'base64 decode opt. 1',
-      value: 'jniBase64_url_decode1',
+      name: 'decode_config #2 (get_byte_array_elements)',
+      value: 'jni_url_decodeConfig2',
     },
     {
-      name: 'base64 decode opt. 2',
-      value: 'jniBase64_url_decode2',
+      name: 'decode_config #3 (explicit size)',
+      value: 'jni_url_decodeConfig3',
     },
     {
-      name: 'base64 decode opt. 3',
-      value: 'jniBase64_url_decode3',
+      name: 'decode_config #4 (get_primitive_array_critical)',
+      value: 'jni_url_decodeConfig4',
     },
     {
-      name: 'base64 decode opt. 4',
-      value: 'jniBase64_url_decode4',
+      name: 'decode_config_slice JNI',
+      value: 'jni_url_decodeConfigSlice1',
     },
     {
-      name: 'base64 decode direct memory',
-      value: 'jniBase64_url_decodeHacky1',
+      name: 'decode_config_slice (no cache)',
+      value: 'jni_url_decodeConfigSlice1NoCache',
     },
     {
-      name: 'base64 decode cached direct memory',
-      value: 'jniBase64_url_decodeHacky2',
+      name: 'decode_config_slice (cache output)',
+      value: 'jni_url_decodeConfigSlice2Cache',
     },
     {
-      name: 'crypto2 decode',
-      value: 'jniCrypto2_url_decode',
+      name: 'decode_config_slice (cache input/output)',
+      value: 'jni_url_decodeConfigSlice3CacheInputOutput',
     },
   ],
 };
@@ -100,7 +100,7 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
     values:
       action === 'all'
         ? xDesc.values
-        : xDesc.values.filter((v) => v.value.indexOf(action) !== -1),
+        : xDesc.values.filter((v) => v.name.indexOf(action) !== -1),
   });
 
   return (
@@ -109,8 +109,8 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <p>
         Here are benchmarking results for{' '}
-        <Link to="/p/base64-via-jni-encoding-performance">
-          &laquo;Base64 via JNI Encoding Performance&raquo;
+        <Link to="/p/base64-encoding-via-jni-performance">
+          &laquo;Base64 Encoding via JNI Performance&raquo;
         </Link>{' '}
         blog post.
       </p>
@@ -231,7 +231,7 @@ const fetchAndCombineResults = () => {
 const Base64JniPerformance = JmhChartPage(Base64JniPerformanceImpl, {
   fetchFunc: fetchAndCombineResults,
   exportDimensionsFunc: exportDimensions,
-  headerText: 'Base64 via JNI Encoding Performance (Charts)',
+  headerText: 'Base64 Encoding via JNI Performance (Charts)',
 });
 
 export default Base64JniPerformance;
