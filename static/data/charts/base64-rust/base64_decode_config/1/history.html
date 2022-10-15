@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>base64_decode_config/1 History - Criterion.rs</title>
+    <style type="text/css">body {
+    font: 14px Helvetica Neue;
+    text-rendering: optimizelegibility;
+}
+
+.body {
+    width: 960px;
+    margin: auto;
+}
+
+a:link {
+    color: #1F78B4;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#footer {
+    height: 40px;
+    background: #888;
+    color: white;
+    font-size: larger;
+    font-weight: 300;
+}
+
+#footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#footer p {
+    text-align: center
+}
+
+        .number {
+            opacity: 0.6
+        }
+        .timestamp {
+            opacity: 0.6;
+            float: right
+        }
+        .improved {
+            color: green
+        }
+        .regressed {
+            color: brick
+        }
+
+        th.ci-bound {
+            opacity: 0.6
+        }
+
+        td.ci-bound {
+            opacity: 0.5
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <img alt="History of base64_decode_config/1" src="history.svg"></img>
+        <h4> <span class="number"># 3</span><span class="timestamp">2022-10-15T17:18:32+03:00</span> </h4>
+        <br>
+        <br>
+        <table>
+        <tr>
+            <th></th>
+            <th class="ci-bound"> Lower Bound</th>
+            <th>Estimate</th>
+            <th class="ci-bound">Upper Bound</th>
+        </tr>
+        <tr>
+            <td>Value:</td>
+            <td class="ci-bound">83.79ns</td>
+            <td class="nochange">83.88ns</td>
+            <td class="ci-bound">83.99ns</td>
+        </tr>
+        <tr>
+            <td>Throughput:</td>
+            <td class="ci-bound">45.52MiB/s</td>
+            <td class="nochange">45.48MiB/s</td>
+            <td class="ci-bound">45.42MiB/s</td>
+        </tr>
+        <tr>
+            <td>Change in Value:</td>
+            <td class="ci-bound">-7.5824%</td>
+            <td>-4.4447%</td>
+            <td class="ci-bound">-1.8171%</td>
+        </tr>
+        <tr>
+            <td>Change in Throughput:</td>
+            <td class="ci-bound">+8.2045%</td>
+            <td>+4.6515%</td>
+            <td class="ci-bound">+1.8507%</td>
+        </tr>
+        </table>
+        No change in performance detected.<hr>
+        <h4> <span class="number"># 2</span><span class="timestamp">2022-10-15T16:52:44+03:00</span> </h4>
+        <br>
+        <br>
+        <table>
+        <tr>
+            <th></th>
+            <th class="ci-bound"> Lower Bound</th>
+            <th>Estimate</th>
+            <th class="ci-bound">Upper Bound</th>
+        </tr>
+        <tr>
+            <td>Value:</td>
+            <td class="ci-bound">85.62ns</td>
+            <td class="nochange">87.05ns</td>
+            <td class="ci-bound">88.59ns</td>
+        </tr>
+        <tr>
+            <td>Throughput:</td>
+            <td class="ci-bound">44.55MiB/s</td>
+            <td class="nochange">43.82MiB/s</td>
+            <td class="ci-bound">43.06MiB/s</td>
+        </tr>
+        <tr>
+            <td>Change in Value:</td>
+            <td class="ci-bound">+2.4857%</td>
+            <td>+5.2415%</td>
+            <td class="ci-bound">+9.1613%</td>
+        </tr>
+        <tr>
+            <td>Change in Throughput:</td>
+            <td class="ci-bound">-2.4254%</td>
+            <td>-4.9805%</td>
+            <td class="ci-bound">-8.3925%</td>
+        </tr>
+        </table>
+        No change in performance detected.<hr>
+        <h4> <span class="number"># 1</span><span class="timestamp">2022-10-08T17:29:32+03:00</span> </h4>
+        <br>
+        <br>
+        <table>
+        <tr>
+            <th></th>
+            <th class="ci-bound"> Lower Bound</th>
+            <th>Estimate</th>
+            <th class="ci-bound">Upper Bound</th>
+        </tr>
+        <tr>
+            <td>Value:</td>
+            <td class="ci-bound">83.42ns</td>
+            <td class="nochange">83.99ns</td>
+            <td class="ci-bound">85.16ns</td>
+        </tr>
+        <tr>
+            <td>Throughput:</td>
+            <td class="ci-bound">45.73MiB/s</td>
+            <td class="nochange">45.42MiB/s</td>
+            <td class="ci-bound">44.79MiB/s</td>
+        </tr>
+        <tr>
+            <td>Change in Value:</td>
+            <td class="ci-bound">-0.2823%</td>
+            <td>+0.1701%</td>
+            <td class="ci-bound">+0.8163%</td>
+        </tr>
+        <tr>
+            <td>Change in Throughput:</td>
+            <td class="ci-bound">+0.2831%</td>
+            <td>-0.1698%</td>
+            <td class="ci-bound">-0.8097%</td>
+        </tr>
+        </table>
+        Change within noise threshold.<hr>
+        <h4> <span class="number"># 0</span><span class="timestamp">2022-10-08T17:10:18+03:00</span> </h4>
+        <br>
+        <br>
+        <table>
+        <tr>
+            <th></th>
+            <th class="ci-bound"> Lower Bound</th>
+            <th>Estimate</th>
+            <th class="ci-bound">Upper Bound</th>
+        </tr>
+        <tr>
+            <td>Value:</td>
+            <td class="ci-bound">83.49ns</td>
+            <td class="nochange">83.75ns</td>
+            <td class="ci-bound">84.04ns</td>
+        </tr>
+        <tr>
+            <td>Throughput:</td>
+            <td class="ci-bound">45.69MiB/s</td>
+            <td class="nochange">45.55MiB/s</td>
+            <td class="ci-bound">45.39MiB/s</td>
+        </tr>
+        </table>
+    </div>
+    <div id="footer">
+        <p>This report was generated by <a href="https://github.com/bheisler/cargo-criterion">cargo-criterion</a></p>
+    </div>
+</body>
+
+</html>
