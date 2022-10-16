@@ -12,6 +12,7 @@ UPD: A lot of interesting comments on [reddit](https://www.reddit.com/r/rust/com
 * [Added](https://github.com/dkomanov/rust-stuff/commit/50b7cfd686ca3d23fcf4ee78483e5d6dafe35a57) benchmarks for [data-encoding](https://docs.rs/data-encoding/latest/data_encoding/) crate.
 * [Added](https://github.com/dkomanov/rust-stuff/commit/c222a95fae0812303c931d36d09b5acc7d1a95d8) an [optimized](https://gist.github.com/Measter/e3d12d78777c9e1b125f0466c6b94498) [version](https://godbolt.org/z/5jEeq9713) of JDK ported implementation that brings Rust closer to JVM for encoding.
 * WOW. Merged [PR](https://github.com/dkomanov/rust-stuff/pull/1) using [base64-simd](https://github.com/Nugine/simd) crate, which performance is almost 10x better than anything else!
+* Blog post remains the same, if you curious about new numbers: check it [here](https://github.com/dkomanov/rust-stuff/blob/master/base64_manual_bench/src/main.rs#L9) and [here](https://komanov.com/data/charts/base64-rust/).
 
 I got curious... Not that's something new to me. But a bit unusual thought after benchmarking [Base64](/p/base64-encoding-performance-jdk-vs-apache-commons) performance in Java: what is the maximum performance in unmanaged world? And since I wanted to explore [Rust](https://www.rust-lang.org/) a bit, I decided that it's a good opportunity!
 
