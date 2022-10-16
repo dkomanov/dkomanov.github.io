@@ -81,18 +81,28 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M287.04,582.40 L287.04,573.40  '/>	<g transform="translate(287.04,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
+	<path stroke='black'  d='M201.24,582.40 L201.24,573.40  '/>	<g transform="translate(201.24,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
 		<text><tspan font-family="Helvetica" >#1</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M501.56,582.40 L501.56,573.40  '/>	<g transform="translate(501.56,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
+	<path stroke='black'  d='M329.95,582.40 L329.95,573.40  '/>	<g transform="translate(329.95,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
 		<text><tspan font-family="Helvetica" >#2</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='black'  d='M716.07,582.40 L716.07,573.40  '/>	<g transform="translate(716.07,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
+	<path stroke='black'  d='M458.65,582.40 L458.65,573.40  '/>	<g transform="translate(458.65,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
 		<text><tspan font-family="Helvetica" >#3</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M587.36,582.40 L587.36,573.40  '/>	<g transform="translate(587.36,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Helvetica" >#4</tspan></text>
+	</g>
+</g>
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
+	<path stroke='black'  d='M716.07,582.40 L716.07,573.40  '/>	<g transform="translate(716.07,604.30)" stroke="none" fill="black" font-family="Helvetica" font-size="12.00"  text-anchor="middle">
+		<text><tspan font-family="Helvetica" >#5</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -120,7 +130,8 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 31, 120, 180)'  d='M741.24,63.01 L783.80,63.01 M72.53,210.17 L287.04,519.10 L501.56,479.33 L716.07,475.42  '/></g>
+	<path stroke='rgb( 31, 120, 180)'  d='M741.24,63.01 L783.80,63.01 M72.53,210.17 L201.24,519.10 L329.95,479.33 L458.65,475.42 L587.36,541.77 L716.07,505.39
+		 '/></g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>Confidence Interval</title>
 <g fill="none" color="white" stroke="rgb( 31, 120, 180)" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
@@ -133,7 +144,7 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.500000' points = '741.24,85.51 783.80,85.51 783.80,76.51 741.24,76.51 '/>
-		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.500000' points = '72.53,113.23 287.04,516.48 501.56,474.39 716.07,474.42 716.07,476.41 501.56,483.48 287.04,521.29 72.53,297.14 '/>
+		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.500000' points = '72.53,113.23 201.24,516.48 329.95,474.39 458.65,474.42 587.36,540.38 716.07,487.38 716.07,514.43 587.36,543.09 458.65,476.41 329.95,483.48 201.24,521.29 72.53,297.14 '/>
 	</g>
 </g>
 	</g>

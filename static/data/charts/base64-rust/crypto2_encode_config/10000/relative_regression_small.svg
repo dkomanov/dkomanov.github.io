@@ -242,7 +242,7 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(  7,  26,  28)' fill-opacity = '0.250000' points = '72.53,224.40 72.53,224.40 72.53,224.40 '/>
-		<polygon fill = 'rgb(  7,  26,  28)' fill-opacity = '0.250000' points = '72.53,224.40 383.72,43.06 383.72,33.59 '/>
+		<polygon fill = 'rgb(  7,  26,  28)' fill-opacity = '0.250000' points = '72.53,224.40 383.72,54.60 383.72,54.28 '/>
 	</g>
 </g>
 	</g>
@@ -250,7 +250,7 @@
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.250000' points = '72.53,224.40 72.53,224.40 72.53,224.40 '/>
-		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.250000' points = '72.53,224.40 383.72,54.65 383.72,54.21 '/>
+		<polygon fill = 'rgb( 31, 120, 180)' fill-opacity = '0.250000' points = '72.53,224.40 383.72,52.14 383.72,47.47 '/>
 	</g>
 </g>
 	</g>
@@ -258,11 +258,11 @@
 <g fill="none" color="white" stroke="rgb( 31, 120, 180)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  7,  26,  28)'  d='M72.53,224.40 L383.72,38.65  '/></g>
+	<path stroke='rgb(  7,  26,  28)'  d='M72.53,224.40 L383.72,54.48  '/></g>
 	</g>
 	<g id="gnuplot_plot_4" ><title>New sample</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb( 31, 120, 180)'  d='M72.53,224.40 L383.72,54.46  '/></g>
+	<path stroke='rgb( 31, 120, 180)'  d='M72.53,224.40 L383.72,50.14  '/></g>
 	</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
