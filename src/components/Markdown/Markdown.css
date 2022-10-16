@@ -127,8 +127,7 @@
 }
 
 .markdown code {
-    font-family: Courier, monospace;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .markdown.tiny * {
