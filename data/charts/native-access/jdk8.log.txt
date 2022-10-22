@@ -1,0 +1,245 @@
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.bridj
+
+# Run progress: 0.00% complete, ETA 00:01:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 3601.043 ns/op
+# Warmup Iteration   2: 2639.109 ns/op
+# Warmup Iteration   3: 5314.274 ns/op
+Iteration   1: 2709.122 ns/op
+Iteration   2: 8067.987 ns/op
+Iteration   3: 2770.152 ns/op
+Iteration   4: 2603.396 ns/op
+Iteration   5: 19512.247 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.bridj":
+  7132.581 ±(99.9%) 28115.134 ns/op [Average]
+  (min, avg, max) = (2603.396, 7132.581, 19512.247), stdev = 7301.411
+  CI (99.9%): [≈ 0, 35247.715] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.javaCpp
+
+# Run progress: 12.50% complete, ETA 00:01:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 878.498 ns/op
+# Warmup Iteration   2: 804.389 ns/op
+# Warmup Iteration   3: 796.350 ns/op
+Iteration   1: 791.181 ns/op
+Iteration   2: 813.408 ns/op
+Iteration   3: 793.577 ns/op
+Iteration   4: 783.896 ns/op
+Iteration   5: 788.919 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.javaCpp":
+  794.196 ±(99.9%) 43.587 ns/op [Average]
+  (min, avg, max) = (783.896, 794.196, 813.408), stdev = 11.319
+  CI (99.9%): [750.609, 837.783] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.javaMxBean
+
+# Run progress: 25.00% complete, ETA 00:00:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 1006.466 ns/op
+# Warmup Iteration   2: 970.288 ns/op
+# Warmup Iteration   3: 968.875 ns/op
+Iteration   1: 937.365 ns/op
+Iteration   2: 966.893 ns/op
+Iteration   3: 988.149 ns/op
+Iteration   4: 928.409 ns/op
+Iteration   5: 951.740 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.javaMxBean":
+  954.511 ±(99.9%) 91.686 ns/op [Average]
+  (min, avg, max) = (928.409, 954.511, 988.149), stdev = 23.810
+  CI (99.9%): [862.826, 1046.197] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.jna
+
+# Run progress: 37.50% complete, ETA 00:00:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 3073.252 ns/op
+# Warmup Iteration   2: 2558.285 ns/op
+# Warmup Iteration   3: 2550.752 ns/op
+Iteration   1: 2564.035 ns/op
+Iteration   2: 2556.744 ns/op
+Iteration   3: 2480.268 ns/op
+Iteration   4: 2523.389 ns/op
+Iteration   5: 2504.320 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.jna":
+  2525.751 ±(99.9%) 135.593 ns/op [Average]
+  (min, avg, max) = (2480.268, 2525.751, 2564.035), stdev = 35.213
+  CI (99.9%): [2390.159, 2661.344] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.jnaDirect
+
+# Run progress: 50.00% complete, ETA 00:00:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 1168.723 ns/op
+# Warmup Iteration   2: 1066.715 ns/op
+# Warmup Iteration   3: 1041.881 ns/op
+Iteration   1: 1035.570 ns/op
+Iteration   2: 1048.451 ns/op
+Iteration   3: 1036.552 ns/op
+Iteration   4: 1026.233 ns/op
+Iteration   5: 1031.742 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.jnaDirect":
+  1035.710 ±(99.9%) 31.555 ns/op [Average]
+  (min, avg, max) = (1026.233, 1035.710, 1048.451), stdev = 8.195
+  CI (99.9%): [1004.154, 1067.265] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.jni
+
+# Run progress: 62.50% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 840.692 ns/op
+# Warmup Iteration   2: 830.822 ns/op
+# Warmup Iteration   3: 800.736 ns/op
+Iteration   1: 843.931 ns/op
+Iteration   2: 812.656 ns/op
+Iteration   3: 818.242 ns/op
+Iteration   4: 819.234 ns/op
+Iteration   5: 830.880 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.jni":
+  824.989 ±(99.9%) 48.104 ns/op [Average]
+  (min, avg, max) = (812.656, 824.989, 843.931), stdev = 12.493
+  CI (99.9%): [776.885, 873.093] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.jniEmpty
+
+# Run progress: 75.00% complete, ETA 00:00:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 12.381 ns/op
+# Warmup Iteration   2: 12.405 ns/op
+# Warmup Iteration   3: 10.854 ns/op
+Iteration   1: 10.815 ns/op
+Iteration   2: 11.043 ns/op
+Iteration   3: 10.818 ns/op
+Iteration   4: 10.831 ns/op
+Iteration   5: 10.846 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.jniEmpty":
+  10.871 ±(99.9%) 0.374 ns/op [Average]
+  (min, avg, max) = (10.815, 10.871, 11.043), stdev = 0.097
+  CI (99.9%): [10.497, 11.245] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/getloadavg:rs/getloadavg
+# Warmup: 3 iterations, 1 s each
+# Measurement: 5 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.nativeaccess.jmh.NativeBenchmarks.jnr
+
+# Run progress: 87.50% complete, ETA 00:00:08
+# Fork: 1 of 1
+# Warmup Iteration   1: 1090.003 ns/op
+# Warmup Iteration   2: 848.276 ns/op
+# Warmup Iteration   3: 816.558 ns/op
+Iteration   1: 813.458 ns/op
+Iteration   2: 824.188 ns/op
+Iteration   3: 804.800 ns/op
+Iteration   4: 810.413 ns/op
+Iteration   5: 821.995 ns/op
+
+
+Result "com.komanov.nativeaccess.jmh.NativeBenchmarks.jnr":
+  814.971 ±(99.9%) 31.092 ns/op [Average]
+  (min, avg, max) = (804.800, 814.971, 824.188), stdev = 8.074
+  CI (99.9%): [783.879, 846.063] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:08
+
+Benchmark                    Mode  Cnt     Score       Error  Units
+NativeBenchmarks.bridj       avgt    5  7132.581 ± 28115.134  ns/op
+NativeBenchmarks.javaCpp     avgt    5   794.196 ±    43.587  ns/op
+NativeBenchmarks.javaMxBean  avgt    5   954.511 ±    91.686  ns/op
+NativeBenchmarks.jna         avgt    5  2525.751 ±   135.593  ns/op
+NativeBenchmarks.jnaDirect   avgt    5  1035.710 ±    31.555  ns/op
+NativeBenchmarks.jni         avgt    5   824.989 ±    48.104  ns/op
+NativeBenchmarks.jniEmpty    avgt    5    10.871 ±     0.374  ns/op
+NativeBenchmarks.jnr         avgt    5   814.971 ±    31.092  ns/op
+
+Benchmark result is saved to /static/data/charts/native-access/jdk8.json
