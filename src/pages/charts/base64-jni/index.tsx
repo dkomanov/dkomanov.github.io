@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 import { JmhBenchmarkRun } from '../../..';
 import {
   ChartAndTable,
-  Choose, getChooseItems, JmhChartComponentProps,
+  Choose,
+  getChooseItems,
+  JmhChartComponentProps,
   JmhChartPage,
-  TimeUnits
+  TimeUnits,
 } from '../../../components';
 import { loadJson } from '../../../util';
 
@@ -27,7 +29,7 @@ const xDesc = {
       value: 'jdk_url_encode',
     },
     {
-      name: 'base64 encode',
+      name: 'encode_config',
       value: 'jni_url_encodeConfig',
     },
     {
@@ -41,6 +43,10 @@ const xDesc = {
     {
       name: 'encode_config_slice (cache input/output)',
       value: 'jni_url_encodeConfigSlice2CacheInputOutput',
+    },
+    {
+      name: 'base64_simd::encode',
+      value: 'jni_url_encodeSimdCargo',
     },
     {
       name: 'j.u.Base64 decode',
@@ -77,6 +83,14 @@ const xDesc = {
     {
       name: 'decode_config_slice (cache input/output)',
       value: 'jni_url_decodeConfigSlice3CacheInputOutput',
+    },
+    {
+      name: 'base64_simd::decode',
+      value: 'jni_url_decodeSimdCargo',
+    },
+    {
+      name: 'base64_simd::decodeInPlace',
+      value: 'jni_url_decodeSimdInPlaceCargo',
     },
   ],
 };
@@ -146,10 +160,19 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.length === length && p.dataset === dataset && filterByAction(p)}
+        filter={(p: any) =>
+          p.length === length && p.dataset === dataset && filterByAction(p)
+        }
         title="Encoding/Decoding, nanos"
         xDesc={filteredXDesc}
         yDesc={yDesc}
+        options={{
+          legend: {
+            textStyle: {
+              fontSize: 12,
+            },
+          },
+        }}
       />
 
       <h4>Performance for different data sizes</h4>
@@ -164,7 +187,9 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
         chartType="LineChart"
         dataTable={jmhList}
         extractor={extractor.func}
-        filter={(p: any) => p.jdk === jdk && p.dataset === dataset && filterByAction(p)}
+        filter={(p: any) =>
+          p.jdk === jdk && p.dataset === dataset && filterByAction(p)
+        }
         xDesc={filteredXDesc}
         yDesc={{
           title: 'Data length',
@@ -179,6 +204,60 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
             title: 'time, nanoseconds',
             logScale: true,
             //maxValue: 2000,
+          },
+          legend: {
+            textStyle: {
+              fontSize: 12,
+            },
+          },
+        }}
+      />
+
+      <h4>base64_simd: bazel vs cargo</h4>
+
+      <ChartAndTable
+        dataTable={jmhList}
+        extractor={extractor.func}
+        filter={(p: any) =>
+          p.length === length && p.dataset === dataset && filterByAction(p)
+        }
+        title="Encoding/Decoding, nanos"
+        xDesc={{
+          title: 'Library and Operation',
+          prop: 'method',
+          values: [
+            {
+              name: 'base64_simd::encode (bazel)',
+              value: 'jni_url_encodeSimd',
+            },
+            {
+              name: 'base64_simd::encode (cargo)',
+              value: 'jni_url_encodeSimdCargo',
+            },
+            {
+              name: 'base64_simd::decode (bazel)',
+              value: 'jni_url_decodeSimd',
+            },
+            {
+              name: 'base64_simd::decode (cargo)',
+              value: 'jni_url_decodeSimdCargo',
+            },
+            {
+              name: 'base64_simd::decodeInPlace (bazel)',
+              value: 'jni_url_decodeSimdInPlace',
+            },
+            {
+              name: 'base64_simd::decodeInPlace (cargo)',
+              value: 'jni_url_decodeSimdInPlaceCargo',
+            },
+          ],
+        }}
+        yDesc={yDesc}
+        options={{
+          legend: {
+            textStyle: {
+              fontSize: 12,
+            },
           },
         }}
       />
