@@ -123,8 +123,8 @@ const Base64JniPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <p>
         Here are benchmarking results for{' '}
-        <Link to="/p/base64-encoding-via-jni-performance">
-          &laquo;Base64 Encoding via JNI Performance&raquo;
+        <Link to="/p/java-exploring-jni-performance-via-decoding-base64">
+          &laquo;Java: Exploring JNI performance via Decoding Base64&raquo;
         </Link>{' '}
         blog post.
       </p>
@@ -310,7 +310,7 @@ const fetchAndCombineResults = () => {
 const Base64JniPerformance = JmhChartPage(Base64JniPerformanceImpl, {
   fetchFunc: fetchAndCombineResults,
   exportDimensionsFunc: exportDimensions,
-  headerText: 'Base64 Encoding via JNI Performance (Charts)',
+  headerText: 'Java: Exploring JNI performance via Decoding Base64 (Charts)',
 });
 
 export default Base64JniPerformance;
