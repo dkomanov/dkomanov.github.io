@@ -1,0 +1,17 @@
+# JMH version: 1.20
+# VM version: JDK 1.8.0_342, VM 25.342-b07
+# VM invoker: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# VM options: -Xmx2G -Djava.library.path=bazel-bin/rs/base64:rs/base64
+# Warmup: 5 iterations, 1 s each
+# Measurement: 3 iterations, 3 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.jwt.base64.jmh.Base64Benchmarks.commonsDecode
+# Parameters: (dataset = fixed, length = 1)
+
+# Run progress: 0.00% complete, ETA 00:52:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 1310.649 ns/op
+# Warmup Iteration   2: 778.528 ns/op
+# Warmup Iteration   3: 734.224 ns/op

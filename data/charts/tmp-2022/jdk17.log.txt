@@ -1,0 +1,17 @@
+# JMH version: 1.20
+# VM version: JDK 17.0.4, VM 17.0.4+8-Ubuntu-122.04
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: -Xmx2G --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.invoke=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.serialization.jmh.EventBenchmark.both
+# Parameters: (converterType = CHILL, inputType = _1_K)
+
+# Run progress: 0.00% complete, ETA 00:15:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 78292.648 ns/op
+# Warmup Iteration   2: 61557.029 ns/op
+# Warmup Iteration   3: 64085.019 ns/op

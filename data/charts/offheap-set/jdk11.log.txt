@@ -1,0 +1,1797 @@
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayHit
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:22:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 367.556 ns/op
+# Warmup Iteration   2: 346.100 ns/op
+Iteration   1: 331.005 ns/op
+Iteration   2: 329.666 ns/op
+Iteration   3: 330.451 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayHit":
+  330.374 ±(99.9%) 12.282 ns/op [Average]
+  (min, avg, max) = (329.666, 330.374, 331.005), stdev = 0.673
+  CI (99.9%): [318.092, 342.656] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayHit
+# Parameters: (size = 10000)
+
+# Run progress: 1.56% complete, ETA 00:24:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 465.476 ns/op
+# Warmup Iteration   2: 439.553 ns/op
+Iteration   1: 421.812 ns/op
+Iteration   2: 420.679 ns/op
+Iteration   3: 422.072 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayHit":
+  421.521 ±(99.9%) 13.513 ns/op [Average]
+  (min, avg, max) = (420.679, 421.521, 422.072), stdev = 0.741
+  CI (99.9%): [408.008, 435.034] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayHit
+# Parameters: (size = 100000)
+
+# Run progress: 3.13% complete, ETA 00:23:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 598.302 ns/op
+# Warmup Iteration   2: 571.539 ns/op
+Iteration   1: 563.412 ns/op
+Iteration   2: 563.650 ns/op
+Iteration   3: 564.411 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayHit":
+  563.825 ±(99.9%) 9.519 ns/op [Average]
+  (min, avg, max) = (563.412, 563.825, 564.411), stdev = 0.522
+  CI (99.9%): [554.306, 573.343] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayHit
+# Parameters: (size = 1000000)
+
+# Run progress: 4.69% complete, ETA 00:23:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 741.364 ns/op
+# Warmup Iteration   2: 703.946 ns/op
+Iteration   1: 691.757 ns/op
+Iteration   2: 691.801 ns/op
+Iteration   3: 691.850 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayHit":
+  691.803 ±(99.9%) 0.852 ns/op [Average]
+  (min, avg, max) = (691.757, 691.803, 691.850), stdev = 0.047
+  CI (99.9%): [690.950, 692.655] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayMiss
+# Parameters: (size = 1000)
+
+# Run progress: 6.25% complete, ETA 00:24:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 350.944 ns/op
+# Warmup Iteration   2: 362.398 ns/op
+Iteration   1: 320.404 ns/op
+Iteration   2: 320.321 ns/op
+Iteration   3: 320.220 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayMiss":
+  320.315 ±(99.9%) 1.673 ns/op [Average]
+  (min, avg, max) = (320.220, 320.315, 320.404), stdev = 0.092
+  CI (99.9%): [318.642, 321.988] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayMiss
+# Parameters: (size = 10000)
+
+# Run progress: 7.81% complete, ETA 00:24:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 455.699 ns/op
+# Warmup Iteration   2: 467.454 ns/op
+Iteration   1: 442.535 ns/op
+Iteration   2: 448.149 ns/op
+Iteration   3: 442.467 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayMiss":
+  444.384 ±(99.9%) 59.494 ns/op [Average]
+  (min, avg, max) = (442.467, 444.384, 448.149), stdev = 3.261
+  CI (99.9%): [384.890, 503.878] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayMiss
+# Parameters: (size = 100000)
+
+# Run progress: 9.38% complete, ETA 00:23:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 622.837 ns/op
+# Warmup Iteration   2: 650.075 ns/op
+Iteration   1: 580.599 ns/op
+Iteration   2: 580.456 ns/op
+Iteration   3: 581.544 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayMiss":
+  580.867 ±(99.9%) 10.789 ns/op [Average]
+  (min, avg, max) = (580.456, 580.867, 581.544), stdev = 0.591
+  CI (99.9%): [570.078, 591.655] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.heapArrayMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 10.94% complete, ETA 00:22:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 735.776 ns/op
+# Warmup Iteration   2: 751.611 ns/op
+Iteration   1: 716.735 ns/op
+Iteration   2: 716.363 ns/op
+Iteration   3: 716.170 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.heapArrayMiss":
+  716.423 ±(99.9%) 5.247 ns/op [Average]
+  (min, avg, max) = (716.170, 716.423, 716.735), stdev = 0.288
+  CI (99.9%): [711.176, 721.669] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 12.50% complete, ETA 00:23:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 129.303 ns/op
+# Warmup Iteration   2: 103.594 ns/op
+Iteration   1: 96.942 ns/op
+Iteration   2: 96.925 ns/op
+Iteration   3: 98.399 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetHit":
+  97.422 ±(99.9%) 15.443 ns/op [Average]
+  (min, avg, max) = (96.925, 97.422, 98.399), stdev = 0.846
+  CI (99.9%): [81.979, 112.865] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 14.06% complete, ETA 00:22:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 108.206 ns/op
+# Warmup Iteration   2: 106.794 ns/op
+Iteration   1: 98.680 ns/op
+Iteration   2: 98.813 ns/op
+Iteration   3: 98.699 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetHit":
+  98.731 ±(99.9%) 1.305 ns/op [Average]
+  (min, avg, max) = (98.680, 98.731, 98.813), stdev = 0.072
+  CI (99.9%): [97.426, 100.035] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 15.63% complete, ETA 00:21:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 123.768 ns/op
+# Warmup Iteration   2: 122.926 ns/op
+Iteration   1: 113.008 ns/op
+Iteration   2: 113.925 ns/op
+Iteration   3: 114.331 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetHit":
+  113.755 ±(99.9%) 12.371 ns/op [Average]
+  (min, avg, max) = (113.008, 113.755, 114.331), stdev = 0.678
+  CI (99.9%): [101.383, 126.126] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 17.19% complete, ETA 00:21:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 92.171 ns/op
+# Warmup Iteration   2: 91.682 ns/op
+Iteration   1: 83.317 ns/op
+Iteration   2: 85.401 ns/op
+Iteration   3: 83.416 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetHit":
+  84.045 ±(99.9%) 21.450 ns/op [Average]
+  (min, avg, max) = (83.317, 84.045, 85.401), stdev = 1.176
+  CI (99.9%): [62.594, 105.495] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 18.75% complete, ETA 00:21:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 109.191 ns/op
+# Warmup Iteration   2: 111.902 ns/op
+Iteration   1: 70.781 ns/op
+Iteration   2: 70.830 ns/op
+Iteration   3: 71.146 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetMiss":
+  70.919 ±(99.9%) 3.615 ns/op [Average]
+  (min, avg, max) = (70.781, 70.919, 71.146), stdev = 0.198
+  CI (99.9%): [67.303, 74.534] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 20.31% complete, ETA 00:20:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 114.042 ns/op
+# Warmup Iteration   2: 111.592 ns/op
+Iteration   1: 66.704 ns/op
+Iteration   2: 66.936 ns/op
+Iteration   3: 66.330 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetMiss":
+  66.657 ±(99.9%) 5.576 ns/op [Average]
+  (min, avg, max) = (66.330, 66.657, 66.936), stdev = 0.306
+  CI (99.9%): [61.080, 72.233] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 21.88% complete, ETA 00:20:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 111.684 ns/op
+# Warmup Iteration   2: 110.115 ns/op
+Iteration   1: 65.919 ns/op
+Iteration   2: 66.038 ns/op
+Iteration   3: 65.916 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetMiss":
+  65.958 ±(99.9%) 1.272 ns/op [Average]
+  (min, avg, max) = (65.916, 65.958, 66.038), stdev = 0.070
+  CI (99.9%): [64.686, 67.230] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.javaSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 23.44% complete, ETA 00:19:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 68.513 ns/op
+# Warmup Iteration   2: 70.438 ns/op
+Iteration   1: 73.915 ns/op
+Iteration   2: 73.576 ns/op
+Iteration   3: 73.574 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.javaSetMiss":
+  73.688 ±(99.9%) 3.587 ns/op [Average]
+  (min, avg, max) = (73.574, 73.688, 73.915), stdev = 0.197
+  CI (99.9%): [70.101, 77.275] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit
+# Parameters: (size = 1000)
+
+# Run progress: 25.00% complete, ETA 00:19:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 8370.333 ns/op
+# Warmup Iteration   2: 8627.778 ns/op
+Iteration   1: 8248.444 ns/op
+Iteration   2: 7619.988 ns/op
+Iteration   3: 7548.556 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit":
+  7805.663 ±(99.9%) 7026.019 ns/op [Average]
+  (min, avg, max) = (7548.556, 7805.663, 8248.444), stdev = 385.120
+  CI (99.9%): [779.643, 14831.682] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit
+# Parameters: (size = 10000)
+
+# Run progress: 26.56% complete, ETA 00:19:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 12075.670 ns/op
+# Warmup Iteration   2: 11418.547 ns/op
+Iteration   1: 11847.375 ns/op
+Iteration   2: 11880.688 ns/op
+Iteration   3: 11863.119 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit":
+  11863.728 ±(99.9%) 304.032 ns/op [Average]
+  (min, avg, max) = (11847.375, 11863.728, 11880.688), stdev = 16.665
+  CI (99.9%): [11559.695, 12167.760] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit
+# Parameters: (size = 100000)
+
+# Run progress: 28.13% complete, ETA 00:18:50
+# Fork: 1 of 1
+# Warmup Iteration   1: 21712.155 ns/op
+# Warmup Iteration   2: 21704.995 ns/op
+Iteration   1: 21673.377 ns/op
+Iteration   2: 21673.338 ns/op
+Iteration   3: 21620.817 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit":
+  21655.844 ±(99.9%) 553.412 ns/op [Average]
+  (min, avg, max) = (21620.817, 21655.844, 21673.377), stdev = 30.334
+  CI (99.9%): [21102.432, 22209.256] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit
+# Parameters: (size = 1000000)
+
+# Run progress: 29.69% complete, ETA 00:18:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 30107.661 ns/op
+# Warmup Iteration   2: 31141.013 ns/op
+Iteration   1: 32081.947 ns/op
+Iteration   2: 30938.802 ns/op
+Iteration   3: 29548.199 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeHit":
+  30856.316 ±(99.9%) 23149.209 ns/op [Average]
+  (min, avg, max) = (29548.199, 30856.316, 32081.947), stdev = 1268.886
+  CI (99.9%): [7707.107, 54005.525] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss
+# Parameters: (size = 1000)
+
+# Run progress: 31.25% complete, ETA 00:18:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 8354.773 ns/op
+# Warmup Iteration   2: 9030.934 ns/op
+Iteration   1: 9123.090 ns/op
+Iteration   2: 9029.765 ns/op
+Iteration   3: 9151.419 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss":
+  9101.425 ±(99.9%) 1161.303 ns/op [Average]
+  (min, avg, max) = (9029.765, 9101.425, 9151.419), stdev = 63.655
+  CI (99.9%): [7940.121, 10262.728] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss
+# Parameters: (size = 10000)
+
+# Run progress: 32.81% complete, ETA 00:17:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 15130.885 ns/op
+# Warmup Iteration   2: 15106.933 ns/op
+Iteration   1: 15199.479 ns/op
+Iteration   2: 15176.378 ns/op
+Iteration   3: 15066.952 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss":
+  15147.603 ±(99.9%) 1291.551 ns/op [Average]
+  (min, avg, max) = (15066.952, 15147.603, 15199.479), stdev = 70.794
+  CI (99.9%): [13856.052, 16439.154] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss
+# Parameters: (size = 100000)
+
+# Run progress: 34.38% complete, ETA 00:17:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 21070.397 ns/op
+# Warmup Iteration   2: 21237.291 ns/op
+Iteration   1: 21075.769 ns/op
+Iteration   2: 21209.811 ns/op
+Iteration   3: 21059.822 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss":
+  21115.134 ±(99.9%) 1502.903 ns/op [Average]
+  (min, avg, max) = (21059.822, 21115.134, 21209.811), stdev = 82.379
+  CI (99.9%): [19612.231, 22618.037] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 35.94% complete, ETA 00:16:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 22860.198 ns/op
+# Warmup Iteration   2: 23245.462 ns/op
+Iteration   1: 23450.826 ns/op
+Iteration   2: 23557.635 ns/op
+Iteration   3: 22961.950 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4CompositeMiss":
+  23323.471 ±(99.9%) 5794.355 ns/op [Average]
+  (min, avg, max) = (22961.950, 23323.471, 23557.635), stdev = 317.608
+  CI (99.9%): [17529.116, 29117.825] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleHit
+# Parameters: (size = 1000)
+
+# Run progress: 37.50% complete, ETA 00:16:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 701.036 ns/op
+# Warmup Iteration   2: 692.194 ns/op
+Iteration   1: 612.637 ns/op
+Iteration   2: 612.498 ns/op
+Iteration   3: 612.439 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleHit":
+  612.524 ±(99.9%) 1.853 ns/op [Average]
+  (min, avg, max) = (612.439, 612.524, 612.637), stdev = 0.102
+  CI (99.9%): [610.671, 614.378] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleHit
+# Parameters: (size = 10000)
+
+# Run progress: 39.06% complete, ETA 00:16:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 970.610 ns/op
+# Warmup Iteration   2: 955.384 ns/op
+Iteration   1: 850.627 ns/op
+Iteration   2: 847.735 ns/op
+Iteration   3: 847.244 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleHit":
+  848.535 ±(99.9%) 33.344 ns/op [Average]
+  (min, avg, max) = (847.244, 848.535, 850.627), stdev = 1.828
+  CI (99.9%): [815.191, 881.879] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleHit
+# Parameters: (size = 100000)
+
+# Run progress: 40.63% complete, ETA 00:15:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 1066.778 ns/op
+# Warmup Iteration   2: 1039.422 ns/op
+Iteration   1: 1019.261 ns/op
+Iteration   2: 1002.572 ns/op
+Iteration   3: 1001.418 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleHit":
+  1007.750 ±(99.9%) 182.168 ns/op [Average]
+  (min, avg, max) = (1001.418, 1007.750, 1019.261), stdev = 9.985
+  CI (99.9%): [825.582, 1189.919] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleHit
+# Parameters: (size = 1000000)
+
+# Run progress: 42.19% complete, ETA 00:15:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 1276.935 ns/op
+# Warmup Iteration   2: 1244.573 ns/op
+Iteration   1: 1201.554 ns/op
+Iteration   2: 1201.800 ns/op
+Iteration   3: 1200.265 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleHit":
+  1201.206 ±(99.9%) 15.044 ns/op [Average]
+  (min, avg, max) = (1200.265, 1201.206, 1201.800), stdev = 0.825
+  CI (99.9%): [1186.163, 1216.250] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss
+# Parameters: (size = 1000)
+
+# Run progress: 43.75% complete, ETA 00:14:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 714.023 ns/op
+# Warmup Iteration   2: 707.478 ns/op
+Iteration   1: 616.003 ns/op
+Iteration   2: 613.506 ns/op
+Iteration   3: 613.165 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss":
+  614.225 ±(99.9%) 28.268 ns/op [Average]
+  (min, avg, max) = (613.165, 614.225, 616.003), stdev = 1.549
+  CI (99.9%): [585.956, 642.493] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss
+# Parameters: (size = 10000)
+
+# Run progress: 45.31% complete, ETA 00:14:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 941.933 ns/op
+# Warmup Iteration   2: 930.555 ns/op
+Iteration   1: 812.214 ns/op
+Iteration   2: 813.830 ns/op
+Iteration   3: 812.251 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss":
+  812.765 ±(99.9%) 16.833 ns/op [Average]
+  (min, avg, max) = (812.214, 812.765, 813.830), stdev = 0.923
+  CI (99.9%): [795.932, 829.598] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss
+# Parameters: (size = 100000)
+
+# Run progress: 46.88% complete, ETA 00:13:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 1175.884 ns/op
+# Warmup Iteration   2: 1167.074 ns/op
+Iteration   1: 1010.241 ns/op
+Iteration   2: 1011.200 ns/op
+Iteration   3: 1012.393 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss":
+  1011.278 ±(99.9%) 19.669 ns/op [Average]
+  (min, avg, max) = (1010.241, 1011.278, 1012.393), stdev = 1.078
+  CI (99.9%): [991.609, 1030.947] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 48.44% complete, ETA 00:13:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 1442.693 ns/op
+# Warmup Iteration   2: 1428.679 ns/op
+Iteration   1: 1253.597 ns/op
+Iteration   2: 1252.954 ns/op
+Iteration   3: 1253.885 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty4SingleMiss":
+  1253.479 ±(99.9%) 8.703 ns/op [Average]
+  (min, avg, max) = (1252.954, 1253.479, 1253.885), stdev = 0.477
+  CI (99.9%): [1244.776, 1262.181] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit
+# Parameters: (size = 1000)
+
+# Run progress: 50.00% complete, ETA 00:13:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 10930.609 ns/op
+# Warmup Iteration   2: 10899.928 ns/op
+Iteration   1: 10716.048 ns/op
+Iteration   2: 10465.712 ns/op
+Iteration   3: 11110.656 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit":
+  10764.139 ±(99.9%) 5931.955 ns/op [Average]
+  (min, avg, max) = (10465.712, 10764.139, 11110.656), stdev = 325.150
+  CI (99.9%): [4832.184, 16696.093] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit
+# Parameters: (size = 10000)
+
+# Run progress: 51.56% complete, ETA 00:12:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 22454.913 ns/op
+# Warmup Iteration   2: 18514.685 ns/op
+Iteration   1: 18564.000 ns/op
+Iteration   2: 18514.497 ns/op
+Iteration   3: 18424.933 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit":
+  18501.143 ±(99.9%) 1285.978 ns/op [Average]
+  (min, avg, max) = (18424.933, 18501.143, 18564.000), stdev = 70.489
+  CI (99.9%): [17215.166, 19787.121] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit
+# Parameters: (size = 100000)
+
+# Run progress: 53.13% complete, ETA 00:12:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 32027.025 ns/op
+# Warmup Iteration   2: 34037.092 ns/op
+Iteration   1: 33997.442 ns/op
+Iteration   2: 33528.099 ns/op
+Iteration   3: 31905.084 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit":
+  33143.541 ±(99.9%) 20029.944 ns/op [Average]
+  (min, avg, max) = (31905.084, 33143.541, 33997.442), stdev = 1097.909
+  CI (99.9%): [13113.598, 53173.485] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit
+# Parameters: (size = 1000000)
+
+# Run progress: 54.69% complete, ETA 00:11:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 45075.711 ns/op
+# Warmup Iteration   2: 43172.025 ns/op
+Iteration   1: 46205.602 ns/op
+Iteration   2: 39484.275 ns/op
+Iteration   3: 39724.716 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeHit":
+  41804.864 ±(99.9%) 69564.162 ns/op [Average]
+  (min, avg, max) = (39484.275, 41804.864, 46205.602), stdev = 3813.046
+  CI (99.9%): [≈ 0, 111369.026] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss
+# Parameters: (size = 1000)
+
+# Run progress: 56.25% complete, ETA 00:11:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 9080.132 ns/op
+# Warmup Iteration   2: 9021.460 ns/op
+Iteration   1: 10210.350 ns/op
+Iteration   2: 10262.976 ns/op
+Iteration   3: 10210.471 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss":
+  10227.933 ±(99.9%) 553.675 ns/op [Average]
+  (min, avg, max) = (10210.350, 10227.933, 10262.976), stdev = 30.349
+  CI (99.9%): [9674.257, 10781.608] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss
+# Parameters: (size = 10000)
+
+# Run progress: 57.81% complete, ETA 00:11:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 16402.752 ns/op
+# Warmup Iteration   2: 16173.832 ns/op
+Iteration   1: 16189.806 ns/op
+Iteration   2: 16137.148 ns/op
+Iteration   3: 15365.981 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss":
+  15897.645 ±(99.9%) 8413.762 ns/op [Average]
+  (min, avg, max) = (15365.981, 15897.645, 16189.806), stdev = 461.187
+  CI (99.9%): [7483.883, 24311.408] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss
+# Parameters: (size = 100000)
+
+# Run progress: 59.38% complete, ETA 00:10:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 31701.204 ns/op
+# Warmup Iteration   2: 32868.048 ns/op
+Iteration   1: 32932.523 ns/op
+Iteration   2: 30654.960 ns/op
+Iteration   3: 30762.805 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss":
+  31450.096 ±(99.9%) 23442.291 ns/op [Average]
+  (min, avg, max) = (30654.960, 31450.096, 32932.523), stdev = 1284.951
+  CI (99.9%): [8007.805, 54892.387] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 60.94% complete, ETA 00:10:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 46740.012 ns/op
+# Warmup Iteration   2: 32364.476 ns/op
+Iteration   1: 33974.066 ns/op
+Iteration   2: 36800.633 ns/op
+Iteration   3: 36313.593 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5CompositeMiss":
+  35696.097 ±(99.9%) 27567.625 ns/op [Average]
+  (min, avg, max) = (33974.066, 35696.097, 36800.633), stdev = 1511.075
+  CI (99.9%): [8128.472, 63263.723] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleHit
+# Parameters: (size = 1000)
+
+# Run progress: 62.50% complete, ETA 00:09:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 548.637 ns/op
+# Warmup Iteration   2: 536.219 ns/op
+Iteration   1: 535.332 ns/op
+Iteration   2: 535.383 ns/op
+Iteration   3: 537.009 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleHit":
+  535.908 ±(99.9%) 17.409 ns/op [Average]
+  (min, avg, max) = (535.332, 535.908, 537.009), stdev = 0.954
+  CI (99.9%): [518.499, 553.317] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleHit
+# Parameters: (size = 10000)
+
+# Run progress: 64.06% complete, ETA 00:09:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 858.320 ns/op
+# Warmup Iteration   2: 846.221 ns/op
+Iteration   1: 844.108 ns/op
+Iteration   2: 842.723 ns/op
+Iteration   3: 843.383 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleHit":
+  843.404 ±(99.9%) 12.640 ns/op [Average]
+  (min, avg, max) = (842.723, 843.404, 844.108), stdev = 0.693
+  CI (99.9%): [830.764, 856.044] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleHit
+# Parameters: (size = 100000)
+
+# Run progress: 65.63% complete, ETA 00:09:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 1119.048 ns/op
+# Warmup Iteration   2: 1106.398 ns/op
+Iteration   1: 1110.303 ns/op
+Iteration   2: 1109.175 ns/op
+Iteration   3: 1103.320 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleHit":
+  1107.600 ±(99.9%) 68.387 ns/op [Average]
+  (min, avg, max) = (1103.320, 1107.600, 1110.303), stdev = 3.749
+  CI (99.9%): [1039.212, 1175.987] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleHit
+# Parameters: (size = 1000000)
+
+# Run progress: 67.19% complete, ETA 00:08:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 1157.891 ns/op
+# Warmup Iteration   2: 1153.710 ns/op
+Iteration   1: 1139.567 ns/op
+Iteration   2: 1138.409 ns/op
+Iteration   3: 1138.963 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleHit":
+  1138.980 ±(99.9%) 10.567 ns/op [Average]
+  (min, avg, max) = (1138.409, 1138.980, 1139.567), stdev = 0.579
+  CI (99.9%): [1128.413, 1149.547] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss
+# Parameters: (size = 1000)
+
+# Run progress: 68.75% complete, ETA 00:08:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 682.499 ns/op
+# Warmup Iteration   2: 627.896 ns/op
+Iteration   1: 581.449 ns/op
+Iteration   2: 580.860 ns/op
+Iteration   3: 581.052 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss":
+  581.120 ±(99.9%) 5.479 ns/op [Average]
+  (min, avg, max) = (580.860, 581.120, 581.449), stdev = 0.300
+  CI (99.9%): [575.641, 586.599] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss
+# Parameters: (size = 10000)
+
+# Run progress: 70.31% complete, ETA 00:07:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 945.452 ns/op
+# Warmup Iteration   2: 907.686 ns/op
+Iteration   1: 730.530 ns/op
+Iteration   2: 731.657 ns/op
+Iteration   3: 730.225 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss":
+  730.804 ±(99.9%) 13.763 ns/op [Average]
+  (min, avg, max) = (730.225, 730.804, 731.657), stdev = 0.754
+  CI (99.9%): [717.040, 744.567] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss
+# Parameters: (size = 100000)
+
+# Run progress: 71.88% complete, ETA 00:07:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 1034.827 ns/op
+# Warmup Iteration   2: 1009.451 ns/op
+Iteration   1: 956.752 ns/op
+Iteration   2: 954.736 ns/op
+Iteration   3: 955.546 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss":
+  955.678 ±(99.9%) 18.512 ns/op [Average]
+  (min, avg, max) = (954.736, 955.678, 956.752), stdev = 1.015
+  CI (99.9%): [937.165, 974.190] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 73.44% complete, ETA 00:06:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 1269.776 ns/op
+# Warmup Iteration   2: 1238.266 ns/op
+Iteration   1: 1165.783 ns/op
+Iteration   2: 1170.305 ns/op
+Iteration   3: 1165.736 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.netty5SingleMiss":
+  1167.275 ±(99.9%) 47.882 ns/op [Average]
+  (min, avg, max) = (1165.736, 1167.275, 1170.305), stdev = 2.625
+  CI (99.9%): [1119.393, 1215.156] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapHit
+# Parameters: (size = 1000)
+
+# Run progress: 75.00% complete, ETA 00:06:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 327.488 ns/op
+# Warmup Iteration   2: 291.182 ns/op
+Iteration   1: 292.717 ns/op
+Iteration   2: 291.158 ns/op
+Iteration   3: 291.406 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapHit":
+  291.760 ±(99.9%) 15.282 ns/op [Average]
+  (min, avg, max) = (291.158, 291.760, 292.717), stdev = 0.838
+  CI (99.9%): [276.478, 307.042] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapHit
+# Parameters: (size = 10000)
+
+# Run progress: 76.56% complete, ETA 00:06:11
+# Fork: 1 of 1
+# Warmup Iteration   1: 469.946 ns/op
+# Warmup Iteration   2: 419.932 ns/op
+Iteration   1: 427.930 ns/op
+Iteration   2: 428.527 ns/op
+Iteration   3: 430.426 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapHit":
+  428.961 ±(99.9%) 23.783 ns/op [Average]
+  (min, avg, max) = (427.930, 428.961, 430.426), stdev = 1.304
+  CI (99.9%): [405.178, 452.743] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapHit
+# Parameters: (size = 100000)
+
+# Run progress: 78.13% complete, ETA 00:05:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 605.089 ns/op
+# Warmup Iteration   2: 537.687 ns/op
+Iteration   1: 545.049 ns/op
+Iteration   2: 545.141 ns/op
+Iteration   3: 545.130 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapHit":
+  545.107 ±(99.9%) 0.918 ns/op [Average]
+  (min, avg, max) = (545.049, 545.107, 545.141), stdev = 0.050
+  CI (99.9%): [544.189, 546.024] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapHit
+# Parameters: (size = 1000000)
+
+# Run progress: 79.69% complete, ETA 00:05:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 706.880 ns/op
+# Warmup Iteration   2: 658.191 ns/op
+Iteration   1: 644.778 ns/op
+Iteration   2: 643.718 ns/op
+Iteration   3: 643.059 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapHit":
+  643.852 ±(99.9%) 15.820 ns/op [Average]
+  (min, avg, max) = (643.059, 643.852, 644.778), stdev = 0.867
+  CI (99.9%): [628.031, 659.672] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapMiss
+# Parameters: (size = 1000)
+
+# Run progress: 81.25% complete, ETA 00:04:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 340.395 ns/op
+# Warmup Iteration   2: 339.086 ns/op
+Iteration   1: 335.528 ns/op
+Iteration   2: 335.647 ns/op
+Iteration   3: 335.502 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapMiss":
+  335.559 ±(99.9%) 1.408 ns/op [Average]
+  (min, avg, max) = (335.502, 335.559, 335.647), stdev = 0.077
+  CI (99.9%): [334.151, 336.968] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapMiss
+# Parameters: (size = 10000)
+
+# Run progress: 82.81% complete, ETA 00:04:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 449.577 ns/op
+# Warmup Iteration   2: 444.203 ns/op
+Iteration   1: 438.205 ns/op
+Iteration   2: 438.747 ns/op
+Iteration   3: 436.771 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapMiss":
+  437.908 ±(99.9%) 18.630 ns/op [Average]
+  (min, avg, max) = (436.771, 437.908, 438.747), stdev = 1.021
+  CI (99.9%): [419.278, 456.537] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapMiss
+# Parameters: (size = 100000)
+
+# Run progress: 84.38% complete, ETA 00:04:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 586.732 ns/op
+# Warmup Iteration   2: 581.623 ns/op
+Iteration   1: 573.401 ns/op
+Iteration   2: 574.722 ns/op
+Iteration   3: 575.001 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapMiss":
+  574.375 ±(99.9%) 15.595 ns/op [Average]
+  (min, avg, max) = (573.401, 574.375, 575.001), stdev = 0.855
+  CI (99.9%): [558.780, 589.969] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.offHeapMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 85.94% complete, ETA 00:03:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 735.708 ns/op
+# Warmup Iteration   2: 724.693 ns/op
+Iteration   1: 713.274 ns/op
+Iteration   2: 713.235 ns/op
+Iteration   3: 713.544 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.offHeapMiss":
+  713.351 ±(99.9%) 3.072 ns/op [Average]
+  (min, avg, max) = (713.235, 713.351, 713.544), stdev = 0.168
+  CI (99.9%): [710.279, 716.424] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetHit
+# Parameters: (size = 1000)
+
+# Run progress: 87.50% complete, ETA 00:03:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 287.977 ns/op
+# Warmup Iteration   2: 276.121 ns/op
+Iteration   1: 272.005 ns/op
+Iteration   2: 272.154 ns/op
+Iteration   3: 272.528 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetHit":
+  272.229 ±(99.9%) 4.912 ns/op [Average]
+  (min, avg, max) = (272.005, 272.229, 272.528), stdev = 0.269
+  CI (99.9%): [267.317, 277.141] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetHit
+# Parameters: (size = 10000)
+
+# Run progress: 89.06% complete, ETA 00:02:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 344.213 ns/op
+# Warmup Iteration   2: 336.189 ns/op
+Iteration   1: 336.167 ns/op
+Iteration   2: 332.070 ns/op
+Iteration   3: 332.229 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetHit":
+  333.489 ±(99.9%) 42.345 ns/op [Average]
+  (min, avg, max) = (332.070, 333.489, 336.167), stdev = 2.321
+  CI (99.9%): [291.144, 375.834] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetHit
+# Parameters: (size = 100000)
+
+# Run progress: 90.63% complete, ETA 00:02:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 470.240 ns/op
+# Warmup Iteration   2: 464.954 ns/op
+Iteration   1: 464.224 ns/op
+Iteration   2: 478.156 ns/op
+Iteration   3: 464.446 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetHit":
+  468.942 ±(99.9%) 145.587 ns/op [Average]
+  (min, avg, max) = (464.224, 468.942, 478.156), stdev = 7.980
+  CI (99.9%): [323.355, 614.529] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetHit
+# Parameters: (size = 1000000)
+
+# Run progress: 92.19% complete, ETA 00:02:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 551.970 ns/op
+# Warmup Iteration   2: 542.367 ns/op
+Iteration   1: 534.129 ns/op
+Iteration   2: 534.551 ns/op
+Iteration   3: 540.050 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetHit":
+  536.243 ±(99.9%) 60.275 ns/op [Average]
+  (min, avg, max) = (534.129, 536.243, 540.050), stdev = 3.304
+  CI (99.9%): [475.968, 596.518] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetMiss
+# Parameters: (size = 1000)
+
+# Run progress: 93.75% complete, ETA 00:01:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 207.391 ns/op
+# Warmup Iteration   2: 207.372 ns/op
+Iteration   1: 215.767 ns/op
+Iteration   2: 212.951 ns/op
+Iteration   3: 212.815 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetMiss":
+  213.844 ±(99.9%) 30.397 ns/op [Average]
+  (min, avg, max) = (212.815, 213.844, 215.767), stdev = 1.666
+  CI (99.9%): [183.447, 244.241] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetMiss
+# Parameters: (size = 10000)
+
+# Run progress: 95.31% complete, ETA 00:01:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 261.019 ns/op
+# Warmup Iteration   2: 257.673 ns/op
+Iteration   1: 265.139 ns/op
+Iteration   2: 265.126 ns/op
+Iteration   3: 265.502 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetMiss":
+  265.256 ±(99.9%) 3.896 ns/op [Average]
+  (min, avg, max) = (265.126, 265.256, 265.502), stdev = 0.214
+  CI (99.9%): [261.359, 269.152] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetMiss
+# Parameters: (size = 100000)
+
+# Run progress: 96.88% complete, ETA 00:00:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 361.573 ns/op
+# Warmup Iteration   2: 362.776 ns/op
+Iteration   1: 373.923 ns/op
+Iteration   2: 375.374 ns/op
+Iteration   3: 374.041 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetMiss":
+  374.446 ±(99.9%) 14.707 ns/op [Average]
+  (min, avg, max) = (373.923, 374.446, 375.374), stdev = 0.806
+  CI (99.9%): [359.739, 389.153] (assumes normal distribution)
+
+
+# JMH version: 1.20
+# VM version: JDK 11.0.16, VM 11.0.16+8-post-Ubuntu-0ubuntu122.04
+# VM invoker: /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+# VM options: -Xmx2G
+# Warmup: 2 iterations, 3 s each
+# Measurement: 3 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 2 threads, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.komanov.offheap.jmh.Benchmarks.scalaSetMiss
+# Parameters: (size = 1000000)
+
+# Run progress: 98.44% complete, ETA 00:00:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 408.409 ns/op
+# Warmup Iteration   2: 400.845 ns/op
+Iteration   1: 397.720 ns/op
+Iteration   2: 397.707 ns/op
+Iteration   3: 400.656 ns/op
+
+
+Result "com.komanov.offheap.jmh.Benchmarks.scalaSetMiss":
+  398.694 ±(99.9%) 30.991 ns/op [Average]
+  (min, avg, max) = (397.707, 398.694, 400.656), stdev = 1.699
+  CI (99.9%): [367.703, 429.686] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:26:24
+
+Benchmark                        (size)  Mode  Cnt      Score       Error  Units
+Benchmarks.heapArrayHit            1000  avgt    3    330.374 ±    12.282  ns/op
+Benchmarks.heapArrayHit           10000  avgt    3    421.521 ±    13.513  ns/op
+Benchmarks.heapArrayHit          100000  avgt    3    563.825 ±     9.519  ns/op
+Benchmarks.heapArrayHit         1000000  avgt    3    691.803 ±     0.852  ns/op
+Benchmarks.heapArrayMiss           1000  avgt    3    320.315 ±     1.673  ns/op
+Benchmarks.heapArrayMiss          10000  avgt    3    444.384 ±    59.494  ns/op
+Benchmarks.heapArrayMiss         100000  avgt    3    580.867 ±    10.789  ns/op
+Benchmarks.heapArrayMiss        1000000  avgt    3    716.423 ±     5.247  ns/op
+Benchmarks.javaSetHit              1000  avgt    3     97.422 ±    15.443  ns/op
+Benchmarks.javaSetHit             10000  avgt    3     98.731 ±     1.305  ns/op
+Benchmarks.javaSetHit            100000  avgt    3    113.755 ±    12.371  ns/op
+Benchmarks.javaSetHit           1000000  avgt    3     84.045 ±    21.450  ns/op
+Benchmarks.javaSetMiss             1000  avgt    3     70.919 ±     3.615  ns/op
+Benchmarks.javaSetMiss            10000  avgt    3     66.657 ±     5.576  ns/op
+Benchmarks.javaSetMiss           100000  avgt    3     65.958 ±     1.272  ns/op
+Benchmarks.javaSetMiss          1000000  avgt    3     73.688 ±     3.587  ns/op
+Benchmarks.netty4CompositeHit      1000  avgt    3   7805.663 ±  7026.019  ns/op
+Benchmarks.netty4CompositeHit     10000  avgt    3  11863.728 ±   304.032  ns/op
+Benchmarks.netty4CompositeHit    100000  avgt    3  21655.844 ±   553.412  ns/op
+Benchmarks.netty4CompositeHit   1000000  avgt    3  30856.316 ± 23149.209  ns/op
+Benchmarks.netty4CompositeMiss     1000  avgt    3   9101.425 ±  1161.303  ns/op
+Benchmarks.netty4CompositeMiss    10000  avgt    3  15147.603 ±  1291.551  ns/op
+Benchmarks.netty4CompositeMiss   100000  avgt    3  21115.134 ±  1502.903  ns/op
+Benchmarks.netty4CompositeMiss  1000000  avgt    3  23323.471 ±  5794.355  ns/op
+Benchmarks.netty4SingleHit         1000  avgt    3    612.524 ±     1.853  ns/op
+Benchmarks.netty4SingleHit        10000  avgt    3    848.535 ±    33.344  ns/op
+Benchmarks.netty4SingleHit       100000  avgt    3   1007.750 ±   182.168  ns/op
+Benchmarks.netty4SingleHit      1000000  avgt    3   1201.206 ±    15.044  ns/op
+Benchmarks.netty4SingleMiss        1000  avgt    3    614.225 ±    28.268  ns/op
+Benchmarks.netty4SingleMiss       10000  avgt    3    812.765 ±    16.833  ns/op
+Benchmarks.netty4SingleMiss      100000  avgt    3   1011.278 ±    19.669  ns/op
+Benchmarks.netty4SingleMiss     1000000  avgt    3   1253.479 ±     8.703  ns/op
+Benchmarks.netty5CompositeHit      1000  avgt    3  10764.139 ±  5931.955  ns/op
+Benchmarks.netty5CompositeHit     10000  avgt    3  18501.143 ±  1285.978  ns/op
+Benchmarks.netty5CompositeHit    100000  avgt    3  33143.541 ± 20029.944  ns/op
+Benchmarks.netty5CompositeHit   1000000  avgt    3  41804.864 ± 69564.162  ns/op
+Benchmarks.netty5CompositeMiss     1000  avgt    3  10227.933 ±   553.675  ns/op
+Benchmarks.netty5CompositeMiss    10000  avgt    3  15897.645 ±  8413.762  ns/op
+Benchmarks.netty5CompositeMiss   100000  avgt    3  31450.096 ± 23442.291  ns/op
+Benchmarks.netty5CompositeMiss  1000000  avgt    3  35696.097 ± 27567.625  ns/op
+Benchmarks.netty5SingleHit         1000  avgt    3    535.908 ±    17.409  ns/op
+Benchmarks.netty5SingleHit        10000  avgt    3    843.404 ±    12.640  ns/op
+Benchmarks.netty5SingleHit       100000  avgt    3   1107.600 ±    68.387  ns/op
+Benchmarks.netty5SingleHit      1000000  avgt    3   1138.980 ±    10.567  ns/op
+Benchmarks.netty5SingleMiss        1000  avgt    3    581.120 ±     5.479  ns/op
+Benchmarks.netty5SingleMiss       10000  avgt    3    730.804 ±    13.763  ns/op
+Benchmarks.netty5SingleMiss      100000  avgt    3    955.678 ±    18.512  ns/op
+Benchmarks.netty5SingleMiss     1000000  avgt    3   1167.275 ±    47.882  ns/op
+Benchmarks.offHeapHit              1000  avgt    3    291.760 ±    15.282  ns/op
+Benchmarks.offHeapHit             10000  avgt    3    428.961 ±    23.783  ns/op
+Benchmarks.offHeapHit            100000  avgt    3    545.107 ±     0.918  ns/op
+Benchmarks.offHeapHit           1000000  avgt    3    643.852 ±    15.820  ns/op
+Benchmarks.offHeapMiss             1000  avgt    3    335.559 ±     1.408  ns/op
+Benchmarks.offHeapMiss            10000  avgt    3    437.908 ±    18.630  ns/op
+Benchmarks.offHeapMiss           100000  avgt    3    574.375 ±    15.595  ns/op
+Benchmarks.offHeapMiss          1000000  avgt    3    713.351 ±     3.072  ns/op
+Benchmarks.scalaSetHit             1000  avgt    3    272.229 ±     4.912  ns/op
+Benchmarks.scalaSetHit            10000  avgt    3    333.489 ±    42.345  ns/op
+Benchmarks.scalaSetHit           100000  avgt    3    468.942 ±   145.587  ns/op
+Benchmarks.scalaSetHit          1000000  avgt    3    536.243 ±    60.275  ns/op
+Benchmarks.scalaSetMiss            1000  avgt    3    213.844 ±    30.397  ns/op
+Benchmarks.scalaSetMiss           10000  avgt    3    265.256 ±     3.896  ns/op
+Benchmarks.scalaSetMiss          100000  avgt    3    374.446 ±    14.707  ns/op
+Benchmarks.scalaSetMiss         1000000  avgt    3    398.694 ±    30.991  ns/op
+
+Benchmark result is saved to /static/data/charts/offheap-set-netty-5/jdk11.json
