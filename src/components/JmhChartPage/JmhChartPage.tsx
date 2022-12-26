@@ -1,9 +1,9 @@
 import React from 'react';
 import { ErrorMessage, Loader, Layout } from '..';
-import { AjaxHelper, exportDataTable } from '../../util';
+import { AjaxHelper, CancelablePromise, exportDataTable } from '../../util';
 
 interface JmhChartPageConfig {
-  fetchFunc: () => Promise<any>;
+  fetchFunc: () => Promise<any> | CancelablePromise;
   exportDimensionsFunc: (benchmark: string, params: any) => any;
   headerText?: string;
   loadingText?: string;
