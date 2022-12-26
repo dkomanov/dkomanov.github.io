@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-.markdown div.choose ul li:hover {
+.markdown div.choose ul li:not(.slider):hover {
     background-color: rgba(0, 0, 0, .15);
 }
 
