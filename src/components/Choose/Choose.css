@@ -42,3 +42,7 @@
     vertical-align: bottom;
     font-size: 23px;
 }
+
+.markdown div.choose li.slider input[type=range] {
+    vertical-align: middle;
+}
