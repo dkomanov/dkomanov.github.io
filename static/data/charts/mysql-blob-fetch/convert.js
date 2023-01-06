@@ -3,9 +3,6 @@ const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('jdk17.json'));
 
 const converted = data.map(({ benchmark, params, primaryMetric, secondaryMetrics }) => {
-  //'com.komanov.mysql.blob.jmh.MysqlBlobBenchmarks.app_compressed'
-  const method = benchmark.substring(benchmark.lastIndexOf('.') + 1); // app_compressed
-
   const getAvg = (name) => {
     // AuxCounters count warmup as well, so the first value in the array is
     // "zero".
@@ -17,8 +14,8 @@ const converted = data.map(({ benchmark, params, primaryMetric, secondaryMetrics
   return {
     params: {
       ...params,
-      method,
-      comparison: `${method}-${params.compressionRatio}`,
+      realData: benchmark.indexOf('RealData') !== -1,
+      comparison: `${params.algorithm}-${params.compressionRatio || 'LOW_COMPRESSION_1_3'}`,
     },
     primaryMetric: {
       score: primaryMetric.score,
