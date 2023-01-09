@@ -3,7 +3,7 @@ import './Button.css';
 
 interface ButtonProps {
     onClick: (event: React.MouseEvent) => void;
-    children: React.ReactChildren;
+    children: React.ReactNode;
 }
 
 const Button = (props: ButtonProps) => {
