@@ -5,10 +5,7 @@
  * @param {function(benchmark: string, params: string)} extractor
  * @returns {Array} Converted list composed of extracted fields and pm (primaryMetric).
  */
-export function exportDataTable(
-  results: any[],
-  extractor: (benchmark: string, params: any) => any
-) {
+export function exportDataTable(results: any[], extractor: (benchmark: string, params: any) => any) {
   return results.map((value) => {
     const dimensions = extractor(value.benchmark, value.params);
     dimensions.pm = value.primaryMetric;
@@ -18,11 +15,9 @@ export function exportDataTable(
 
 export type JmhExtractorFunc = (pm: any) => number;
 export interface JmhExtractorFuncHolder {
-  func: JmhExtractorFunc | null;
+  func?: JmhExtractorFunc;
 }
-export const EmptyJmhExtractorFuncHolder: JmhExtractorFuncHolder = {
-  func: null,
-};
+export const EmptyJmhExtractorFuncHolder: JmhExtractorFuncHolder = {};
 
 export interface JmhAxisValueEx {
   name: string;
@@ -92,3 +87,50 @@ export function buildData(
 
   return result;
 }
+
+export function buildData2(
+  list: any[],
+  extractByTimeUnitFunc: JmhExtractorFunc,
+  xDesc: JmhAxisDescriptor,
+  yDesc: JmhAxisDescriptor,
+  floorValues: boolean
+): JmhDataValue[][] {
+  const result: JmhDataValue[][] = [];
+
+  const header = [xDesc.title];
+  yDesc.values.forEach((v) => {
+    header.push(nameOf(v));
+  });
+  result.push(header);
+
+  function addValues(dataForThisLine: any[], desc: JmhAxisDescriptor, func: JmhExtractorFunc, line: JmhDataValue[]) {
+    desc.values.forEach((y) => {
+      const yValue = valueOf(y);
+      const d = dataForThisLine.find((v) => v[desc.prop] === yValue) || {
+        pm: { scorePercentiles: {} },
+      };
+      line.push(floorValues ? Math.floor(func(d.pm) || NaN) : func(d.pm));
+    });
+  }
+
+  xDesc.values.forEach((realX) => {
+    const xName = nameOf(realX);
+    const xValue = valueOf(realX);
+    const dataForThisLine = list.filter((v) => v[xDesc.prop] === xValue);
+    const line: JmhDataValue[] = [xName];
+    addValues(dataForThisLine, yDesc, extractByTimeUnitFunc, line);
+    if (line.slice(1).filter((v) => !Number.isNaN(v)).length > 0) {
+      result.push(line);
+    }
+  });
+
+  return result;
+}
+
+export function createFilterByDescriptor(desc: JmhAxisDescriptor): (p: any) => boolean {
+  const values: Record<string, boolean> = {};
+  desc.values.forEach((v) => (values[valueOf(v)] = true));
+  return (p: any) => values[p[desc.prop]] === true;
+}
+
+export const transpose = (arr: any[][]): any[][] => arr[0].map((_, i) => arr.map((row) => row[i]));

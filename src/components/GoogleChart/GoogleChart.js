@@ -7,6 +7,7 @@ function getConvertOptionsFunc(chartType) {
     : null;
 }
 
+// https://developers.google.com/chart/interactive/docs/gallery/linechart
 export default class GoogleChart extends React.Component {
   constructor(props) {
     super(props);

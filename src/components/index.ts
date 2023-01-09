@@ -3,6 +3,7 @@ export { default as BlogPostList } from './BlogPostList/BlogPostList';
 export { default as Button } from './Button/Button';
 export { default as Changelog } from './Changelog/Changelog';
 export { default as ChartAndTable } from './ChartAndTable/ChartAndTable';
+export { default as ChartAndTable2 } from './ChartAndTable/ChartAndTable2';
 export { default as Choose } from './Choose/Choose';
 export { default as ChooseSlider } from './Choose/ChooseSlider';
 export { default as StatelessChoose } from './Choose/StatelessChoose';
