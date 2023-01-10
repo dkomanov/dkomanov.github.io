@@ -43,6 +43,8 @@ high (3.4) -> "0123"
 extra high (6.2) -> "01"
 ```
 
+*Disclaimer*: random dataset isn't entirely random as you may see, for the purposes of the benchmark it's just a non-static dataset with more or less stable compression ratio.
+
 ## Compression Algorithms
 
 I picked a few popular compression algorithms:
