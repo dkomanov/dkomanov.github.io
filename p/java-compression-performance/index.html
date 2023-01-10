@@ -1,0 +1,615 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:description" content="A performance benchmark for a few compression libraries in Java"/><meta data-react-helmet="true" name="twitter:title" content="Java Compression Performance"/><meta data-react-helmet="true" name="twitter:creator" content="Dmitry Komanov"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:description" content="A performance benchmark for a few compression libraries in Java"/><meta data-react-helmet="true" name="og:title" content="Java Compression Performance"/><meta data-react-helmet="true" name="description" content="A performance benchmark for a few compression libraries in Java"/><meta name="theme-color" content="#663399"/><meta name="generator" content="Gatsby 4.19.2"/><style data-href="/styles.0dc5cf8c2594c5e48801.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}article{border-bottom:1px solid #f2f2f0;padding:40px 0}article:last-child{border-bottom:0}article .post-title{display:block;font-size:28px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}article .post-teaser{float:left;height:100px;padding:0 10px 0 0;width:100px}article .post-description{color:#666665;font-size:20px;font-style:normal;font-weight:300;letter-spacing:-.02em;line-height:1.3}article .teaser-padding{margin-left:110px}article .post-meta{color:#b3b3b1;font-size:14px;line-height:30px}article .post-meta time{margin:0 1em 0 0;vertical-align:middle}ul.pagination{list-style:none;margin:1em 0 0;padding:0}ul.pagination li{color:#b3b3b1;float:left;padding:0 10px 0 0}ul.pagination li.active{font-weight:700}ul.pagination li a,ul.pagination li a:visited{color:#b3b3b1;text-decoration:none}.btn{background-color:transparent;border:none;cursor:pointer;display:inline;margin:0;outline:0;padding:0;text-decoration:underline}.btn:focus,.btn:hover{text-decoration:none}.table-toggler{text-align:center}.table-toggler a{border-bottom:1px dotted #000;cursor:pointer;font-size:.7em}.raw-data-table table{width:100%}.raw-data-table table th{background-color:rgba(0,0,0,.03)}.raw-data-table table .right{text-align:right}.markdown div.choose ul{margin:.5em 0 0;padding:0}.markdown div.choose ul li:first-child{border-radius:5px 0 0 5px}.markdown div.choose ul li:last-child{border-radius:0 5px 5px 0}.markdown div.choose ul li{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);cursor:pointer;line-height:1.4;margin:0;min-width:40px;padding:3px .5em;text-align:center}.markdown div.choose ul li:not(.slider):hover{background-color:rgba(0,0,0,.15)}.markdown div.choose ul li.active{background-color:rgba(0,0,0,.15);cursor:default}.markdown div.choose label{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);display:inline-block;font-size:23px;margin:0 .5em 0 0;padding:5px;vertical-align:bottom}.markdown div.choose li.slider input[type=range]{vertical-align:middle}body{text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";font-family:Open Sans,MundoSans,Helvetica Neue,Arial,Helvetica,sans-serif;font-size:1.2em;margin:0;padding:0}a{color:#333332}a,a:hover{text-decoration:none}.cf:after{clear:both;content:"";display:table}ul.horizontal{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.horizontal li{float:left}.site-header{box-sizing:border-box;margin:0 auto;max-width:740px;padding:0;position:relative;top:-140px;width:100%;z-index:2}.site-header .site-logo{background-color:#fff;background-image:url(data:image/jpeg;base64,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);background-size:cover;border:3px solid #fff;border-radius:50%;box-shadow:0 1px 1px rgba(0,0,0,.3);height:120px;margin-right:-60px;position:absolute;right:50%;text-indent:-9999px;top:-60px;width:120px;z-index:99}.site-header .site-title{color:#fff;font-size:50px;font-weight:700;letter-spacing:-2px;line-height:50px;margin:0;outline:0;padding:84px 16px 8px;text-align:center;word-break:break-word}.site-header .site-description{color:#666;font-size:18px;font-weight:400;line-height:1.5;margin:0 0 20px;padding:0 32px;text-align:center}.site-content{box-sizing:border-box;margin:0 auto;max-width:740px;position:relative;top:-140px;width:100%}.wide-content{display:block;left:50%;margin-left:-48vw;margin-right:-48vw;position:relative;right:50%;width:96vw}@media only screen and (max-width:800px){.site-content{padding:0 32px}}.markdown{color:#333;width:100%}.markdown,.markdown h1,.markdown h2,.markdown h3{font-family:Linux Libertine,serif}.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 4px}.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:20px;font-style:normal;font-weight:500;letter-spacing:.02em;line-height:1.4;margin:0 0 3px;text-transform:uppercase}.markdown h1,.markdown h2{font-size:32px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:4px;padding-top:31px}.markdown p{color:#333;font-size:22px;font-style:normal;font-weight:400;-webkit-hyphens:auto;hyphens:auto;line-height:30px;margin:0;padding-bottom:30px}.markdown a{color:#333;text-decoration:underline}.markdown img{margin:0 auto;max-width:100%}.markdown figure{margin:0;padding:0 0 30px}.markdown figcaption{color:#666665;font-size:16px;font-style:italic;font-weight:400;line-height:1.3;outline:0;text-align:center;z-index:300}.markdown hr{border:0;border-top:1px solid #ddd;display:block;margin:30px auto;padding:0;width:15%}.markdown blockquote,.markdown li blockquote{border-left:3px solid #57ad68;margin:0 0 30px -26px;padding-left:20px}.markdown blockquote p,.markdown li blockquote p{border-left:3px solid #57ad68;font-style:italic;font-weight:400;letter-spacing:.01rem;margin-left:-26px;padding-bottom:3px;padding-left:20px}.markdown ol,.markdown ul{margin:0;padding:0 0 30px}.markdown li{font-size:23px;font-style:normal;font-weight:400;line-height:30px;margin-bottom:12px;margin-left:30px;padding:2px 0 0}.markdown li p{padding:0 0 1.618rem}.markdown ol li{list-style-type:decimal}.markdown code{font-size:18px}.markdown.tiny *{font-size:16px;line-height:1.2em}.markdown.tiny ul{padding:0}.markdown.tiny ul li{margin-bottom:0}footer{color:#999;font-size:12px;line-height:17.6px;margin:0 auto;max-width:640px;padding:22px 0;text-align:center;width:100%}footer a{color:#666;text-decoration:none}footer a:hover{color:#333}.share-buttons{display:inline-block}.share-buttons .share-button{display:inline-block;margin:0 0 0 .5em;text-align:center;vertical-align:top}.site-menu{color:#ccc;margin:0 0 50px;text-align:center}.site-menu a{color:#999;padding-left:20px;text-decoration:none}.site-menu a:hover{color:#333}.site-menu a.active{font-weight:700}.tag-cloud a{margin:6px}ul.tags{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.tags li{background-color:rgba(0,0,0,.05);border-radius:3px;float:left;line-height:1.4;margin:4px .5em 0 0;padding:3px 5px}ul.tags li:hover{background-color:rgba(0,0,0,.15)}ul.tags li.label{padding:0 .5em 0 0}ul.tags li a,ul.tags li a:visited{color:rgba(0,0,0,.68);text-decoration:none}.teaser-image{background-color:#000;height:360px;overflow:hidden;position:relative}.teaser-image_image{background-position:50%;background-size:cover;bottom:0;left:0;position:absolute;right:0;text-indent:-9999px;top:0;z-index:1}.time-units p.small{margin:0 0 10px}.time-units small{color:rgba(0,0,0,.3);font-size:11px}.site-content.no-cover{position:relative;top:0}.no-cover .post-meta{padding-top:60px}.no-cover .post-title{color:#333332;font-size:50px;font-style:normal;font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}.no-cover .author-image{background-image:url(/img/top-logo.jpg);background-size:cover;border-radius:100%;display:inline-block;float:left;height:30px;line-height:30px;margin-bottom:-10px;margin-right:8px;text-indent:-9999px;width:30px}.no-cover .author-name{display:inline}.no-cover .post-meta-text{color:#b3b3b1;font-size:14px;font-style:normal;font-weight:400;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}.blog-post-meta{color:#b3b3b1}ul.what-i-read{list-style-type:none;margin:0;padding:0}ul.what-i-read>li{display:inline-block;padding:0 10px 0 0}</style><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" title="Severe Software Developer Blog" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=994a873755adc623fbc44f1a9a107c69" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=994a873755adc623fbc44f1a9a107c69"/><title data-react-helmet="true">Java Compression Performance | @dkomanov</title><link data-react-helmet="true" rel="canonical" href="TBD"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="teaser-image"><div class="teaser-image_image" style="background-image:url(/static/b533fb6ce07791f6e8fd3359c5f591bb/cover.jpg);transform:translate3d(0px, 0px, 0px);opacity:1">Teaser Image</div></div><header class="site-header"><a class="site-logo" href="/">@dkomanov</a><h1 class="site-title">@dkomanov</h1><div class="site-description">Severe Software Developer Blog</div><div class="site-menu"><a href="/">Blog</a><a href="/what-i-read">What I Read</a><a href="/what-i-listen">What I Listen</a><a href="/about">About</a></div></header><div class="site-content"><div class="blog-post" itemscope="" itemType="http://schema.org/Article"><h1>Java Compression Performance</h1><div class="markdown " role="main"><p><a href="https://en.wikipedia.org/wiki/Data_compression">Data compression</a> is a very broad topic, we may find lots of materials on this topic on Internet. There are <a href="https://quixdb.github.io/squash-benchmark/">amazing</a> <a href="http://mattmahoney.net/dc/text.html">benchmarks</a> for all kinds of compression algorithms. Benchmarks <sup><a href="https://github.com/ning/jvm-compressor-benchmark">1</a> <a href="https://github.com/torao/benchmark.compression">2</a> <a href="http://web.archive.org/web/20180715083420/http://java-performance.info/performance-general-compression/">3</a></sup> for Java exist, but it seems to be a little bit outdated (not using JMH, for example) as it was written a long time ago.</p>
+<p>Compression effectiveness (both performance and size) is dependent on the actual data. Therefore, it made sense to me to redo benchmarks to determine which algorithm (if any) will fit the most, and just learn a bit more about data compression in Java.</p>
+<h2 id="what-data-do-we-benchmark" style="position:relative;"><a href="#what-data-do-we-benchmark" aria-label="what data do we benchmark permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What data do we benchmark</h2>
+<p>We are going to benchmark on two sets of data: our internal data structure of different sizes and a set of artificial randomly generated data with different compression ratios and sizes.</p>
+<p>An internal data structure is a kind of <a href="https://en.wikipedia.org/wiki/Trie">trie</a> with URLs, UUIDs and some other binary information (encoded as <a href="https://developers.google.com/protocol-buffers/">protobuf</a> messages). We can’t share the data itself as may contain some user data.</p>
+<p>Random dataset is just random characters of different character sets. Here is the function to <a href="https://github.com/dkomanov/stuff/blob/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression/BlobCompressionRatio.java">generate data</a>:</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>Random</span> rnd <span class="token operator">=</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span>
+
+<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">generateImpl</span><span class="token punctuation">(</span>
+  <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> alphabet<span class="token punctuation">,</span>
+  <span class="token keyword">int</span> length<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> result<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> alphabet<span class="token punctuation">[</span>rnd<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span>alphabet<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>For different alphabets I calculated compression ratios for <a href="https://en.wikipedia.org/wiki/Deflate">deflate</a> compression algorithm and called different sets according to its compression ratio:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">low (1.3) -> "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+medium (2.1) -> "0123456789"
+high (3.4) -> "0123"
+extra high (6.2) -> "01"</code></pre></div>
+<h2 id="compression-algorithms" style="position:relative;"><a href="#compression-algorithms" aria-label="compression algorithms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compression Algorithms</h2>
+<p>I picked a few popular compression algorithms:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Gzip">gzip</a> via <a href="https://commons.apache.org/proper/commons-compress/">Apache Commons Compress</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Deflate">deflate</a> also via commons-compress.</li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">MySQL compression</a>: basically, it’s uses deflate algorithm, but also prefixes with 4 bytes of the original data length (which helps allocating buffer for decompression). Via <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/zip/Deflater.html">java.util.zip.Deflater</a>.</li>
+<li><a href="https://github.com/facebook/zstd">zstd</a>: Facebook’s compression algorithm that’s supposedly faster and has better compression ratio than deflate.</li>
+<li><a href="https://github.com/google/snappy">snappy</a>: Google’s compression algorithm that was designed to be very fast with reasonable compression ratios. Via <a href="https://github.com/xerial/snappy-java">snappy-java</a>.</li>
+<li><a href="https://github.com/google/brotli">brotli</a>: Another Google’s compression algorithm that aims for the better compression ratio and comparable performance with deflate. For brotli we will use 3 compression levels: 0, 6 and 11 (default, maximum). Via <a href="https://github.com/hyperxpro/Brotli4j">Brotli4j</a>.</li>
+<li><a href="https://lz4.github.io/lz4/">lz4</a>: a compression algorithm that aims for the best decoding performance. For lz4 we will use 3 compression levels: fast, 9 (default), 17 (maximum). Via <a href="https://github.com/lz4/lz4-java">lz4-java</a>.</li>
+</ul>
+<h2 id="compression-ratios" style="position:relative;"><a href="#compression-ratios" aria-label="compression ratios permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compression Ratios</h2>
+<p>For the Real dataset the best compression ratio had brotli, the worst snappy and lz4 fast:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d944ac225e6a3d5cba450d98bd9d4dee/82f58/real-compression-ratios.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.810810810810814%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTElEQVQozx2RS47jVAAAfVCOgLgBOw4AS9ggjcQGDYhk+kfTnWQcO45/z59nv4+f7diZnmHJaLpRdxikQuQAJVWpvI9/feThzw+oqcfMI7Uz2ONIOzqc1XSqpR977OgQtqHsNXtdop3GNpJudMj/mWmkthrv38+fmR6ObOuYXZuxFiGRzrnLA2QjyNMdVSOIypj7OuJORiyLt0TVnjIOETJjmwVkSrBJfLx/Tiemh5mg2rNvc96KHYkWbPIdMvIpVrdURUxcxGxkzKZJuKl2xOkW8ccVRRkTZCFCCfwkwDudTrz/8B7VG/TYUesGPVhEW+G2a5qrJToOkSKmOCcrYitpkgC5+BVXZhQiwZkGkcd4z8/PTMeZttN000BjFfrgSFXFWBeYaMdoDdoqMluTmIpQCdoyQ6/u6U1L1VT0o6OSFd7p5YXp3Ywwkma0CF2T9JJrsaVLI4y/oRs6Cqe4rUJ+r0KWhU+2W2He/IZuS1It0XNP0hR4zy8vHKcDnSwZVIMuctSgzxZ96GNuLunz5Gy0VwV7U+JrQb3fot8sOIgUlSXMStLEEd7fT09M84weunOy6gzZ0HIpfEwaYQOffnCUneKmDrkofX4R6/MUfXfL0GlaZxmPE7Vu8Z4eHxnnCTkY2oOjMA1533JfRThVY0XONPbUtuW6DListrzO70llissz3NBRmhb37kDe1niPnz7ROMMiW3NZblkma77fLfj66gfirqY2ilUT89P+mq8W3/Hl8lu++PkbfowuUM5yVQe8Ci94Xax4FVzwH9Xxr3EiFp0+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Compression Ratios for Real Data"
+        title="Compression Ratios for Real Data"
+        src="/static/d944ac225e6a3d5cba450d98bd9d4dee/50383/real-compression-ratios.png"
+        srcset="/static/d944ac225e6a3d5cba450d98bd9d4dee/1d79a/real-compression-ratios.png 185w,
+/static/d944ac225e6a3d5cba450d98bd9d4dee/1efb2/real-compression-ratios.png 370w,
+/static/d944ac225e6a3d5cba450d98bd9d4dee/50383/real-compression-ratios.png 740w,
+/static/d944ac225e6a3d5cba450d98bd9d4dee/73caa/real-compression-ratios.png 1110w,
+/static/d944ac225e6a3d5cba450d98bd9d4dee/82f58/real-compression-ratios.png 1387w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>For the Stub dataset (random) the best is brotli and the worst consistently lz4 fast.</p>
+<p>A spreadsheet with all compression ratios is available <a href="https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI">here</a>.</p>
+<h2 id="benchmarks" style="position:relative;"><a href="#benchmarks" aria-label="benchmarks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks</h2>
+<p><a href="https://github.com/dkomanov/stuff/blob/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression/jmh/CompressionBenchmark.scala">Benchmarks</a> were performed using <a href="https://github.com/openjdk/jmh">JMH</a> for 3 JDKs: openjdk-8, openjdk-11 and openjdk-17. If not mentioned separately, the charts are for openjdk-17.</p>
+<h3 id="decoding-on-real-data" style="position:relative;"><a href="#decoding-on-real-data" aria-label="decoding on real data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decoding on Real Data</h3>
+<p>First, let’s see the performance of decoding for the Real Data (data length is between 600KB and 4MB):</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f60c34c5b5f85e663a344fbf4b778b4b/5eb90/real-decode-performance.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJUlEQVQoz52R224jMQxD8/+fWaBB03TGV0m+jU/hyW66wL60FcAH2yJF0ZfjOFiYc/4MwOydkpU+JiUFTJXLr8TmZCl2FYplYBBzQFV+KfjHnWaPjMEBxJiotXIxM1Z9S+R0Ns/+Jolo8vdI9u6x8hJ8kL6c/lfraozzrR2TVisheuqojL4MHcQsqNpj5X95C6UW1ITSGpodyd8IwbG7Defu7O6OiGd2oxVltPbUuJxTa8Y0oBaR/IH6KyXesPhGlY1WMsUio0SoGUahVz1zi0FobTxjOx2+367cXl+4X1/Y3l4JPp6NwQW8S+xB2H1kW3CR+xZ43wLOZ2LI1NK+BMdYX26EZLiFqPg1WTIhCXtKbN6jZqgVRJQsdua1uGN0eu/P7D8BS13A7/aO+eAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Performance for Real Data (600KB-4MB)"
+        title="Decoding Performance for Real Data (600KB-4MB)"
+        src="/static/f60c34c5b5f85e663a344fbf4b778b4b/50383/real-decode-performance.png"
+        srcset="/static/f60c34c5b5f85e663a344fbf4b778b4b/1d79a/real-decode-performance.png 185w,
+/static/f60c34c5b5f85e663a344fbf4b778b4b/1efb2/real-decode-performance.png 370w,
+/static/f60c34c5b5f85e663a344fbf4b778b4b/50383/real-decode-performance.png 740w,
+/static/f60c34c5b5f85e663a344fbf4b778b4b/73caa/real-decode-performance.png 1110w,
+/static/f60c34c5b5f85e663a344fbf4b778b4b/536c7/real-decode-performance.png 1480w,
+/static/f60c34c5b5f85e663a344fbf4b778b4b/5eb90/real-decode-performance.png 1612w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Another view for this chart would be throughput in bytes per second:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/29366b2c9a2e8da0cfba340fb806f986/d004c/real-decode-throughput.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTElEQVQoz4WS244cIQxE+/9/M9JosplRN41tMOA+CczenrIllQSoKJcN2xgDLxW3QrVK1MYVQVwX1w+MqYtgopwHxYxtHnjvL46OlsLwxgU/Gn5w4swHZsrWe/88nOgxMDUYsUwj/p9wtL7upTPj7mwiwpiXv1ezyrEL8S7+juhj6UYEIoqYvdbpPaFIpvfAfdBH4G2sfW2dIymSbVUuVsnZOA4hJeVMQozBmEmviyyKWWFrrdFGx1vHS8e9U4cv9gisOlkM0UKd2qsvfWuDWl+cY/nAFlfgtVNqo7RGqf5K2y+s+EpaI6i9U5qvwtN4FpotqwjN2zKbo1iPUmRH9tsnLT2wtKPpgTzf0Ocb6XHn+HMnP39zPu+Lab/xfPxCNX0ZzpeyMlsSVDOiGdU54ITYicjO8bghklBTRE+sCKaZVpRqhea+fgT/DP8CsyHAcdE/UEIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Throughput for Real Data (600KB-4MB)"
+        title="Decoding Throughput for Real Data (600KB-4MB)"
+        src="/static/29366b2c9a2e8da0cfba340fb806f986/50383/real-decode-throughput.png"
+        srcset="/static/29366b2c9a2e8da0cfba340fb806f986/1d79a/real-decode-throughput.png 185w,
+/static/29366b2c9a2e8da0cfba340fb806f986/1efb2/real-decode-throughput.png 370w,
+/static/29366b2c9a2e8da0cfba340fb806f986/50383/real-decode-throughput.png 740w,
+/static/29366b2c9a2e8da0cfba340fb806f986/73caa/real-decode-throughput.png 1110w,
+/static/29366b2c9a2e8da0cfba340fb806f986/536c7/real-decode-throughput.png 1480w,
+/static/29366b2c9a2e8da0cfba340fb806f986/d004c/real-decode-throughput.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>From these charts it’s clear that lz4 (all 3 levels) outperforms significantly all other algorithms. The next after lz4 fast are zstd and snappy.</p>
+<h3 id="encoding-of-real-data" style="position:relative;"><a href="#encoding-of-real-data" aria-label="encoding of real data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encoding of Real Data</h3>
+<p>Next, let’s check encoding performance for the Real Data (data length is between 600KB and 4MB):</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9935e60c4ed386da6885ec58d82575bd/d004c/real-encode-performance-brotli11.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAz0lEQVQoz52R227EIAxE+f+P3TTgGxgyK4eElVq11a6lIx7QHHkgjTEQHMfxFjGtKXLe0LzByg4VQfpUGBl3A/M+xbSDhZHeFU2AMRy9V1zLYs8FtVYkEfmorruuZjH0tUFiw/+F+FbVz6rBfReTiSGif1eODaLWFCjcBd0rem8/3v2eNEMNvdtijAjUk+NwAK/Ab3OLT6FVg9W2iO8XZqgoVOxEiMELuU4ClfkZt/QSVqgZ1CpUDcJTGFAhPB7bGZwQiBglE0ouKDlDVZfwCfGBxW4Ij8+IAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Encoding Performance for Real Data (600KB-4MB)"
+        title="Encoding Performance for Real Data (600KB-4MB)"
+        src="/static/9935e60c4ed386da6885ec58d82575bd/50383/real-encode-performance-brotli11.png"
+        srcset="/static/9935e60c4ed386da6885ec58d82575bd/1d79a/real-encode-performance-brotli11.png 185w,
+/static/9935e60c4ed386da6885ec58d82575bd/1efb2/real-encode-performance-brotli11.png 370w,
+/static/9935e60c4ed386da6885ec58d82575bd/50383/real-encode-performance-brotli11.png 740w,
+/static/9935e60c4ed386da6885ec58d82575bd/73caa/real-encode-performance-brotli11.png 1110w,
+/static/9935e60c4ed386da6885ec58d82575bd/536c7/real-encode-performance-brotli11.png 1480w,
+/static/9935e60c4ed386da6885ec58d82575bd/d004c/real-encode-performance-brotli11.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Wow! Brotli with level 11 took 13 seconds to encode 4MB of data… At first I didn’t believe it, thought that I must be use the library incorrectly. But then I ran original native binary:</p>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">time</span> brotli ~/1/bins/total_4072805_with_34010_items.bin
+
+real	0m12.945s
+user	0m12.878s
+sys	0m0.064s</code></pre></div>
+<p>Indeed, compression level 11 is extremely slow. Let’s exclude it to see normally performance of other algorithms:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c5ea49f6ee620b7690b314eade684511/5eb90/real-encode-performance.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABFElEQVQoz5WS227DIAyG8/7vOalrmiaADeH4TabrtotpWo1+zAV8PrHUWum9M8Z4TUA/C+FwlFI4gyPFyNJaew3Ip++dngvJCy0XvDhiVBaDvQSs7dvXRh+WKzgfyDmzxBj/DyuVkcuUlWs2RrcdOXZUhUVV/4ZYSwxgIAPa89aNQZYDuV2ppdBLo5b6Sw9t9UGv1qPKKO2RiQ1hMEu0c06K3leqBWuPO2YTOCM+bj90npAVRmHUk5qELG5OsqiniCO7Oz/tmdAcimwr/vJGWN/x7xfu1wvbdmNfrxzbyr5vHMeB8w4/dRBUsP6nqPPbPKETGGNCRAmi00uMeI1ITARVbgaTgBOZ8qq4EBARoirpTF/ADxFlwunpaRqgAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Encoding Performance without brotli_11 for Real Data (600KB-4MB)"
+        title="Encoding Performance without brotli_11 for Real Data (600KB-4MB)"
+        src="/static/c5ea49f6ee620b7690b314eade684511/50383/real-encode-performance.png"
+        srcset="/static/c5ea49f6ee620b7690b314eade684511/1d79a/real-encode-performance.png 185w,
+/static/c5ea49f6ee620b7690b314eade684511/1efb2/real-encode-performance.png 370w,
+/static/c5ea49f6ee620b7690b314eade684511/50383/real-encode-performance.png 740w,
+/static/c5ea49f6ee620b7690b314eade684511/73caa/real-encode-performance.png 1110w,
+/static/c5ea49f6ee620b7690b314eade684511/536c7/real-encode-performance.png 1480w,
+/static/c5ea49f6ee620b7690b314eade684511/5eb90/real-encode-performance.png 1612w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>And the corresponding chart for the throughput (bytes per second):</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4a1cb772d0e1e7a613df36b38ec36354/d004c/real-encode-throughput.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQoz12Si27sIAxE8/+futXebIAAfnGuAmladaKRgYwHsNncjYsTYzAm+RV55u6K6Um4MaZ+5Vxo6UOrlc3dUa2YKxrjTuyYVdxlmbhg1uZcw+c4XBFTqnUGQSoHZz2XYVZhb5mmldRPmnU8nAidiSN8nqS70kwWtXH0k1JP1J2UMyLCVkrBb3F3oZrwEaGokLST7pi1U0xpHhQz9t5pVZGuxBiUY+cshS3nvMrnA9dgeEyBRCB+M4KujoozYhAWWHOIVb8LLoapsZkZLj55CZ+xOt6dkJ/4/NdlPL+7kd+YNYwInqaxNr6XnvW/WA2+TX8Zb9f1+tXy9xd1/1D3RDsyLSX6saP5QEtCjn0x5cm+v2n/XtT3C2v1fnWXYQQmHRfFLnZBz7JMzkxNB+nrRUsHvRR6qfTa0FandlL0ufZ/8dLC0lsUoSoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Encoding Throughput without brotli_11 for Real Data (600KB-4MB)"
+        title="Encoding Throughput without brotli_11 for Real Data (600KB-4MB)"
+        src="/static/4a1cb772d0e1e7a613df36b38ec36354/50383/real-encode-throughput.png"
+        srcset="/static/4a1cb772d0e1e7a613df36b38ec36354/1d79a/real-encode-throughput.png 185w,
+/static/4a1cb772d0e1e7a613df36b38ec36354/1efb2/real-encode-throughput.png 370w,
+/static/4a1cb772d0e1e7a613df36b38ec36354/50383/real-encode-throughput.png 740w,
+/static/4a1cb772d0e1e7a613df36b38ec36354/73caa/real-encode-throughput.png 1110w,
+/static/4a1cb772d0e1e7a613df36b38ec36354/536c7/real-encode-throughput.png 1480w,
+/static/4a1cb772d0e1e7a613df36b38ec36354/d004c/real-encode-throughput.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>4 leaders here are: lz4 fast (500+MBps), brotli_0 (450+MBps), snappy (400+MBps) and zstd (250+MBps). The worst is lz4_high17 with 13-30MBps.</p>
+<h3 id="comparing-performance-for-different-jdks" style="position:relative;"><a href="#comparing-performance-for-different-jdks" aria-label="comparing performance for different jdks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparing Performance for different JDKs</h3>
+<p>And comparing performance in different JDKs we may see that performance is more or less the same as most libraries use JNI under the hood:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/780a9d2a5ce5a7bf58960cd31b8549b7/5eb90/real-decode-jdks.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8ElEQVQoz0WRW08TURDH95v5BfwGvvjomw9GwWtipDExBuUixAcSRC2VAtr0Eq0NCVZa5YkHQZNuS9tdettCt7ftZffsT3dPqZNM5pz/zPznpriAU6vgWEO8t+u6UgExGiLsMeISu1ThIMYeDkIIPBl0TAaWheIA5UQMUVV9hyuEr37QryPGWuk/7roSbxh0DzMSdxzfdromltVH6bjw6cVLbDVMy/MIZxqU3U7Q/LFGz08c4ziyUCaro4ce0MZmOJax7U6X0WiEYgwhubyMfrxJ7FwmOI7t2+RGBDUVIG76X+wJYXJfp/H+Jh+NOsZAYl2zJUf2CL8sLaEfb/FBr4LdRQg52t67KOreM3aaFqN+nckmSH3TaQRvsds4o2CUJiP3sawBStuFzwsLXBQSrB5GGJsqkg5SGxH0g2VCRZVSLsalfN0vY4bvsqOf8PMoLHc5yVK8/UQW59mOBlhdD2C3877Da+b7ZoKd7du82lrnohCdEqYPqqRfX+d5/C0n6ZXpcbyjKT0XwotPmZ29RuDJDLtvgtTNjl8vE4pz79FVZh7OsRecp9joS8JsjbU7V7jxeI7wyn3yp4bs0CN0XDivVSiXVTStSClXpN2TiZ1mC037Q65wyllOpdJsTS46wij/Jq9p6HkVXa/Lgf8R/gWPt42WCp98RAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Performance in different JDKs for 4MB input"
+        title="Decoding Performance in different JDKs for 4MB input"
+        src="/static/780a9d2a5ce5a7bf58960cd31b8549b7/50383/real-decode-jdks.png"
+        srcset="/static/780a9d2a5ce5a7bf58960cd31b8549b7/1d79a/real-decode-jdks.png 185w,
+/static/780a9d2a5ce5a7bf58960cd31b8549b7/1efb2/real-decode-jdks.png 370w,
+/static/780a9d2a5ce5a7bf58960cd31b8549b7/50383/real-decode-jdks.png 740w,
+/static/780a9d2a5ce5a7bf58960cd31b8549b7/73caa/real-decode-jdks.png 1110w,
+/static/780a9d2a5ce5a7bf58960cd31b8549b7/536c7/real-decode-jdks.png 1480w,
+/static/780a9d2a5ce5a7bf58960cd31b8549b7/5eb90/real-decode-jdks.png 1612w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>And the same for encoding:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/75e496ac432f6d75369d3beece29716b/5eb90/real-encode-jdks.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB20lEQVQoz12RbW/SUBiG+Zcm/gETP/gLjF+NiTHTDyZGnYubCVHnu5LFTVxAlMEmooCIvBcESmGllK6np720pywsnuSc3Llynus87RPzPA/f9wmCgACQuonX1VUOznB/7uA1Bv/xAF94yOYQx5ziOAtiUspIGG7Aaw0RxWZUKFdcjk3cT2VQXK4eOhGIzE/M4wmLUBjKQmngS3XZa48QpbbK/hkujRlutrrkfiRdCr2DGubUxBWC2MK2o1dPt6bjlToqny7FpxYiW13y1Rm4ApmrYRkGtm0Tmwko7H3B/f1CXTquaCwKTZXLR3WM/FOV7f4UO11R+VfNop9cB1xc22OeKuM7gnAesQXw+NoDrNxVmAxIr+8y/NxQhS8fpajHL4E/4XAzQStRUvx9Uqd48zzIDu2dfb7GC6rfsGMlfL62hSjdhj81Mnd3GGZbqvDdkwzaqysgR+TvbNNMRB0mU2Mq9y5C0KHz7C35eDH8m/hBEAm3r29Q/3AZ/VuOvVtxBpnok9/E0xxtXOC4W2V/7T71198V3/2oc3DjHKP2IT82t8g+zKsOlTCc4XQwpq9V0LQ+k56GsE5UoTmZM+iWabS6jLUOziQaoDnzMLoVWloPo9fG0mfRkP4J/wLchp0+3DnGoAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Performance in different JDKs for 4MB input"
+        title="Decoding Performance in different JDKs for 4MB input"
+        src="/static/75e496ac432f6d75369d3beece29716b/50383/real-encode-jdks.png"
+        srcset="/static/75e496ac432f6d75369d3beece29716b/1d79a/real-encode-jdks.png 185w,
+/static/75e496ac432f6d75369d3beece29716b/1efb2/real-encode-jdks.png 370w,
+/static/75e496ac432f6d75369d3beece29716b/50383/real-encode-jdks.png 740w,
+/static/75e496ac432f6d75369d3beece29716b/73caa/real-encode-jdks.png 1110w,
+/static/75e496ac432f6d75369d3beece29716b/536c7/real-encode-jdks.png 1480w,
+/static/75e496ac432f6d75369d3beece29716b/5eb90/real-encode-jdks.png 1612w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h3 id="stub-random-data" style="position:relative;"><a href="#stub-random-data" aria-label="stub random data permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stub (random) Data</h3>
+<p>Even though compression ratios in the Real dataset are different, it’s mostly 2x and higher, plus the data is not all random. It’s also interesting to check how algorithms behave on more different compression ratios and more random data. So, for Stub Data let’s check performance for different compression ratios.</p>
+<h4 id="lz4-fast-vs-snappy" style="position:relative;"><a href="#lz4-fast-vs-snappy" aria-label="lz4 fast vs snappy permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lz4 fast vs snappy</h4>
+<p>Looking at throughput graphs it seems that lz4 fast compressor is a very decent alternative for snappy, when compression ratio is not very important. Decoding is faster:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ae9790548f72725197ac2b941557dd49/d004c/stub-lz4-fast-vs-snappy-decode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQoz42Sy44cIQxF6///NIpSVTxsYzCcqOjpnllkEUtHyBa+hgvHGIOIYM3J/E/WWgwzughdlbCG/L4QFY4ZwVyLJ9Y/eMfP/BEdqluYteix+JUMlcrh7szWiFqJnJk5EembkRL9ToQ7MTrx3MgUyQ3VidnEfXDefyilcOScaaUid8G04c1p5lRpyIM6UpR6JixXJFVqUrLMfTKPxYzFkIZ3fwk+RR+gvqi20Lbwvmi+UJtYW6gE5XasOPk0LCu9Kl6EOcbHmqO1RrOBt6B7MPp84c/kt3mLmBOP+GLs2pv1g2O/8A/7x5r0FVg4MozsSnKldiN5JbtwtcLVKhaGDGXsybwEe+/bzPO6uO6b8zo3KSVyymipmAhSCtP6h8fXkoWahdHHt+DzBbTKbtRS6GKE+uZp7NWoV8ar4WKvtdre17/y4f0j+Bet58BveRn/gQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Throughput: lz4 fast vs snappy"
+        title="Decoding Throughput: lz4 fast vs snappy"
+        src="/static/ae9790548f72725197ac2b941557dd49/50383/stub-lz4-fast-vs-snappy-decode.png"
+        srcset="/static/ae9790548f72725197ac2b941557dd49/1d79a/stub-lz4-fast-vs-snappy-decode.png 185w,
+/static/ae9790548f72725197ac2b941557dd49/1efb2/stub-lz4-fast-vs-snappy-decode.png 370w,
+/static/ae9790548f72725197ac2b941557dd49/50383/stub-lz4-fast-vs-snappy-decode.png 740w,
+/static/ae9790548f72725197ac2b941557dd49/73caa/stub-lz4-fast-vs-snappy-decode.png 1110w,
+/static/ae9790548f72725197ac2b941557dd49/536c7/stub-lz4-fast-vs-snappy-decode.png 1480w,
+/static/ae9790548f72725197ac2b941557dd49/d004c/stub-lz4-fast-vs-snappy-decode.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>As well as encoding:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a66b2fe4fb509157e5c8f697c97d8aff/d004c/stub-lz4-fast-vs-snappy-encode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABN0lEQVQoz5WR22okMQxE+/9/cyHLkPalbcsX2e6z2MkMyUMIaygkrFJRqI7eO/d98z9vsbUUhipjdGZT5N0iWTjGGOSc8deF8x5rTiQkShDER+qV6DFvaJBdmw+7v3VwV6Xp5HEVsiSO5TBYh388yNeFt2aLRnfhznPP7K6G5BzRGvTKJFdxp5BspZWG9YYYI0dKCZVG9YVyFTQ0kgsYY8ih7P7P3zeMdZzO4oxFkyIxUSRSJXKr0qXStHEs1dZvchuUNsg6KXq/kHVgJPOeEkYisVZqn4S67see65iv+x6qypxzB/MT1hNV2uhkrVtE2qBP6APm4nxydyi/CT5R+8CVgCuR0iuiiT71I/lP0R3KEv3N4XNhzLFd1l53X7TQZ39xtsMl+hXr74l1EhHZ9du8f997Cv4DJwXAOOnQyv4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Encoding Throughput: lz4 fast vs snappy"
+        title="Encoding Throughput: lz4 fast vs snappy"
+        src="/static/a66b2fe4fb509157e5c8f697c97d8aff/50383/stub-lz4-fast-vs-snappy-encode.png"
+        srcset="/static/a66b2fe4fb509157e5c8f697c97d8aff/1d79a/stub-lz4-fast-vs-snappy-encode.png 185w,
+/static/a66b2fe4fb509157e5c8f697c97d8aff/1efb2/stub-lz4-fast-vs-snappy-encode.png 370w,
+/static/a66b2fe4fb509157e5c8f697c97d8aff/50383/stub-lz4-fast-vs-snappy-encode.png 740w,
+/static/a66b2fe4fb509157e5c8f697c97d8aff/73caa/stub-lz4-fast-vs-snappy-encode.png 1110w,
+/static/a66b2fe4fb509157e5c8f697c97d8aff/536c7/stub-lz4-fast-vs-snappy-encode.png 1480w,
+/static/a66b2fe4fb509157e5c8f697c97d8aff/d004c/stub-lz4-fast-vs-snappy-encode.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>However, this benchmark doesn’t take into account the IO limit of the system: network/disk throughput is not infinite, so the compressor is not going to work on its best performance. I tried to emulate IO limit, but it doesn’t seem to depict the reality. And for that I’m going to run another benchmark soon…</p>
+<h4 id="gzip-vs-deflate" style="position:relative;"><a href="#gzip-vs-deflate" aria-label="gzip vs deflate permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gzip vs deflate</h4>
+<p>Gzip and deflate have <a href="https://stackoverflow.com/a/68538037/426397">12 bytes difference</a> in header/footer sizes. Apart from that gzip uses deflate to compress data. But, there is a performance difference between them!</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/c85fe368e1a0aa74f28df69545500181/d004c/stub-gzip-vs-deflate-decode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVQoz22SjY7cIAyE8/4P2t5VRwj/sQ18Fezu3aqqpclYBM3Y2IeI0HtnzskYY/PGM19nWiuS8/e/dbbvjsmYDy5/TkopHGb2IwSM3rfAO4YIo1Xsvr/vbbzMgc+rkXLmWBUukRXdDC2FOTpTldkas1YsN+4z05dBa9jqyuxRwKq2d07viDFyrM9y2WIxMFJBY6FelZqUVjulDnIx2pkZq+Ja6CliMaAhMM2wcrOK24LLwZzj9oWYO/WeyIC7Q9FJs4kOKMI20SJIEawKc3VoxisOUUHdiXMN1wZJDV8rZ05cORFLJpYH5yaEqriohGRcqeMuQ5b7802P0Y3fH55fX54UAiUEJBfulGkh0WJ+IhG8x5+O6C+unXvOL8/d5EdQVLnO8BiGdroYQ/tehfd4TZX36f6D3fJrSn0MbPHOn7xWSHXvl4qwVkzXAP6Dl+BfiePAdB0dKa0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Throughput: gzip vs deflate"
+        title="Decoding Throughput: gzip vs deflate"
+        src="/static/c85fe368e1a0aa74f28df69545500181/50383/stub-gzip-vs-deflate-decode.png"
+        srcset="/static/c85fe368e1a0aa74f28df69545500181/1d79a/stub-gzip-vs-deflate-decode.png 185w,
+/static/c85fe368e1a0aa74f28df69545500181/1efb2/stub-gzip-vs-deflate-decode.png 370w,
+/static/c85fe368e1a0aa74f28df69545500181/50383/stub-gzip-vs-deflate-decode.png 740w,
+/static/c85fe368e1a0aa74f28df69545500181/73caa/stub-gzip-vs-deflate-decode.png 1110w,
+/static/c85fe368e1a0aa74f28df69545500181/536c7/stub-gzip-vs-deflate-decode.png 1480w,
+/static/c85fe368e1a0aa74f28df69545500181/d004c/stub-gzip-vs-deflate-decode.png 1611w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>This is very strange, because under the hood, both deflate and gzip use <code class="language-text">Inflater</code>/<code class="language-text">Deflater</code> classes from JDK.</p>
+<h4 id="deflate-vs-mysql-compress" style="position:relative;"><a href="#deflate-vs-mysql-compress" aria-label="deflate vs mysql compress permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>deflate vs MySQL Compress</h4>
+<p>As I mentioned before, <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">MySQL Compress</a> is deflate plus size of the uncompressed input. This size (extra 4 bytes) allows to allocate buffer precisely on decoding, which may save few allocations and memory copy. And it’s something that we actually see on a graph:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a783d977f5062f597f5b9d8c16d63a72/8c833/stub-deflate-vs-mysql-decode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABU0lEQVQoz2WSi47dIAxE8/8/Wu2VEt4Y8zqVc5u725ZoNISBsQ0+VJU5J3tv1lo3f+a9s02r9cYyzdZ/4Fkrr4ucM8cY49sI2GO8DUTYqjcvbayc35rtefAE35uvICQztAw/hiJQK8zJ7J3RGr1WVISaCiuldxDLvI+/jC93EkLgiDHeEZDKLAUpFSlCKY3aJjI2RTepTkqujJSYOd8ZzxAY3rO1M6piyR3RooqgzpOyku1gWzSFIpNSB9IGXTfZCuimdUQ7qp1pFc7BMw5tjXp6ztBwuRFr5QqRK3hCjoQUb445klPBuYp3neAH3g/Oa9B03WZW+rHm5Ncr8PW68Jcjh4wWoWVBUr3RklBixjuPcx7vLrw7ce7iOk+ktm9D7Z0cEqMpey7WmDdMfF/5/8P64Xnhz7ffew97YevDuSbD+A+eee+dUsp94dZi9m/8Lx7D37eQwHvnz5i2AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Throughput: deflate vs deflate+size"
+        title="Decoding Throughput: deflate vs deflate+size"
+        src="/static/a783d977f5062f597f5b9d8c16d63a72/50383/stub-deflate-vs-mysql-decode.png"
+        srcset="/static/a783d977f5062f597f5b9d8c16d63a72/1d79a/stub-deflate-vs-mysql-decode.png 185w,
+/static/a783d977f5062f597f5b9d8c16d63a72/1efb2/stub-deflate-vs-mysql-decode.png 370w,
+/static/a783d977f5062f597f5b9d8c16d63a72/50383/stub-deflate-vs-mysql-decode.png 740w,
+/static/a783d977f5062f597f5b9d8c16d63a72/73caa/stub-deflate-vs-mysql-decode.png 1110w,
+/static/a783d977f5062f597f5b9d8c16d63a72/536c7/stub-deflate-vs-mysql-decode.png 1480w,
+/static/a783d977f5062f597f5b9d8c16d63a72/8c833/stub-deflate-vs-mysql-decode.png 1609w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>This optimization indeed helps a lot.</p>
+<h4 id="brotli-vs-gzip" style="position:relative;"><a href="#brotli-vs-gzip" aria-label="brotli vs gzip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>brotli vs gzip</h4>
+<p>Brotli is supposed to be more efficient replacement for deflate/gzip. And it’s :) From the performance standpoint, brotli with compression level 6 is generally faster than gzip/deflate. After certain size (in this benchmark somewhere between 20K and 30K) brotli performs significantly better:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/6adeb72b2c14d45cbaae8f4d0c037fd6/8c833/stub-brotli-vs-gzip-decode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABW0lEQVQoz42S4Y7cIAyE8/7veT3daRMggME24avI7l7V/ipoNMEZDxi8qSpjDOacXNf15Nf34rliIlyl/GiupX9pb/igfB9Ia2zu/mM0gbnErT0hcmOI4DFiIWKt4a1jIjd8sTlfqSEibOuE947LzAyWiRtDFe/PxN46OiZohyagCu4rA9aJ3TjCTimFLZ/nszR3Zin0KtTSKLUjzeg+0QG1XyS5UB1YVSwLlio9VS4deO2YO9t5nvd9jBiR0mjr59oYsAHdBrU5ppOuk9ygrUIUmk7MJmOJX2NTMzydpJCJtRNT5tgj8Yjsj8DjETj2QAg7OUVySoSQyKmSkxBDRdVvs/UO27q//Wvn49eD78+d+MiUs1Kz0GvDpKNN6U2pVci1kmshlUTKiXBG1PSPoaoRjxPtr+A/83/Gu33uklfLrD68rsFqoYW1frOpUesqy+6Y2d/s9sx5G/4GSwDAgqg+280AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decoding Throughput: brotli (6) vs gzip"
+        title="Decoding Throughput: brotli (6) vs gzip"
+        src="/static/6adeb72b2c14d45cbaae8f4d0c037fd6/50383/stub-brotli-vs-gzip-decode.png"
+        srcset="/static/6adeb72b2c14d45cbaae8f4d0c037fd6/1d79a/stub-brotli-vs-gzip-decode.png 185w,
+/static/6adeb72b2c14d45cbaae8f4d0c037fd6/1efb2/stub-brotli-vs-gzip-decode.png 370w,
+/static/6adeb72b2c14d45cbaae8f4d0c037fd6/50383/stub-brotli-vs-gzip-decode.png 740w,
+/static/6adeb72b2c14d45cbaae8f4d0c037fd6/73caa/stub-brotli-vs-gzip-decode.png 1110w,
+/static/6adeb72b2c14d45cbaae8f4d0c037fd6/536c7/stub-brotli-vs-gzip-decode.png 1480w,
+/static/6adeb72b2c14d45cbaae8f4d0c037fd6/8c833/stub-brotli-vs-gzip-decode.png 1609w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>The same goes for the encoding, but threshold is even smaller (around 3K-4K):</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/152cb542025341a840066752cb147bf0/8c833/stub-brotli-vs-gzip-encode.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSklEQVQoz22Si27bMAxF/f9fma5Y4nSzI1svSyR1Bjl2062jcEUCgg4vKA2qipnRWnuK9llbPxPFqmClPrPo31KjiRI+ZlLODCewxw5T+wZoZ0Ozb8AOEzXuLpFSYlBRtCkxefz8IC+BlgXLgva8Cc2+ON8bv9SjG5ofvwkhMIQYSSFQl7i7S5LZZNsv767V0FRfI/mPsEYNGyLC0KklCWoHoDWKFlJNFClIE1pRrCjt6/oXesSgIuSqfHghlsqmFTFDTHe3sWZ8CUgutK3PzGjVQA/ImQ7w/ihhdqwu4bwRs7FEwSchZSVmZU0bc15x0eP8oXXFr5HkM1r1EzpYJ5cNWxxlmljHieU24cYHbnQ8fk57/vU+cbuMXN9Gbm93bj/uXN/vXC5XVh9fwL6J6lMimApmiqrQ3VepxBQppeznXf1nnPWpc45/AN2mwVKAn8vsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Encoding Throughput: brotli (6) vs gzip"
+        title="Encoding Throughput: brotli (6) vs gzip"
+        src="/static/152cb542025341a840066752cb147bf0/50383/stub-brotli-vs-gzip-encode.png"
+        srcset="/static/152cb542025341a840066752cb147bf0/1d79a/stub-brotli-vs-gzip-encode.png 185w,
+/static/152cb542025341a840066752cb147bf0/1efb2/stub-brotli-vs-gzip-encode.png 370w,
+/static/152cb542025341a840066752cb147bf0/50383/stub-brotli-vs-gzip-encode.png 740w,
+/static/152cb542025341a840066752cb147bf0/73caa/stub-brotli-vs-gzip-encode.png 1110w,
+/static/152cb542025341a840066752cb147bf0/536c7/stub-brotli-vs-gzip-encode.png 1480w,
+/static/152cb542025341a840066752cb147bf0/8c833/stub-brotli-vs-gzip-encode.png 1609w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h2 id="another-interesting-details" style="position:relative;"><a href="#another-interesting-details" aria-label="another interesting details permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Another interesting details</h2>
+<h3 id="brotli" style="position:relative;"><a href="#brotli" aria-label="brotli permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Brotli</h3>
+<p>There are 3 libraries for Java:</p>
+<ul>
+<li><a href="https://github.com/google/brotli">org.brotli:dec</a>: an old library by Google, last updated in 2017.</li>
+<li><a href="https://github.com/nixxcode/jvm-brotli">com.nixxcode.jvmbrotli:jvmbrotli</a>: also old, updated in 2019.</li>
+<li><a href="https://github.com/hyperxpro/Brotli4j">com.aayushatharva.brotli4j:brotli4j</a>: the one I used in the benchmark.</li>
+</ul>
+<p><code class="language-text">dec</code> library allows only decompression (it’s used for decompression only in commons-compress). I decided to benchmark it, and results are very sad:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Action   (algorithm) (ratio) (length)      Score  Units
+decode      brotli_6  medium   102400    813.029  us/op
+decode           dec  medium   102400   2220.280  us/op
+decode     jvmbrotli  medium   102400   2644.517  us/op</code></pre></div>
+<h3 id="lz4" style="position:relative;"><a href="#lz4" aria-label="lz4 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lz4</h3>
+<p>lz4 is supposed in commons-compress. A short benchmark showed that its more than 1 order of magnitude slower than <code class="language-text">org.lz4:lz4-java</code> that is used in the benchmark.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Action  (algorithm)  (length)    Score  Units
+decode    lz4_block     62830  726.496  us/op
+decode   lz4_framed     62830  891.120  us/op
+decode     lz4_fast     62830   30.119  us/op
+decode   lz4_high17     62830   22.561  us/op
+decode    lz4_high9     62830   22.075  us/op</code></pre></div>
+<h2 id="conclusion" style="position:relative;"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>Even though the results of the benchmark look promising, I am not fully convinced that I will see the same level of performance in a real-life application: I briefly mentioned that IO limit of network/disk is hard to emulate, so it’s hard to predict how it will behave.</p>
+<p>Anyway,</p>
+<ul>
+<li>lz4 looks really promising and I’m looking forward to make a more comprehensive benchmark with it!</li>
+<li>Brotli surprised that by default it uses maximum compression which is extremely slow. And what surprised me even more, that decoding speed of highly compressed data is also slower. Which makes some compression level in the middle a much better choice.</li>
+<li>Zstd stands somewhere in the middle in terms of performance and compression ratio.</li>
+</ul>
+<p>Another interesting point for me is that artificial data (random) shows more or less the same trends for compression algorithms, but the real data is decompressed faster for the same compression ratio (lz4 level 17 for real data ~69 usec vs ~88 usec). So, it’s important to benchmark on the real data samples if possible.</p>
+<p>Play with charts <a href="/charts/java-compression">here</a>. Source code is on <a href="https://github.com/dkomanov/stuff/tree/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression">GitHub</a>. Originally posted on <a href="TBD">Medium</a>. <a href="https://pixabay.com/photos/water-pump-manometer-pressure-gauge-7177350/">Cover image</a> by <a href="https://pixabay.com/users/indoposter-24870892/">indoposter</a> from <a href="https://pixabay.com/">Pixabay</a>.</p></div></div><div class="blog-post-meta"><ul class="tags"><li class="cf"><a href="/posts/java">java</a></li><li class="cf"><a href="/posts/compression">compression</a></li><li class="cf"><a href="/posts/jni">jni</a></li><li class="cf"><a href="/posts/lz4">lz4</a></li><li class="cf"><a href="/posts/deflate">deflate</a></li><li class="cf"><a href="/posts/brotli">brotli</a></li><li class="cf"><a href="/posts/gzip">gzip</a></li><li class="cf"><a href="/posts/blob">blob</a></li><li class="cf"><a href="/posts/benchmark">benchmark</a></li><li class="cf"><a href="/posts/performance">performance</a></li></ul><hr/><div class="share-buttons"><button aria-label="twitter" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#00aced"></rect><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" fill="white"></path></svg></button><button aria-label="facebook" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#3b5998"></rect><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z" fill="white"></path></svg></button></div></div></div><footer>All content ©<!-- --> <a href="mailto:dkomanov@gmail.com">Dmitry Komanov</a>,<!-- --> <a href="/powered">powered by...</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/p/java-compression-performance/";window.___webpackCompilationHash="f4bcc59c9f30e0d531a3";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f1d5be50dbe1d5fc9ecc.js"],"app":["/app-2269d79bc8e19222e87e.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-99a953a5d5072d737c00.js"],"component---src-pages-404-js":["/component---src-pages-404-js-411ef4eaab63e67f917d.js"],"component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx":["/component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx-d14165dc07e0e483d4fb.js"],"component---src-pages-charts-base-64-jni-index-tsx":["/component---src-pages-charts-base-64-jni-index-tsx-4f66c9bc6220d72f885d.js"],"component---src-pages-charts-java-compression-compression-ratio-tsx":["/component---src-pages-charts-java-compression-compression-ratio-tsx-8110b1e4b7c477551750.js"],"component---src-pages-charts-java-compression-index-tsx":["/component---src-pages-charts-java-compression-index-tsx-e2fcb3cad10b7bb622d2.js"],"component---src-pages-charts-java-compression-real-data-tsx":["/component---src-pages-charts-java-compression-real-data-tsx-43ab02b3357201d9b0f9.js"],"component---src-pages-charts-mysql-blob-fetch-index-tsx":["/component---src-pages-charts-mysql-blob-fetch-index-tsx-5f8b04d335e4e0f05dc1.js"],"component---src-pages-charts-mysql-streaming-index-js":["/component---src-pages-charts-mysql-streaming-index-js-780495a06cbe1ac6221b.js"],"component---src-pages-charts-native-access-index-tsx":["/component---src-pages-charts-native-access-index-tsx-5c6f958f17ce5c93a235.js"],"component---src-pages-charts-offheap-array-index-tsx":["/component---src-pages-charts-offheap-array-index-tsx-024d498f8961da81b4fb.js"],"component---src-pages-charts-offheap-hashmap-index-tsx":["/component---src-pages-charts-offheap-hashmap-index-tsx-d75446a4db74c1da573a.js"],"component---src-pages-charts-read-lines-index-js":["/component---src-pages-charts-read-lines-index-js-bb3f7db27e294632f1a2.js"],"component---src-pages-charts-read-utf-8-index-js":["/component---src-pages-charts-read-utf-8-index-js-f4d60054c81944568be5.js"],"component---src-pages-charts-region-matches-index-tsx":["/component---src-pages-charts-region-matches-index-tsx-1812b45dfa8604201183.js"],"component---src-pages-charts-scala-serialization-2022-index-tsx":["/component---src-pages-charts-scala-serialization-2022-index-tsx-d9ec2e1b0fde2462ad45.js"],"component---src-pages-charts-scala-serialization-index-js":["/component---src-pages-charts-scala-serialization-index-js-225ab2b6f43837a81a74.js"],"component---src-pages-charts-scala-string-format-index-js":["/component---src-pages-charts-scala-string-format-index-js-989dfb4a2933d53485aa.js"],"component---src-pages-charts-set-map-java-vs-scala-index-tsx":["/component---src-pages-charts-set-map-java-vs-scala-index-tsx-98d55b19945e17cd1869.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8d5dc7a04410f1a5e964.js"],"component---src-templates-blog-by-tag-js":["/component---src-templates-blog-by-tag-js-644d70da62520e655eb3.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3a7f1226ca2d533bf8f2.js"],"component---src-templates-static-js":["/component---src-templates-static-js-b0b89dc82e3360603931.js"],"component---src-templates-what-i-listen-list-tsx":["/component---src-templates-what-i-listen-list-tsx-774af08d23b2797f8ff4.js"],"component---src-templates-what-i-listen-single-episode-tsx":["/component---src-templates-what-i-listen-single-episode-tsx-7691f95dc109a423643e.js"],"component---src-templates-what-i-listen-tag-cloud-tsx":["/component---src-templates-what-i-listen-tag-cloud-tsx-58bf894680d9448a1385.js"],"component---src-templates-what-i-read-index-js":["/component---src-templates-what-i-read-index-js-d4124ab8f3404c08f33d.js"]};/*]]>*/</script><script src="/polyfill-f1d5be50dbe1d5fc9ecc.js" nomodule=""></script><script src="/app-2269d79bc8e19222e87e.js" async=""></script><script src="/framework-bf670a827ae315f850d0.js" async=""></script><script src="/webpack-runtime-d19530f5d9926f395d92.js" async=""></script></body></html>
