@@ -9,10 +9,16 @@ canonicalUrl: TBD
 cover: ./cover.jpg
 ---
 
-What's the best way to store binary data in MySQL?
+  What's the best way to store binary data in MySQL?
 
-
-
+* https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI
+* https://quixdb.github.io/squash-benchmark/
+* [Should binary files be stored in the database?](https://dba.stackexchange.com/questions/2445/should-binary-files-be-stored-in-the-database)
+* [8.4.2.3 Optimizing for BLOB Types](https://dev.mysql.com/doc/refman/8.0/en/optimize-blob.html)
+* https://stackoverflow.com/questions/9511476/speed-of-mysql-query-on-tables-containing-blob-depends-on-filesystem-cache
+* https://dev.mysql.com/doc/refman/8.0/en/blob.html
+* https://dev.mysql.com/doc/refman/8.0/en/innodb-compression-internals.html
+* https://medium.com/datadenys/data-compression-in-mysql-6a0668af8f08
 
 ## How to JNI?
 
