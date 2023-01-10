@@ -4,7 +4,7 @@ date: 2023-01-10
 title: 'Java Compression Performance'
 description: 'A performance benchmark for a few compression libraries in Java'
 tags: ['java', 'compression', 'jni', 'lz4', 'deflate', 'brotli', 'gzip', 'blob', 'benchmark', 'performance']
-canonicalUrl: TBD
+canonicalUrl: https://dkomanov.medium.com/java-compression-performance-fb373078cfde
 cover: ./cover.jpg
 ---
 
@@ -72,11 +72,11 @@ A spreadsheet with all compression ratios is available [here](https://docs.googl
 
 First, let's see the performance of decoding for the Real Data (data length is between 600KB and 4MB):
 
-![Decoding Performance for Real Data (600KB-4MB)](./real-decode-performance.png)
+![Decoding Performance in microseconds for Real Data (600KB-4MB)](./real-decode-performance.png)
 
 Another view for this chart would be throughput in bytes per second:
 
-![Decoding Throughput for Real Data (600KB-4MB)](./real-decode-throughput.png)
+![Decoding Throughput in bytes for Real Data (600KB-4MB)](./real-decode-throughput.png)
 
 From these charts it's clear that lz4 (all 3 levels) outperforms significantly all other algorithms. The next after lz4 fast are zstd and snappy.
 
@@ -84,7 +84,7 @@ From these charts it's clear that lz4 (all 3 levels) outperforms significantly a
 
 Next, let's check encoding performance for the Real Data (data length is between 600KB and 4MB):
 
-![Encoding Performance for Real Data (600KB-4MB)](./real-encode-performance-brotli11.png)
+![Encoding Performance in microseconds for Real Data (600KB-4MB)](./real-encode-performance-brotli11.png)
 
 Wow! Brotli with level 11 took 13 seconds to encode 4MB of data... At first I didn't believe it, thought that I must be use the library incorrectly. But then I ran original native binary:
 ```bash
@@ -157,7 +157,7 @@ The same goes for the encoding, but threshold is even smaller (around 3K-4K):
 
 ![Encoding Throughput: brotli (6) vs gzip](./stub-brotli-vs-gzip-encode.png)
 
-## Another interesting details
+## Other interesting details
 
 ### Brotli
 
@@ -176,7 +176,7 @@ decode     jvmbrotli  medium   102400   2644.517  us/op
 
 ### lz4
 
-lz4 is supposed in commons-compress. A short benchmark showed that its more than 1 order of magnitude slower than `org.lz4:lz4-java` that is used in the benchmark.
+lz4 is supported in commons-compress. A short benchmark showed that its more than 1 order of magnitude slower than `org.lz4:lz4-java` that is used in the benchmark.
 
 ```
 Action  (algorithm)  (length)    Score  Units
@@ -197,7 +197,7 @@ Anyway,
 * Brotli surprised that by default it uses maximum compression which is extremely slow. And what surprised me even more, that decoding speed of highly compressed data is also slower. Which makes some compression level in the middle a much better choice.
 * Zstd stands somewhere in the middle in terms of performance and compression ratio.
 
-Another interesting point for me is that artificial data (random) shows more or less the same trends for compression algorithms, but the real data is decompressed faster for the same compression ratio (lz4 level 17 for real data ~69 usec vs ~88 usec). So, it's important to benchmark on the real data samples if possible.
+Another interesting point for me is that artificial data (random) shows more or less the same trends for compression algorithms, but the real data is decompressed faster for the same compression ratio (lz4 level 17 for real data ~69 usec vs ~88 usec for random data). So, it's important to benchmark on the real data samples if possible.
 
 
-Play with charts [here](/charts/java-compression). Source code is on [GitHub](https://github.com/dkomanov/stuff/tree/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression). Originally posted on [Medium](TBD). [Cover image](https://pixabay.com/photos/water-pump-manometer-pressure-gauge-7177350/) by [indoposter](https://pixabay.com/users/indoposter-24870892/) from [Pixabay](https://pixabay.com/).
+Play with charts [here](/charts/java-compression). Source code is on [GitHub](https://github.com/dkomanov/stuff/tree/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression). Originally posted on [Medium](https://dkomanov.medium.com/java-compression-performance-fb373078cfde). [Cover image](https://pixabay.com/photos/water-pump-manometer-pressure-gauge-7177350/) by [indoposter](https://pixabay.com/users/indoposter-24870892/) from [Pixabay](https://pixabay.com/).
