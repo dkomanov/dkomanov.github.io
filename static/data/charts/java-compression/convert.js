@@ -9,7 +9,7 @@ function convert(list, jdk) {
     //'com.komanov.compression.jmh.RealDataCompressionBenchmark.decode'
     const action = benchmark.substring(benchmark.lastIndexOf('.') + 1); // decode
     const realData = benchmark.indexOf('.RealData') !== -1;
-  
+
     const getAvg = (name) => {
       // AuxCounters count warmup as well, so the first value in the array is
       // "zero".
@@ -17,7 +17,10 @@ function convert(list, jdk) {
       const avg = (rd[rd.length - 1] - rd[0]) / (rd.length - 1);
       return avg;
     };
-  
+
+    const totalInputBytes = getAvg('totalInputBytes');
+    const totalOutputBytes = getAvg('totalOutputBytes');
+
     return {
       params: {
         ...params,
@@ -29,9 +32,10 @@ function convert(list, jdk) {
       primaryMetric: {
         score: primaryMetric.score,
         scorePercentiles: primaryMetric.scorePercentiles,
-        totalInputBytes: getAvg('totalInputBytes'),
-        totalOutputBytes: getAvg('totalOutputBytes'),
-      }
+        totalInputBytes,
+        totalOutputBytes,
+        ratio: action === 'encode' ? totalInputBytes / totalOutputBytes : totalOutputBytes / totalInputBytes,
+      },
     };
   });
 }

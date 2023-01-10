@@ -12,11 +12,16 @@ import { loadJson } from '../../../util';
 import { EmptyJmhExtractorFuncHolder, JmhAxisDescriptor, JmhExtractorFunc } from '../../../util/jmh';
 import {
   AllCompressionRatios,
-  ChooseCompressionRatio,
+  CompressionRatioChooseComponent,
   comparisonValues,
   DefaultCompressionRatio,
 } from '../java-compression/CompressionRatio';
-import { DefaultRealDataset, filterByDataset, MakeDatasetChoose, yRealDesc } from '../java-compression/RealData';
+import {
+  DefaultRealDataset,
+  filterByDataset,
+  DatasetChooseComponent,
+  RealLengthDesc,
+} from '../java-compression/RealData';
 
 interface NameValue {
   name: string;
@@ -121,7 +126,10 @@ const xDescComparison_lz4_vs_uncompressed: JmhAxisDescriptor = {
 const xDescDeflateMysqlComparison: JmhAxisDescriptor = {
   title: 'Compression Algorithm',
   prop: 'comparison',
-  values: [...comparisonValues('Compressed table', 'auto_mysql'), ...comparisonValues('deflate+len MySQL', 'explicit_mysql')],
+  values: [
+    ...comparisonValues('Compressed table', 'auto_mysql'),
+    ...comparisonValues('deflate+len MySQL', 'explicit_mysql'),
+  ],
 };
 
 const xDescDeflateComparison: JmhAxisDescriptor = {
@@ -160,9 +168,9 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
       onChange={stubDatasetSet}
     />
   );
-  const RealDatasetChoose = MakeDatasetChoose(realDataset, realDatasetSet);
-  const CompressionRatioChoose = ChooseCompressionRatio(compressionRatio, (value: string) =>
-    compressionRatioSet(value)
+  const RealDatasetChoose = <DatasetChooseComponent dataset={realDataset} datasetSet={realDatasetSet} />;
+  const CompressionRatioChoose = (
+    <CompressionRatioChooseComponent value={compressionRatio} onChange={compressionRatioSet} />
   );
 
   const makeChooses = (realData: boolean) => {
@@ -193,7 +201,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
           extractor={extractor.func}
           filter={makeFilter(realData)}
           xDesc={xDesc}
-          yDesc={realData ? yRealDesc : yStubDesc}
+          yDesc={realData ? RealLengthDesc : yStubDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisTime,
@@ -221,7 +229,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
           extractor={(pm: any) => pm.totalBytesReturned}
           filter={makeFilter(realData)}
           xDesc={xDesc}
-          yDesc={realData ? yRealDesc : yStubDesc}
+          yDesc={realData ? RealLengthDesc : yStubDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
@@ -243,7 +251,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
           extractor={(pm: any) => pm.totalBytesFromMysql}
           filter={makeFilter(realData)}
           xDesc={xDesc}
-          yDesc={realData ? yRealDesc : yStubDesc}
+          yDesc={realData ? RealLengthDesc : yStubDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,

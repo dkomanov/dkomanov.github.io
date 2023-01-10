@@ -1,0 +1,111 @@
+cat brotli.log | grep us | grep MEDIUM_COMPRESSION_2_1 | grep decode | sort --key 7,7 --numeric-sort
+
+Benchmark                                                  (algorithm)      (compressionRatio)  (length)  Mode  Cnt            Score       Error  Units
+StubDataCompressionBenchmark.decode                           brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5          925.029 ±    82.573  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes           brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3457592850.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes          brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   6551040000.000                  #
+StubDataCompressionBenchmark.decode                           brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5          596.900 ±    69.215  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes           brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   3953776704.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes          brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5  10259660800.000                  #
+StubDataCompressionBenchmark.decode                           brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5          813.029 ±   188.041  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes           brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3666707220.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes          brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   7709081600.000                  #
+StubDataCompressionBenchmark.decode                           brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5          557.785 ±   102.620  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes           brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5   3144527685.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes          brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5  10455552000.000                  #
+StubDataCompressionBenchmark.decode                          brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5          773.490 ±    72.502  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes          brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3359510305.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes         brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5   7909273600.000                  #
+StubDataCompressionBenchmark.decode                          brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5          709.167 ±    16.678  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes          brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5   2141081005.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes         brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5   8559308800.000                  #
+StubDataCompressionBenchmark.decode                        jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5         3328.994 ±    84.253  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes        jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5    976110972.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes       jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1829683200.000                  #
+StubDataCompressionBenchmark.decode                        jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5         2028.068 ±    37.135  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes        jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   1148090086.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes       jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   2984550400.000                  #
+StubDataCompressionBenchmark.decode                        jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5         2644.517 ±   229.488  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes        jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1110765872.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes       jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   2330214400.000                  #
+StubDataCompressionBenchmark.decode                        jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5         1779.049 ±    63.228  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes        jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5   1043750210.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes       jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5   3471257600.000                  #
+StubDataCompressionBenchmark.decode                       jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5         2660.207 ±   279.660  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes       jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5    970899954.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes      jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5   2285363200.000                  #
+StubDataCompressionBenchmark.decode                       jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5         2541.310 ±   292.287  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes       jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5    594675440.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes      jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5   2377216000.000                  #
+StubDataCompressionBenchmark.decode                    brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5         1908.208 ±    40.798  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes    brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1639456589.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes   brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3108147200.000                  #
+StubDataCompressionBenchmark.decode                    brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5         1550.065 ±    13.627  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes    brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5   1462036056.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes   brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5   3795763200.000                  #
+StubDataCompressionBenchmark.decode                    brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5         2220.280 ±    48.642  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes    brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1266398313.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes   brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5   2660249600.000                  #
+StubDataCompressionBenchmark.decode                    brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5         1544.619 ±    40.932  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes    brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5   1135085903.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes   brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5   3775385600.000                  #
+StubDataCompressionBenchmark.decode                   brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5         1270.755 ±    17.768  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes   brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1981012990.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes  brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5   4664422400.000                  #
+StubDataCompressionBenchmark.decode                   brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5         1367.687 ±   514.394  us/op
+StubDataCompressionBenchmark.decode:totalInputBytes   brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5   1169299135.000                  #
+StubDataCompressionBenchmark.decode:totalOutputBytes  brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5   4674457600.000                  #
+StubDataCompressionBenchmark.encode                           brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5          957.363 ±    12.539  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes           brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   6290534400.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes          brotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3355852668.000                  #
+StubDataCompressionBenchmark.encode                           brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5          581.350 ±    19.696  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes           brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5  10431795200.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes          brotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   4019093596.000                  #
+StubDataCompressionBenchmark.encode                           brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5         8840.839 ±   360.403  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes           brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    696832000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes          brotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    331784580.000                  #
+StubDataCompressionBenchmark.encode                           brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5        14861.660 ±   413.833  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes           brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5    419123200.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes          brotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5    126105330.000                  #
+StubDataCompressionBenchmark.encode                          brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5       152749.383 ±  2804.232  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes          brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5     46080000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes         brotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5     19574100.000                  #
+StubDataCompressionBenchmark.encode                          brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5       216524.524 ±  3452.350  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes          brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5     33792000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes         brotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5      8452950.000                  #
+StubDataCompressionBenchmark.encode                        jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5         2876.214 ±   221.923  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes        jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   2141286400.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes       jvmbrotli_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   1138833971.000                  #
+StubDataCompressionBenchmark.encode                        jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5         1655.641 ±    43.340  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes        jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   3701350400.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes       jvmbrotli_0    HIGH_COMPRESSION_3_4    102400  avgt    5   1426176576.000                  #
+StubDataCompressionBenchmark.encode                        jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5        21809.987 ±  1280.099  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes        jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    288358400.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes       jvmbrotli_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    137350400.000                  #
+StubDataCompressionBenchmark.encode                        jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5        34927.127 ±   720.622  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes        jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5    181350400.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes       jvmbrotli_6    HIGH_COMPRESSION_3_4    102400  avgt    5     54645976.000                  #
+StubDataCompressionBenchmark.encode                       jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5       416381.720 ± 32050.089  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes       jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5     21504000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes      jvmbrotli_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5      9136260.000                  #
+StubDataCompressionBenchmark.encode                       jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5       684341.391 ± 18390.103  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes       jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5     15360000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes      jvmbrotli_11    HIGH_COMPRESSION_3_4    102400  avgt    5      3842550.000                  #
+StubDataCompressionBenchmark.encode                    brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5          960.991 ±    55.803  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes    brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   6361907200.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes   brotli_google_0  MEDIUM_COMPRESSION_2_1    102400  avgt    5   3407596544.000                  #
+StubDataCompressionBenchmark.encode                    brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5          578.556 ±    24.331  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes    brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5  10490368000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes   brotli_google_0    HIGH_COMPRESSION_3_4    102400  avgt    5   4035718330.000                  #
+StubDataCompressionBenchmark.encode                    brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5         8888.314 ±   402.269  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes    brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    698163200.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes   brotli_google_6  MEDIUM_COMPRESSION_2_1    102400  avgt    5    332152506.000                  #
+StubDataCompressionBenchmark.encode                    brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5        14824.916 ±   855.032  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes    brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5    419737600.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes   brotli_google_6    HIGH_COMPRESSION_3_4    102400  avgt    5    126298388.000                  #
+StubDataCompressionBenchmark.encode                   brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5       193988.819 ± 11022.349  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes   brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5     39936000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes  brotli_google_11  MEDIUM_COMPRESSION_2_1    102400  avgt    5     16957200.000                  #
+StubDataCompressionBenchmark.encode                   brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5       218827.792 ±  7640.068  us/op
+StubDataCompressionBenchmark.encode:totalInputBytes   brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5     33792000.000                  #
+StubDataCompressionBenchmark.encode:totalOutputBytes  brotli_google_11    HIGH_COMPRESSION_3_4    102400  avgt    5      8453280.000                  #

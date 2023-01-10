@@ -20,7 +20,32 @@ export const AllCompressionRatios = [
   },
 ];
 
-export const ChooseCompressionRatio = (value: string, onChange: (value: string) => any) => {
+export const DefaultCompressionRatio = 'MEDIUM_COMPRESSION_2_1';
+
+export const sideBySide = (lists: any[][]): any[] => {
+  if (lists.length <= 0) {
+    throw new Error('empty array');
+  }
+  if (lists.find((v) => v.length !== lists[0].length)) {
+    throw new Error('different lengths');
+  }
+
+  const r = [];
+  for (let i = 0; i < lists[0].length; ++i) {
+    for (let j = 0; j < lists.length; ++j) {
+      r.push(lists[j][i]);
+    }
+  }
+  return r;
+};
+
+export const comparisonValues = (name: string, value: string) => {
+  return AllCompressionRatios.slice()
+    .reverse()
+    .map((r) => ({ name: `${name} [${r.name}]`, value: `${value}-${r.value}` }));
+};
+
+export const CompressionRatioChooseComponent = ({ value, onChange }: { value: string; onChange: (value: string) => any }) => {
   return (
     <StatelessChoose
       label="Compression Ratio:"
@@ -34,25 +59,4 @@ export const ChooseCompressionRatio = (value: string, onChange: (value: string) 
   );
 };
 
-export const DefaultCompressionRatio = 'MEDIUM_COMPRESSION_2_1';
-
-export const comparisonValues = (name: string, value: string) => {
-  return [
-    {
-      name: `${name} [low]`,
-      value: `${value}-LOW_COMPRESSION_1_3`,
-    },
-    {
-      name: `${name} [med]`,
-      value: `${value}-MEDIUM_COMPRESSION_2_1`,
-    },
-    {
-      name: `${name} [high]`,
-      value: `${value}-HIGH_COMPRESSION_3_4`,
-    },
-    {
-      name: `${name} [extra]`,
-      value: `${value}-EXTRA_HIGH_COMPRESSION_6_2`,
-    },
-  ];
-};
+export default CompressionRatioChooseComponent;

@@ -1,0 +1,33 @@
+cat lz4.log | grep us | grep decode | sort --key 7,7 --numeric-sort
+
+Benchmark                                             (algorithm)  (length)  Mode  Cnt             Score        Error  Units
+RealDataCompressionBenchmark.decode                     lz4_block     62830  avgt    5           726.496 ±      3.350  us/op
+RealDataCompressionBenchmark.decode:totalInputBytes     lz4_block     62830  avgt    5    1952428682.000                   #
+RealDataCompressionBenchmark.decode:totalOutputBytes    lz4_block     62830  avgt    5    5018043610.000                   #
+RealDataCompressionBenchmark.decode                    lz4_framed     62830  avgt    5           891.120 ±      9.196  us/op
+RealDataCompressionBenchmark.decode:totalInputBytes    lz4_framed     62830  avgt    5    1571998575.000                   #
+RealDataCompressionBenchmark.decode:totalOutputBytes   lz4_framed     62830  avgt    5    4037141650.000                   #
+RealDataCompressionBenchmark.decode                      lz4_fast     62830  avgt    5            30.119 ±      0.326  us/op
+RealDataCompressionBenchmark.decode:totalInputBytes      lz4_fast     62830  avgt    5   56705410971.000                   #
+RealDataCompressionBenchmark.decode:totalOutputBytes     lz4_fast     62830  avgt    5  123721254690.000                   #
+RealDataCompressionBenchmark.decode                     lz4_high9     62830  avgt    5            22.075 ±      1.300  us/op
+RealDataCompressionBenchmark.decode:totalInputBytes     lz4_high9     62830  avgt    5   64624048000.000                   #
+RealDataCompressionBenchmark.decode:totalOutputBytes    lz4_high9     62830  avgt    5  167394827500.000                   #
+RealDataCompressionBenchmark.decode                    lz4_high17     62830  avgt    5            22.561 ±      2.644  us/op
+RealDataCompressionBenchmark.decode:totalInputBytes    lz4_high17     62830  avgt    5   64281341078.000                   #
+RealDataCompressionBenchmark.decode:totalOutputBytes   lz4_high17     62830  avgt    5  166713310490.000                   #
+RealDataCompressionBenchmark.encode                     lz4_block     62830  avgt    5       1014368.650 ± 127777.660  us/op
+RealDataCompressionBenchmark.encode:totalInputBytes     lz4_block     62830  avgt    5       8921860.000                   #
+RealDataCompressionBenchmark.encode:totalOutputBytes    lz4_block     62830  avgt    5       3471332.000                   #
+RealDataCompressionBenchmark.encode                    lz4_framed     62830  avgt    5        999868.076 ±  39885.858  us/op
+RealDataCompressionBenchmark.encode:totalInputBytes    lz4_framed     62830  avgt    5       9424500.000                   #
+RealDataCompressionBenchmark.encode:totalOutputBytes   lz4_framed     62830  avgt    5       3669750.000                   #
+RealDataCompressionBenchmark.encode                      lz4_fast     62830  avgt    5           165.487 ±      9.745  us/op
+RealDataCompressionBenchmark.encode:totalInputBytes      lz4_fast     62830  avgt    5   22610003800.000                   #
+RealDataCompressionBenchmark.encode:totalOutputBytes     lz4_fast     62830  avgt    5   10362888420.000                   #
+RealDataCompressionBenchmark.encode                     lz4_high9     62830  avgt    5          1444.275 ±     69.469  us/op
+RealDataCompressionBenchmark.encode:totalInputBytes     lz4_high9     62830  avgt    5    2653750710.000                   #
+RealDataCompressionBenchmark.encode:totalOutputBytes    lz4_high9     62830  avgt    5    1024500672.000                   #
+RealDataCompressionBenchmark.encode                    lz4_high17     62830  avgt    5          5117.994 ±    518.725  us/op
+RealDataCompressionBenchmark.encode:totalInputBytes    lz4_high17     62830  avgt    5     738566650.000                   #
+RealDataCompressionBenchmark.encode:totalOutputBytes   lz4_high17     62830  avgt    5     284776630.000                   #

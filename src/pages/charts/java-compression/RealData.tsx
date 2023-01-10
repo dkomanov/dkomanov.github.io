@@ -2,7 +2,7 @@ import React from 'react';
 import { StatelessChoose } from '../../../components';
 import { JmhAxisDescriptor } from '../../../util/jmh';
 
-export const yRealDesc: JmhAxisDescriptor = {
+export const RealLengthDesc: JmhAxisDescriptor = {
   title: 'Real Input Size',
   prop: 'length',
   values: [
@@ -44,7 +44,13 @@ function inBetween(v: any, from: number, to: number) {
   return from <= num && num <= to;
 }
 
-export const MakeDatasetChoose = (dataset: RealDataset, datasetSet: (v: any) => any) => (
+export const DatasetChooseComponent = ({
+  dataset,
+  datasetSet,
+}: {
+  dataset: RealDataset;
+  datasetSet: (v: any) => any;
+}) => (
   <StatelessChoose
     label="Data set:"
     items={AllRealDatasets.map((v) => ({ label: v, value: v }))}
@@ -52,3 +58,5 @@ export const MakeDatasetChoose = (dataset: RealDataset, datasetSet: (v: any) => 
     onChange={datasetSet}
   />
 );
+
+export default DatasetChooseComponent;

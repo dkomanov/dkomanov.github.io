@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import {
-  ChartAndTable,
+  ChartAndTable2,
   ChooseSlider,
   Jdks,
   JdkVersion,
@@ -12,8 +12,13 @@ import {
 } from '../../../components';
 import { loadJson } from '../../../util';
 import { EmptyJmhExtractorFuncHolder, JmhAxisDescriptor } from '../../../util/jmh';
-import { ChooseCompressionRatio, comparisonValues, DefaultCompressionRatio } from './CompressionRatio';
-import { DefaultRealDataset, filterByDataset, MakeDatasetChoose, yRealDesc } from './RealData';
+import {
+  CompressionRatioChooseComponent,
+  comparisonValues,
+  DefaultCompressionRatio,
+  sideBySide,
+} from './CompressionRatio';
+import { DefaultRealDataset, filterByDataset, DatasetChooseComponent, RealLengthDesc } from './RealData';
 
 const AllActions = [
   {
@@ -30,7 +35,7 @@ const AllActions = [
   },
 ];
 
-const xDesc: JmhAxisDescriptor = {
+const AlgorithmDesc: JmhAxisDescriptor = {
   title: 'Compression Algorithm',
   prop: 'algorithm',
   values: [
@@ -48,38 +53,6 @@ const xDesc: JmhAxisDescriptor = {
   ],
 };
 
-const xDescDeflateComparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [...comparisonValues('deflate', 'deflate'), ...comparisonValues('mysql', 'deflateWithSize')],
-};
-
-const xDescLz4Comparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [
-    ...comparisonValues('lz4_fast', 'lz4_fast'),
-    ...comparisonValues('lz4_high9', 'lz4_high9'),
-    ...comparisonValues('lz4_high17', 'lz4_high17'),
-  ],
-};
-
-const xDescBrotliComparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [
-    ...comparisonValues('brotli_0', 'brotli_0'),
-    ...comparisonValues('brotli_6', 'brotli_6'),
-    ...comparisonValues('brotli_11', 'brotli_11'),
-  ],
-};
-
-const xDescLz4VsBrotliComparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [...comparisonValues('lz4 9', 'lz4_high9'), ...comparisonValues('brotli 6', 'brotli_6')],
-};
-
 const getChooseItemsForLength = (desc: JmhAxisDescriptor, defaultValue: string) => {
   return desc.values.map((i) => {
     return {
@@ -90,7 +63,7 @@ const getChooseItemsForLength = (desc: JmhAxisDescriptor, defaultValue: string) 
   });
 };
 
-const yStubDesc: JmhAxisDescriptor = {
+const StubLengthDesc: JmhAxisDescriptor = {
   title: 'Stub Input Size',
   prop: 'length',
   values: [
@@ -141,10 +114,16 @@ function generateThroughputNormalizer() {
 
 const ThroughputNormalizer = generateThroughputNormalizer();
 
-const yJdkDesc = {
+const JdkDesc = {
   title: 'JDK',
   prop: 'jdk',
   values: Jdks,
+};
+
+const legend = {
+  textStyle: {
+    fontSize: 12,
+  },
 };
 
 const hAxisDataLength = { title: 'Data length, bytes' };
@@ -166,13 +145,13 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
   const [stubDataLength, stubDataLengthSet] = useState('102400');
   const [compressionRatio, compressionRatioSet] = useState(DefaultCompressionRatio);
 
-  const xAlgoDesc: JmhAxisDescriptor =
+  const finalAlgoDesc: JmhAxisDescriptor =
     action === 'encode'
       ? {
-          ...xDesc,
-          values: xDesc.values.filter((v) => v !== 'brotli_11'),
+          ...AlgorithmDesc,
+          values: AlgorithmDesc.values.filter((v) => v !== 'brotli_11'),
         }
-      : xDesc;
+      : AlgorithmDesc;
 
   const filterByJdk = (p: any) => p.jdk === jdk;
   const filterByAction = (p: any) => p.action === (encoding ? 'encode' : 'decode');
@@ -197,7 +176,7 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
   const items = (list: string[]) => list.map((v) => ({ label: v, value: v }));
   const JdkChoose = <StatelessChoose label="JDK:" items={items(Jdks)} value={jdk} onChange={jdkSet} />;
   const ActionChoose = <StatelessChoose label="Action:" items={AllActions} value={action} onChange={actionSet} />;
-  const DatasetChoose = MakeDatasetChoose(dataset, datasetSet);
+  const DatasetChoose = <DatasetChooseComponent dataset={dataset} datasetSet={datasetSet} />;
   const ThroughputNormalizerChoose = (
     <ChooseSlider
       label="IO limit:"
@@ -209,16 +188,19 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
   const RealDataSlider = (
     <ChooseSlider
       label="Data length:"
-      items={getChooseItemsForLength(yRealDesc, realDataLength)}
+      items={getChooseItemsForLength(RealLengthDesc, realDataLength)}
       onChange={realDataLengthSet}
     />
   );
   const StubDataSlider = (
     <ChooseSlider
       label="Data length:"
-      items={getChooseItemsForLength(yStubDesc, stubDataLength)}
+      items={getChooseItemsForLength(StubLengthDesc, stubDataLength)}
       onChange={stubDataLengthSet}
     />
+  );
+  const CompressionRatioChoose = (
+    <CompressionRatioChooseComponent value={compressionRatio} onChange={compressionRatioSet} />
   );
 
   const PerformanceChart = (realData: boolean) => {
@@ -237,12 +219,12 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
           <div>
             {JdkChoose}
             {ActionChoose}
-            {ChooseCompressionRatio(compressionRatio, compressionRatioSet)}
+            {CompressionRatioChoose}
           </div>
         )}
 
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={extractor.func}
           filter={(p: any) =>
@@ -251,11 +233,10 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
             filterByAction(p) &&
             (realData ? filterByDataset(dataset, p) : filterByRatio(p))
           }
-          title="Time, microseconds"
-          xDesc={xAlgoDesc}
-          yDesc={realData ? yRealDesc : yStubDesc}
+          xDesc={realData ? RealLengthDesc : StubLengthDesc}
+          yDesc={finalAlgoDesc}
           options={{
-            chartArea: { height: '80%' },
+            legend,
             hAxis: hAxisDataLength,
             vAxis: vAxisTime,
           }}
@@ -282,13 +263,13 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
           <div>
             {JdkChoose}
             {ActionChoose}
-            {ChooseCompressionRatio(compressionRatio, compressionRatioSet)}
+            {CompressionRatioChoose}
           </div>
         )}
         {ThroughputNormalizerChoose}
 
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={throughputExtractor}
           filter={(p: any) =>
@@ -297,10 +278,10 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
             filterByAction(p) &&
             (realData ? filterByDataset(dataset, p) : filterByRatio(p))
           }
-          xDesc={xAlgoDesc}
-          yDesc={realData ? yRealDesc : yStubDesc}
+          xDesc={realData ? RealLengthDesc : StubLengthDesc}
+          yDesc={finalAlgoDesc}
           options={{
-            chartArea: { height: '80%' },
+            legend,
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
           }}
@@ -319,65 +300,98 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
           RealDataSlider
         ) : (
           <div>
-            {ChooseCompressionRatio(compressionRatio, compressionRatioSet)}
+            {CompressionRatioChoose}
             {StubDataSlider}
           </div>
         )}
 
-        <ChartAndTable
+        <ChartAndTable2
+          chartType="Bar"
           dataTable={jmhList}
           extractor={extractor.func}
           filter={(p: any) =>
             p.realData == realData && p.length === length && filterByAction(p) && (realData || filterByRatio(p))
           }
-          xDesc={xAlgoDesc}
-          yDesc={yJdkDesc}
+          xDesc={JdkDesc}
+          yDesc={finalAlgoDesc}
           options={{
-            hAxis: hAxisDataLength,
-            legend: {
-              textStyle: {
-                fontSize: 12,
-              },
-            },
+            legend,
+            vAxis: vAxisTime,
           }}
         />
       </div>
     );
   };
 
-  const ComparisonPerformance = (xDesc: JmhAxisDescriptor) => {
+  const Comparison = (title: string, xDesc: JmhAxisDescriptor, alternate?: number) => {
+    const f = (p: any) => !p.realData && filterByJdk(p) && filterByAction(p);
     return (
-      <ChartAndTable
-        chartType="LineChart"
-        dataTable={jmhList}
-        extractor={extractor.func}
-        filter={(p: any) => !p.realData && filterByJdk(p) && filterByAction(p)}
-        xDesc={xDesc}
-        yDesc={yStubDesc}
-        options={{
-          chartArea: { height: '80%' },
-          hAxis: hAxisDataLength,
-          vAxis: vAxisTime,
-        }}
-      />
-    );
-  };
+      <div>
+        <h3>
+          {actionTitle} Comparison: {title}
+        </h3>
 
-  const ComparisonThroughput = (xDesc: JmhAxisDescriptor) => {
-    return (
-      <ChartAndTable
-        chartType="LineChart"
-        dataTable={jmhList}
-        extractor={throughputExtractor}
-        filter={(p: any) => !p.realData && filterByJdk(p) && filterByAction(p)}
-        xDesc={xDesc}
-        yDesc={yStubDesc}
-        options={{
-          chartArea: { height: '80%' },
-          hAxis: hAxisDataLength,
-          vAxis: vAxisThroughput,
-        }}
-      />
+        <h4>Performance Comparison: {title}</h4>
+
+        {JdkChoose}
+        {ActionChoose}
+
+        <ChartAndTable2
+          chartType="Line"
+          dataTable={jmhList}
+          extractor={extractor.func}
+          filter={f}
+          xDesc={StubLengthDesc}
+          yDesc={xDesc}
+          alternateColors={alternate || 2}
+          options={{
+            legend,
+            hAxis: hAxisDataLength,
+            vAxis: vAxisTime,
+          }}
+        />
+
+        <h4>Throughput Comparison: {title}</h4>
+
+        {JdkChoose}
+        {ActionChoose}
+
+        <ChartAndTable2
+          chartType="Line"
+          dataTable={jmhList}
+          filter={f}
+          extractor={throughputExtractor}
+          xDesc={StubLengthDesc}
+          yDesc={xDesc}
+          alternateColors={alternate || 2}
+          options={{
+            legend,
+            hAxis: hAxisDataLength,
+            vAxis: vAxisThroughput,
+          }}
+        />
+
+        <h4>Compression Ratios: {title}</h4>
+
+        <ChartAndTable2
+          chartType="Line"
+          dataTable={jmhList}
+          filter={f}
+          extractor={(pm: any) => pm.ratio}
+          xDesc={StubLengthDesc}
+          yDesc={xDesc}
+          doNotFloorValues
+          alternateColors={alternate || 2}
+          options={{
+            legend,
+            hAxis: hAxisDataLength,
+            vAxis: {
+              title: 'compression ratio',
+              format: 'decimal',
+            },
+          }}
+        />
+      </div>
     );
   };
 
@@ -420,23 +434,57 @@ const JavaCompressionPerformanceImpl = ({ jmhList }: JmhChartComponentProps) => 
 
       <h2>Comparisons</h2>
 
-      <h3>{actionTitle}: deflate vs deflate+size (MySQL Compress)</h3>
-      {ComparisonPerformance(xDescDeflateComparison)}
-
-      <h3>{actionTitle}: lz4 Performance</h3>
-      {ComparisonPerformance(xDescLz4Comparison)}
-
-      <h3>{actionTitle}: lz4 Throughput</h3>
-      {ComparisonThroughput(xDescLz4Comparison)}
-
-      <h3>{actionTitle}: brotli Performance</h3>
-      {ComparisonPerformance(xDescBrotliComparison)}
-
-      <h3>{actionTitle}: brotli Throughput</h3>
-      {ComparisonThroughput(xDescBrotliComparison)}
-
-      <h3>{actionTitle}: lz4 vs brotli Throughput</h3>
-      {ComparisonThroughput(xDescLz4VsBrotliComparison)}
+      {Comparison('gzip vs deflate', {
+        title: 'Compression Algorithm',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('gzip', 'gzip'), comparisonValues('deflate', 'deflate')]),
+      })}
+      {Comparison('deflate vs deflate+size', {
+        title: 'Compression Algorithm',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('deflate', 'deflate'), comparisonValues('mysql', 'deflateWithSize')]),
+      })}
+      {Comparison(
+        'lz4 levels',
+        {
+          title: 'Compression Algorithm',
+          prop: 'comparison',
+          values: sideBySide([
+            comparisonValues('lz4_fast', 'lz4_fast'),
+            comparisonValues('lz4_high9', 'lz4_high9'),
+            comparisonValues('lz4_high17', 'lz4_high17'),
+          ]),
+        },
+        3
+      )}
+      {Comparison(
+        'brotli levels',
+        {
+          title: 'Compression Algorithm',
+          prop: 'comparison',
+          values: sideBySide([
+            comparisonValues('brotli_0', 'brotli_0'),
+            comparisonValues('brotli_6', 'brotli_6'),
+            comparisonValues('brotli_11', 'brotli_11'),
+          ]),
+        },
+        3
+      )}
+      {Comparison('lz4 vs brotli', {
+        title: 'Compression Algorithm',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('lz4_high9', 'lz4_high9'), comparisonValues('brotli_6', 'brotli_6')]),
+      })}
+      {Comparison('lz4_fast vs snappy', {
+        title: 'Compression Algorithm',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('lz4_fast', 'lz4_fast'), comparisonValues('snappy', 'snappy')]),
+      })}
+      {Comparison('brotli_6 vs gzip', {
+        title: 'Compression Algorithm',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('brotli_6', 'brotli_6'), comparisonValues('gzip', 'gzip')]),
+      })}
 
       <p>
         Full JMH logs:
