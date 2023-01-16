@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import {
-  ChartAndTable,
+  ChartAndTable2,
   ChooseSlider,
   JmhChartComponentProps,
   JmhChartPage,
@@ -15,6 +15,7 @@ import {
   CompressionRatioChooseComponent,
   comparisonValues,
   DefaultCompressionRatio,
+  sideBySide,
 } from '../java-compression/CompressionRatio';
 import {
   DefaultRealDataset,
@@ -66,8 +67,8 @@ function generateLengths() {
 
 const AllLengths = generateLengths();
 
-const xDesc: JmhAxisDescriptor = {
-  title: 'Fetch Kind',
+const AlgorithmDesc: JmhAxisDescriptor = {
+  title: 'Compression Method',
   prop: 'algorithm',
   values: [
     {
@@ -96,49 +97,7 @@ const xDesc: JmhAxisDescriptor = {
   ],
 };
 
-const xDescComparison_lz4_vs_uncompressed: JmhAxisDescriptor = {
-  title: 'Fetch Kind',
-  prop: 'comparison',
-  values: [
-    {
-      name: 'Uncompressed',
-      value: 'uncompressed-LOW_COMPRESSION_1_3',
-    },
-    {
-      name: 'lz4 ~1',
-      value: 'lz4_high9-LOW_COMPRESSION_1_3',
-    },
-    {
-      name: 'lz4 ~1.5',
-      value: 'lz4_high9-MEDIUM_COMPRESSION_2_1',
-    },
-    {
-      name: 'lz4 ~2.5',
-      value: 'lz4_high9-HIGH_COMPRESSION_3_4',
-    },
-    {
-      name: 'lz4 ~3.9',
-      value: 'lz4_high9-EXTRA_HIGH_COMPRESSION_6_2',
-    },
-  ],
-};
-
-const xDescDeflateMysqlComparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [
-    ...comparisonValues('Compressed table', 'auto_mysql'),
-    ...comparisonValues('deflate+len MySQL', 'explicit_mysql'),
-  ],
-};
-
-const xDescDeflateComparison: JmhAxisDescriptor = {
-  title: 'Compression Algorithm',
-  prop: 'comparison',
-  values: [...comparisonValues('Java', 'deflateWithSize'), ...comparisonValues('MySQL', 'explicit_mysql')],
-};
-
-const yStubDesc: JmhAxisDescriptor = {
+const StubLengthDesc: JmhAxisDescriptor = {
   title: 'Data length',
   prop: 'length',
   values: AllLengths,
@@ -147,6 +106,11 @@ const yStubDesc: JmhAxisDescriptor = {
 const hAxisDataLength = { title: 'Data length, bytes' };
 const vAxisThroughput = { title: 'throughput, bytes per second' };
 const vAxisTime = { title: 'time, microseconds' };
+const legend = {
+  textStyle: {
+    fontSize: 14,
+  },
+};
 
 const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   const [length, lengthSet] = useState(AllLengths.find((v) => v.default)!.value);
@@ -195,21 +159,17 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
         {makeChooses(realData)}
 
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={extractor.func}
           filter={makeFilter(realData)}
-          xDesc={xDesc}
-          yDesc={realData ? RealLengthDesc : yStubDesc}
+          xDesc={realData ? RealLengthDesc : StubLengthDesc}
+          yDesc={AlgorithmDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisTime,
-            legend: {
-              textStyle: {
-                fontSize: 14,
-              },
-            },
+            legend,
           }}
         />
       </div>
@@ -223,21 +183,17 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
         {makeChooses(realData)}
 
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={(pm: any) => pm.totalBytesReturned}
           filter={makeFilter(realData)}
-          xDesc={xDesc}
-          yDesc={realData ? RealLengthDesc : yStubDesc}
+          xDesc={realData ? RealLengthDesc : StubLengthDesc}
+          yDesc={AlgorithmDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
-            legend: {
-              textStyle: {
-                fontSize: 14,
-              },
-            },
+            legend,
           }}
         />
 
@@ -245,28 +201,24 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
         {makeChooses(realData)}
 
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={(pm: any) => pm.totalBytesFromMysql}
           filter={makeFilter(realData)}
-          xDesc={xDesc}
-          yDesc={realData ? RealLengthDesc : yStubDesc}
+          xDesc={realData ? RealLengthDesc : StubLengthDesc}
+          yDesc={AlgorithmDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
-            legend: {
-              textStyle: {
-                fontSize: 14,
-              },
-            },
+            legend,
           }}
         />
       </div>
     );
   };
 
-  const ComparisonCharts = (title: string, xDesc: JmhAxisDescriptor) => {
+  const ComparisonCharts = (title: string, yDesc: JmhAxisDescriptor) => {
     return (
       <div>
         <h3>{title} with different compression ratios</h3>
@@ -274,42 +226,35 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
         <h4>Performance</h4>
 
         {StubDatasetChoose}
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={extractor.func}
           filter={(p: any) => filterByStubDataset(p)}
-          xDesc={xDesc}
-          yDesc={yStubDesc}
+          xDesc={StubLengthDesc}
+          yDesc={yDesc}
+          alternateColors={yDesc.values.length % 4 === 0 ? 2 : 0}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisTime,
-            legend: {
-              textStyle: {
-                fontSize: 14,
-              },
-            },
+            legend,
           }}
         />
 
         <h4>Throughput</h4>
 
         {StubDatasetChoose}
-        <ChartAndTable
-          chartType="LineChart"
+        <ChartAndTable2
+          chartType="Line"
           dataTable={jmhList}
           extractor={(pm: any) => pm.totalBytesReturned}
           filter={(p: any) => filterByStubDataset(p)}
-          xDesc={xDesc}
-          yDesc={yStubDesc}
+          xDesc={StubLengthDesc}
+          yDesc={yDesc}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
-            legend: {
-              textStyle: {
-                fontSize: 14,
-              },
-            },
+            legend,
           }}
         />
       </div>
@@ -372,16 +317,17 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
         onChange={(value: string) => lengthSet(value)}
       />
 
-      <ChartAndTable
+      <ChartAndTable2
+        chartType="Bar"
         dataTable={jmhList}
         extractor={extractor.func}
         filter={(p: any) => p.length === length}
-        xDesc={xDesc}
-        yDesc={{
+        xDesc={{
           title: 'Compression Ratio',
           prop: 'compressionRatio',
           values: AllCompressionRatios,
         }}
+        yDesc={AlgorithmDesc}
         options={{
           hAxis: {
             title: 'Compression Ratio',
@@ -392,9 +338,31 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <h2 id="comparisons">Comparisons</h2>
 
-      {ComparisonCharts('Uncompressed vs LZ4', xDescComparison_lz4_vs_uncompressed)}
-      {ComparisonCharts('Compressed Table vs DECOMPRESS', xDescDeflateMysqlComparison)}
-      {ComparisonCharts('Java vs MySQL', xDescDeflateComparison)}
+      {ComparisonCharts('Uncompressed vs LZ4', {
+        title: 'Compression Method',
+        prop: 'comparison',
+        values: [
+          {
+            name: 'Uncompressed',
+            value: 'uncompressed-LOW_COMPRESSION_1_3',
+          },
+          ...comparisonValues('lz4_high9', 'lz4_high9'),
+        ],
+      })}
+      {ComparisonCharts('Compressed Table vs DECOMPRESS', {
+        title: 'Compression Method',
+        prop: 'comparison',
+        values: sideBySide([
+          comparisonValues('Compressed table', 'auto_mysql'),
+          comparisonValues('deflate+len MySQL', 'explicit_mysql'),
+        ]),
+      })}
+
+      {ComparisonCharts('Java vs MySQL', {
+        title: 'Compression Method',
+        prop: 'comparison',
+        values: sideBySide([comparisonValues('Java', 'deflateWithSize'), comparisonValues('MySQL', 'explicit_mysql')]),
+      })}
 
       <h2 id="legend">Legend</h2>
 
@@ -419,22 +387,17 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
           neither in MySQL nor on application level.
         </li>
         <li>
-          <strong>Compressed</strong>: select data column from <i>compressed_blobs</i> table: data is compressed in
-          MySQL, on select MySQL decompresses it and returns data uncompressed over the wire.
+          <strong>Compressed table</strong>: select data column from <i>compressed_blobs</i> table: data is compressed
+          in MySQL, on select MySQL decompresses it and returns data uncompressed over the wire.
         </li>
         <li>
-          <strong>deflate</strong>: select data column from <i>uncompressed_blobs</i> table: data is compressed on
+          <strong>deflate+size</strong>: select data column from <i>uncompressed_blobs</i> table: data is compressed on
           application level using{' '}
           <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">
             MySQL's algorithm
           </a>
           , on select MySQL returns compressed data over the wire (no decompress in MySQL); data is decompressed in
           application.
-        </li>
-        <li>
-          <strong>lz4</strong>: select data column from <i>lz4_compressed_blobs</i> table: data is compressed on
-          application level using <a href="https://github.com/lz4/lz4-java">LZ4 algorithm</a>, on select MySQL returns
-          compressed data over the wire (no decompress in MySQL); data is decompressed in application.
         </li>
       </ul>
 
