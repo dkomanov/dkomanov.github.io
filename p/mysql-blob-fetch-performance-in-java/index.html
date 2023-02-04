@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:description" content="What’s the best way to store binary data in MySQL? https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI https://quixdb.github.io…"/><meta data-react-helmet="true" name="twitter:title" content="MySQL BLOB Fetch Performance in Java"/><meta data-react-helmet="true" name="twitter:creator" content="Dmitry Komanov"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:description" content="What’s the best way to store binary data in MySQL? https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI https://quixdb.github.io…"/><meta data-react-helmet="true" name="og:title" content="MySQL BLOB Fetch Performance in Java"/><meta data-react-helmet="true" name="description" content="What’s the best way to store binary data in MySQL? https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI https://quixdb.github.io…"/><meta name="theme-color" content="#663399"/><meta name="generator" content="Gatsby 4.19.2"/><style data-href="/styles.0dc5cf8c2594c5e48801.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}article{border-bottom:1px solid #f2f2f0;padding:40px 0}article:last-child{border-bottom:0}article .post-title{display:block;font-size:28px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}article .post-teaser{float:left;height:100px;padding:0 10px 0 0;width:100px}article .post-description{color:#666665;font-size:20px;font-style:normal;font-weight:300;letter-spacing:-.02em;line-height:1.3}article .teaser-padding{margin-left:110px}article .post-meta{color:#b3b3b1;font-size:14px;line-height:30px}article .post-meta time{margin:0 1em 0 0;vertical-align:middle}ul.pagination{list-style:none;margin:1em 0 0;padding:0}ul.pagination li{color:#b3b3b1;float:left;padding:0 10px 0 0}ul.pagination li.active{font-weight:700}ul.pagination li a,ul.pagination li a:visited{color:#b3b3b1;text-decoration:none}.btn{background-color:transparent;border:none;cursor:pointer;display:inline;margin:0;outline:0;padding:0;text-decoration:underline}.btn:focus,.btn:hover{text-decoration:none}.table-toggler{text-align:center}.table-toggler a{border-bottom:1px dotted #000;cursor:pointer;font-size:.7em}.raw-data-table table{width:100%}.raw-data-table table th{background-color:rgba(0,0,0,.03)}.raw-data-table table .right{text-align:right}.markdown div.choose ul{margin:.5em 0 0;padding:0}.markdown div.choose ul li:first-child{border-radius:5px 0 0 5px}.markdown div.choose ul li:last-child{border-radius:0 5px 5px 0}.markdown div.choose ul li{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);cursor:pointer;line-height:1.4;margin:0;min-width:40px;padding:3px .5em;text-align:center}.markdown div.choose ul li:not(.slider):hover{background-color:rgba(0,0,0,.15)}.markdown div.choose ul li.active{background-color:rgba(0,0,0,.15);cursor:default}.markdown div.choose label{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);display:inline-block;font-size:23px;margin:0 .5em 0 0;padding:5px;vertical-align:bottom}.markdown div.choose li.slider input[type=range]{vertical-align:middle}body{text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";font-family:Open Sans,MundoSans,Helvetica Neue,Arial,Helvetica,sans-serif;font-size:1.2em;margin:0;padding:0}a{color:#333332}a,a:hover{text-decoration:none}.cf:after{clear:both;content:"";display:table}ul.horizontal{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.horizontal li{float:left}.site-header{box-sizing:border-box;margin:0 auto;max-width:740px;padding:0;position:relative;top:-140px;width:100%;z-index:2}.site-header .site-logo{background-color:#fff;background-image:url(data:image/jpeg;base64,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);background-size:cover;border:3px solid #fff;border-radius:50%;box-shadow:0 1px 1px rgba(0,0,0,.3);height:120px;margin-right:-60px;position:absolute;right:50%;text-indent:-9999px;top:-60px;width:120px;z-index:99}.site-header .site-title{color:#fff;font-size:50px;font-weight:700;letter-spacing:-2px;line-height:50px;margin:0;outline:0;padding:84px 16px 8px;text-align:center;word-break:break-word}.site-header .site-description{color:#666;font-size:18px;font-weight:400;line-height:1.5;margin:0 0 20px;padding:0 32px;text-align:center}.site-content{box-sizing:border-box;margin:0 auto;max-width:740px;position:relative;top:-140px;width:100%}.wide-content{display:block;left:50%;margin-left:-48vw;margin-right:-48vw;position:relative;right:50%;width:96vw}@media only screen and (max-width:800px){.site-content{padding:0 32px}}.markdown{color:#333;width:100%}.markdown,.markdown h1,.markdown h2,.markdown h3{font-family:Linux Libertine,serif}.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 4px}.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:20px;font-style:normal;font-weight:500;letter-spacing:.02em;line-height:1.4;margin:0 0 3px;text-transform:uppercase}.markdown h1,.markdown h2{font-size:32px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:4px;padding-top:31px}.markdown p{color:#333;font-size:22px;font-style:normal;font-weight:400;-webkit-hyphens:auto;hyphens:auto;line-height:30px;margin:0;padding-bottom:30px}.markdown a{color:#333;text-decoration:underline}.markdown img{margin:0 auto;max-width:100%}.markdown figure{margin:0;padding:0 0 30px}.markdown figcaption{color:#666665;font-size:16px;font-style:italic;font-weight:400;line-height:1.3;outline:0;text-align:center;z-index:300}.markdown hr{border:0;border-top:1px solid #ddd;display:block;margin:30px auto;padding:0;width:15%}.markdown blockquote,.markdown li blockquote{border-left:3px solid #57ad68;margin:0 0 30px -26px;padding-left:20px}.markdown blockquote p,.markdown li blockquote p{border-left:3px solid #57ad68;font-style:italic;font-weight:400;letter-spacing:.01rem;margin-left:-26px;padding-bottom:3px;padding-left:20px}.markdown ol,.markdown ul{margin:0;padding:0 0 30px}.markdown li{font-size:23px;font-style:normal;font-weight:400;line-height:30px;margin-bottom:12px;margin-left:30px;padding:2px 0 0}.markdown li p{padding:0 0 1.618rem}.markdown ol li{list-style-type:decimal}.markdown code{font-size:18px}.markdown.tiny *{font-size:16px;line-height:1.2em}.markdown.tiny ul{padding:0}.markdown.tiny ul li{margin-bottom:0}footer{color:#999;font-size:12px;line-height:17.6px;margin:0 auto;max-width:640px;padding:22px 0;text-align:center;width:100%}footer a{color:#666;text-decoration:none}footer a:hover{color:#333}.share-buttons{display:inline-block}.share-buttons .share-button{display:inline-block;margin:0 0 0 .5em;text-align:center;vertical-align:top}.site-menu{color:#ccc;margin:0 0 50px;text-align:center}.site-menu a{color:#999;padding-left:20px;text-decoration:none}.site-menu a:hover{color:#333}.site-menu a.active{font-weight:700}.tag-cloud a{margin:6px}ul.tags{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.tags li{background-color:rgba(0,0,0,.05);border-radius:3px;float:left;line-height:1.4;margin:4px .5em 0 0;padding:3px 5px}ul.tags li:hover{background-color:rgba(0,0,0,.15)}ul.tags li.label{padding:0 .5em 0 0}ul.tags li a,ul.tags li a:visited{color:rgba(0,0,0,.68);text-decoration:none}.teaser-image{background-color:#000;height:360px;overflow:hidden;position:relative}.teaser-image_image{background-position:50%;background-size:cover;bottom:0;left:0;position:absolute;right:0;text-indent:-9999px;top:0;z-index:1}.time-units p.small{margin:0 0 10px}.time-units small{color:rgba(0,0,0,.3);font-size:11px}.site-content.no-cover{position:relative;top:0}.no-cover .post-meta{padding-top:60px}.no-cover .post-title{color:#333332;font-size:50px;font-style:normal;font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}.no-cover .author-image{background-image:url(/img/top-logo.jpg);background-size:cover;border-radius:100%;display:inline-block;float:left;height:30px;line-height:30px;margin-bottom:-10px;margin-right:8px;text-indent:-9999px;width:30px}.no-cover .author-name{display:inline}.no-cover .post-meta-text{color:#b3b3b1;font-size:14px;font-style:normal;font-weight:400;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}.blog-post-meta{color:#b3b3b1}ul.what-i-read{list-style-type:none;margin:0;padding:0}ul.what-i-read>li{display:inline-block;padding:0 10px 0 0}</style><style type="text/css">
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:description" content="A performance benchmark: fetching BLOB column from MySQL uncompressed vs compressed with different algorithms!"/><meta data-react-helmet="true" name="twitter:title" content="MySQL BLOB Fetch Performance in Java"/><meta data-react-helmet="true" name="twitter:creator" content="Dmitry Komanov"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="og:type" content="website"/><meta data-react-helmet="true" name="og:description" content="A performance benchmark: fetching BLOB column from MySQL uncompressed vs compressed with different algorithms!"/><meta data-react-helmet="true" name="og:title" content="MySQL BLOB Fetch Performance in Java"/><meta data-react-helmet="true" name="description" content="A performance benchmark: fetching BLOB column from MySQL uncompressed vs compressed with different algorithms!"/><meta name="theme-color" content="#663399"/><meta name="generator" content="Gatsby 4.19.2"/><style data-href="/styles.0dc5cf8c2594c5e48801.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}article{border-bottom:1px solid #f2f2f0;padding:40px 0}article:last-child{border-bottom:0}article .post-title{display:block;font-size:28px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0}article .post-teaser{float:left;height:100px;padding:0 10px 0 0;width:100px}article .post-description{color:#666665;font-size:20px;font-style:normal;font-weight:300;letter-spacing:-.02em;line-height:1.3}article .teaser-padding{margin-left:110px}article .post-meta{color:#b3b3b1;font-size:14px;line-height:30px}article .post-meta time{margin:0 1em 0 0;vertical-align:middle}ul.pagination{list-style:none;margin:1em 0 0;padding:0}ul.pagination li{color:#b3b3b1;float:left;padding:0 10px 0 0}ul.pagination li.active{font-weight:700}ul.pagination li a,ul.pagination li a:visited{color:#b3b3b1;text-decoration:none}.btn{background-color:transparent;border:none;cursor:pointer;display:inline;margin:0;outline:0;padding:0;text-decoration:underline}.btn:focus,.btn:hover{text-decoration:none}.table-toggler{text-align:center}.table-toggler a{border-bottom:1px dotted #000;cursor:pointer;font-size:.7em}.raw-data-table table{width:100%}.raw-data-table table th{background-color:rgba(0,0,0,.03)}.raw-data-table table .right{text-align:right}.markdown div.choose ul{margin:.5em 0 0;padding:0}.markdown div.choose ul li:first-child{border-radius:5px 0 0 5px}.markdown div.choose ul li:last-child{border-radius:0 5px 5px 0}.markdown div.choose ul li{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);cursor:pointer;line-height:1.4;margin:0;min-width:40px;padding:3px .5em;text-align:center}.markdown div.choose ul li:not(.slider):hover{background-color:rgba(0,0,0,.15)}.markdown div.choose ul li.active{background-color:rgba(0,0,0,.15);cursor:default}.markdown div.choose label{background-color:rgba(0,0,0,.05);color:rgba(0,0,0,.68);display:inline-block;font-size:23px;margin:0 .5em 0 0;padding:5px;vertical-align:bottom}.markdown div.choose li.slider input[type=range]{vertical-align:middle}body{text-rendering:optimizeLegibility;-webkit-font-feature-settings:"liga";font-feature-settings:"liga";font-family:Open Sans,MundoSans,Helvetica Neue,Arial,Helvetica,sans-serif;font-size:1.2em;margin:0;padding:0}a{color:#333332}a,a:hover{text-decoration:none}.cf:after{clear:both;content:"";display:table}ul.horizontal{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.horizontal li{float:left}.site-header{box-sizing:border-box;margin:0 auto;max-width:740px;padding:0;position:relative;top:-140px;width:100%;z-index:2}.site-header .site-logo{background-color:#fff;background-image:url(data:image/jpeg;base64,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);background-size:cover;border:3px solid #fff;border-radius:50%;box-shadow:0 1px 1px rgba(0,0,0,.3);height:120px;margin-right:-60px;position:absolute;right:50%;text-indent:-9999px;top:-60px;width:120px;z-index:99}.site-header .site-title{color:#fff;font-size:50px;font-weight:700;letter-spacing:-2px;line-height:50px;margin:0;outline:0;padding:84px 16px 8px;text-align:center;word-break:break-word}.site-header .site-description{color:#666;font-size:18px;font-weight:400;line-height:1.5;margin:0 0 20px;padding:0 32px;text-align:center}.site-content{box-sizing:border-box;margin:0 auto;max-width:740px;position:relative;top:-140px;width:100%}.wide-content{display:block;left:50%;margin-left:-48vw;margin-right:-48vw;position:relative;right:50%;width:96vw}@media only screen and (max-width:800px){.site-content{padding:0 32px}}.markdown{color:#333;width:100%}.markdown,.markdown h1,.markdown h2,.markdown h3{font-family:Linux Libertine,serif}.markdown h3,.markdown h4,.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:24px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin:0 0 4px}.markdown h5,.markdown h6{font-family:Linux Libertine,serif;font-size:20px;font-style:normal;font-weight:500;letter-spacing:.02em;line-height:1.4;margin:0 0 3px;text-transform:uppercase}.markdown h1,.markdown h2{font-size:32px;font-style:normal;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-bottom:4px;padding-top:31px}.markdown p{color:#333;font-size:22px;font-style:normal;font-weight:400;-webkit-hyphens:auto;hyphens:auto;line-height:30px;margin:0;padding-bottom:30px}.markdown a{color:#333;text-decoration:underline}.markdown img{margin:0 auto;max-width:100%}.markdown figure{margin:0;padding:0 0 30px}.markdown figcaption{color:#666665;font-size:16px;font-style:italic;font-weight:400;line-height:1.3;outline:0;text-align:center;z-index:300}.markdown hr{border:0;border-top:1px solid #ddd;display:block;margin:30px auto;padding:0;width:15%}.markdown blockquote,.markdown li blockquote{border-left:3px solid #57ad68;margin:0 0 30px -26px;padding-left:20px}.markdown blockquote p,.markdown li blockquote p{border-left:3px solid #57ad68;font-style:italic;font-weight:400;letter-spacing:.01rem;margin-left:-26px;padding-bottom:3px;padding-left:20px}.markdown ol,.markdown ul{margin:0;padding:0 0 30px}.markdown li{font-size:23px;font-style:normal;font-weight:400;line-height:30px;margin-bottom:12px;margin-left:30px;padding:2px 0 0}.markdown li p{padding:0 0 1.618rem}.markdown ol li{list-style-type:decimal}.markdown code{font-size:18px}.markdown.tiny *{font-size:16px;line-height:1.2em}.markdown.tiny ul{padding:0}.markdown.tiny ul li{margin-bottom:0}footer{color:#999;font-size:12px;line-height:17.6px;margin:0 auto;max-width:640px;padding:22px 0;text-align:center;width:100%}footer a{color:#666;text-decoration:none}footer a:hover{color:#333}.share-buttons{display:inline-block}.share-buttons .share-button{display:inline-block;margin:0 0 0 .5em;text-align:center;vertical-align:top}.site-menu{color:#ccc;margin:0 0 50px;text-align:center}.site-menu a{color:#999;padding-left:20px;text-decoration:none}.site-menu a:hover{color:#333}.site-menu a.active{font-weight:700}.tag-cloud a{margin:6px}ul.tags{display:inline-block;list-style:none;margin:0;padding:0;vertical-align:top}ul.tags li{background-color:rgba(0,0,0,.05);border-radius:3px;float:left;line-height:1.4;margin:4px .5em 0 0;padding:3px 5px}ul.tags li:hover{background-color:rgba(0,0,0,.15)}ul.tags li.label{padding:0 .5em 0 0}ul.tags li a,ul.tags li a:visited{color:rgba(0,0,0,.68);text-decoration:none}.teaser-image{background-color:#000;height:360px;overflow:hidden;position:relative}.teaser-image_image{background-position:50%;background-size:cover;bottom:0;left:0;position:absolute;right:0;text-indent:-9999px;top:0;z-index:1}.time-units p.small{margin:0 0 10px}.time-units small{color:rgba(0,0,0,.3);font-size:11px}.site-content.no-cover{position:relative;top:0}.no-cover .post-meta{padding-top:60px}.no-cover .post-title{color:#333332;font-size:50px;font-style:normal;font-weight:700;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}.no-cover .author-image{background-image:url(/img/top-logo.jpg);background-size:cover;border-radius:100%;display:inline-block;float:left;height:30px;line-height:30px;margin-bottom:-10px;margin-right:8px;text-indent:-9999px;width:30px}.no-cover .author-name{display:inline}.no-cover .post-meta-text{color:#b3b3b1;font-size:14px;font-style:normal;font-weight:400;letter-spacing:-.02em;text-overflow:ellipsis;white-space:nowrap}.blog-post-meta{color:#b3b3b1}ul.what-i-read{list-style-type:none;margin:0;padding:0}ul.what-i-read>li{display:inline-block;padding:0 10px 0 0}</style><style type="text/css">
     .anchor.before {
       position: absolute;
       top: 0;
@@ -48,435 +48,420 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" title="Severe Software Developer Blog" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=994a873755adc623fbc44f1a9a107c69" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=994a873755adc623fbc44f1a9a107c69"/><title data-react-helmet="true">MySQL BLOB Fetch Performance in Java | @dkomanov</title><link data-react-helmet="true" rel="canonical" href="TBD"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="site-content no-cover"><div class="post-meta"><h1 class="post-title">MySQL BLOB Fetch Performance in Java</h1><div class="cf post-meta-text"><a href="/"><span class="author-image">Blog Logo</span></a><h4 class="author-name" itemProp="author" itemscope="" itemType="http://schema.org/Person">Dmitry Komanov</h4><span> on <time dateTime="2022-12-26T00:00:00.000Z">December 26, 2022</time><br/><br/></span></div><div class="site-menu"><a href="/">Blog</a><a href="/what-i-read">What I Read</a><a href="/what-i-listen">What I Listen</a><a href="/about">About</a></div></div><div class="blog-post" itemscope="" itemType="http://schema.org/Article"><div class="markdown " role="main"><p>What’s the best way to store binary data in MySQL?</p>
+  </script><link rel="alternate" type="application/rss+xml" title="Severe Software Developer Blog" href="/rss.xml"/><link rel="icon" href="/favicon-32x32.png?v=994a873755adc623fbc44f1a9a107c69" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=994a873755adc623fbc44f1a9a107c69"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=994a873755adc623fbc44f1a9a107c69"/><title data-react-helmet="true">MySQL BLOB Fetch Performance in Java | @dkomanov</title><link data-react-helmet="true" rel="canonical" href="TBD"/><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="teaser-image"><div class="teaser-image_image" style="background-image:url(/static/595e821066ff403c0e159cf18471e292/cover.png);transform:translate3d(0px, 0px, 0px);opacity:1">Teaser Image</div></div><header class="site-header"><a class="site-logo" href="/">@dkomanov</a><h1 class="site-title">@dkomanov</h1><div class="site-description">Severe Software Developer Blog</div><div class="site-menu"><a href="/">Blog</a><a href="/what-i-read">What I Read</a><a href="/what-i-listen">What I Listen</a><a href="/about">About</a></div></header><div class="site-content"><div class="blog-post" itemscope="" itemType="http://schema.org/Article"><h1>MySQL BLOB Fetch Performance in Java</h1><div class="markdown " role="main"><p>What’s the best way to store binary data in <a href="https://www.mysql.com/">MySQL</a>? This is a question that has multiple answers, depending on what you want to achieve. For example, if you need to optimize for the storage size, you probably need to use some compression algorithm that compresses your data efficiently. In my case, I really need the best performance, meaning the fastest response time to fetch the entire blob from MySQL.</p>
+<p>Let’s put aside the question of whether MySQL is a good fit for <a href="https://dba.stackexchange.com/questions/2445/should-binary-files-be-stored-in-the-database">storing binary data</a>. The question here, is how to store binary data so the reads from DB are as fast as possible?</p>
+<p>The solution might be to use data compression. However, this is something that requires benchmarking, as there is a trade off between using CPU for decompression and network speed. In this benchmark I am going to compare performance between different compression algorithms, compression using MySQL itself and not using compression at all.</p>
+<h2 id="benchmark-environment" style="position:relative;"><a href="#benchmark-environment" aria-label="benchmark environment permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmark Environment</h2>
+<p>This benchmark is slightly less micro and slightly more complicated than my usual benchmarks. We have 3 major parameters here: MySQL Server, network between MySQL and Application and compression algorithms.</p>
+<h3 id="datasets-and-compression-algorithms" style="position:relative;"><a href="#datasets-and-compression-algorithms" aria-label="datasets and compression algorithms permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Datasets and Compression Algorithms</h3>
+<p>Because this blog post is a continuation of my previous one — <a href="/p/java-compression-performance">Java Compression Performance</a>, I’m going to use the same compression algorithms and datasets as there. Let’s briefly describe it.</p>
+<p>In short, there are 2 datasets:</p>
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI">https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI</a></li>
-<li><a href="https://quixdb.github.io/squash-benchmark/">https://quixdb.github.io/squash-benchmark/</a></li>
-<li><a href="https://dba.stackexchange.com/questions/2445/should-binary-files-be-stored-in-the-database">Should binary files be stored in the database?</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/optimize-blob.html">8.4.2.3 Optimizing for BLOB Types</a></li>
-<li><a href="https://stackoverflow.com/questions/9511476/speed-of-mysql-query-on-tables-containing-blob-depends-on-filesystem-cache">https://stackoverflow.com/questions/9511476/speed-of-mysql-query-on-tables-containing-blob-depends-on-filesystem-cache</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/blob.html">https://dev.mysql.com/doc/refman/8.0/en/blob.html</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-compression-internals.html">https://dev.mysql.com/doc/refman/8.0/en/innodb-compression-internals.html</a></li>
-<li><a href="https://medium.com/datadenys/data-compression-in-mysql-6a0668af8f08">https://medium.com/datadenys/data-compression-in-mysql-6a0668af8f08</a></li>
+<li>One is based on the real user data, contains URLs, UUID etc.</li>
+<li>Another is <a href="https://github.com/dkomanov/stuff/blob/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/compression/BlobCompressionRatio.java">purely random</a>, using different alphabet sizes to achieve different compression ratios.</li>
 </ul>
-<h2 id="how-to-jni" style="position:relative;"><a href="#how-to-jni" aria-label="how to jni permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to JNI?</h2>
-<p>There are multiple resources on how to work with JNI. For example this <a href="https://www.baeldung.com/jni">guide</a>. Because I’m going to use Rust, the relevant guide is on the <a href="https://docs.rs/jni/latest/jni/">jni crate</a> documentation itself. Basically, we start with something simple:</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>komanov<span class="token punctuation">.</span>jwt<span class="token punctuation">.</span>base64<span class="token punctuation">.</span>jni</span><span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">NativeBazel</span> <span class="token punctuation">{</span>
-    <span class="token keyword">static</span> <span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">loadLibrary</span><span class="token punctuation">(</span><span class="token string">"base64_lib"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">native</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">decodeConfigUrlSafe1</span><span class="token punctuation">(</span><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> encoded<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>Then we need to generate a C-header file for it:</p>
-<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">java -h NativeBazel.java</code></pre></div>
-<p>In return we get file <code class="language-text">com_komanov_jwt_base64_jni_NativeBazel.h</code>:</p>
-<div class="gatsby-highlight" data-language="cpp"><pre class="language-cpp"><code class="language-cpp"><span class="token comment">/* DO NOT EDIT THIS FILE - it is machine generated */</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;jni.h></span></span>
-<span class="token comment">/* Header for class com_komanov_jwt_base64_jni_NativeBazel */</span>
-
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">_Included_com_komanov_jwt_base64_jni_NativeBazel</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">_Included_com_komanov_jwt_base64_jni_NativeBazel</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__cplusplus</span></span>
-<span class="token keyword">extern</span> <span class="token string">"C"</span> <span class="token punctuation">{</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
-<span class="token comment">/*
- * Class:     com_komanov_jwt_base64_jni_NativeBazel
- * Method:    decodeConfigUrlSafe1
- * Signature: ([B)[B
- */</span>
-JNIEXPORT jbyteArray JNICALL
-  <span class="token function">Java_com_komanov_jwt_base64_jni_NativeBazel_decodeConfigUrlSafe1</span>
-  <span class="token punctuation">(</span>JNIEnv <span class="token operator">*</span><span class="token punctuation">,</span> jclass<span class="token punctuation">,</span> jbyteArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__cplusplus</span></span>
-<span class="token punctuation">}</span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span></code></pre></div>
-<p>And for Rust we need to create a file (we need to use a generated function name <code class="language-text">Java_com_komanov_jwt_base64_jni_NativeBazel_decodeConfigUrlSafe1</code>, but it’s very long, so I cut it just for the post to look good):</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token keyword">use</span> base64<span class="token punctuation">;</span>
-<span class="token keyword">use</span> <span class="token namespace">jni<span class="token punctuation">::</span></span><span class="token class-name">JNIEnv</span><span class="token punctuation">;</span>
-<span class="token keyword">use</span> <span class="token namespace">jni<span class="token punctuation">::</span>objects<span class="token punctuation">::</span></span><span class="token class-name">JClass</span><span class="token punctuation">;</span>
-<span class="token keyword">use</span> <span class="token namespace">jni<span class="token punctuation">::</span>sys<span class="token punctuation">::</span></span>jbyteArray<span class="token punctuation">;</span>
-
-<span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigUrlSafe1</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config</span><span class="token punctuation">(</span>
-    env<span class="token punctuation">.</span><span class="token function">convert_byte_array</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>This would be our first and the simplest implementation using <a href="https://docs.rs/base64/latest/base64/">base64</a> crate.</p>
-<p>Also, don’t forget to make your native library (libbase64_lib.so in case of Linux) discoverable to JVM by specifying it’s location via command line argument <code class="language-text">-Djava.library.path=</code>.</p>
-<h2 id="the-first-benchmark" style="position:relative;"><a href="#the-first-benchmark" aria-label="the first benchmark permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The First Benchmark</h2>
-<p>Next thing is to write a benchmark Java vs Rust via JNI. Easy, right? First results:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark              (length)      Score       Error  Units
-
-jdk_url_decode              100    232.112 ±     3.565  ns/op
-jni_url_decodeConfig1       100    662.213 ±    30.668  ns/op
-
-jdk_url_decode            10000  19530.268 ±   590.507  ns/op
-jni_url_decodeConfig1     10000  12403.311 ±    99.469  ns/op</code></pre></div>
-<p>And the chart for all payload sizes (openjdk-17, for previous versions JDK implementation performs slightly worse):</p>
-<p><img src="./decode1.png" alt="Performance of JDK vs base64::decode_config ver. 1"></p>
-<p>Somewhere between payload size of 500 and 1000 performance converges and then Rust via JNI starts to perform better. However… If we take a look on the Rust performance without JNI, we would see <a href="/data/charts/base64-rust/base64_decode_config/index.html">this</a>:</p>
-<p><img src="./decode1_rust.png" alt="Performance of base64::decode_config ver. 1 without JNI"></p>
-<p>It’s actually pretty close: 12.4 μs (microseconds) with JNI vs 10.2 μs without JNI. Approximately 20% overhead of JNI. Let’s try to decrease it.</p>
-<h2 id="optimize-it" style="position:relative;"><a href="#optimize-it" aria-label="optimize it permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optimize It!</h2>
-<p><strong>Disclaimer 1</strong>: I didn’t save actual results from all different runs, so I’m going to use the final results, but I’m going to describe everything in the more or less the same order as I proceeded during my research.</p>
-<p><strong>Disclaimer 2</strong>: micro-optimizations aren’t simple, the benchmarking results are not <a href="http://wiki.jvmlangsummit.com/images/1/1d/PerformanceAnxiety2010.pdf">that simple</a>, beware of it — you need to benchmark your system yourself, sometimes successful benchmark of a smaller thing may not be visible after integration to a bigger system.</p>
-<p>Let’s take a look at the implementation again:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigUrlSafe1</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config</span><span class="token punctuation">(</span>
-    env<span class="token punctuation">.</span><span class="token function">convert_byte_array</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>Here we perform 3 operations:</p>
-<ol>
-<li><a href="https://docs.rs/jni/latest/jni/struct.JNIEnv.html#method.convert_byte_array">env.convert_byte_array</a> converts <code class="language-text">byte[]</code> to <code class="language-text">Vec&lt;u8></code>: we can’t access directly byte array, because it’s in a managed heap of JVM and may be moved.</li>
-<li><a href="https://docs.rs/base64/latest/base64/fn.decode_config.html">decode_config</a> decodes Base64.</li>
-<li><a href="https://docs.rs/jni/latest/jni/struct.JNIEnv.html#method.byte_array_from_slice">env.byte_array_from_slice</a> converts <code class="language-text">[u8]</code> (byte slice) back to <code class="language-text">byte[]</code>.</li>
-</ol>
-<p>Let’s try to replace certain parts and see how it affects the performance.</p>
-<h3 id="use-get_byte_array_elements-instead-of-convert_byte_array" style="position:relative;"><a href="#use-get_byte_array_elements-instead-of-convert_byte_array" aria-label="use get_byte_array_elements instead of convert_byte_array permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use get_byte_array_elements instead of convert_byte_array</h3>
-<p>There are few methods for working with array, one of them is <a href="https://docs.rs/jni/latest/jni/struct.JNIEnv.html#method.get_byte_array_elements">get_byte_array_elements</a>:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigUrlSafe2</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> arr <span class="token operator">=</span> env<span class="token punctuation">.</span><span class="token function">get_byte_array_elements</span><span class="token punctuation">(</span>
-    payload<span class="token punctuation">,</span>
-    <span class="token class-name">ReleaseMode</span><span class="token punctuation">::</span><span class="token class-name">NoCopyBack</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> sl <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token function">from_raw_parts</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">as_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> arr<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token keyword">usize</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config</span><span class="token punctuation">(</span>sl<span class="token punctuation">,</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark              (length)      Score       Error  Units
-
-jni_url_decodeConfig1       100    662.213 ±    30.668  ns/op
-jni_url_decodeConfig2       100    538.772 ±     4.381  ns/op
-
-jni_url_decodeConfig1     10000  12403.311 ±    99.469  ns/op
-jni_url_decodeConfig2     10000  12355.233 ±   620.308  ns/op</code></pre></div>
-<p>Slightly better.</p>
-<h3 id="passing-array-size-explicitly" style="position:relative;"><a href="#passing-array-size-explicitly" aria-label="passing array size explicitly permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing array size explicitly</h3>
-<p>Under the hood of <code class="language-text">arr.size()</code> is another call to <code class="language-text">JNIEnv</code> object to <a href="https://docs.rs/jni/latest/jni/struct.JNIEnv.html#method.get_array_length">get_array_length</a> method. Instead of that we can pass array’s length via arguments (and hope that marshalling of <code class="language-text">int</code> is very cheap):</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigUrlSafe3</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-  size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> arr <span class="token operator">=</span> env<span class="token punctuation">.</span><span class="token function">get_byte_array_elements</span><span class="token punctuation">(</span>
-    payload<span class="token punctuation">,</span>
-    <span class="token class-name">ReleaseMode</span><span class="token punctuation">::</span><span class="token class-name">NoCopyBack</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> sl <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token function">from_raw_parts</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">as_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config</span><span class="token punctuation">(</span>sl<span class="token punctuation">,</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark              (length)      Score       Error  Units
-
-jni_url_decodeConfig2       100    538.772 ±     4.381  ns/op
-jni_url_decodeConfig3       100    505.095 ±    44.893  ns/op
-
-jni_url_decodeConfig2     10000  12355.233 ±   620.308  ns/op
-jni_url_decodeConfig3     10000  12252.848 ±    40.396  ns/op</code></pre></div>
-<p>Slightly better.</p>
-<h3 id="use-get_primitive_array_critical-instead-of-get_byte_array_elements" style="position:relative;"><a href="#use-get_primitive_array_critical-instead-of-get_byte_array_elements" aria-label="use get_primitive_array_critical instead of get_byte_array_elements permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use get_primitive_array_critical instead of get_byte_array_elements</h3>
-<p>Yet another way of accessing <code class="language-text">byte[]</code> is by using <a href="https://docs.rs/jni/latest/jni/struct.JNIEnv.html#method.get_primitive_array_critical">get_primitive_array_critical</a>. There’s <a href="https://stackoverflow.com/questions/23258357/whats-the-trade-off-between-using-getprimitivearraycritical-and-getprimitivety">caveat</a> of using this method: it may prevent Garbage Collector from running, so it’s assumed that this method should be accessed for a short period of time, without any extra calls to JNI.</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigUrlSafe4</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-  size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> arr <span class="token operator">=</span> env<span class="token punctuation">.</span><span class="token function">get_primitive_array_critical</span><span class="token punctuation">(</span>
-    payload<span class="token punctuation">,</span>
-    <span class="token class-name">ReleaseMode</span><span class="token punctuation">::</span><span class="token class-name">NoCopyBack</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">let</span> sl <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token function">from_raw_parts</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">as_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config</span><span class="token punctuation">(</span>sl<span class="token punctuation">,</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark              (length)      Score       Error  Units
-
-jni_url_decodeConfig3       100    505.095 ±    44.893  ns/op
-jni_url_decodeConfig4       100    455.117 ±     3.990  ns/op
-
-jni_url_decodeConfig3     10000  12252.848 ±    40.396  ns/op
-jni_url_decodeConfig4     10000  11942.370 ±   330.573  ns/op</code></pre></div>
-<p>Slightly better :)</p>
-<h3 id="use-base64decode_config_slice" style="position:relative;"><a href="#use-base64decode_config_slice" aria-label="use base64decode_config_slice permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use base64::decode_config_slice</h3>
-<p>At the time of this benchmark, there was a <a href="https://github.com/marshallpierce/rust-base64/issues/195">bug</a> that allocated more memory then needed in <code class="language-text">decode_config</code> method, so I tried to allocate memory by myself:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigSliceUrlSafe1</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-  size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> jbyteArray <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> <span class="token keyword">mut</span> buffer <span class="token operator">=</span> <span class="token class-name">Vec</span><span class="token punctuation">::</span><span class="token operator">&lt;</span><span class="token keyword">u8</span><span class="token operator">></span><span class="token punctuation">::</span><span class="token function">with_capacity</span><span class="token punctuation">(</span>size <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> arr <span class="token operator">=</span> env<span class="token punctuation">.</span><span class="token function">get_byte_array_elements</span><span class="token punctuation">(</span>
-    payload<span class="token punctuation">,</span>
-    <span class="token class-name">ReleaseMode</span><span class="token punctuation">::</span><span class="token class-name">NoCopyBack</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> <span class="token punctuation">(</span>input_slice<span class="token punctuation">,</span> <span class="token keyword">mut</span> output_slice<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">(</span>
-      <span class="token function">from_raw_parts</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">as_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token operator">*</span><span class="token keyword">const</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token function">from_raw_parts_mut</span><span class="token punctuation">(</span>buffer<span class="token punctuation">.</span><span class="token function">as_mut_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> buffer<span class="token punctuation">.</span><span class="token function">capacity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">let</span> size <span class="token operator">=</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config_slice</span><span class="token punctuation">(</span>
-    input_slice<span class="token punctuation">,</span>
-    <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">,</span>
-    <span class="token operator">&amp;</span><span class="token keyword">mut</span> output_slice<span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token comment">// simplified assert, correct probably only for benchmark data.</span>
-  <span class="token macro property">assert_eq!</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span> buffer<span class="token punctuation">.</span><span class="token function">capacity</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    buffer<span class="token punctuation">.</span><span class="token function">set_len</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">return</span> env<span class="token punctuation">.</span><span class="token function">byte_array_from_slice</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>buffer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark               (length)      Score       Error  Units
-
-jni_url_decodeConfig2        100    538.772 ±     4.381  ns/op
-jni_url_decodeConfig4        100    455.117 ±     3.990  ns/op
-jni_url_decodeConfigSlice1   100    506.076 ±     5.490  ns/op
-
-jni_url_decodeConfig2      10000  12355.233 ±   620.308  ns/op
-jni_url_decodeConfig4      10000  11942.370 ±   330.573  ns/op
-jni_url_decodeConfigSlice1 10000  12318.419 ±   283.668  ns/op</code></pre></div>
-<p>Here we can see, that it performs slightly better than <code class="language-text">decode_config</code> with passing size explicitly optimization. So, we could probably add all other optimizations and it will be slightly better. But what are the next possible optimizations here?</p>
-<p>Actually, we have 2 things going here:</p>
-<ol>
-<li>Marshalling of encoded <code class="language-text">byte[]</code> as input argument.</li>
-<li>Marshalling of decoded result as <code class="language-text">byte[]</code> as returned value.</li>
-</ol>
-<p>Could it be that JVM’s marshalling mechanism isn’t the most robust for our specific problem?</p>
-<h3 id="allocate-off-heap-memory-for-the-output" style="position:relative;"><a href="#allocate-off-heap-memory-for-the-output" aria-label="allocate off heap memory for the output permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Allocate off-heap memory for the output</h3>
-<p>For off-heap allocation we can use <a href="https://github.com/openjdk/jdk/blob/jdk-19+36/src/java.base/share/classes/jdk/internal/misc/Unsafe.java#L621">Unsafe</a> class. Method <code class="language-text">allocateMemory</code> will return a <code class="language-text">long</code> value, which represents an address in off-heap memory, which we need to pass via JNI.</p>
-<p>In Java it would look like this:</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">native</span> <span class="token keyword">int</span> <span class="token function">decodeConfigSliceUrlSafe2</span><span class="token punctuation">(</span>
-  <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> encoded<span class="token punctuation">,</span>
-  <span class="token keyword">int</span> size<span class="token punctuation">,</span>
-  <span class="token keyword">long</span> address<span class="token punctuation">,</span>
-  <span class="token keyword">int</span> outputSize
-<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>And the Rust implementation:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigSliceUrlSafe2</span><span class="token punctuation">(</span>
-  env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  payload<span class="token punctuation">:</span> jbyteArray<span class="token punctuation">,</span>
-  size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-  output<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>
-  output_size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> arr <span class="token operator">=</span> env<span class="token punctuation">.</span><span class="token function">get_byte_array_elements</span><span class="token punctuation">(</span>
-    payload<span class="token punctuation">,</span>
-    <span class="token class-name">ReleaseMode</span><span class="token punctuation">::</span><span class="token class-name">NoCopyBack</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">let</span> <span class="token punctuation">(</span>input_slice<span class="token punctuation">,</span> output_slice<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">(</span>
-      <span class="token namespace">std<span class="token punctuation">::</span>slice<span class="token punctuation">::</span></span><span class="token function">from_raw_parts</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">as_ptr</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token operator">*</span><span class="token keyword">const</span> <span class="token keyword">u8</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token namespace">std<span class="token punctuation">::</span>slice<span class="token punctuation">::</span></span><span class="token function">from_raw_parts_mut</span><span class="token punctuation">(</span>output<span class="token punctuation">,</span> output_size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">return</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config_slice</span><span class="token punctuation">(</span>
-    input_slice<span class="token punctuation">,</span>
-    <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">,</span>
-    output_slice<span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>As a result we return an actual number of decoded bytes. And then in Java we need to <a href="https://github.com/dkomanov/stuff/blob/7f808056d53fd891bacb83e53f559614c675e693/src/com/komanov/jwt/base64/jni/NativeHelper.java#L10-L14">create a byte array</a> (by using <a href="https://github.com/openjdk/jdk/blob/jdk-19+36/src/jdk.unsupported/share/classes/sun/misc/Unsafe.java#L570">copyMemory</a>):</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">toByteArray</span><span class="token punctuation">(</span><span class="token keyword">long</span> address<span class="token punctuation">,</span> <span class="token keyword">int</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
-  unsafe<span class="token punctuation">.</span><span class="token function">copyMemory</span><span class="token punctuation">(</span>
-    <span class="token keyword">null</span><span class="token punctuation">,</span>
-    address<span class="token punctuation">,</span>
-    result<span class="token punctuation">,</span>
-    <span class="token class-name">Unsafe</span><span class="token punctuation">.</span>ARRAY_BYTE_BASE_OFFSET<span class="token punctuation">,</span>
-    length
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And also the next optimization for it — cache in thread local an off-heap memory, so we don’t need to allocate/release it for each JNI call.</p>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark                      (length)      Score       Error  Units
-
-jni_url_decodeConfig2               100    538.772 ±     4.381  ns/op
-jni_url_decodeConfig4               100    455.117 ±     3.990  ns/op
-jni_url_decodeConfigSlice1          100    506.076 ±     5.490  ns/op
-jni_url_decodeConfigSlice1NoCache   100    378.639 ±     3.030  ns/op
-jni_url_decodeConfigSlice2Cache     100    292.331 ±     4.535  ns/op
-
-jni_url_decodeConfig2             10000  12355.233 ±   620.308  ns/op
-jni_url_decodeConfig4             10000  11942.370 ±   330.573  ns/op
-jni_url_decodeConfigSlice1        10000  12318.419 ±   283.668  ns/op
-jni_url_decodeConfigSlice1NoCache 10000  12322.464 ±    91.313  ns/op
-jni_url_decodeConfigSlice2Cache   10000  12071.756 ±   134.344  ns/op</code></pre></div>
-<p>We can see that for smaller payloads performance improvement is pretty much significant. For larger not so much, but still slightly better.</p>
-<h3 id="allocate-off-heap-memory-for-both-input-and-output" style="position:relative;"><a href="#allocate-off-heap-memory-for-both-input-and-output" aria-label="allocate off heap memory for both input and output permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Allocate off-heap memory for both input and output</h3>
-<p>So, the next and (almost) the last step is to use off-heap buffers for both input and output data. This way we completely eliminate marshalling of <code class="language-text">byte[]</code> from JVM to native.</p>
-<p>In Java it looks like this:</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">native</span> <span class="token keyword">int</span> <span class="token function">decodeConfigSliceUrlSafe3</span><span class="token punctuation">(</span>
-  <span class="token keyword">long</span> inputAddress<span class="token punctuation">,</span>
-  <span class="token keyword">int</span> inputSize<span class="token punctuation">,</span>
-  <span class="token keyword">long</span> outputAddress<span class="token punctuation">,</span>
-  <span class="token keyword">int</span> outputSize
-<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>And in Rust:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeConfigSliceUrlSafe3</span><span class="token punctuation">(</span>
-  _env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  input<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token keyword">const</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>
-  input_size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-  output<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>
-  output_size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> <span class="token punctuation">(</span>input_slice<span class="token punctuation">,</span> output_slice<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">(</span>
-      <span class="token namespace">std<span class="token punctuation">::</span>slice<span class="token punctuation">::</span></span><span class="token function">from_raw_parts</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> input_size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token namespace">std<span class="token punctuation">::</span>slice<span class="token punctuation">::</span></span><span class="token function">from_raw_parts_mut</span><span class="token punctuation">(</span>output<span class="token punctuation">,</span> output_size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token function">decode_config_slice</span><span class="token punctuation">(</span>
-    input_slice<span class="token punctuation">,</span>
-    <span class="token namespace">base64<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">,</span>
-    output_slice<span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>To copy input <code class="language-text">byte[]</code> to off-heap we may use <a href="https://github.com/dkomanov/stuff/blob/7f808056d53fd891bacb83e53f559614c675e693/src/com/komanov/jwt/base64/jni/NativeHelper.java#L16-L18">this code</a>:</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">copyFromByteArray</span><span class="token punctuation">(</span><span class="token keyword">long</span> address<span class="token punctuation">,</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> input<span class="token punctuation">,</span> <span class="token keyword">int</span> inputSize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  unsafe<span class="token punctuation">.</span><span class="token function">copyMemory</span><span class="token punctuation">(</span>
-    input<span class="token punctuation">,</span>
-    <span class="token class-name">Unsafe</span><span class="token punctuation">.</span>ARRAY_BYTE_BASE_OFFSET<span class="token punctuation">,</span>
-    <span class="token keyword">null</span><span class="token punctuation">,</span>
-    address<span class="token punctuation">,</span>
-    inputSize
-  <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And the benchmark:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark                               (length)      Score       Error  Units
-
-jdk_url_decode                               100    232.112 ±     3.565  ns/op
-jni_url_decodeConfig1                        100    662.213 ±    30.668  ns/op
-jni_url_decodeConfig4                        100    455.117 ±     3.990  ns/op
-jni_url_decodeConfigSlice1                   100    506.076 ±     5.490  ns/op
-jni_url_decodeConfigSlice1NoCache            100    378.639 ±     3.030  ns/op
-jni_url_decodeConfigSlice2Cache              100    292.331 ±     4.535  ns/op
-jni_url_decodeConfigSlice3CacheInputOutput   100    182.863 ±    26.261  ns/op
-
-jdk_url_decode                             10000  19530.268 ±   590.507  ns/op
-jni_url_decodeConfig1                      10000  12403.311 ±    99.469  ns/op
-jni_url_decodeConfig4                      10000  11942.370 ±   330.573  ns/op
-jni_url_decodeConfigSlice1                 10000  12318.419 ±   283.668  ns/op
-jni_url_decodeConfigSlice1NoCache          10000  12322.464 ±    91.313  ns/op
-jni_url_decodeConfigSlice2Cache            10000  12071.756 ±   134.344  ns/op
-jni_url_decodeConfigSlice3CacheInputOutput 10000  11841.998 ±    60.984  ns/op</code></pre></div>
-<p>And a final chart for different payload sizes:</p>
-<p><img src="./decode_final.png" alt="Performance of JDK vs base64::decode_config vs base64::decode_config_slice final version"></p>
-<h2 id="the-ultimate-optimization" style="position:relative;"><a href="#the-ultimate-optimization" aria-label="the ultimate optimization permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Ultimate Optimization</h2>
-<p>As I mentioned in update to my <a href="/p/base64-encoding-performance-java-vs-rust">post</a> about Base64 encoding in Rust, the fastest libraries isn’t <a href="https://docs.rs/base64/latest/base64/">base64</a> crate, but <a href="https://docs.rs/base64-simd/latest/base64_simd/">base64-simd</a> crate. Let’s check out what would be if we use it. Also, knowing all these optimizations with off-heap memory and stuff:</p>
-<div class="gatsby-highlight" data-language="rust"><pre class="language-rust"><code class="language-rust"><span class="token attribute attr-name">#[no_mangle]</span>
-<span class="token keyword">pub</span> <span class="token keyword">extern</span> <span class="token string">"system"</span> <span class="token keyword">fn</span> <span class="token function-definition function">decodeSimdNative</span><span class="token punctuation">(</span>
-  _env<span class="token punctuation">:</span> <span class="token class-name">JNIEnv</span><span class="token punctuation">,</span>
-  _class<span class="token punctuation">:</span> <span class="token class-name">JClass</span><span class="token punctuation">,</span>
-  input<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token keyword">const</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>
-  input_size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-  output<span class="token punctuation">:</span> <span class="token operator">*</span><span class="token keyword">mut</span> <span class="token keyword">u8</span><span class="token punctuation">,</span>
-  output_size<span class="token punctuation">:</span> <span class="token keyword">usize</span><span class="token punctuation">,</span>
-<span class="token punctuation">)</span> <span class="token punctuation">-></span> <span class="token keyword">usize</span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> <span class="token punctuation">(</span>input_slice<span class="token punctuation">,</span> output_slice<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">unsafe</span> <span class="token punctuation">{</span>
-    <span class="token punctuation">(</span>
-      <span class="token function">from_raw_parts</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> input_size<span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token function">from_raw_parts_mut</span><span class="token punctuation">(</span>output<span class="token punctuation">,</span> output_size<span class="token punctuation">)</span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token namespace">base64_simd<span class="token punctuation">::</span></span><span class="token constant">URL_SAFE_NO_PAD</span><span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>
-    input_slice<span class="token punctuation">,</span>
-    <span class="token namespace">base64_simd<span class="token punctuation">::</span></span><span class="token class-name">OutRef</span><span class="token punctuation">::</span><span class="token function">from_slice</span><span class="token punctuation">(</span>output_slice<span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  result<span class="token punctuation">.</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>And benchmark results:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark                               (length)      Score       Error  Units
-
-jdk_url_decode                               100    232.112 ±     3.565  ns/op
-jni_url_decodeConfigSlice3CacheInputOutput   100    182.863 ±    26.261  ns/op
-jni_url_decodeSimdCargo                      100     76.619 ±     1.512  ns/op
-
-jdk_url_decode                             10000  19530.268 ±   590.507  ns/op
-jni_url_decodeConfigSlice3CacheInputOutput 10000  11841.998 ±    60.984  ns/op
-jni_url_decodeSimdCargo                    10000   2918.582 ±   196.564  ns/op</code></pre></div>
-<p>Yup, it’s that epic of a difference! Basically, 19 μs vs 3 μs on 10K payload!</p>
-<h3 id="sidenote-bazel-vs-cargo" style="position:relative;"><a href="#sidenote-bazel-vs-cargo" aria-label="sidenote bazel vs cargo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sidenote: bazel vs cargo</h3>
-<p>I generally use <a href="https://bazel.build/">bazel</a> for all my <a href="https://github.com/dkomanov/stuff">stuff</a> that I benchmark and test. But here I stumbled upon bad <a href="https://github.com/bazelbuild/rules_rust/">support</a> for Rust: <a href="https://github.com/bazelbuild/intellij/issues/675">zero support</a> in IntelliJ (there is a Rust plugin <a href="https://github.com/vaticle/bazel-intellij-rust-example">fork</a> with the support, but it includes both bazel BUILD files and cargo files, which confuses me a bit). And the second thing is inability (well, maybe it’s just me) to configure it in a way so the base64-simd implementation would work with optimizations enabled. Here is the comparison of base64-simd built by bazel and by cargo:</p>
-<p><img src="./bazel-vs-cargo.png" alt="Bazel vs Cargo performance for base64-simd"></p>
-<p>Yup, it’s 400+ μs vs 3 μs. Very sad. I spent few hours aligning configuration between my cargo project and bazel project, but without success. Other stuff works well: I managed to apply <code class="language-text">--codegen=opt-level=3</code> in bazel, and the performance of <a href="https://github.com/dkomanov/stuff/blob/7f808056d53fd891bacb83e53f559614c675e693/src/com/komanov/jwt/base64/jni/jmh/BazelVsCargoBenchmarks.scala#L10">other stuff</a> is more or less the same, but not base64-simd.</p>
-<p>Of course it’s inconvenient to have a separate Rust project, but this way IntelliJ and optimizations work well.</p>
-<h2 id="jni-cost" style="position:relative;"><a href="#jni-cost" aria-label="jni cost permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JNI Cost</h2>
-<p>Let’s compare JNI call (optimized) vs raw call (for both <a href="/data/charts/base64-rust/base64_decode_config/index.html">base64</a> and <a href="/data/charts/base64-rust/base64_simd_decode_type/index.html">base64-simd</a>):</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Method          payload         Raw        JNI
-
-base64              100      167 ns     182 ns
-base64-simd         100       46 ns      76 ns
-
-base64            10000     10.2 μs    11.8 μs
-base64-simd       10000      1.3 μs     2.9 μs</code></pre></div>
-<p>My guess that these ~30 ns difference (for 100 bytes payload) and ~1.6 μs difference (for 10K payload) is approximate time to do 2 memory copy operations. So, I <a href="https://github.com/dkomanov/stuff/commit/817dd679066abc00ad735b083df36ca9b28c4efc">checked</a> it, and it seems so:</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark                   (length)     Score     Error  Units
-from_encoded_to_decoded          100    29.547 ±   3.860  ns/op
-from_encoded_to_decoded        10000  1664.824 ±  39.950  ns/op</code></pre></div>
-<p>At the end, the overhead of using JNI is marshalling data to and from JNI plus some constant of accessing native code (I got something around 20 ns in a <a href="/charts/native-access/">previous benchmark</a>).</p>
+<p>Application level compression using these algorithms: <a href="https://en.wikipedia.org/wiki/Gzip">gzip</a>, <a href="https://en.wikipedia.org/wiki/Deflate">deflate</a>, <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">MySQL compression</a>, <a href="https://github.com/facebook/zstd">zstd</a>, <a href="https://github.com/google/snappy">snappy</a>, <a href="https://github.com/google/brotli">brotli</a> and <a href="https://lz4.github.io/lz4/">lz4</a>.</p>
+<p>In additional to application-level compression, we’re going to use internal <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-compression-internals.html">MySQL compression</a> as well.</p>
+<p>Compression ratios for different algorithms and datasets you may explore in <a href="https://docs.google.com/spreadsheets/d/1pFOAgxVYsos38oraeva1_RHC9P4J3oN2Oj2fQ65L8OI">this spreadsheet</a>.</p>
+<h3 id="blob-in-mysql" style="position:relative;"><a href="#blob-in-mysql" aria-label="blob in mysql permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BLOB in MySQL</h3>
+<p>MySQL has <a href="https://dev.mysql.com/doc/refman/8.0/en/blob.html">BLOB</a> column type which allows to store binary data (check <a href="https://dev.mysql.com/doc/refman/8.0/en/storage-requirements.html#data-types-storage-reqs-strings">docs</a> for the maximum length, and also <a href="https://dev.mysql.com/doc/refman/8.0/en/optimize-blob.html">few tips</a> for using BLOB).</p>
+<p>Another aspect is the MySQL’s storage <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-row-format.html">row format</a>. Depending on row format, MySQL stores data differently.</p>
+<ul>
+<li><code class="language-text">DYNAMIC</code> row format for <code class="language-text">BLOB</code> stores 20-byte pointer to where it’s stored. As opposed to <code class="language-text">REDUNDANT</code> and <code class="language-text">COMPACT</code> row formats, which store first 768 bytes in a table and the rest in overflow pages. In this benchmark data sizes start from 1028 bytes, so this kind of optimization is irrelevant.</li>
+<li><code class="language-text">COMPRESSED</code> row format enables <a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-compression-internals.html">compression</a> on database level, so 20-byte pointer will point to another storage which will be compressed using <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">deflate with 4-byte length prefix</a>. For the benchmark sake we will use the same algorithm on application level to see the overhead of MySQL over compression. You may find useful another blog post with overview of <a href="https://medium.com/datadenys/data-compression-in-mysql-6a0668af8f08">MySQL compression</a>.</li>
+</ul>
+<p>So, the first table structure we’re going to use is this:</p>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token identifier"><span class="token punctuation">`</span>uncompressed_blobs<span class="token punctuation">`</span></span> <span class="token punctuation">(</span>
+  <span class="token identifier"><span class="token punctuation">`</span>id<span class="token punctuation">`</span></span> <span class="token keyword">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+  <span class="token identifier"><span class="token punctuation">`</span>data<span class="token punctuation">`</span></span> <span class="token keyword">MEDIUMBLOB</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> ROW_FORMAT<span class="token operator">=</span>DYNAMIC<span class="token punctuation">;</span></code></pre></div>
+<p>In this table we will store either uncompressed data or data compressed on an application level without using MySQL compression (obviously, we want to avoid double compression as it ineffective).</p>
+<p>And another table for benchmarking MySQL’s compression:</p>
+<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token identifier"><span class="token punctuation">`</span>compressed_blobs<span class="token punctuation">`</span></span> <span class="token punctuation">(</span>
+  <span class="token identifier"><span class="token punctuation">`</span>id<span class="token punctuation">`</span></span> <span class="token keyword">INT</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span> <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span><span class="token punctuation">,</span>
+  <span class="token identifier"><span class="token punctuation">`</span>data<span class="token punctuation">`</span></span> <span class="token keyword">MEDIUMBLOB</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> ROW_FORMAT<span class="token operator">=</span>COMPRESSED<span class="token punctuation">;</span></code></pre></div>
+<h3 id="network-and-hardware" style="position:relative;"><a href="#network-and-hardware" aria-label="network and hardware permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Network and Hardware</h3>
+<p>For this benchmark I ended up with 4 different configurations:</p>
+<ul>
+<li><code class="language-text">localhost</code>. This is the most naive and “in a vacuum” configuration. Both JMH benchmark and MySQL were run on a same laptop (i7-1165G7, 16GB RAM, Ubuntu 22). This configuration provides the best “network” latencies, and allegedly without too much contention, as 2 threads were used for the JMH benchmark and the rest for MySQL (which was underutilized anyway).</li>
+<li><code class="language-text">AWS</code>. I used the actual production cluster of MySQL Server with master/slaves with <a href="https://proxysql.com/">proxysql</a> in front of it. JMH benchmark was run on a separate server inside the same region.</li>
+<li><code class="language-text">1Gbit</code> is so-called configuration that I ran on my home network. MySQL server was installed on an old computer with Atom processor, and a JMH benchmark was run from another laptop (i7-U10610U, 32GB RAM, Ubuntu 20).
+<ul>
+<li>First run using Wi-Fi.</li>
+<li>And another one using Ethernet (I don’t have Ethernet port on a laptop from <code class="language-text">localhost</code> configuration)</li>
+</ul>
+</li>
+</ul>
+<p>Because compression performance doesn’t really depend on JDK version (as I shown in my <a href="/p/java-compression-performance">previous benchmark</a>), I used different versions of JDK (openjdk-11 in <code class="language-text">AWS</code> and openjdk-17 on my laptops).</p>
+<h2 id="benchmarks" style="position:relative;"><a href="#benchmarks" aria-label="benchmarks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks</h2>
+<p>For this benchmark the most important metric is a throughput: how many bytes of uncompressed data we can get in a second. Response time can’t show a meaningful result because it doesn’t include compression ratio.</p>
+<h3 id="benchmarks-for-aws-configuration" style="position:relative;"><a href="#benchmarks-for-aws-configuration" aria-label="benchmarks for aws configuration permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks for AWS configuration</h3>
+<p>I’d guess that the most interesting results are for <code class="language-text">AWS</code> configuration as it’s closest to a potential production use case.</p>
+<p>Here we may see the throughput chart for real dataset and data sizes between 600KB and 4MB:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/67ab251376e970162c5c904317cd6326/7de21/aws-real-big.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHklEQVQoz5WSiW6DMBBE+f/PpAGMMRAOH+C1X2WSVFErVcpKo9Veo9m1KxEhpUTO+TO8ZiSSRJjvFu8dVSH8mKwAyEnIwYFE3NTjnKfy3v+rsNRSTg9f+q74SeY2cjxJWZi3gRiFylr7h+A9/m1XTiLZ7yzWsoSDMwrrfbtql8Jn5/vU5YTMGSMhRmw8cEfAeUvwO8ZajPMsIXCUG27uUl8VmWYc6FVN39/QRmOmETNq9NBjJsMwKFRzo2tbtNLUStGqjn3SuHkgnoF9mYkiVMcR0E3N2HUsXcfY1CjVodsvpuaLe9+xjQa/Lhzbit9WjmUmWUvyHvGOXB62nKGs/LgZj0M/t72+RMqknDnPiA8BSekHJV/UlO3KLyl42TfLvHHAriTIzAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AWS, real dataset, large BLOBs, throughput bytes per second"
+        title="AWS, real dataset, large BLOBs, throughput bytes per second"
+        src="/static/67ab251376e970162c5c904317cd6326/50383/aws-real-big.png"
+        srcset="/static/67ab251376e970162c5c904317cd6326/1d79a/aws-real-big.png 185w,
+/static/67ab251376e970162c5c904317cd6326/1efb2/aws-real-big.png 370w,
+/static/67ab251376e970162c5c904317cd6326/50383/aws-real-big.png 740w,
+/static/67ab251376e970162c5c904317cd6326/73caa/aws-real-big.png 1110w,
+/static/67ab251376e970162c5c904317cd6326/536c7/aws-real-big.png 1480w,
+/static/67ab251376e970162c5c904317cd6326/7de21/aws-real-big.png 1839w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Let’s highlight the best:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7310e695a67b06fbb102b4c8c92d5f5a/7de21/aws-real-big-highlight.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKElEQVQoz52S4W7bMAyE/f7PuCZ26i1tEtuJbEqWSOkr5CTYWvRPR4AAJfGOJ5KNmZFzppTyM68YIMeAxcg4LYgsNJXwv8k0kcYTJa346YQPgSaEcFf4SeXfuL599UpWTEnvr5hfyNkY5zOqRiMid3BN+qf6k/BbWz3r5Y3LPDPGREiKuy5b/qaQRy94EmiCbFsYgseJsHjhNjvG8zvT8ZWTm1nUSGZoLgxONjFNjJHfbceha+m7ltOfnsPLjn73wn6/p2sPHA8t3a8d3a7l2L/RD47zVXBOuDkhJd0KVa4mrivTcEZuDpmuyDRwFc9tnpkvA+qFbEqpwzPDVCmaKKrkuiHbUDOW0tbf5r4ykB99zIU7+DGkmBLee1QVrd97ej0/7uqmPO0DG4dxFnH3DuoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AWS, real dataset, large BLOBs, highlighted, throughput bytes per second"
+        title="AWS, real dataset, large BLOBs, highlighted, throughput bytes per second"
+        src="/static/7310e695a67b06fbb102b4c8c92d5f5a/50383/aws-real-big-highlight.png"
+        srcset="/static/7310e695a67b06fbb102b4c8c92d5f5a/1d79a/aws-real-big-highlight.png 185w,
+/static/7310e695a67b06fbb102b4c8c92d5f5a/1efb2/aws-real-big-highlight.png 370w,
+/static/7310e695a67b06fbb102b4c8c92d5f5a/50383/aws-real-big-highlight.png 740w,
+/static/7310e695a67b06fbb102b4c8c92d5f5a/73caa/aws-real-big-highlight.png 1110w,
+/static/7310e695a67b06fbb102b4c8c92d5f5a/536c7/aws-real-big-highlight.png 1480w,
+/static/7310e695a67b06fbb102b4c8c92d5f5a/7de21/aws-real-big-highlight.png 1839w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>You may see, that lz4 takes the lead over uncompressed BLOB and every other algorithm is slower. Bigger the BLOB, the difference is more significant.</p>
+<p>Let’s take a look on a smaller dataset — 34KB to 94KB:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/161ec/aws-real-medium.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMUlEQVQoz5WS4W7kIAyE8/5PeXfbbLZJAyEESLDhO8F21fZnkYwxeMYjm0FEKKVQa/2lFUqpXLmQpbK5SIyB4VdkQN+vhKazE2m71EwwMyEmhqbwJ5Du+ebbqqrUnKkpEuyBM57oLP5YiTngjpV8ZYYY4xPQyEqhiPRYiuJOT5ATVaGKoFlx1rPtO7u3LMvEZj/IObP70PUPKaVPCRXyBXKhybFuCz4c2M0wzQ8edmUcR+7TjdVMOLeSgucyhhwT7ji7oEFU+6O3D65gsHbh3zRi5gU/f3A8Jvwys003jm2hSKRW7b1sBLXUPlS3O1SVQXJmfvvL7T7yZ7zz9v7OZhznvnN6h2h+DqM+m/k6fw2qNxs9E9oUNlYRfSYXetXXauBWveU0e/2I5stnXov1G+Y/lMBxu0xjP6oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AWS, real dataset, medium BLOBs, throughput bytes per second"
+        title="AWS, real dataset, medium BLOBs, throughput bytes per second"
+        src="/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/50383/aws-real-medium.png"
+        srcset="/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/1d79a/aws-real-medium.png 185w,
+/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/1efb2/aws-real-medium.png 370w,
+/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/50383/aws-real-medium.png 740w,
+/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/73caa/aws-real-medium.png 1110w,
+/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/536c7/aws-real-medium.png 1480w,
+/static/d5c53a9bf80a8c65efdcfd8af0dcbde0/161ec/aws-real-medium.png 1840w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>The picture is more interesting here, but it’s mostly because compression ratio for lz4 for particular examples is significantly worse. However, it’s important to note this — compression ratio matters a lot. And to illustrate this point let’s check the performance for random dataset for different compression ratios:</p>
+<p><img src="/585113c5653cd557d42b2118651abc2d/aws-stub.gif" alt="AWS, stub dataset, different compression ratios, throughput bytes per second"></p>
+<p>You may see: bigger the size and better the compression ratio — lz4 outperforms everything else more and more.</p>
+<h3 id="benchmarks-for-localhost" style="position:relative;"><a href="#benchmarks-for-localhost" aria-label="benchmarks for localhost permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks for localhost</h3>
+<p>What <code class="language-text">localhost</code> benchmark really shows is the ideal case in which network is as fast as possible.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/fc28e97cc81b1d61c07e9b16bf9c81bd/7de21/localhost-real-big.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQklEQVQoz02Si7KkIAxE/f8f3Z1Rh1E0JCFwtsS17k1VV0MTmkcyRQStNXrvdLj5mf/Goz187ZNMt0KLIH1PShGmYTgSKt2U3uLH+DeG9qAPI3pjRAvk80KkMJVSoJygQnelS4aod+LjcB1yres5GMk0N7w1ajSiBSnP1BpM53li0fHoRIdaG5ozdunHMaBHRopxqiPqnB7sVvmIkoriEezfPG4+iQhfLSxFWIuyqvKRk3QeJC3spuzmZDc2K2ymfFXYVSjmAx6NlGX871Rrxd0xFaxkVAsejoVTVBEriBeyFtQcM0O9IuLkPXPknXDn2BI1gsnN2JaV9Hfm82cmvRbSe2WfV3JK5OVDnmckJY5lYXu92N9v8rLiW8L3L636XfXryVfLXJ8arQ3h4qvyAy0wN67C3e11a+1/zl2QPsZP/AN/5HHadjxLCAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="localhost, real dataset, large BLOBs, throughput bytes per second"
+        title="localhost, real dataset, large BLOBs, throughput bytes per second"
+        src="/static/fc28e97cc81b1d61c07e9b16bf9c81bd/50383/localhost-real-big.png"
+        srcset="/static/fc28e97cc81b1d61c07e9b16bf9c81bd/1d79a/localhost-real-big.png 185w,
+/static/fc28e97cc81b1d61c07e9b16bf9c81bd/1efb2/localhost-real-big.png 370w,
+/static/fc28e97cc81b1d61c07e9b16bf9c81bd/50383/localhost-real-big.png 740w,
+/static/fc28e97cc81b1d61c07e9b16bf9c81bd/73caa/localhost-real-big.png 1110w,
+/static/fc28e97cc81b1d61c07e9b16bf9c81bd/536c7/localhost-real-big.png 1480w,
+/static/fc28e97cc81b1d61c07e9b16bf9c81bd/7de21/localhost-real-big.png 1839w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>We may see that uncompressed performance is better than any other algorithm significantly except for lz4.</p>
+<p>If you remember, on the chart from <code class="language-text">AWS</code> configuration for mid-sized BLOBs lz4 didn’t perform as well something (because of bad compression ratio). However, when you improve throughput of MySQL (network), lz4 continues to shine:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9d0c351647b56c316dc5dccbfb6330b6/bcec6/localhost-real-medium.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPElEQVQoz42RyY7cMAxE/f+/GSQ9jW7LWqyVywvsTAZzSyQUCB6KeCxuIoKZ4e7/J8DXxOfAnbs3c2Ks9N7Y/jmMP6b7mWK9snpjjo62E1TBjRae1NbZxhjfBnwzX40ZqGCzI71ylkTunSpCF6UOoaTCmoOjvLm23VprnwPAZd3mi2DUTD0zqWTepRBrZaow1RhLqHMyVW8AVSMd5Ya6CXstxHgQUmJPmeOspD5JY1GXYP4X2lFX7PpudJkMmZg7oTTcjO3CbKoMVxaOXVF95nZVdWOaMHTdmmvRxry1VOgmLBPOdCCqbHrlkQNnDOTjRd6f5P1FDIH0fnPugbxHwnNnfzwIP39Qng/ix5P91wfpFZA5cdX72pvIosRIL4WeEy0FRs60fFJT4syXTqRPTORr9VtmtFKYY3wd8jdOFHHKBSmpLQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="localhost, real dataset, medium BLOBs, throughput bytes per second"
+        title="localhost, real dataset, medium BLOBs, throughput bytes per second"
+        src="/static/9d0c351647b56c316dc5dccbfb6330b6/50383/localhost-real-medium.png"
+        srcset="/static/9d0c351647b56c316dc5dccbfb6330b6/1d79a/localhost-real-medium.png 185w,
+/static/9d0c351647b56c316dc5dccbfb6330b6/1efb2/localhost-real-medium.png 370w,
+/static/9d0c351647b56c316dc5dccbfb6330b6/50383/localhost-real-medium.png 740w,
+/static/9d0c351647b56c316dc5dccbfb6330b6/73caa/localhost-real-medium.png 1110w,
+/static/9d0c351647b56c316dc5dccbfb6330b6/536c7/localhost-real-medium.png 1480w,
+/static/9d0c351647b56c316dc5dccbfb6330b6/bcec6/localhost-real-medium.png 1834w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h3 id="benchmarks-for-local-network-and-weak-server" style="position:relative;"><a href="#benchmarks-for-local-network-and-weak-server" aria-label="benchmarks for local network and weak server permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Benchmarks for local network and weak server</h3>
+<p>Even though it is pretty much unlikely to encounter such configuration in a real production environment, it may show something interesting.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f909fed8f392540dfbc01e36334dd37b/7de21/ethernet-real-big.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVQoz42S3W7kIAxG8/6PuBerdqdNp5NMAgk/AducFZltVfWiWiRjjMzxh2GotWJmtNZ+NPu6NoPWEBWSVNQazkVyTgxfgWYP+wTZN5jZJ6yosHhPDBGTQlpvxJQZjuP4L4VyggEapTXWfUNTAlFUhXWfEFGG1DeBXli0oXaGXQQqj6DP3m+EPZCqsYeIeoeGiOweqxXvwln4BEa34KY33PuFbR7RUqkp4+4Tu99Y7zP+PrK5K/PtD/v0zN7jcCccnipdYTpbMpRauN5G5vnK4lem91cuz794G5+YbhdeX35zHZ8I+8K2rXg3s4eutFJNyf3KZgS/IqoMIsKRhZgqKVW2KCyLZ1k9IVZyVlJWQhRCEHLqVsmxUHOh5EJTo6mcj3cCVRUzPSW37lt79NGUkjM5BvT8DXrm6of/d677j/EX1o9wmY1cb7QAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="1GBit Ethernet, real dataset, large BLOBs, throughput bytes per second"
+        title="1GBit Ethernet, real dataset, large BLOBs, throughput bytes per second"
+        src="/static/f909fed8f392540dfbc01e36334dd37b/50383/ethernet-real-big.png"
+        srcset="/static/f909fed8f392540dfbc01e36334dd37b/1d79a/ethernet-real-big.png 185w,
+/static/f909fed8f392540dfbc01e36334dd37b/1efb2/ethernet-real-big.png 370w,
+/static/f909fed8f392540dfbc01e36334dd37b/50383/ethernet-real-big.png 740w,
+/static/f909fed8f392540dfbc01e36334dd37b/73caa/ethernet-real-big.png 1110w,
+/static/f909fed8f392540dfbc01e36334dd37b/536c7/ethernet-real-big.png 1480w,
+/static/f909fed8f392540dfbc01e36334dd37b/7de21/ethernet-real-big.png 1839w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Here we clearly see that uncompressed BLOB gives about 30MB/sec, and for that it’s hard to show any good results for fast algorithms. And in such circumstances brotli shines as it has the best compression ratio among all algorithms, so the poor throughput of MySQL is well compensated by a big compression ratio and reasonable decoding performance (I want to remind you, that 11th level of brotli is extremely slow on encoding).</p>
+<h3 id="comparisons" style="position:relative;"><a href="#comparisons" aria-label="comparisons permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparisons</h3>
+<p>I also did a few interesting (in my view) comparisons.</p>
+<h4 id="mysql-compression-algorithm" style="position:relative;"><a href="#mysql-compression-algorithm" aria-label="mysql compression algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MySQL Compression Algorithm</h4>
+<p>The first comparison is between <code class="language-text">ROW_FORMAT=COMPRESSED</code> and using <code class="language-text">UNCOMPRESS</code> function of MySQL over compressed data in <code class="language-text">ROW_FORMAT=DYNAMIC</code>. Basically, we compare how storage is organized versus simple uncompression.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/25d5a0c2072ce1899179e3ea323a762a/de766/mysql-vs-mysql-localhost.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKElEQVQoz32S2w7lIAhF+/+fei6tWFTwtia26cx5GszKJrIhGt1aawxg9s4wZ7jTc2ao0mOkR6FLYJzxoh877f2mvV7UtZ8S+glIFHLObGNORk6Xsa+Gi5MShFYbWSJFE1acnJ2SjJIKrgm1SamTV1AkBFSVzXLC9wMtAzX+cmaQcxJ1ovkmlUlME9E7tzJobXDsH77fLyLCpjEiRyE7ZK9ocbQYpRreKmoZ9cRpCyXVdTIllhOxE2vG8Ia50Xtn0+zsp3EmIUggiiBBkEOQPXCGiB5KlkQOCQ16aZFEOpRanN/Y3J3P+4tpYZTKrJ3ZB/Rx65gw5+2e8x9PzMn84RqYU75rz/ox3D3zv/x6tnVvc6fWyhq+vtHKH10vZ2ZX/vDUFqv/d+Af4mRxB94IJjQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="localhost, Compressed Table vs UNCOMPRESS, throughput bytes per second"
+        title="localhost, Compressed Table vs UNCOMPRESS, throughput bytes per second"
+        src="/static/25d5a0c2072ce1899179e3ea323a762a/50383/mysql-vs-mysql-localhost.png"
+        srcset="/static/25d5a0c2072ce1899179e3ea323a762a/1d79a/mysql-vs-mysql-localhost.png 185w,
+/static/25d5a0c2072ce1899179e3ea323a762a/1efb2/mysql-vs-mysql-localhost.png 370w,
+/static/25d5a0c2072ce1899179e3ea323a762a/50383/mysql-vs-mysql-localhost.png 740w,
+/static/25d5a0c2072ce1899179e3ea323a762a/73caa/mysql-vs-mysql-localhost.png 1110w,
+/static/25d5a0c2072ce1899179e3ea323a762a/536c7/mysql-vs-mysql-localhost.png 1480w,
+/static/25d5a0c2072ce1899179e3ea323a762a/de766/mysql-vs-mysql-localhost.png 1838w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Interestingly enough, doing <code class="language-text">SELECT UNCOMRESS(data)</code> is slightly faster than uncompressing data automatically from the storage itself.</p>
+<p>The next step is to compare getting uncompressed data from MySQL via <code class="language-text">SELECT UNCOMPRESS(data)</code> and getting compressed data from MySQL and uncompressing it in an application itself. Basically, MySQL vs network+Java :)</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/08606b647d54f88b1aea0ebd337d5b69/de766/java-vs-mysql-aws.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABPUlEQVQoz6WS624UMQyF5/3frYIfBbVsZ6ZFQPfS3aVzSWzHyVcluxUI+IelT06s5OTYSpdSIudMKeXfwC/qPpd2PqeEp0QSobgz709EiXTu/pdAdr+QMylGbF1xVXSesWVG5wkLtSa4RJIltueZsC50qnoVo70or6/YPBHP5yYg00KcFjQIJolkmZRKw6xmcC+cji9M00y3rivvUczQNRIWI0yRpWYpiBWiFpborNEJcslRnKiOpYyLkdzp1LSJbcdvjB/uefrUM972fP8y8GMz8LwZ2PeP7Mav7PqRXf/Ifnhi/zBw6Ee29xvmw8vVUaErnhluPrP5eMfp+JOlthkCIoKpoKKEqIhcsDpLtbau9RAFT37VK3QahePzoan/T5Tr/S6X0npXs+ZKm4MLZkYIgTrn3+t/Ur/eu8M3PSpu/Aobf3gAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AWS, Java vs UNCOMPRESS, throughput bytes per second"
+        title="AWS, Java vs UNCOMPRESS, throughput bytes per second"
+        src="/static/08606b647d54f88b1aea0ebd337d5b69/50383/java-vs-mysql-aws.png"
+        srcset="/static/08606b647d54f88b1aea0ebd337d5b69/1d79a/java-vs-mysql-aws.png 185w,
+/static/08606b647d54f88b1aea0ebd337d5b69/1efb2/java-vs-mysql-aws.png 370w,
+/static/08606b647d54f88b1aea0ebd337d5b69/50383/java-vs-mysql-aws.png 740w,
+/static/08606b647d54f88b1aea0ebd337d5b69/73caa/java-vs-mysql-aws.png 1110w,
+/static/08606b647d54f88b1aea0ebd337d5b69/536c7/java-vs-mysql-aws.png 1480w,
+/static/08606b647d54f88b1aea0ebd337d5b69/de766/java-vs-mysql-aws.png 1838w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>As expected, lower network usage is very beneficial: uncompressing in Java is significantly faster. But with an ideal network (namely <code class="language-text">localhost</code>), it’s not really the case:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f9a44d63962b221bf90b1a651aa55779/de766/java-vs-mysql-localhost.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABG0lEQVQoz2WSi27kIAxF8/8/WnXVzhDA2JjHqSCZqqMNOroXzMPEHO7OGGPTa6WZ4aoXpWxdY23F3C9evl794Y3074GacvTe6a3txWvi6J05J3PMS1tjul8s3xqMAc2h962jDz4eiSKZo66TREALVANV5l/MmLW+MaTgKeNnwrXuTB/fX8QYOVIItGdAtVN0IDqIchFy5yzzjbBYcZ3kMohlUley5rTeOUyVmJxQnFgMsUptFatGUUEkIzm9sa5WciJvImbK6zvUnM+vQD5P4jNwPgPhsfREoiCpkJMgWRHRN7WVQDG8tr3Z+ueHmXGGSL+LwPw97Oq//H+Nm9vfc3eVd2FWpd3x5pfeY6pKWc/nfjK/sT9+7fHK8AfoFHIX7zdjUAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="localhost, Java vs UNCOMPRESS, throughput bytes per second"
+        title="localhost, Java vs UNCOMPRESS, throughput bytes per second"
+        src="/static/f9a44d63962b221bf90b1a651aa55779/50383/java-vs-mysql-localhost.png"
+        srcset="/static/f9a44d63962b221bf90b1a651aa55779/1d79a/java-vs-mysql-localhost.png 185w,
+/static/f9a44d63962b221bf90b1a651aa55779/1efb2/java-vs-mysql-localhost.png 370w,
+/static/f9a44d63962b221bf90b1a651aa55779/50383/java-vs-mysql-localhost.png 740w,
+/static/f9a44d63962b221bf90b1a651aa55779/73caa/java-vs-mysql-localhost.png 1110w,
+/static/f9a44d63962b221bf90b1a651aa55779/536c7/java-vs-mysql-localhost.png 1480w,
+/static/f9a44d63962b221bf90b1a651aa55779/de766/java-vs-mysql-localhost.png 1838w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>We may see that only for highest compression ratios Java wins. In other cases MySQL is faster. Which probably means that <code class="language-text">UNCOMPRESS</code> implementation from MySQL is faster (it makes sense as Java does plenty of memory copy and some allocations).</p>
+<h3 id="lz4-vs-uncompressed" style="position:relative;"><a href="#lz4-vs-uncompressed" aria-label="lz4 vs uncompressed permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>lz4 vs Uncompressed</h3>
+<p>Let’s take a slightly closer look on lz4 and uncompressed, as they are clear winners in <code class="language-text">localhost</code> and <code class="language-text">AWS</code> configurations. Here is the small animation to see lz4 vs uncompressed in all configurations:</p>
+<p><img src="/a20bce7e4f179aaba360384f7b9f4d12/lz4.gif" alt="lz4 vs Uncompressed, stub dataset for all configurations, throughput bytes per second"></p>
+<p>And here is lz4 vs uncompressed for <code class="language-text">AWS</code> configuration. Uncompressed is highlighted, so it’s obvious that lz4 wins clearly:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 740px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a5bc309d077a08fe6ad548036927da35/de766/lz4-aws-highlight.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4klEQVQoz4WS624EIQiFff8H7a/dzo53BOY0OLidaZOW5AsKegJoGGNAVXEcxx94XgTHOqsKFXYEr+cDOWeEf8Usv4TMX/G7JrhtT6SUEXrvNwFdzAoEOuisgq0T8Tj72kRl3mM+96GUAjMLYqKOADDYkQv6jY9jmVeImeytIaWKV6zYc8deCbEOxDKQKiNWRm6M3BmpnVSSW4dBfB4pV3w8MrbYkCtPgXyhuJ/iZbzXexropO8ug/X+uRfEQrjb4fzc/2a17BUqausQHiAiEC1PsC9VSoXN+RqncT9rD7UEvwDshXZY0WtpNQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="AWS, lz4 vs Uncompressed, throughput bytes per second"
+        title="AWS, lz4 vs Uncompressed, throughput bytes per second"
+        src="/static/a5bc309d077a08fe6ad548036927da35/50383/lz4-aws-highlight.png"
+        srcset="/static/a5bc309d077a08fe6ad548036927da35/1d79a/lz4-aws-highlight.png 185w,
+/static/a5bc309d077a08fe6ad548036927da35/1efb2/lz4-aws-highlight.png 370w,
+/static/a5bc309d077a08fe6ad548036927da35/50383/lz4-aws-highlight.png 740w,
+/static/a5bc309d077a08fe6ad548036927da35/73caa/lz4-aws-highlight.png 1110w,
+/static/a5bc309d077a08fe6ad548036927da35/536c7/lz4-aws-highlight.png 1480w,
+/static/a5bc309d077a08fe6ad548036927da35/de766/lz4-aws-highlight.png 1838w"
+        sizes="(max-width: 740px) 100vw, 740px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
 <h2 id="conclusion" style="position:relative;"><a href="#conclusion" aria-label="conclusion permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
-<p>There are two main outcomes of these benchmarks:</p>
+<p>For our particular use case lz4 looks very promising. When the compression ratio is not good, it loses slightly, but generally it outperforms anything else. The next option is not using compression at all.</p>
+<p>But it’s very important to remember that application level compression has some downsides:</p>
 <ul>
-<li>Native outperforms Java (no surprise).</li>
-<li>There are ways to improve Java-Native interop.</li>
+<li>Data can’t be used within database. So, if you, for example, store JSON in a BLOB, you won’t be able to use JSON functions.</li>
+<li>It moves CPU computations from MySQL to your application (which could be an upside in some cases as well).</li>
+<li>It requires more effort from the application side.</li>
 </ul>
-<p>I’d like to reiterate optimizations:</p>
-<ul>
-<li>Less JNI calls from the Rust (or whatever else native language you use) — the better. We saw slight performance improvement, for example, by removal <code class="language-text">get_array_length</code> call.</li>
-<li>Marshalling works well, but if you don’t need to marshall anything — the better performance would be. Even with double copying (input and output) it’s better. We don’t know if JNI actually copies data or just spends a lot of time ensuring safety with GC, but it’s faster to do 2 extra memory copy operations than marshalling data via JNI API.</li>
-</ul>
-<p>I hope it was interesting enough! In my previous post about <a href="/p/java-native-access-performance">native access performance</a> the example was too simple to assess JNI cost, and here is more real-world-ish example with clear. The cost of going to native is noticeable, but it may be still worth it as in this particular case.</p>
-<p>Play with charts <a href="/charts/base64-jni">here</a>. Source code is on <a href="https://github.com/dkomanov/stuff/tree/7f808056d53fd891bacb83e53f559614c675e693/src/com/komanov/jwt/base64/jni/jmh">GitHub</a>. Originally posted on <a href="https://dkomanov.medium.com/a-java-exploring-jni-performance-via-decoding-base64-4388683102a2">Medium</a>. <a href="https://pixabay.com/illustrations/white-male-3d-model-whole-body-1748797/">Cover image</a> by <a href="https://pixabay.com/users/peggy_marco-1553824">Peggy und Marco Lachmann-Anke</a> with my madskillz from <a href="https://pixabay.com/">Pixabay</a>.</p></div></div><div class="blog-post-meta"><ul class="tags"><li class="cf"><a href="/posts/java">java</a></li><li class="cf"><a href="/posts/mysql">mysql</a></li><li class="cf"><a href="/posts/compression">compression</a></li><li class="cf"><a href="/posts/lz4">lz4</a></li><li class="cf"><a href="/posts/zlib">zlib</a></li><li class="cf"><a href="/posts/blob">blob</a></li><li class="cf"><a href="/posts/benchmark">benchmark</a></li><li class="cf"><a href="/posts/performance">performance</a></li></ul><hr/><div class="share-buttons"><button aria-label="twitter" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#00aced"></rect><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" fill="white"></path></svg></button><button aria-label="facebook" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#3b5998"></rect><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z" fill="white"></path></svg></button></div></div><footer>All content ©<!-- --> <a href="mailto:dkomanov@gmail.com">Dmitry Komanov</a>,<!-- --> <a href="/powered">powered by...</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/p/mysql-blob-fetch-performance-in-java/";window.___webpackCompilationHash="f4bcc59c9f30e0d531a3";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f1d5be50dbe1d5fc9ecc.js"],"app":["/app-2269d79bc8e19222e87e.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-99a953a5d5072d737c00.js"],"component---src-pages-404-js":["/component---src-pages-404-js-411ef4eaab63e67f917d.js"],"component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx":["/component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx-d14165dc07e0e483d4fb.js"],"component---src-pages-charts-base-64-jni-index-tsx":["/component---src-pages-charts-base-64-jni-index-tsx-4f66c9bc6220d72f885d.js"],"component---src-pages-charts-java-compression-compression-ratio-tsx":["/component---src-pages-charts-java-compression-compression-ratio-tsx-8110b1e4b7c477551750.js"],"component---src-pages-charts-java-compression-index-tsx":["/component---src-pages-charts-java-compression-index-tsx-e2fcb3cad10b7bb622d2.js"],"component---src-pages-charts-java-compression-real-data-tsx":["/component---src-pages-charts-java-compression-real-data-tsx-43ab02b3357201d9b0f9.js"],"component---src-pages-charts-mysql-blob-fetch-index-tsx":["/component---src-pages-charts-mysql-blob-fetch-index-tsx-5f8b04d335e4e0f05dc1.js"],"component---src-pages-charts-mysql-streaming-index-js":["/component---src-pages-charts-mysql-streaming-index-js-780495a06cbe1ac6221b.js"],"component---src-pages-charts-native-access-index-tsx":["/component---src-pages-charts-native-access-index-tsx-5c6f958f17ce5c93a235.js"],"component---src-pages-charts-offheap-array-index-tsx":["/component---src-pages-charts-offheap-array-index-tsx-024d498f8961da81b4fb.js"],"component---src-pages-charts-offheap-hashmap-index-tsx":["/component---src-pages-charts-offheap-hashmap-index-tsx-d75446a4db74c1da573a.js"],"component---src-pages-charts-read-lines-index-js":["/component---src-pages-charts-read-lines-index-js-bb3f7db27e294632f1a2.js"],"component---src-pages-charts-read-utf-8-index-js":["/component---src-pages-charts-read-utf-8-index-js-f4d60054c81944568be5.js"],"component---src-pages-charts-region-matches-index-tsx":["/component---src-pages-charts-region-matches-index-tsx-1812b45dfa8604201183.js"],"component---src-pages-charts-scala-serialization-2022-index-tsx":["/component---src-pages-charts-scala-serialization-2022-index-tsx-d9ec2e1b0fde2462ad45.js"],"component---src-pages-charts-scala-serialization-index-js":["/component---src-pages-charts-scala-serialization-index-js-225ab2b6f43837a81a74.js"],"component---src-pages-charts-scala-string-format-index-js":["/component---src-pages-charts-scala-string-format-index-js-989dfb4a2933d53485aa.js"],"component---src-pages-charts-set-map-java-vs-scala-index-tsx":["/component---src-pages-charts-set-map-java-vs-scala-index-tsx-98d55b19945e17cd1869.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8d5dc7a04410f1a5e964.js"],"component---src-templates-blog-by-tag-js":["/component---src-templates-blog-by-tag-js-644d70da62520e655eb3.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3a7f1226ca2d533bf8f2.js"],"component---src-templates-static-js":["/component---src-templates-static-js-b0b89dc82e3360603931.js"],"component---src-templates-what-i-listen-list-tsx":["/component---src-templates-what-i-listen-list-tsx-774af08d23b2797f8ff4.js"],"component---src-templates-what-i-listen-single-episode-tsx":["/component---src-templates-what-i-listen-single-episode-tsx-7691f95dc109a423643e.js"],"component---src-templates-what-i-listen-tag-cloud-tsx":["/component---src-templates-what-i-listen-tag-cloud-tsx-58bf894680d9448a1385.js"],"component---src-templates-what-i-read-index-js":["/component---src-templates-what-i-read-index-js-d4124ab8f3404c08f33d.js"]};/*]]>*/</script><script src="/polyfill-f1d5be50dbe1d5fc9ecc.js" nomodule=""></script><script src="/app-2269d79bc8e19222e87e.js" async=""></script><script src="/framework-bf670a827ae315f850d0.js" async=""></script><script src="/webpack-runtime-d19530f5d9926f395d92.js" async=""></script></body></html>
+<p>The next thing to be aware of is a compression ratio. Know you data, benchmark over your data, as the performance depends on an actual compression ratio significantly.</p>
+<p>And the last thing — a configuration of your environment also may affect the decision greatly, as for slower servers benchmark shows completely opposite results (maybe not completely, but close to it).</p>
+<p>Play with charts <a href="/charts/mysql-blog-fetch">here</a>. Source code is on <a href="">GitHub</a>. Originally posted on <a href="TBD">Medium</a>. Cover image by <a href="https://openai.com/dall-e-2/">DALL-E</a>: “a manometer with pipe with a dolphin on a background, 3d render” (yay! First time I managed to get something from it, even though it’s still not 100%-pretty :)).</p></div></div><div class="blog-post-meta"><ul class="tags"><li class="cf"><a href="/posts/java">java</a></li><li class="cf"><a href="/posts/mysql">mysql</a></li><li class="cf"><a href="/posts/compression">compression</a></li><li class="cf"><a href="/posts/lz4">lz4</a></li><li class="cf"><a href="/posts/deflate">deflate</a></li><li class="cf"><a href="/posts/brotli">brotli</a></li><li class="cf"><a href="/posts/gzip">gzip</a></li><li class="cf"><a href="/posts/blob">blob</a></li><li class="cf"><a href="/posts/benchmark">benchmark</a></li><li class="cf"><a href="/posts/performance">performance</a></li></ul><hr/><div class="share-buttons"><button aria-label="twitter" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#00aced"></rect><path d="M48,22.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6 C41.7,19.8,40,19,38.2,19c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5c-5.5-0.3-10.3-2.9-13.5-6.9c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.2,4.3,2.9,5.5c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,2.9,10.1,2.9c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C46,24.5,47.1,23.4,48,22.1z" fill="white"></path></svg></button><button aria-label="facebook" class="react-share__ShareButton share-button" style="background-color:transparent;border:none;padding:0;font:inherit;color:inherit;cursor:pointer"><svg viewBox="0 0 64 64" width="24" height="24"><rect width="64" height="64" rx="0" ry="0" fill="#3b5998"></rect><path d="M34.1,47V33.3h4.6l0.7-5.3h-5.3v-3.4c0-1.5,0.4-2.6,2.6-2.6l2.8,0v-4.8c-0.5-0.1-2.2-0.2-4.1-0.2 c-4.1,0-6.9,2.5-6.9,7V28H24v5.3h4.6V47H34.1z" fill="white"></path></svg></button></div></div></div><footer>All content ©<!-- --> <a href="mailto:dkomanov@gmail.com">Dmitry Komanov</a>,<!-- --> <a href="/powered">powered by...</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/p/mysql-blob-fetch-performance-in-java/";window.___webpackCompilationHash="dcd34fa90b82cc070cd1";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f1d5be50dbe1d5fc9ecc.js"],"app":["/app-2269d79bc8e19222e87e.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-99a953a5d5072d737c00.js"],"component---src-pages-404-js":["/component---src-pages-404-js-411ef4eaab63e67f917d.js"],"component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx":["/component---src-pages-charts-base-64-jdk-vs-apache-commons-index-tsx-d14165dc07e0e483d4fb.js"],"component---src-pages-charts-base-64-jni-index-tsx":["/component---src-pages-charts-base-64-jni-index-tsx-4f66c9bc6220d72f885d.js"],"component---src-pages-charts-java-compression-compression-ratio-tsx":["/component---src-pages-charts-java-compression-compression-ratio-tsx-8110b1e4b7c477551750.js"],"component---src-pages-charts-java-compression-index-tsx":["/component---src-pages-charts-java-compression-index-tsx-e2fcb3cad10b7bb622d2.js"],"component---src-pages-charts-java-compression-real-data-tsx":["/component---src-pages-charts-java-compression-real-data-tsx-43ab02b3357201d9b0f9.js"],"component---src-pages-charts-mysql-blob-fetch-index-tsx":["/component---src-pages-charts-mysql-blob-fetch-index-tsx-479eabb8b57bfe4a76bf.js"],"component---src-pages-charts-mysql-streaming-index-js":["/component---src-pages-charts-mysql-streaming-index-js-780495a06cbe1ac6221b.js"],"component---src-pages-charts-native-access-index-tsx":["/component---src-pages-charts-native-access-index-tsx-5c6f958f17ce5c93a235.js"],"component---src-pages-charts-offheap-array-index-tsx":["/component---src-pages-charts-offheap-array-index-tsx-024d498f8961da81b4fb.js"],"component---src-pages-charts-offheap-hashmap-index-tsx":["/component---src-pages-charts-offheap-hashmap-index-tsx-d75446a4db74c1da573a.js"],"component---src-pages-charts-read-lines-index-js":["/component---src-pages-charts-read-lines-index-js-bb3f7db27e294632f1a2.js"],"component---src-pages-charts-read-utf-8-index-js":["/component---src-pages-charts-read-utf-8-index-js-f4d60054c81944568be5.js"],"component---src-pages-charts-region-matches-index-tsx":["/component---src-pages-charts-region-matches-index-tsx-1812b45dfa8604201183.js"],"component---src-pages-charts-scala-serialization-2022-index-tsx":["/component---src-pages-charts-scala-serialization-2022-index-tsx-d9ec2e1b0fde2462ad45.js"],"component---src-pages-charts-scala-serialization-index-js":["/component---src-pages-charts-scala-serialization-index-js-225ab2b6f43837a81a74.js"],"component---src-pages-charts-scala-string-format-index-js":["/component---src-pages-charts-scala-string-format-index-js-989dfb4a2933d53485aa.js"],"component---src-pages-charts-set-map-java-vs-scala-index-tsx":["/component---src-pages-charts-set-map-java-vs-scala-index-tsx-98d55b19945e17cd1869.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8d5dc7a04410f1a5e964.js"],"component---src-templates-blog-by-tag-js":["/component---src-templates-blog-by-tag-js-644d70da62520e655eb3.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-3a7f1226ca2d533bf8f2.js"],"component---src-templates-static-js":["/component---src-templates-static-js-b0b89dc82e3360603931.js"],"component---src-templates-what-i-listen-list-tsx":["/component---src-templates-what-i-listen-list-tsx-774af08d23b2797f8ff4.js"],"component---src-templates-what-i-listen-single-episode-tsx":["/component---src-templates-what-i-listen-single-episode-tsx-7691f95dc109a423643e.js"],"component---src-templates-what-i-listen-tag-cloud-tsx":["/component---src-templates-what-i-listen-tag-cloud-tsx-58bf894680d9448a1385.js"],"component---src-templates-what-i-read-index-js":["/component---src-templates-what-i-read-index-js-d4124ab8f3404c08f33d.js"]};/*]]>*/</script><script src="/polyfill-f1d5be50dbe1d5fc9ecc.js" nomodule=""></script><script src="/app-2269d79bc8e19222e87e.js" async=""></script><script src="/framework-bf670a827ae315f850d0.js" async=""></script><script src="/webpack-runtime-b69ddeb614301856f176.js" async=""></script></body></html>
