@@ -117,6 +117,8 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   const [compressionRatio, compressionRatioSet] = useState(DefaultCompressionRatio);
   const [stubDataset, stubDatasetSet] = useState<StubDataset>('big');
   const [realDataset, realDatasetSet] = useState(DefaultRealDataset);
+  const [network, networkSet] = useState('aws');
+  const [onlyThroughput, onlyThroughputSet] = useState(true);
   const [extractor, extractorSet] = useState(EmptyJmhExtractorFuncHolder);
 
   const filterByRatio = (p: any) => p.compressionRatio === compressionRatio;
@@ -136,12 +138,29 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   const CompressionRatioChoose = (
     <CompressionRatioChooseComponent value={compressionRatio} onChange={compressionRatioSet} />
   );
+  const NetworkChoose = (
+    <StatelessChoose
+      label="Network:"
+      items={[
+        { label: 'localhost', value: 'localhost' },
+        { label: 'AWS', value: 'aws' },
+        { label: '1GBit Ethernet', value: 'ethernet' },
+        { label: '1GBit Wi-Fi', value: 'wifi' },
+      ]}
+      value={network}
+      onChange={networkSet}
+    />
+  );
 
   const makeChooses = (realData: boolean) => {
     return realData ? (
-      <div>{RealDatasetChoose}</div>
+      <div>
+        {NetworkChoose}
+        {RealDatasetChoose}
+      </div>
     ) : (
       <div>
+        {NetworkChoose}
         {CompressionRatioChoose}
         {StubDatasetChoose}
       </div>
@@ -149,10 +168,14 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   };
   const makeFilter = (realData: boolean) =>
     realData
-      ? (p: any) => p.realData === realData && filterByDataset(realDataset, p)
-      : (p: any) => p.realData === realData && filterByRatio(p) && filterByStubDataset(p);
+      ? (p: any) => p.network === network && p.realData === realData && filterByDataset(realDataset, p)
+      : (p: any) => p.network === network && p.realData === realData && filterByRatio(p) && filterByStubDataset(p);
 
   const PerformanceChart = (realData: boolean) => {
+    if (onlyThroughput) {
+      return null;
+    }
+
     return (
       <div>
         <h3>Fetch BLOBs of different lengths</h3>
@@ -177,7 +200,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   };
 
   const ThroughputChart = (realData: boolean) => {
-    return (
+    const appThroughput = (
       <div>
         <h3>Effective throughput after decompression</h3>
 
@@ -196,6 +219,16 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
             legend,
           }}
         />
+      </div>
+    );
+
+    if (onlyThroughput) {
+      return appThroughput;
+    }
+
+    return (
+      <div>
+        {appThroughput}
 
         <h3>MySQL data throughput over the wire</h3>
 
@@ -225,12 +258,13 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
         <h4>Performance</h4>
 
+        {NetworkChoose}
         {StubDatasetChoose}
         <ChartAndTable2
           chartType="Line"
           dataTable={jmhList}
           extractor={extractor.func}
-          filter={(p: any) => filterByStubDataset(p)}
+          filter={(p: any) => p.network === network && filterByStubDataset(p)}
           xDesc={StubLengthDesc}
           yDesc={yDesc}
           alternateColors={yDesc.values.length % 4 === 0 ? 2 : 0}
@@ -243,18 +277,21 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
         <h4>Throughput</h4>
 
+        {NetworkChoose}
         {StubDatasetChoose}
         <ChartAndTable2
           chartType="Line"
           dataTable={jmhList}
           extractor={(pm: any) => pm.totalBytesReturned}
-          filter={(p: any) => filterByStubDataset(p)}
+          filter={(p: any) => p.network === network && filterByStubDataset(p)}
           xDesc={StubLengthDesc}
           yDesc={yDesc}
+          alternateColors={yDesc.values.length % 4 === 0 ? 2 : 0}
           options={{
             hAxis: hAxisDataLength,
             vAxis: vAxisThroughput,
             legend,
+            focusTarget: 'category',
           }}
         />
       </div>
@@ -286,11 +323,17 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
         <li>
           <a href="#comparisons">Comparisons for stub (random) data</a>
         </li>
-        <li>
-          <a href="#legend">Legend</a>
-        </li>
       </ul>
 
+      <StatelessChoose
+        label="Hide irrelevant charts:"
+        items={[
+          { label: 'Yes', value: true },
+          { label: 'Show Me Everything', value: false },
+        ]}
+        value={onlyThroughput}
+        onChange={onlyThroughputSet}
+      />
       <TimeUnits onChange={(func: JmhExtractorFunc) => extractorSet({ func })} />
 
       <h2>Charts for real data</h2>
@@ -305,6 +348,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 
       <h3>Fetch performance for different compression ratios</h3>
 
+      {NetworkChoose}
       <ChooseSlider
         label="Data length:"
         items={AllLengths.map((i) => {
@@ -320,8 +364,8 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
       <ChartAndTable2
         chartType="Bar"
         dataTable={jmhList}
-        extractor={extractor.func}
-        filter={(p: any) => p.length === length}
+        extractor={(pm: any) => pm.totalBytesReturned}
+        filter={(p: any) => p.length === length && p.network === network}
         xDesc={{
           title: 'Compression Ratio',
           prop: 'compressionRatio',
@@ -329,10 +373,8 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
         }}
         yDesc={AlgorithmDesc}
         options={{
-          hAxis: {
-            title: 'Compression Ratio',
-          },
-          vAxis: vAxisTime,
+          hAxis: { title: 'Compression Ratio' },
+          vAxis: vAxisThroughput,
         }}
       />
 
@@ -364,45 +406,12 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
         values: sideBySide([comparisonValues('Java', 'deflateWithSize'), comparisonValues('MySQL', 'explicit_mysql')]),
       })}
 
-      <h2 id="legend">Legend</h2>
-
-      <p>SQL schema:</p>
-      <pre>
-        -- data is not compressed{'\n'}
-        CREATE TABLE uncompressed_blobs ({'\n'}
-        {'  '}id INT NOT NULL PRIMARY KEY,{'\n'}
-        {'  '}data MEDIUMBLOB NOT NULL{'\n'}) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
-        {'\n'}
-        {'\n'}
-        CREATE TABLE compressed_blobs ({'\n'}
-        {'  '}id INT NOT NULL PRIMARY KEY,{'\n'}
-        {'  '}data MEDIUMBLOB NOT NULL{'\n'}) ENGINE=InnoDB ROW_FORMAT=COMPRESSED;
-        {'\n'}
-        {'\n'}
-      </pre>
-
-      <ul>
-        <li>
-          <strong>Uncompressed</strong>: select data column from <i>uncompressed_blobs</i> table: data is not compressed
-          neither in MySQL nor on application level.
-        </li>
-        <li>
-          <strong>Compressed table</strong>: select data column from <i>compressed_blobs</i> table: data is compressed
-          in MySQL, on select MySQL decompresses it and returns data uncompressed over the wire.
-        </li>
-        <li>
-          <strong>deflate+size</strong>: select data column from <i>uncompressed_blobs</i> table: data is compressed on
-          application level using{' '}
-          <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_compress">
-            MySQL's algorithm
-          </a>
-          , on select MySQL returns compressed data over the wire (no decompress in MySQL); data is decompressed in
-          application.
-        </li>
-      </ul>
-
       <p>
-        Full JMH logs: <a href={filePath('jdk17.log.txt')}>openjdk-17</a> (<a href={filePath('jdk17.json')}>json</a>).
+        Full JMH logs: <a href={filePath('localhost.log.txt')}>localhost</a>&nbsp;(
+        <a href={filePath('localhost.json')}>json</a>), <a href={filePath('aws.log.txt')}>AWS</a>&nbsp;(
+        <a href={filePath('aws.json')}>json</a>), <a href={filePath('ethernet.log.txt')}>Ethernet</a>&nbsp;(
+        <a href={filePath('ethernet.json')}>json</a>), <a href={filePath('wifi.log.txt')}>Wi&#8209;Fi</a>&nbsp;(
+        <a href={filePath('wifi.json')}>json</a>).
       </p>
     </div>
   );
@@ -411,7 +420,7 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
 const filePath = (name: string) => `/data/charts/mysql-blob-fetch/${name}`;
 
 const MysqlBlobFetch = JmhChartPage(MysqlBlobFetchImpl, {
-  fetchFunc: () => loadJson(filePath('jdk17.min.json')),
+  fetchFunc: () => loadJson(filePath('jmh.min.json')),
   exportDimensionsFunc: (_, params) => params,
   headerText: 'MySQL BLOB Fetch Performance In Java (Charts)',
 });
