@@ -10,7 +10,7 @@ const items = [
     default: true,
   },
   {
-    label: 'p0',
+    label: 'min',
     value: '0.0',
   },
   {
@@ -26,7 +26,7 @@ const items = [
     value: '99.0',
   },
   {
-    label: 'p100',
+    label: 'max',
     value: '100.0',
   },
 ];
@@ -42,7 +42,7 @@ export default class TimeUnits extends React.Component {
         <Choose label="Time Units: " onChange={this.handleOnClick} items={items}/>
         <p className="small">
           <small>
-            avg - average, p0 - percentile 0 (min), p50 - percentile 50 (median), p95 - percentile 95, p99 - percentile 99, p100 - percentile 100 (max)
+            avg - average, min - minimal, p50 - percentile 50 (median), p95 - percentile 95, p99 - percentile 99, max - maximum
           </small>
         </p>
       </div>
