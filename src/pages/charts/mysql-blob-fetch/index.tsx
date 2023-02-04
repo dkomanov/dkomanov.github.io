@@ -252,33 +252,12 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
   };
 
   const ComparisonCharts = (title: string, yDesc: JmhAxisDescriptor) => {
-    return (
+    const thr = (
       <div>
-        <h3>{title} with different compression ratios</h3>
-
-        <h4>Performance</h4>
-
-        {NetworkChoose}
-        {StubDatasetChoose}
-        <ChartAndTable2
-          chartType="Line"
-          dataTable={jmhList}
-          extractor={extractor.func}
-          filter={(p: any) => p.network === network && filterByStubDataset(p)}
-          xDesc={StubLengthDesc}
-          yDesc={yDesc}
-          alternateColors={yDesc.values.length % 4 === 0 ? 2 : 0}
-          options={{
-            hAxis: hAxisDataLength,
-            vAxis: vAxisTime,
-            legend,
-          }}
-        />
-
         <h4>Throughput</h4>
 
-        {NetworkChoose}
         {StubDatasetChoose}
+        {NetworkChoose}
         <ChartAndTable2
           chartType="Line"
           dataTable={jmhList}
@@ -294,6 +273,41 @@ const MysqlBlobFetchImpl = ({ jmhList }: JmhChartComponentProps) => {
             focusTarget: 'category',
           }}
         />
+      </div>
+    );
+
+    if (onlyThroughput) {
+      return (
+        <div>
+          <h3>{title} with different compression ratios</h3>
+          {thr}
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <h3>{title} with different compression ratios</h3>
+
+        <h4>Performance</h4>
+
+        {StubDatasetChoose}
+        {NetworkChoose}
+        <ChartAndTable2
+          chartType="Line"
+          dataTable={jmhList}
+          extractor={extractor.func}
+          filter={(p: any) => p.network === network && filterByStubDataset(p)}
+          xDesc={StubLengthDesc}
+          yDesc={yDesc}
+          alternateColors={yDesc.values.length % 4 === 0 ? 2 : 0}
+          options={{
+            hAxis: hAxisDataLength,
+            vAxis: vAxisTime,
+            legend,
+          }}
+        />
+        {thr}
       </div>
     );
   };
