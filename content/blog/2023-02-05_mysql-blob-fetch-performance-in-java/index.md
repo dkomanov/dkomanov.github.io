@@ -1,11 +1,10 @@
 ---
 type: blog
 date: 2023-02-05
-draft: true
 title: 'MySQL BLOB Fetch Performance in Java'
 description: 'A performance benchmark: fetching BLOB column from MySQL uncompressed vs compressed with different algorithms!'
 tags: ['java', 'mysql', 'compression', 'lz4', 'deflate', 'brotli', 'gzip', 'blob', 'benchmark', 'performance']
-canonicalUrl: TBD
+canonicalUrl: https://dkomanov.medium.com/mysql-blob-fetch-performance-in-java-d40460e856c
 cover: ./cover.png
 ---
 
@@ -120,17 +119,17 @@ Here we clearly see that uncompressed BLOB gives about 30MB/sec, and for that it
 
 ### Comparisons
 
-I also did a few interesting (in my view) comparisons.
+I also did a couple interesting (in my view) comparisons.
 
 #### MySQL Compression Algorithm
 
-The first comparison is between `ROW_FORMAT=COMPRESSED` and using `UNCOMPRESS` function of MySQL over compressed data in `ROW_FORMAT=DYNAMIC`. Basically, we compare how storage is organized versus simple uncompression.
+The first comparison is between `ROW_FORMAT=COMPRESSED` and using [UNCOMPRESS](https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_uncompress) function of MySQL over compressed data in `ROW_FORMAT=DYNAMIC`. Basically, we compare how storage is organized versus simple decompression.
 
 ![localhost, Compressed Table vs UNCOMPRESS, throughput bytes per second](./mysql-vs-mysql-localhost.png)
 
-Interestingly enough, doing `SELECT UNCOMRESS(data)` is slightly faster than uncompressing data automatically from the storage itself.
+Interestingly enough, doing `SELECT UNCOMPRESS(data)` is slightly faster than decompressing data automatically from the storage itself.
 
-The next step is to compare getting uncompressed data from MySQL via `SELECT UNCOMPRESS(data)` and getting compressed data from MySQL and uncompressing it in an application itself. Basically, MySQL vs network+Java :)
+The next step is to compare getting uncompressed data from MySQL via `SELECT UNCOMPRESS(data)` and getting compressed data from MySQL and decompressing it in an application itself. Basically, MySQL vs network+Java :)
 
 ![AWS, Java vs UNCOMPRESS, throughput bytes per second](./java-vs-mysql-aws.png)
 
@@ -138,7 +137,7 @@ As expected, lower network usage is very beneficial: uncompressing in Java is si
 
 ![localhost, Java vs UNCOMPRESS, throughput bytes per second](./java-vs-mysql-localhost.png)
 
-We may see that only for highest compression ratios Java wins. In other cases MySQL is faster. Which probably means that `UNCOMPRESS` implementation from MySQL is faster (it makes sense as Java does plenty of memory copy and some allocations).
+We may see that only for highest compression ratio Java wins. In other cases MySQL is faster. Which probably means that `UNCOMPRESS` implementation from MySQL is faster (it makes sense as Java does plenty of memory copy and some allocations).
 
 ### lz4 vs Uncompressed
 
@@ -164,4 +163,4 @@ The next thing to be aware of is a compression ratio. Know you data, benchmark o
 And the last thing -- a configuration of your environment also may affect the decision greatly, as for slower servers benchmark shows completely opposite results (maybe not completely, but close to it).
 
 
-Play with charts [here](/charts/mysql-blog-fetch). Source code is on [GitHub](). Originally posted on [Medium](TBD). Cover image by [DALL-E](https://openai.com/dall-e-2/): "a manometer with pipe with a dolphin on a background, 3d render" (yay! First time I managed to get something from it, even though it's still not 100%-pretty :)).
+Play with charts [here](/charts/mysql-blog-fetch). Source code is on [GitHub](https://github.com/dkomanov/stuff/tree/4e7dd1ff5ffc3354115b90f29ef3c14ec2ebd96b/src/com/komanov/mysql/blob). Originally posted on [Medium](https://dkomanov.medium.com/mysql-blob-fetch-performance-in-java-d40460e856c). Cover image by [DALL-E](https://openai.com/dall-e-2/): "a manometer with pipe with a dolphin on a background, 3d render" (yay! First time I managed to get something from it, even though it's still not 100%-pretty :)).
