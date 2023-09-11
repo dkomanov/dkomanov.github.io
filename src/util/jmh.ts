@@ -5,12 +5,48 @@
  * @param {function(benchmark: string, params: string)} extractor
  * @returns {Array} Converted list composed of extracted fields and pm (primaryMetric).
  */
-export function exportDataTable(results: any[], extractor: (benchmark: string, params: any) => any) {
+export function exportDataTable(results: any[], extractor: (benchmark: string, params: any) => any): JmhDimensions[] {
   return results.map((value) => {
     const dimensions = extractor(value.benchmark, value.params);
     dimensions.pm = value.primaryMetric;
+    dimensions.pm.sm = value.secondaryMetrics || {};
     return dimensions;
   });
+}
+
+export interface JmhMetricPercentiles {
+  '0.0': number;
+  '50.0': number;
+  '90.0': number;
+  '95.0': number;
+  '99.0': number;
+  '99.9': number;
+  '99.99': number;
+  '99.999': number;
+  '99.9999': number;
+  '100.0': number;
+}
+
+export interface JmhMetric {
+  score: number;
+  scoreError: number;
+  scoreConfidence: number[];
+  scorePercentiles: JmhMetricPercentiles;
+  scoreUnit: string;
+  rawData: number[][];
+}
+
+export interface JmhMetrics extends JmhMetric {
+  sm: {
+    [x: string]: JmhMetric;
+  };
+}
+
+// TODO Rewrite ChartAndTable component to typescript and reuse this interface.
+
+export interface JmhDimensions {
+  pm: JmhMetrics;
+  [x: string | number | symbol]: unknown;
 }
 
 export type JmhExtractorFunc = (pm: any) => number;

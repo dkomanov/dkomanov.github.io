@@ -1,6 +1,7 @@
 import React from 'react';
 import { ErrorMessage, Loader, Layout } from '..';
 import { AjaxHelper, CancelablePromise, exportDataTable } from '../../util';
+import { JmhDimensions } from '../../util/jmh';
 
 interface JmhChartPageConfig {
   fetchFunc: () => Promise<any> | CancelablePromise;
@@ -10,12 +11,12 @@ interface JmhChartPageConfig {
 }
 
 interface JmhChartPageState {
-  jmhList?: any[] | null;
+  jmhList: JmhDimensions[] | null;
   warning?: any | null;
 }
 
 export interface JmhChartComponentProps {
-  jmhList: any[] | null;
+  jmhList: JmhDimensions[] | null;
   refetch: () => void;
 }
 
