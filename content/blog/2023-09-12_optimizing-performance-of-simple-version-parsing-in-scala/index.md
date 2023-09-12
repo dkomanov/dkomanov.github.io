@@ -233,7 +233,7 @@ optimized1  10000.10000.10000  avgt    5   156.005 ±   5.058  ns/op
 optimized2  10000.10000.10000  avgt    5   115.824 ±   5.485  ns/op
 ```
 
-It's quite significant: ~50% faster.
+It's quite significant: 25%-35% faster.
 
 ### Step 7. Almost There?
 
