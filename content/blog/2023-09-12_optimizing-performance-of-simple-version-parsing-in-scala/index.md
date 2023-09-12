@@ -56,7 +56,7 @@ Try {
 }.toOption.flatten
 ```
 
-This version's benchmarks improved a bit for this particular case:
+This version's benchmarks improved quite a bit for this particular case:
 ```
 Benchmark       (encoded)  Mode  Cnt     Score     Error  Units
 yolo        200.200.99999  avgt    5  2133.263 ± 218.761  ns/op
@@ -67,7 +67,7 @@ yoloNoThrow         1.0.0  avgt    5   163.308 ±  10.761  ns/op
 
 ### Step 1.5. More Issues To Solve
 
-Well, we solved one case, but not the only one. Let's see what we actually do here. All the relevant pieces in this single line of code:
+Well, we solved one case, but it's not the only one. Let's see what we actually do here. All the relevant pieces in this single line of code:
 
 ```scala
 val numbers@Array(major, minor, fix) = v.split('.').map(_.toInt)
@@ -221,6 +221,7 @@ And the benchmark (only for happy flows):
 
 ```
 Benchmark           (encoded)  Mode  Cnt     Score     Error  Units
+
 yoloNoThrow             1.0.0  avgt    5   163.308 ±  10.761  ns/op
 regex                   1.0.0  avgt    5   216.829 ±   0.991  ns/op
 optimized1              1.0.0  avgt    5   100.512 ±   4.974  ns/op
@@ -453,7 +454,7 @@ def version(major: Int, minor: Int, fix: Int): Long = {
 
 And now instead of returning `Option[Version]` we need to return `long` and just replace `None` or `null` with `Invalid` and `Some(Version(...))` with `version(...)`!
 
-![Normalized Memory Allocations Per Single Call, bytes, long instead of Version](memory-no-alloc.png)
+![Allocated Memory Per Single Call without Option[Version], bytes](memory-no-alloc.png)
 
 Yes, now we see that after [Step 5](#step-5-searching-for-dots-use-indexof) we managed to remove allocations completely! And what's about performance without any allocations?
 
@@ -533,7 +534,7 @@ value class Version {
 }
 ```
 
-Effectively it will be just 8 bytes in memory, not in heap, passing by value, as effective as `long`, but with the convenience of the normal class. We just need to patiently wait for Valhalla :)
+Effectively it will be 8 bytes in memory, not in heap, passing by value, as effective as `long`, but with the convenience of the normal class. We just need to patiently wait for Valhalla :)
 
 ## Final Thoughts
 
