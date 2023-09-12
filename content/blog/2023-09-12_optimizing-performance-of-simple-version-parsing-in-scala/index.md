@@ -4,7 +4,7 @@ date: 2023-09-12
 title: 'Optimizing Performance of Simple Version Parsing in Scala'
 description: 'A step by step guide how code optimization is done: what to look for during optimization process, how to win nanoseconds and have fun!'
 tags: ['scala', 'java', 'string', 'benchmark', 'performance', 'optimization']
-canonicalUrl: TBD
+canonicalUrl: https://dkomanov.medium.com/optimizing-performance-of-simple-version-parsing-in-scala-aeff8bc133a5
 cover: ./cover.jpg
 ---
 
@@ -556,4 +556,4 @@ I had a lot of fun conducting this benchmark and doing all these optimizations s
 But more than anything, optimization and benchmarking are always a fun exercise -- have fun! ;-)
 
 
-Play with charts [here](/charts/version-parsing). Source code is on [GitHub](https://github.com/dkomanov/stuff/commit/85e5845688922ecce4ccc88818c9e283174f8705). Originally posted on [Medium](TBD). [Cover image](https://pixabay.com/illustrations/matrix-code-computer-pc-data-356024/) by [51581](https://pixabay.com/users/51581-51581/) from [Pixabay](https://pixabay.com/) + [Excalidraw](https://excalidraw.com/).
+Play with charts [here](/charts/version-parsing). Source code is on [GitHub](https://github.com/dkomanov/stuff/commit/85e5845688922ecce4ccc88818c9e283174f8705). Originally posted on [Medium](https://dkomanov.medium.com/optimizing-performance-of-simple-version-parsing-in-scala-aeff8bc133a5). [Cover image](https://pixabay.com/illustrations/matrix-code-computer-pc-data-356024/) by [51581](https://pixabay.com/users/51581-51581/) from [Pixabay](https://pixabay.com/) + [Excalidraw](https://excalidraw.com/).
