@@ -536,6 +536,26 @@ value class Version {
 
 Effectively it will be 8 bytes in memory, not in heap, passing by value, as effective as `long`, but with the convenience of the normal class. We just need to patiently wait for Valhalla :)
 
+### Back to Scala
+
+I was carried away by worse performance of pattern matching in Scala comparing to basic `switch` in Java. But to be fair, the final solution doesn't require pattern matching. I [ported](https://github.com/dkomanov/stuff/commit/e8602ee396d2a930f22bb3e976de4f603ab36154) the final version back to Scala. Unsurprisingly, the performance is more or less the same.
+
+```
+Benchmark                         (encoded)  Mode  Cnt   Score    Error Units
+
+optimized6                            1.0.0  avgt    5  22.995 ±  1.303 ns/op
+optimized6Scala                       1.0.0  avgt    5  24.780 ±  3.820 ns/op
+
+optimized6                10000.10000.10000  avgt    5  60.070 ±  3.753 ns/op
+optimized6Scala           10000.10000.10000  avgt    5  60.828 ± 27.522 ns/op
+
+optimized6      NO ALLOC              1.0.0  avgt    5  21.713 ±  2.534 ns/op
+optimized6Scala NO ALLOC              1.0.0  avgt    5  20.101 ±  1.469 ns/op
+
+optimized6      NO ALLOC  10000.10000.10000  avgt    5  48.535 ±  1.351 ns/op
+optimized6Scala NO ALLOC  10000.10000.10000  avgt    5  48.259 ±  1.484 ns/op
+```
+
 ## Final Thoughts
 
 Clearly, the initial code is concise and simple. And sometimes we pay for the simplicity and the ease of maintenance. Do we even need to optimize it? If it works -- no need to touch it. In my case, my attention was brought to this code because of the exceptions. By chance I profiled service with [async-profiler](https://github.com/async-profiler/async-profiler) and at that point of time we received significant amount of requests with invalid versions, so exceptions thrown by this validation were visible in hot spots.
