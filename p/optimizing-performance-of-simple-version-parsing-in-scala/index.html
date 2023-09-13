@@ -515,6 +515,21 @@ optimized6 NO ALLOC                 1.0.0  avgt    5    20.232 ±   0.054  ns/op
   <span class="token punctuation">}</span>  
 <span class="token punctuation">}</span></code></pre></div>
 <p>Effectively it will be 8 bytes in memory, not in heap, passing by value, as effective as <code class="language-text">long</code>, but with the convenience of the normal class. We just need to patiently wait for Valhalla :)</p>
+<h3 id="back-to-scala" style="position:relative;"><a href="#back-to-scala" aria-label="back to scala permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Back to Scala</h3>
+<p>I was carried away by worse performance of pattern matching in Scala comparing to basic <code class="language-text">switch</code> in Java. But to be fair, the final solution doesn’t require pattern matching. I <a href="https://github.com/dkomanov/stuff/commit/e8602ee396d2a930f22bb3e976de4f603ab36154">ported</a> the final version back to Scala. Unsurprisingly, the performance is more or less the same.</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Benchmark                         (encoded)  Mode  Cnt   Score    Error Units
+
+optimized6                            1.0.0  avgt    5  22.995 ±  1.303 ns/op
+optimized6Scala                       1.0.0  avgt    5  24.780 ±  3.820 ns/op
+
+optimized6                10000.10000.10000  avgt    5  60.070 ±  3.753 ns/op
+optimized6Scala           10000.10000.10000  avgt    5  60.828 ± 27.522 ns/op
+
+optimized6      NO ALLOC              1.0.0  avgt    5  21.713 ±  2.534 ns/op
+optimized6Scala NO ALLOC              1.0.0  avgt    5  20.101 ±  1.469 ns/op
+
+optimized6      NO ALLOC  10000.10000.10000  avgt    5  48.535 ±  1.351 ns/op
+optimized6Scala NO ALLOC  10000.10000.10000  avgt    5  48.259 ±  1.484 ns/op</code></pre></div>
 <h2 id="final-thoughts" style="position:relative;"><a href="#final-thoughts" aria-label="final thoughts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Final Thoughts</h2>
 <p>Clearly, the initial code is concise and simple. And sometimes we pay for the simplicity and the ease of maintenance. Do we even need to optimize it? If it works — no need to touch it. In my case, my attention was brought to this code because of the exceptions. By chance I profiled service with <a href="https://github.com/async-profiler/async-profiler">async-profiler</a> and at that point of time we received significant amount of requests with invalid versions, so exceptions thrown by this validation were visible in hot spots.</p>
 <p>It’s still may not be a reason for optimizations. If we are just concerned with exceptions, we may as well use <a href="#step-4-regex">Regex</a> implementation. It’s not as robust on happy flow, but still good enough. And it has more or less the same readability.</p>
